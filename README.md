@@ -17,7 +17,7 @@ In Warm-ups the followings has been done:
 Within 2 use cases benchmarks for different data scales have been executed.  
 
 USE CASE 1  
-For data scales Huge and Gigantic these benchmarks have been executed: 
+For data scales Huge and Gigantic these benchmarks have been executed:  
 micro - sort  
 micro - terasort  
 micro - wordcount  
