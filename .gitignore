@@ -349,5 +349,9 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+
+
 # tar.gz files
 *.tar.gz
+# png files
+*.png
