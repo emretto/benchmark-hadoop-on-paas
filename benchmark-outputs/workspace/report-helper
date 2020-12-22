@@ -64,20 +64,20 @@ SCRIPTS
 #################### Collect original CSP HiBench reports and save within naming convention
 ########## USE CASE 1: 
 ##### HUGE
-cp ../uc1/gcp/huge/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-gcp.report && cp ../uc1/gcp/huge/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-azu.report && cp ../uc1/ali/huge/HiBench/root/HiBench/report/hibench.report reports/uc1-h-ali.report
+cp ../uc1/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-gcp.report && cp ../uc1/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-azu.report && cp ../uc1/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc1-h-ali.report
 ##### GIGANTIC
-cp ../uc1/gcp/gigantic/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-gcp.report && cp ../uc1/gcp/gigantic/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-azu.report && cp ../uc1/ali/gigantic/HiBench/root/HiBench/report/hibench.report reports/uc1-g-ali.report
+cp ../uc1/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-gcp.report && cp ../uc1/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-azu.report && cp ../uc1/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc1-g-ali.report
 ########## USE CASE 2:
 ##### TINY
-cp ../uc2/gcp/tiny/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-gcp.report && cp ../uc2/gcp/tiny/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-azu.report && cp ../uc2/ali/tiny/HiBench/root/HiBench/report/hibench.report reports/uc2-t-ali.report
+cp ../uc2/gcp/t/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-gcp.report && cp ../uc2/gcp/t/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-azu.report && cp ../uc2/ali/t/HiBench/root/HiBench/report/hibench.report reports/uc2-t-ali.report
 ##### SMALL
-cp ../uc2/gcp/small/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-gcp.report && cp ../uc2/gcp/small/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-azu.report && cp ../uc2/ali/small/HiBench/root/HiBench/report/hibench.report reports/uc2-s-ali.report
+cp ../uc2/gcp/s/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-gcp.report && cp ../uc2/gcp/s/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-azu.report && cp ../uc2/ali/s/HiBench/root/HiBench/report/hibench.report reports/uc2-s-ali.report
 ##### LARGE
-cp ../uc2/gcp/large/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-gcp.report && cp ../uc2/gcp/large/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-azu.report && cp ../uc2/ali/large/HiBench/root/HiBench/report/hibench.report reports/uc2-l-ali.report
+cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-gcp.report && cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-azu.report && cp ../uc2/ali/l/HiBench/root/HiBench/report/hibench.report reports/uc2-l-ali.report
 ##### HUGE
-cp ../uc2/gcp/huge/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-gcp.report && cp ../uc2/gcp/huge/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-azu.report && cp ../uc2/ali/huge/HiBench/root/HiBench/report/hibench.report reports/uc2-h-ali.report
+cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-gcp.report && cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-azu.report && cp ../uc2/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc2-h-ali.report
 ##### GIGABTIC
-cp ../uc2/gcp/gigantic/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-gcp.report && cp ../uc2/gcp/gigantic/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-azu.report && cp ../uc2/ali/gigantic/HiBench/root/HiBench/report/hibench.report reports/uc2-g-ali.report
+cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-gcp.report && cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-azu.report && cp ../uc2/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc2-g-ali.report
 
 
 #################### Granulate HiBench CSP reports by Use Case and Benchmark
@@ -137,7 +137,7 @@ sed -n 's/HadoopPagerank/GCP/p' reports/uc1-g-gcp.report >> reports/processed/uc
 ## SORT
 sed -n 's/HadoopSort/GCP/p' reports/uc2-t-gcp.report >> reports/processed/uc2-t-srt.dat && sed -n 's/HadoopSort/Azure/p' reports/uc2-t-azu.report >> reports/processed/uc2-t-srt.dat && sed -n 's/HadoopSort/Alibaba/p' reports/uc2-t-ali.report >> reports/processed/uc2-t-srt.dat
 ## WORDCOUNT
-sed -n 's/HadoopWordcount/GCP/p' reports/uc2-t-gcp.report >> reports/processed/uc2-t-wrdcnt.dat && sed -n 's/HadoopWordcount/Azure/p' reports/uc2-t-azu.report >> reports/processed/uc2-t-wrdcnt.dat && sed -n 's/HadoopWordcount/Alibaba/p' reports/uc1-t-ali.report >> reports/processed/uc2-t-wrdcnt.dat
+sed -n 's/HadoopWordcount/GCP/p' reports/uc2-t-gcp.report >> reports/processed/uc2-t-wrdcnt.dat && sed -n 's/HadoopWordcount/Azure/p' reports/uc2-t-azu.report >> reports/processed/uc2-t-wrdcnt.dat && sed -n 's/HadoopWordcount/Alibaba/p' reports/uc2-t-ali.report >> reports/processed/uc2-t-wrdcnt.dat
 ##### SMALL #####
 ## SORT
 sed -n 's/HadoopSort/GCP/p' reports/uc2-s-gcp.report >> reports/processed/uc2-s-srt.dat && sed -n 's/HadoopSort/Azure/p' reports/uc2-s-azu.report >> reports/processed/uc2-s-srt.dat && sed -n 's/HadoopSort/Alibaba/p' reports/uc2-s-ali.report >> reports/processed/uc2-s-srt.dat
@@ -165,20 +165,79 @@ sed -n 's/HadoopWordcount/GCP/p' reports/uc2-g-gcp.report >> reports/processed/u
 
 
 
-# PLOTTING SOURCE ACTIVITIES DURING RUN (HUGE)
-#gnuplot -c cmidt-plot.gp "HiBench Results: DFSIOE (r/w Files: 256, Filesize: 100 MB)" gcp dfsioe h
+# PLOTTING SOURCE ACTIVITIES 
 
-gnuplot -c cmidt-plot.gp "HiBench Results: SORT (DS: tiny)" gcp srt t
-gnuplot -c cmidt-plot.gp "HiBench Results: TERASORT (DS: tiny)" gcp tera t
-gnuplot -c cmidt-plot.gp "HiBench Results: WORDCOUNT (DS: tiny)" gcp wrdcnt t
-gnuplot -c cmidt-plot.gp "HiBench Results: DFSIOE - read (DS: tiny)" gcp dfsioer t
-gnuplot -c cmidt-plot.gp "HiBench Results: DFSIOE - write (DS: tiny)" gcp dfsioew t
-gnuplot -c cmidt-plot.gp "HiBench Results: SCAN (DS: tiny)" gcp scan t
-gnuplot -c cmidt-plot.gp "HiBench Results: JOIN (DS: tiny)" gcp join t
-gnuplot -c cmidt-plot.gp "HiBench Results: AGGREGATION (DS: tiny)" gcp aggreg t
-gnuplot -c cmidt-plot.gp "HiBench Results: BAYES (DS: tiny)" gcp bayes t
-gnuplot -c cmidt-plot.gp "HiBench Results: K-MEANS (DS: tiny)" gcp kmeans t
-gnuplot -c cmidt-plot.gp "HiBench Results: NUTCHINDEXING (DS: tiny)" gcp nutch t
-gnuplot -c cmidt-plot.gp "HiBench Results: PAGERANK (DS: tiny)" gcp page t
+########## USE CASE 1:
+##### HUGE #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC1 - Sort (Huge)" uc1 srt h
+## TERASORT
+gnuplot -c cmidt-plot.gp "Results: UC1 - Terasort (Huge)" uc1 tera h 
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC1 - Wordcount (Huge)" uc1 wrdcnt h 
+## DFSIOE-R
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-read (Huge)" uc1 dfsioer h 
+## DFSIOE-W
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-write (Huge)" uc1 dfsioew h 
+## SCAN
+gnuplot -c cmidt-plot.gp "Results: UC1 - Scan (Huge)" uc1 scan h 
+## JOIN
+gnuplot -c cmidt-plot.gp "Results: UC1 - Join (Huge)" uc1 join h 
+## AGGREGATION
+gnuplot -c cmidt-plot.gp "Results: UC1 - Aggregation (Huge)" uc1 aggreg h 
+## BAYES
+gnuplot -c cmidt-plot.gp "Results: UC1 - Bayes (Huge)" uc1 bayes h 
+## KMEANS
+gnuplot -c cmidt-plot.gp "Results: UC1 - Kmeans (Huge)" uc1 kmeans h 
+## PAGERANK
+gnuplot -c cmidt-plot.gp "Results: UC1 - Pagerank (Huge)" uc1 page h 
+##### GIGANTIC #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC1 - Sort (Gigantic)" uc1 srt g
+## TERASORT
+gnuplot -c cmidt-plot.gp "Results: UC1 - Terasort (Gigantic)" uc1 tera g
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC1 - Wordcount (Gigantic)" uc1 wrdcnt g
+## DFSIOE-R
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-read (Gigantic)" uc1 dfsioer g
+## DFSIOE-W
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-write (Gigantic)" uc1 dfsioew g
+## SCAN
+gnuplot -c cmidt-plot.gp "Results: UC1 - Scan (Gigantic)" uc1 scan g
+## JOIN
+gnuplot -c cmidt-plot.gp "Results: UC1 - Join (Gigantic)" uc1 join g
+## AGGREGATION
+gnuplot -c cmidt-plot.gp "Results: UC1 - Aggregation (Gigantic)" uc1 aggreg g
+## BAYES
+gnuplot -c cmidt-plot.gp "Results: UC1 - Bayes (Gigantic)" uc1 bayes g
+## KMEANS
+gnuplot -c cmidt-plot.gp "Results: UC1 - Kmeans (Gigantic)" uc1 kmeans g
+## PAGERANK
+gnuplot -c cmidt-plot.gp "Results: UC1 - Pagerank (Gigantic)" uc1 page g
 
-
+########## USE CASE 2:
+##### TINY #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Tiny)" uc2 srt t
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Tiny)" uc2 wrdcnt t
+##### SMALL #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Small)" uc2 srt s
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Small)" uc2 wrdcnt s
+##### LARGE #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Large)" uc2 srt l
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Large)" uc2 wrdcnt l
+##### HUGE #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Huge)" uc2 srt h
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Huge)" uc2 wrdcnt h
+##### GIGANTIC #####
+## SORT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Gigantic)" uc2 srt g
+## WORDCOUNT
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Gigantic)" uc2 wrdcnt g
