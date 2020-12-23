@@ -355,5 +355,7 @@ MigrationBackup/
 *.tar.gz
 # png files
 *.png
+*.dat
+*.txt
 
 .vscode/settings.json

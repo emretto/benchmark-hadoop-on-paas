@@ -53,6 +53,11 @@ set output IMAGENAME
 set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
 
 
+#if (BNCH eq "dfsioer") \
+#    BNCH = "dfsioe"; 
+#if (BNCH eq "dfsioew") \
+#    BNCH = "dfsioe";
+
 # Put GCP Dataproc system utilization into plot
 
 GCP_W0_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-ca", ".dat")

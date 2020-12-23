@@ -76,7 +76,7 @@ cp ../uc2/gcp/s/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2
 cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-gcp.report && cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-azu.report && cp ../uc2/ali/l/HiBench/root/HiBench/report/hibench.report reports/uc2-l-ali.report
 ##### HUGE
 cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-gcp.report && cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-azu.report && cp ../uc2/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc2-h-ali.report
-##### GIGABTIC
+##### GIGANTIC
 cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-gcp.report && cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-azu.report && cp ../uc2/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc2-g-ali.report
 
 
