@@ -170,74 +170,74 @@ sed -n 's/HadoopWordcount/GCP/p' reports/uc2-g-gcp.report >> reports/processed/u
 ########## USE CASE 1:
 ##### HUGE #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC1 - Sort (Huge)" uc1 srt h
+gnuplot -c cmidt-plot.gp "Results: UC1 - Sort (Huge; 3.2 GB)" uc1 srt h
 ## TERASORT
-gnuplot -c cmidt-plot.gp "Results: UC1 - Terasort (Huge)" uc1 tera h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Terasort (Huge; 320 MB)" uc1 tera h 
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC1 - Wordcount (Huge)" uc1 wrdcnt h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Wordcount (Huge; 32 GB)" uc1 wrdcnt h 
 ## DFSIOE-R
-gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-read (Huge)" uc1 dfsioer h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-read (Huge; No of Files: 256, File size: 100 MB)" uc1 dfsioer h 
 ## DFSIOE-W
-gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-write (Huge)" uc1 dfsioew h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-write (Huge; No of Files: 256, File size: 100 MB)" uc1 dfsioew h 
 ## SCAN
-gnuplot -c cmidt-plot.gp "Results: UC1 - Scan (Huge)" uc1 scan h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Scan (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)" uc1 scan h 
 ## JOIN
-gnuplot -c cmidt-plot.gp "Results: UC1 - Join (Huge)" uc1 join h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Join (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)" uc1 join h 
 ## AGGREGATION
-gnuplot -c cmidt-plot.gp "Results: UC1 - Aggregation (Huge)" uc1 aggreg h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Aggregation (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)" uc1 aggreg h 
 ## BAYES
-gnuplot -c cmidt-plot.gp "Results: UC1 - Bayes (Huge)" uc1 bayes h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Bayes (Huge; PAGES: 500,000 CLASSES: 100 NGRAMS: 2)" uc1 bayes h 
 ## KMEANS
-gnuplot -c cmidt-plot.gp "Results: UC1 - Kmeans (Huge)" uc1 kmeans h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Kmeans (Huge; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 100,000,000 SAMP PER INPUT: 20,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)" uc1 kmeans h 
 ## PAGERANK
-gnuplot -c cmidt-plot.gp "Results: UC1 - Pagerank (Huge)" uc1 page h 
+gnuplot -c cmidt-plot.gp "Results: UC1 - Pagerank (Huge; PAGES: 5,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)" uc1 page h 
 ##### GIGANTIC #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC1 - Sort (Gigantic)" uc1 srt g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Sort (Gigantic; 32 GB)" uc1 srt g
 ## TERASORT
-gnuplot -c cmidt-plot.gp "Results: UC1 - Terasort (Gigantic)" uc1 tera g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Terasort (Gigantic; 3.2 GB)" uc1 tera g
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC1 - Wordcount (Gigantic)" uc1 wrdcnt g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Wordcount (Gigantic; 320 GB)" uc1 wrdcnt g
 ## DFSIOE-R
-gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-read (Gigantic)" uc1 dfsioer g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-read (Gigantic; No of Files: 512, File size: 400 MB)" uc1 dfsioer g
 ## DFSIOE-W
-gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-write (Gigantic)" uc1 dfsioew g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Dfsioe-write (Gigantic; No of Files: 512, File size: 400 MB)" uc1 dfsioew g
 ## SCAN
-gnuplot -c cmidt-plot.gp "Results: UC1 - Scan (Gigantic)" uc1 scan g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Scan (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)" uc1 scan g
 ## JOIN
-gnuplot -c cmidt-plot.gp "Results: UC1 - Join (Gigantic)" uc1 join g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Join (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)" uc1 join g
 ## AGGREGATION
-gnuplot -c cmidt-plot.gp "Results: UC1 - Aggregation (Gigantic)" uc1 aggreg g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Aggregation (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)" uc1 aggreg g
 ## BAYES
-gnuplot -c cmidt-plot.gp "Results: UC1 - Bayes (Gigantic)" uc1 bayes g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Bayes (Gigantic; PAGES: 1,000,000 CLASSES: 100 NGRAMS: 2)" uc1 bayes g
 ## KMEANS
-gnuplot -c cmidt-plot.gp "Results: UC1 - Kmeans (Gigantic)" uc1 kmeans g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Kmeans (Gigantic; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 200,000,000 SAMP PER INPUT: 40,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)" uc1 kmeans g
 ## PAGERANK
-gnuplot -c cmidt-plot.gp "Results: UC1 - Pagerank (Gigantic)" uc1 page g
+gnuplot -c cmidt-plot.gp "Results: UC1 - Pagerank (Gigantic; PAGES: 30,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)" uc1 page g
 
 ########## USE CASE 2:
 ##### TINY #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Tiny)" uc2 srt t
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Tiny; 32 KB)" uc2 srt t
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Tiny)" uc2 wrdcnt t
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Tiny; 32 KB)" uc2 wrdcnt t
 ##### SMALL #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Small)" uc2 srt s
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Small; 3.2 MB)" uc2 srt s
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Small)" uc2 wrdcnt s
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Small; 320 MB)" uc2 wrdcnt s
 ##### LARGE #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Large)" uc2 srt l
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Large; 320 MB)" uc2 srt l
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Large)" uc2 wrdcnt l
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Large; 3.2 GB)" uc2 wrdcnt l
 ##### HUGE #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Huge)" uc2 srt h
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Huge; 3.2 GB)" uc2 srt h
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Huge)" uc2 wrdcnt h
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Huge; 32 GB)" uc2 wrdcnt h
 ##### GIGANTIC #####
 ## SORT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Gigantic)" uc2 srt g
+gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Gigantic; 32 GB)" uc2 srt g
 ## WORDCOUNT
-gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Gigantic)" uc2 wrdcnt g
+gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Gigantic; 320 GB)" uc2 wrdcnt g

@@ -12,25 +12,25 @@ HIBENCH_REPORT = sprintf("%s%s%s%s%s%s%s", "reports/processed/", UC, "-", DATA_S
 IMAGENAME = sprintf( "%s%s%s%s%s%s%s%s", "plots/", UC, "-", BNCH, "-", DATA_SCALE, "-cmidt", ".png")
 #"test.png"
 
-#LC_CPU_A = "#60F71405"
-LC_CPU_W0 = "#601705f7"
-LC_CPU_W1 = "#601705f7"
-LC_CPU_W2 = "#601705f7"
+#LC_CPU_A = "#6066CC00"
+LC_CPU_W0 = "#501565C0" #601705f7
+LC_CPU_W1 = "#501E88E5"
+LC_CPU_W2 = "#5042A5F5"
 
 #60C303DD
-LC_RAM_W0 = "#6000FA00"
-LC_RAM_W1 = "#6000FA00"
-LC_RAM_W2 = "#6000FA00"
+LC_RAM_W0 = "#50FF00FF" # "#601d8348" #6000FA00
+LC_RAM_W1 = "#50FF33FF" # "#60239b56"
+LC_RAM_W2 = "#50FF66FF" # "#60229954"
 
 #LC_IO = "#60E67E22"
-LC_IO_W0_R = "#60FF0000"
-LC_IO_W0_W = "#60FF0000"
+LC_IO_W0_R = "#502E7D32" #60FF0000
+LC_IO_W1_R = "#502E7D32"
+LC_IO_W2_R = "#502E7D32"
 
-LC_IO_W1_R = "#60FF0000"
-LC_IO_W1_W = "#60FF0000"
+LC_IO_W0_W = "#50B71C1C"
+LC_IO_W1_W = "#50B71C1C"
+LC_IO_W2_W = "#50B71C1C"
 
-LC_IO_W2_R = "#60FF0000"
-LC_IO_W2_W = "#60FF0000"
 
 set grid
 #set rmargin 10
@@ -92,10 +92,10 @@ plot GCP_W0_CPU_ALL u 1:4 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
 	GCP_W1_RAM u 1:5 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
 	GCP_W2_RAM u 1:5 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
     GCP_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
-	GCP_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
     GCP_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
-	GCP_W1_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
     GCP_W2_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
+	GCP_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
+	GCP_W1_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
 	GCP_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2
 
 
@@ -128,18 +128,18 @@ AZU_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/"
 
 set title "Azure HDInsight" font "Times New Roman, 14"
 
-plot AZU_W0_CPU_ALL u 1:4 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
-	AZU_W1_CPU_ALL u 1:4 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
-	AZU_W2_CPU_ALL u 1:4 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1, \
+plot AZU_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
+	AZU_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
 	AZU_W0_RAM u 1:5 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
-	AZU_W1_RAM u 1:5 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
-	AZU_W2_RAM u 1:5 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
-    AZU_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
-	AZU_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
-    AZU_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
+	AZU_W0_CPU_ALL u 1:4 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
 	AZU_W1_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
+    AZU_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
+	AZU_W1_RAM u 1:5 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
+	AZU_W1_CPU_ALL u 1:4 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
+	AZU_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2, \
     AZU_W2_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
-	AZU_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2
+	AZU_W2_RAM u 1:5 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
+	AZU_W2_CPU_ALL u 1:4 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1
 
 
 # Put Alibaba Cloud e-MapReduce system utilization into plot
@@ -177,12 +177,12 @@ plot ALI_W0_CPU_ALL u 1:3 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
 	ALI_W0_RAM u 1:4 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
 	ALI_W1_RAM u 1:4 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
 	ALI_W2_RAM u 1:4 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
-    ALI_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "io-rtps" axes x1y2, \
-	ALI_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "io-wtps" axes x1y2,\
-    ALI_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
-	ALI_W1_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
-    ALI_W2_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
-	ALI_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2
+    ALI_W0_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
+    ALI_W1_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
+    ALI_W2_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
+	ALI_W0_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
+	ALI_W1_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
+	ALI_W2_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2
 
 
 # PUT DURATION & THROUGHPUT COMPARISON FOR CSPs INTO PLOT
