@@ -85,61 +85,61 @@ GCP_W1_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/"
 GCP_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-i", ".dat")
 
 set title "Google Dataproc" font "Times New Roman, 14"
-plot GCP_W0_CPU_ALL u 1:4 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
-	GCP_W1_CPU_ALL u 1:4 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
-	GCP_W2_CPU_ALL u 1:4 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1, \
-	GCP_W0_RAM u 1:5 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
-	GCP_W1_RAM u 1:5 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
-	GCP_W2_RAM u 1:5 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
-    GCP_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
+plot GCP_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
     GCP_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
     GCP_W2_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
 	GCP_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
 	GCP_W1_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
-	GCP_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2
+	GCP_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2, \
+	GCP_W0_CPU_ALL u 1:4 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
+	GCP_W1_CPU_ALL u 1:4 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
+	GCP_W2_CPU_ALL u 1:4 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1, \
+	GCP_W0_RAM u 1:5 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
+	GCP_W1_RAM u 1:5 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
+	GCP_W2_RAM u 1:5 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1
 
 
 # Put Azure HDInsight system utilization into plot
 
-AZU_W0_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-ca", ".dat")
-# AZU_W0_CPU_0 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c0", ".dat")
-# AZU_W0_CPU_1 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c1", ".dat")
-# AZU_W0_CPU_2 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c2", ".dat")
-# AZU_W0_CPU_3 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c3", ".dat")
-AZU_W1_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-ca", ".dat")
-# AZU_W1_CPU_0 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c0", ".dat")
-# AZU_W1_CPU_1 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c1", ".dat")
-# AZU_W1_CPU_2 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c2", ".dat")
-# AZU_W1_CPU_3 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c3", ".dat")
-AZU_W2_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-ca", ".dat")
-# AZU_W2_CPU_0 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c0", ".dat")
-# AZU_W2_CPU_1 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c1", ".dat")
-# AZU_W2_CPU_2 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c2", ".dat")
-# AZU_W2_CPU_3 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c3", ".dat")
+AZU_W0_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-ca", ".dat")
+# AZU_W0_CPU_0 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c0", ".dat")
+# AZU_W0_CPU_1 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c1", ".dat")
+# AZU_W0_CPU_2 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c2", ".dat")
+# AZU_W0_CPU_3 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-c3", ".dat")
+AZU_W1_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-ca", ".dat")
+# AZU_W1_CPU_0 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c0", ".dat")
+# AZU_W1_CPU_1 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c1", ".dat")
+# AZU_W1_CPU_2 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c2", ".dat")
+# AZU_W1_CPU_3 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-c3", ".dat")
+AZU_W2_CPU_ALL = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-ca", ".dat")
+# AZU_W2_CPU_0 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c0", ".dat")
+# AZU_W2_CPU_1 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c1", ".dat")
+# AZU_W2_CPU_2 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c2", ".dat")
+# AZU_W2_CPU_3 = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-c3", ".dat")
 
-AZU_W0_RAM = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-r", ".dat")
-AZU_W1_RAM = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-r", ".dat")
-AZU_W2_RAM = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-r", ".dat")
+AZU_W0_RAM = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-r", ".dat")
+AZU_W1_RAM = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-r", ".dat")
+AZU_W2_RAM = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-r", ".dat")
 
-AZU_W0_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w0/", GCP, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-i", ".dat")
-AZU_W1_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-i", ".dat")
-AZU_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-i", ".dat")
+AZU_W0_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w0/", AZU, "-", UC, "-w0-", DATA_SCALE, "-", BNCH, "-i", ".dat")
+AZU_W1_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w1/", AZU, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-i", ".dat")
+AZU_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-i", ".dat")
 
 
 set title "Azure HDInsight" font "Times New Roman, 14"
 
 plot AZU_W0_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
 	AZU_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
-	AZU_W0_RAM u 1:5 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
-	AZU_W0_CPU_ALL u 1:4 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
+	AZU_W0_RAM u 1:4 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
+	AZU_W0_CPU_ALL u 1:3 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
 	AZU_W1_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
     AZU_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
-	AZU_W1_RAM u 1:5 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
-	AZU_W1_CPU_ALL u 1:4 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
+	AZU_W1_RAM u 1:4 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
+	AZU_W1_CPU_ALL u 1:3 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
 	AZU_W2_IO u 1:4 w impulses lw 1 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2, \
     AZU_W2_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
-	AZU_W2_RAM u 1:5 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
-	AZU_W2_CPU_ALL u 1:4 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1
+	AZU_W2_RAM u 1:4 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
+	AZU_W2_CPU_ALL u 1:3 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1
 
 
 # Put Alibaba Cloud e-MapReduce system utilization into plot
@@ -172,18 +172,18 @@ ALI_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../", UC, "/", ALI, "/"
 set title "Alibaba Cloud e-MapReduce" font "Times New Roman, 14"
 
 plot ALI_W0_CPU_ALL u 1:3 w l lc rgb LC_CPU_W0 t "w0-cpu%" axes x1y1, \
-	ALI_W1_CPU_ALL u 1:3 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
-	ALI_W2_CPU_ALL u 1:3 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1, \
-	ALI_W0_RAM u 1:4 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
-	ALI_W1_RAM u 1:4 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
-	ALI_W2_RAM u 1:4 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1, \
-    ALI_W0_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
+	ALI_W0_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
     ALI_W1_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
     ALI_W2_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
 	ALI_W0_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W0_W t "w0-io-w" axes x1y2,\
 	ALI_W1_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W1_W t "w1-io-w" axes x1y2,\
-	ALI_W2_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2
-
+	ALI_W2_IO u 1:4 w impulses lw 0.5 lc rgb LC_IO_W2_W t "w2-io-w" axes x1y2, \
+	ALI_W1_CPU_ALL u 1:3 w l lc rgb LC_CPU_W1 t "w1-cpu%" axes x1y1, \
+	ALI_W2_CPU_ALL u 1:3 w l lc rgb LC_CPU_W2 t "w2-cpu%" axes x1y1, \
+	ALI_W0_RAM u 1:4 w l lc rgb LC_RAM_W0 t "w0-mem%" axes x1y1, \
+	ALI_W1_RAM u 1:4 w l lc rgb LC_RAM_W1 t "w1-mem%" axes x1y1, \
+	ALI_W2_RAM u 1:4 w l lc rgb LC_RAM_W2 t "w2-mem%" axes x1y1
+    
 
 # PUT DURATION & THROUGHPUT COMPARISON FOR CSPs INTO PLOT
 
