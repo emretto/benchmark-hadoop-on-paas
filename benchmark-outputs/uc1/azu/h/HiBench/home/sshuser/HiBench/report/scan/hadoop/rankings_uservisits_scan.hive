@@ -1,0 +1,12 @@
+USE DEFAULT;
+set hive.input.format=org.apache.hadoop.hive.ql.io.HiveInputFormat;
+set mapreduce.job.maps=12;
+set mapreduce.job.reduces=12;
+set hive.stats.autogather=false;
+
+
+DROP TABLE IF EXISTS uservisits;
+CREATE EXTERNAL TABLE uservisits (sourceIP STRING,destURL STRING,visitDate STRING,adRevenue DOUBLE,userAgent STRING,countryCode STRING,languageCode STRING,searchWord STRING,duration INT ) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' STORED AS  SEQUENCEFILE LOCATION 'wasb://my-benchmark-cluster-2020-12-24t13-30-30-287z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Scan/Input/uservisits';
+DROP TABLE IF EXISTS uservisits_copy;
+CREATE EXTERNAL TABLE uservisits_copy (sourceIP STRING,destURL STRING,visitDate STRING,adRevenue DOUBLE,userAgent STRING,countryCode STRING,languageCode STRING,searchWord STRING,duration INT ) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' STORED AS  SEQUENCEFILE LOCATION 'wasb://my-benchmark-cluster-2020-12-24t13-30-30-287z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Scan/Output/uservisits_copy';
+INSERT OVERWRITE TABLE uservisits_copy SELECT * FROM uservisits;
