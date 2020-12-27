@@ -64,20 +64,21 @@ SCRIPTS
 #################### Collect original CSP HiBench reports and save within naming convention
 ########## USE CASE 1: 
 ##### HUGE
-cp ../uc1/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-gcp.report && cp ../uc1/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-azu.report && cp ../uc1/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc1-h-ali.report
+cp ../uc1/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-h-gcp.report && cp ../uc1/azu/h/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc1-h-azu.report && cp ../uc1/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc1-h-ali.report
 ##### GIGANTIC
-cp ../uc1/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-gcp.report && cp ../uc1/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-azu.report && cp ../uc1/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc1-g-ali.report
+cp ../uc1/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc1-g-gcp.report && cp ../uc1/azu/g/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc1-g-azu.report && cp ../uc1/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc1-g-ali.report
 ########## USE CASE 2:
 ##### TINY
-cp ../uc2/gcp/t/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-gcp.report && cp ../uc2/gcp/t/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-azu.report && cp ../uc2/ali/t/HiBench/root/HiBench/report/hibench.report reports/uc2-t-ali.report
+cp ../uc2/gcp/t/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-t-gcp.report && cp ../uc2/azu/t/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc2-t-azu.report && cp ../uc2/ali/t/HiBench/root/HiBench/report/hibench.report reports/uc2-t-ali.report
 ##### SMALL
-cp ../uc2/gcp/s/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-gcp.report && cp ../uc2/gcp/s/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-azu.report && cp ../uc2/ali/s/HiBench/root/HiBench/report/hibench.report reports/uc2-s-ali.report
+cp ../uc2/gcp/s/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-s-gcp.report && cp ../uc2/azu/s/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc2-s-azu.report && cp ../uc2/ali/s/HiBench/root/HiBench/report/hibench.report reports/uc2-s-ali.report
 ##### LARGE
-cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-gcp.report && cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-azu.report && cp ../uc2/ali/l/HiBench/root/HiBench/report/hibench.report reports/uc2-l-ali.report
+cp ../uc2/gcp/l/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-l-gcp.report && cp ../uc2/azu/l/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc2-l-azu.report && cp ../uc2/ali/l/HiBench/root/HiBench/report/hibench.report reports/uc2-l-ali.report
 ##### HUGE
-cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-gcp.report && cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-azu.report && cp ../uc2/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc2-h-ali.report
+cp ../uc2/gcp/h/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-h-gcp.report && cp ../uc2/azu/h/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc2-h-azu.report && cp ../uc2/ali/h/HiBench/root/HiBench/report/hibench.report reports/uc2-h-ali.report
 ##### GIGANTIC
-cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-gcp.report && cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-azu.report && cp ../uc2/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc2-g-ali.report
+cp ../uc2/gcp/g/HiBench/home/ulueremre/HiBench/report/hibench.report reports/uc2-g-gcp.report && cp ../uc2/azu/g/HiBench/home/sshuser/HiBench/report/hibench.report reports/uc2-g-azu.report && cp ../uc2/ali/g/HiBench/root/HiBench/report/hibench.report reports/uc2-g-ali.report
+
 
 
 #################### Granulate HiBench CSP reports by Use Case and Benchmark
