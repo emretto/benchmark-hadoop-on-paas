@@ -36,6 +36,13 @@
 
 \usepackage{graphicx}
 \graphicspath{ {figures/} }
+
+\usepackage{array}
+\usepackage{multirow}
+
+
+
+
 %% `Elsevier LaTeX' style, distributed in TeX Live 2019
 \bibliographystyle{elsarticle-num}
 % \usepackage{numcompress}\bibliographystyle{elsarticle-num-names}
@@ -127,6 +134,142 @@ Ivanov et al. [56] compare the performances of two enterprise grade applications
 
 \section{Results}
 HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and Wordcount), sql (Scan, Join, and Aggregation), ml (Bayes and Kmeans), and websearch (Pagerank) have been executed on all three CSPs managed Hadoop services. During benchmark runtime resource utilization on worker nodes have been captured. The resulting multiplots are suggested to be read as follows: Top-left, top-right, and bottom-left plots represent CPU (user\%), Memory, and IO utilization on each worker node of the respective cluster over time. CPU utilization lines are given in blue tones, Memory utilization lines are given in fuchsia tones, IO-read and IO-write tps' are represented with orange tones and green tones, respectively. Even though the coloring convention might sound confusing, it gives a clear overview in terms of resource utilization of the total benchmark process over time. The left hand side x-axis measures CPU/Memory usage in percent, the right hand side x-axis measures IO-read or IO-write transfers in byte per second. The bottom-right plot represents the comparative benchmark performance outputs of the respective CSP. Duration measure in seconds is expected to perceived as "lower is better" while Throughput which is the amount of processed data per second in bytes is expected to perceived as "higher is better".
+
+\begin{table}[b]
+	\centering
+	\small
+	\caption{Selected configurations on CSPs’ managed Hadoop services}
+	\begin{tabular}{ p{2.5cm} p{2.5cm} p{3.7cm} p{3cm}  }
+		\hline
+		 {} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
+		\hline
+		Service & Dataproc & HDInsight & e-MapReduce \\
+		Region & \textit{europe-west3-a} & \textit{Germany West Central} & \textit{eu-central-1} \\
+		Location & Frankfurt & Frankfurt & Frankfurt \\
+		Image & 1.4-ubuntu18  & HDI 3.6 & EMR-3.32.0 \\
+		OS & ubuntu18.04 & ubuntu 16.04 & Aliyun Linux 2 \\
+		Hadoop v. & 2.9 & 2.7.3 & 2.8.5 \\
+		Java & 1.8.0\_275 & 1.8.0\_275 & 1.8.0\_252 \\
+		\hline
+		\multicolumn{4}{ c }{MASTER NODE} \\
+		\hline
+		Machine Type & \textit{e2-highmem-8} & \textit{A8m v2} & \textit{ecs.se1.2xlarge} \\
+		Processors & 8 vCPU & 8 cores & 8 vCPU \\
+		Memory & 64 GB RAM & 64 GB RAM & 64 GB RAM \\
+		\hline
+		\multicolumn{4}{ c }{WORKER NODES} \\
+		\hline
+		\# Nodes & 3 & 3 & 3 \\
+		Machine Type & \textit{e2-highmem-4} & \textit{A4m v2} & \textit{ecs.se1.xlarge} \\
+		Processors & 4 vCPU & 4 cores & 4 vCPU \\	
+		Memory & 32 GB RAM & 32 GB RAM & 32 GB RAM \\	
+		Storage & HDFS 1000 GB & \multirow{3}{ 4em }{WASB (Azure storage)} & HDFS 1000 GB \\	
+		Replication & 32 GB RAM &  & 32 GB RAM \\	
+		Block size & 32 GB RAM &  & 32 GB RAM \\
+		\hline
+	\end{tabular}
+\end{table}
+
+%%Use Case 1 Tabular Results:
+\begin{table}[b]
+	\centering
+	\small
+	\caption{Use Case 1 benchmark outputs}
+	\begin{tabular}{ r r r r r r r r }
+		\multicolumn{4}{ l }{Data Scale: Huge} & & & & \\
+		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		\hline
+		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		\hline
+		Sort & 3.28 GB & 70 & 47110942 & 131 & 25076597 & 111 & 29419903 \\
+		Terasort & 32.00 GB & 667 & 47988314 & 858 & 37277268 & 1054 & 30374710 \\
+		Wordcount & 32.85 GB & 978 & 33594975 & 1470 & 22340906 & 889 & 36949719 \\
+		Dfsioe-r & 26.99 GB & 294 & 91772636 & 662 & 40787869 & 245 & 110206431 \\
+		Dfsioe-w & 27.16 GB & 379 & 71733304 & 658 & 41296567 & 281 & 96488258 \\
+		Scan & 2.01 GB & 73 & 27629405 & 157 & 12830581 & 74 & 27193804 \\
+		Join & 1.92 GB & 181 & 10614143 & 356 & 5390513 & 175  & 10950553 \\
+		Aggregation & 372.38 MB & 97 & 3857328 & 215 & 1728400 & 97 & 3849353 \\
+		Bayes & 1.88 GB & 2604 & 722498 & 6120 & 307708 & 3017 & 623692 \\
+		Kmeans & 20.08 GB & 2321 & 8652662 & 2313 & 8683526 & 2070 & 9703348 \\
+		Pagerank & 2.99 GB & 1544 & 1938541 & 3334 & 897807 & 2458 & 1217764 \\
+		\hline
+		\multicolumn{4}{ l }{Data Scale: Gigantic} & & & & \\
+		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		\hline
+		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		\hline
+		Sort & 32.85 GB & 715 & 45939699 & 787 & 41721261 & 896 & 36680251 \\
+		Terasort & 320.00 GB & 9821 & 32582430 & ---(*) & ---(*) & 9660 & 33126513 \\
+		Wordcount & 328.49 GB & 10131 & 32423997 & 13596 & 24159989 & 8671 & 37882290 \\
+		Dfsioe-r & 216.03 GB & 915 & 236107099 & 1886 & 114538844 & 660 & 327294273 \\
+		Dfsioe-w & 217.33 GB & 1347 & 161394226 & 1914 & 113574850 & 1060 & 205123746 \\
+		Scan & 20.10 GB & 457 & 43964927 & 514 & 39085260 & 407 & 49378781 \\
+		Join & 19.19 GB & 595 & 32268936 & 761 & 25240939 & 594 & 32319846 \\
+		Aggregation & 3.69 GB & 523 & 7051835 & 594 & 6203608 & 565 & 6523381 \\
+		Bayes & 3.77 GB & 5350 & 703332 & 12589 & 299143 & 6363 & 591341 \\
+		Kmeans & 40.16 GB & 4541 & 8844971 & 4042 & 9935665 & 4034 & 9956003 \\
+		Pagerank & 19.93 GB & 8371 & 2381276 & 11779 & 1692241 & 13893 & 1434711 \\
+		\hline
+		\multicolumn{8}{ r }{(*) Incomplete benchmark execution due to insufficient HDFS disk space on HDInsight } \\
+		\hline
+		
+		
+	\end{tabular}
+\end{table}
+
+%% Use Case 2 Tabular Results:
+\begin{table}[b]
+	\centering
+	\small
+	\caption{Use Case 2 benchmark outputs}
+	\begin{tabular}{ l r r r r r r r }
+		%%\multicolumn{4}{ l }{Data Scale: Tiny} & & & & \\
+		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		\hline
+		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		\hline
+		Sort (t) & 39.30 KB & 36 & 1077 & 69 & 563 & 32 & 1173 \\
+		Wordcount(t) & 38.65 KB & 38 & 1005 & 68 & 551 & 31 & 1242 \\
+		%%\hline
+		%%\multicolumn{4}{ l }{Data Scale: Small} & & & & \\
+		%%{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		%%\hline
+		%%{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		%%\hline
+		Sort (s) & 3.28 MB & 36 & 90155 & 70 & 47090 & 31 & 104865 \\
+		Wordcount (s) & 348.29 MB & 50 & 6508975 & 98 & 3337158 & 47 & 7055759 \\
+		%%\hline
+		%%\multicolumn{4}{ l }{Data Scale: Large} & & & & \\
+		%%{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		%%\hline
+		%%{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		%%\hline
+		Sort (l) & 328.50 MB & 42 & 7860401 & 81 & 4065391 & 42 & 7741448 \\
+		Wordcount (l) & 3.28 GB & 129 & 25448586 & 269 & 12195273 & 120 & 27269866 \\
+		%%\hline
+		%%\multicolumn{4}{ l }{Data Scale: Huge} & & & & \\
+		%%{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		%%\hline
+		%%{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		%%\hline
+		Sort (h) & 3.28 GB & 70 & 47077081 & 141 & 23355371 & 107 & 30693426 \\
+		Wordcount (h) & 32.85 GB & 952 & 34512554 & 1487 & 22093900 & 888 & 36991074 \\
+		%%\hline
+		%%\multicolumn{4}{ l }{Data Scale: Gigantic} & & & & \\
+		%%{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
+		%%\hline
+		%%{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		%%\hline
+		Sort (g) & 32.85 GB & 694 & 47300549 & 699 & 47000056 & 883 & 37192377 \\
+		Wordcount (g) & 328.49 GB & 9749 & 33696143 & 13286 & 24725537 & 8622 & 38100208 \\
+		\hline
+		\multicolumn{8}{ r }{(t): tiny, (s): small, (l): large, (h): huge, (g): gigantic} \\
+\hline
+		
+		
+	\end{tabular}
+\end{table}
+
 
 USE CASE 1: 
 
