@@ -34,7 +34,7 @@ LC_IO_W2_W = "#2ECC71"
 
 set grid
 #set rmargin 10
-set key rmargin vertical font "Times New Roman, 12" 
+set key rmargin vertical font "Times New Roman, 14" 
 #box
 set xdata time
 set timefmt "%H:%M:%S"
@@ -51,7 +51,8 @@ set autoscale y2
 set style fill transparent solid 0.6 noborder
 set term png size 1600, 1000
 set output IMAGENAME
-set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
+# set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
+set multiplot title "" layout 2, 2 font "Times New Roman, 1"
 
 
 #if (BNCH eq "dfsioer") \
@@ -85,7 +86,7 @@ GCP_W0_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", GCP, 
 GCP_W1_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w1/", GCP, "-", UC, "-w1-", DATA_SCALE, "-", BNCH, "-i", ".dat")
 GCP_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", GCP, "/", DATA_SCALE, "/sysstat/data-w2/", GCP, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-i", ".dat")
 
-set title "Google Dataproc" font "Times New Roman, 14"
+set title "GCP Dataproc" font "Times New Roman, 18"
 plot GCP_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
     GCP_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
     GCP_W2_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W2_R t "w2-io-r" axes x1y2, \
@@ -128,7 +129,7 @@ AZU_W1_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", AZU, 
 AZU_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", AZU, "/", DATA_SCALE, "/sysstat/data-w2/", AZU, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-i", ".dat")
 
 
-set title "Azure HDInsight" font "Times New Roman, 14"
+set title "Azure HDInsight" font "Times New Roman, 18"
 
 plot AZU_W0_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
     AZU_W1_IO u 1:3 w impulses lw 1 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
@@ -170,7 +171,7 @@ ALI_W1_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", ALI, 
 ALI_W2_IO = sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", "../../", UC, "/", ALI, "/", DATA_SCALE, "/sysstat/data-w2/", ALI, "-", UC, "-w2-", DATA_SCALE, "-", BNCH, "-i", ".dat")
 
 
-set title "Alibaba Cloud e-MapReduce" font "Times New Roman, 14"
+set title "Alibaba Cloud e-MapReduce" font "Times New Roman, 18"
 
 plot ALI_W0_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, \
     ALI_W1_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W1_R t "w1-io-r" axes x1y2, \
@@ -188,7 +189,7 @@ plot ALI_W0_IO u 1:3 w impulses lw 0.5 lc rgb LC_IO_W0_R t "w0-io-r" axes x1y2, 
 
 # PUT DURATION & THROUGHPUT COMPARISON FOR CSPs INTO PLOT
 
-set title "Duration - Throughput" font "Times New Roman, 14"
+set title "Duration - Throughput" font "Times New Roman, 18"
 
 set style data histograms
 set style fill solid
