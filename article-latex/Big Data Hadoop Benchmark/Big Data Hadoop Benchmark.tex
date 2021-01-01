@@ -73,7 +73,7 @@
 \address[mysecondaryaddress]{360 Park Avenue South, New York}
 
 \begin{abstract}
-As rapid as in only the last two decades the advent of Big Data emerged in any data-driven domain and scaled up the extent as well as the depth of data and its handling. In an ongoing maturing process, new approaches leaning on enhanced distributed storage and computing paradigms are invented helping overcome management and running analytics challenges. In this context Hadoop is a success story embraced by a wide scale of beneficiants both from industry and academia since its first release in 2005. The commercialization of Cloud Computing started a grand migration movement towards cloud, applying also for Hadoop transferring its presence from on-premises to virtual machines stored and tamed in large data center facilities by global Cloud Service Providers. The CSPs' response to result-focused analytics needs of business purposes emerged a new service called managed systems where the hard workload of multi node cluster implementation is overtaken by the contractor in providing a pre-configured Hadoop package simplifying the installation process to a matter of property selection thus eliminating technical know-how requirements on such an implementation. Converting the concept of cloud based Hadoop from IaaS to PaaS apparently reduced costs commercially presented as pay-as-you-go or pay-per-use. There is a payoff, though, managed Hadoop systems do present a black-box behavior to the end user who cannot be clear on the inner dynamics, hence the benefits by leveraging them. In this study we selected three global providers (GCP, Azure, and Alibaba Cloud), activated their Hadoop PaaS services (Dataproc, HDInsight, and e-MapReduce, respectively) within same geographical region and by promise apparently same computing specifications, and executed several Hadoop workloads of the HiBench Benchmark Suite. The results yield that selecting apparently same computation specs among CSPs' services does not necessarily guarantee equal or close performance outputs among them. Our assumption is that pre-configuration work of managed systems done by the contractors play a weighing role on their performance.
+The advent of Big Data emerged in any data-driven domain and scaled up the extent as well as the depth of data and its handling. In an ongoing maturing process, new approaches leaning on enhanced distributed storage and computing paradigms are invented helping overcome management and running analytics challenges. In this context Hadoop is embraced in a wide scale by beneficiants both from industry and academia since its first release in 2005. The commercialization of Cloud Computing started a grand migration movement towards cloud, applying also for Hadoop transferring its presence from on-premises to virtual machines stored and tamed in large data center facilities by global Cloud Service Providers. The CSPs' response to result-focused analytics purposes emerged a service called managed systems where the hard workload of multi node cluster implementation is overtaken by the contractor providing a pre-configured Hadoop package simplifying the installation process to a matter of property selection thus eliminating technical know-how requirements on such an implementation. Converting the concept of cloud based Hadoop from IaaS to PaaS apparently reduced costs commercially presented as pay-as-you-go or pay-per-use. There is a payoff, though, managed Hadoop systems do present a black-box behavior to the end user who cannot be clear on the inner performance dynamics, hence the benefits by leveraging them. In this study we selected three global providers (GCP, Azure, and Alibaba Cloud), activated their Hadoop PaaS services (Dataproc, HDInsight, and e-MapReduce, respectively) within same geographical region and by promise apparently same computing specifications, and executed several Hadoop workloads of the HiBench Benchmark Suite. The results yield that apparently same computation specs among CSPs' services do not necessarily guarantee equal or close performance outputs to each other. Our assumption is that the pre-configuration work of managed systems done by the contractor play a weighing role on their performance.
 \end{abstract}
 
 \begin{keyword}
@@ -94,21 +94,14 @@ Big Data has become an inevitable aspect for enterprises and academia of the inf
 
 In parallel, the commercialization of Cloud Computing in the early 2000's delivered utilization of storage and computing resources to the end users saving them high investments on hardware technology that is soon going to be obsolete and is expensive to maintain. As the migration to the cloud is an ongoing process, Hadoop also slips out from its residence on on-prem infrastructure to the cloud by being implemented on virtual machine instances provided as IaaS platforms by many providers. The Cloud Service Providers embraced the need of eliminating Hadoop's complex implementation process on multi-node VMs by providing managed Hadoop systems commercially packaged as PaaS, which are pre-installed and pre-configured Hadoop clusters allowing the installation of tens to hundreds of nodes in a matter of minutes by simply determining some settings like hardware specs and node numbers prior the installation. The Managed Hadoop system is both a blessing and a curse, by leaving the hard implementation part which is not necessarily related with the main analysis objective to a contractor the end user saves time and efforts including a payoff, though: By definition, managed systems are prepackaged solutions provided in black-box nature. CSP apply behind-the-scenes tweaks in terms of reaching better performance results on selected approaches like memory intensive or compute intensive applications.
 
-In this study we put three CSP providers' managed Hadoop services in focus in terms of performance evaluation comparison: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 report in leading or niche section. Bound by availability of their offered hardware and software options we selected by providers' promise apparently same or close settings. Without any tweak operation with their settings for any performance optimization on the respective managed systems after installation we immediately executed several workloads from HiBench's micro, sql, ml, and websearch categories. For a more clear understanding of the benchmark outputs, during the benchmark execution we collected system utilization records on each worker node of the cluster. The results yield that Hadoop PaaS offerings by vendor's promise side perform and system utilizations may highly vary among CSPs.
+In this study we put three CSP providers' managed Hadoop services in focus in terms of performance evaluation comparison: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 report in leading or niche section. Bound by availability of their offered hardware and software options we selected by providers' promise apparently same or close settings. Without any performance tweak operation with their settings for any performance optimization on the respective managed systems after installation we immediately executed several workloads from HiBench's micro, sql, ml, and websearch categories. For a more clear understanding of the benchmark outputs, during the benchmark execution we collected system utilization records on each worker node of the cluster. The results yield that Hadoop PaaS offerings by vendor's promise side perform and system utilizations may highly vary among CSPs.
 
-\paragraph{Installation} If the document class \emph{elsarticle} is not available on your computer, you can download and install the system package \emph{texlive-publishers} (Linux) or install the \LaTeX\ package \emph{elsarticle} using the package manager of your \TeX\ installation, which is typically \TeX\ Live or Mik\TeX.
-
-\paragraph{Usage} Once the package is properly installed, you can use the document class \emph{elsarticle} to create a manuscript. Please make sure that your manuscript follows the guidelines in the Guide for Authors of the relevant journal. It is not necessary to typeset your manuscript in exactly the same way as an article, unless you are submitting to a camera-ready copy (CRC) journal.
 
 \paragraph{Functionality} The Elsevier article class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
 \begin{itemize}
 \item document style
 \item baselineskip
 \item front matter
-\item keywords and MSC codes
-\item theorems, definitions and proofs
-\item lables of enumerations
-\item citation style and labeling.
 \end{itemize}
 
 
@@ -131,14 +124,17 @@ Ivanov et al. [56] compare the performances of two enterprise grade applications
 
 
 \section{Method}
+CSP configurations in Table \ref{tab:csp-configs}
 
 \section{Results}
-HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and Wordcount), sql (Scan, Join, and Aggregation), ml (Bayes and Kmeans), and websearch (Pagerank) have been executed on all three CSPs managed Hadoop services. During benchmark runtime resource utilization on worker nodes have been captured. The resulting multiplots are suggested to be read as follows: Top-left, top-right, and bottom-left plots represent CPU (user\%), Memory, and IO utilization on each worker node of the respective cluster over time. CPU utilization lines are given in blue tones, Memory utilization lines are given in fuchsia tones, IO-read and IO-write tps' are represented with orange tones and green tones, respectively. Even though the coloring convention might sound confusing, it gives a clear overview in terms of resource utilization of the total benchmark process over time. The left hand side x-axis measures CPU/Memory usage in percent, the right hand side x-axis measures IO-read or IO-write transfers in byte per second. The bottom-right plot represents the comparative benchmark performance outputs of the respective CSP. Duration measure in seconds is expected to perceived as "lower is better" while Throughput which is the amount of processed data per second in bytes is expected to perceived as "higher is better".
+Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench benchmark execution outputs.
+\paragraph{Analysis}HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and Wordcount), sql (Scan, Join, and Aggregation), ml (Bayes and Kmeans), and websearch (Pagerank) have been executed on all three CSPs managed Hadoop services. During benchmark runtime resource utilization on worker nodes have been captured. The resulting multiplots are suggested to be read as follows: Top-left, top-right, and bottom-left plots represent CPU (user\%), Memory, and IO utilization on each worker node of the respective cluster over time. CPU utilization lines are given in blue tones, Memory utilization lines are given in fuchsia tones, IO-read and IO-write tps' are represented with orange tones and green tones, respectively. Even though the coloring convention might sound confusing, it gives a clear overview in terms of resource utilization of the total benchmark process over time. The left hand side x-axis measures CPU/Memory usage in percent, the right hand side x-axis measures IO-read or IO-write transfers in byte per second. The bottom-right plot represents the comparative benchmark performance outputs of the respective CSP. Duration measure in seconds is expected to perceived as "lower is better" while Throughput which is the amount of processed data per second in bytes is expected to perceived as "higher is better".
 
 \begin{table}[b]
 	\centering
 	\small
 	\caption{Selected configurations on CSPs’ managed Hadoop services}
+	\label{tab:csp-configs}
 	\begin{tabular}{ p{2.5cm} p{2.5cm} p{3.7cm} p{3cm}  }
 		\hline
 		 {} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
@@ -164,8 +160,8 @@ HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and
 		Processors & 4 vCPU & 4 cores & 4 vCPU \\	
 		Memory & 32 GB RAM & 32 GB RAM & 32 GB RAM \\	
 		Storage & HDFS 1000 GB & \multirow{3}{ 4em }{WASB (Azure storage)} & HDFS 1000 GB \\	
-		Replication & 32 GB RAM &  & 32 GB RAM \\	
-		Block size & 32 GB RAM &  & 32 GB RAM \\
+		Replication & 2 &  & 2 \\	
+		Block size & 128 MB &  & 128 MB \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -175,6 +171,7 @@ HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and
 	\centering
 	\small
 	\caption{Use Case 1 benchmark outputs}
+	\label{tab:uc1-results}
 	\begin{tabular}{ r r r r r r r r }
 		\multicolumn{4}{ l }{Data Scale: Huge} & & & & \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
@@ -222,6 +219,7 @@ HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and
 	\centering
 	\small
 	\caption{Use Case 2 benchmark outputs}
+	\label{tab:uc2-results}
 	\begin{tabular}{ l r r r r r r r }
 		%%\multicolumn{4}{ l }{Data Scale: Tiny} & & & & \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
@@ -272,231 +270,252 @@ HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and
 
 
 USE CASE 1: 
+\paragraph{Sort - Huge} Figure\ref{fig:uc1-srt-h-cmidt}; CPU utilization in GCP and Alibaba condence around 80\% to 98\% whereas in Azure the range widens up between 50\% to 90\%. Memory loads in GCP and Alibaba among the worker nodes display a harmonic behavior between 20\% to 40\% and 90\% to 100\% respectively, whereas the memory load in Azure's worker nodes vary between 10\% and 50\%. In the second half of the benchmark execution IO write transfers in GCP and Alibaba show peaks at about 500 tps where in Azure it is limited with 100 tps. Resulting in GCP carrying out the highest Throughput, thus reaching the shortest Duration of 70 seconds.
 
-\paragraph{Sort - Huge} Lorem ipsum
+\paragraph{Sort - Gigantic} Figure\ref{fig:uc1-srt-g-cmidt}; switching the data scale for Sort benchmark to gigantic, GCP's processor load condences around 80\% - 95\% where its memory load rises to range 80\% - 100\%; IO write transfers behave at about 500 tps where IO reads reach 1000 tps in the second half of the benchmark process. Azure's processor and memory performances depict a looser behavior not utilizing the maximum potential whereas IO-read and IO-write tps' reach their maximum at 200 and 350, respectively. Alibaba's resource utilization depicts a high memory load of 90\% - 100\% dropping to 70\% and about 83\% on partial nodes in the second half. As so with the processor load behaving between 80\% and 100\% in the first half dropping to about 50\% in the second half where IO write reaches peak at 800 tps. Resulting in GCP embarking highest and Azure the second highest Throughput, respective Durations output in 715 and 758 seconds.
 
-\paragraph{Sort - Gigantic} Lorem ipsum
+\paragraph{Terasort - Huge} Figure\ref{fig:uc1-tera-h-cmidt}; GCP depicts a high utilization on processors at a range of 80\% - 100\%, memory moving from 80\% to 100\%, and IO behavior 500 tps in overall and peaking at 1000 tps in IO-read resulting in highest Throughput in 667 seconds response time among other CSPs. Azure's processor and memory utilization fluctuate in overall where memory performance incrementally reach 100\% in one node, a stable IO-write in overall process at about 70 tps peaking at 250 tps reaches the second highest Throughput in 858 seconds. Alibaba with high memory and processor utilization, and varying IO tps's in overall process falls back in embarking Throughput and resulting in 1054 seconds response time.
 
-\paragraph{Terasort - Huge} Lorem ipsum
+\paragraph{Terasort - Gigantic} Figure\ref{fig:uc1-tera-g-cmidt}; switching the scale to gigantic causes dramatic changes on resource utilization on all CSPs. During all benchmark process GCP depicts very condensed high utilization on processor at a broad range of 30\% to about 95\%, memory consumption between 95\% and 100\% and IO read transfer varying between 800 to 1100 tps. Azure on the other side, fails to complete the benchmark on 3 attempts; suffering from YARN insufficient HDFS allocation requested for bringing the job further. IO scores drop to null and task raises failure. Alibaba Cloud's resource utilization goes within maximum levels where processor utilization depicts a consumption of 80\% to 90\% in the overall, memory utilization at it highest during all process, IO reads and writes moving along the 600 tps' and peaking around 1600 tps. With a slicely higher value in Throughput, Alibaba performs best with 9660 seconds, followed by GCP with 9821 seconds. Azure disqualifies this session.
 
-\paragraph{Terasort - Gigantic} Lorem ipsum
+\paragraph{Wordcount - Huge} Figure\ref{fig:uc1-wrdcnt-h-cmidt}; GCP performing processor utilization of 75\% to 100\% with a memory consumption between 80\% to 95\% where IO transfers move along 60 tps peaking at about 150 tps reaches second highest Throughput with 978 seconds response time. Azure's processor utilization moving along 70\% to about 100\% where memory depicts 30\% to 50\% utilization and lower IO transfers peaking at about 60 tps reaches the lowest throughput hance the longest duration of 1470 seconds. Alibaba depicting high processor and memory load moving in ranges 70\% to 100\% and 80\% to slightly over 90\% with IO transfers moving along 200 tps peaking at 300tps to 350tps reaches the highest Throughput hence shortest execution time of 889 seconds.
 
-\paragraph{Dfsioe-read - Huge} Lorem ipsum
+\paragraph{Wordcount - Gigantic} Figure\ref{fig:uc1-wrdcnt-g-cmidt}; GCP utilizing processor and memory sources at their maximum during the overall process, for CPU within 60\% up to pushing 100\%, memory utilization varying between 60\% to 100\%, and IO-read and IO-write transfers moving along 90 tps and 250 tps respectively, reaches second highest Throughput load resulting in 10131 seconds response time. Azure shows a dens processor utilization varyimg between 40\%s and close to 100\%s, memory consumption is somehow oppressed to stay within range 20\% up to 50\%, IO behavior reacts seldomly over 60 tps resulting in the lowest Throughput and longest Duration of 13596 seconds. Alibaba depicting a high processor utilization within range 85\%-100\%, a relatively more stable memory consumption in range 85\% to 100\% and IO transfers mostly about 300 tps thus performing highest Throughput hence shortest response time of 8671 seconds.
 
-\paragraph{Dfsioe-read - Gigantic} Lorem ipsum
+\paragraph{Dfsioe-read - Huge} Figure\ref{fig:uc1-dfsioer-h-cmidt}; GCP's processor utilization moving roughly between 80\% to 95\% accompanied by memory utilization  within range slightly below and over 70\%, IO transfers peaking at 400 tps mostly go along 100 tps and 250 tps performs second highest Throughput resulting in 294 seconds of Duration. Azure's processor utilization is rather limited to between 60\% and 90\%whereas the memory utilization behaves between 10\% to 50\%, generally low IO transfers with two markable IO-read and IO-write condences reaching peaks at 2000 tps and 1500 tps respectively results in the lowest Throughput and 662 seconds of response time. Alibaba with 245 seconds Duration displays a similar resoure utilization pattern with GCP where it differentiates in memory utilization moving around 90\%s.
 
-\paragraph{Dfsioe-write - Huge} Lorem ipsum
+\paragraph{Dfsioe-read - Gigantic} Figure\ref{fig:uc1-dfsioer-g-cmidt};
 
-\paragraph{Dfsioe-write - Gigantic} Lorem ipsum
+\paragraph{Dfsioe-write - Huge} Figure\ref{fig:uc1-dfsioew-h-cmidt};
 
-\paragraph{Wordcount - Huge} Lorem ipsum
+\paragraph{Dfsioe-write - Gigantic} Figure\ref{fig:uc1-dfsioew-g-cmidt};
 
-\paragraph{Wordcount - Gigantic} Lorem ipsum
+\paragraph{Scan - Huge} Figure\ref{fig:uc1-scan-h-cmidt};
 
-\paragraph{Scan - Huge} Lorem ipsum
+\paragraph{Scan - Gigantic} Figure\ref{fig:uc1-scan-g-cmidt};
 
-\paragraph{Scan - Gigantic} Lorem ipsum
+\paragraph{Join - Huge} Figure\ref{fig:uc1-join-h-cmidt};
 
-\paragraph{Join - Huge} Lorem ipsum
+\paragraph{Join - Gigantic} Figure\ref{fig:uc1-join-g-cmidt};
 
-\paragraph{Join - Gigantic} Lorem ipsum
+\paragraph{Aggregation - Huge} Figure\ref{fig:uc1-aggreg-h-cmidt};
 
-\paragraph{Aggregation - Huge} Lorem ipsum
+\paragraph{Aggregation - Gigantic} Figure\ref{fig:uc1-aggreg-g-cmidt};
 
-\paragraph{Aggregation - Gigantic} Lorem ipsum
+\paragraph{Bayes - Huge} Figure\ref{fig:uc1-bayes-h-cmidt};
 
-\paragraph{Bayes - Huge} Lorem ipsum
+\paragraph{Bayes - Gigantic} Figure\ref{fig:uc1-bayes-g-cmidt};
 
-\paragraph{Bayes - Gigantic} Lorem ipsum
+\paragraph{Kmeans - Huge} Figure\ref{fig:uc1-kmeans-h-cmidt};
 
-\paragraph{Kmeans - Huge} Lorem ipsum
+\paragraph{Kmeans - Gigantic} Figure\ref{fig:uc1-kmeans-g-cmidt};
 
-\paragraph{Kmeans - Gigantic} Lorem ipsum
+\paragraph{Pagerank - Huge} Figure\ref{fig:uc1-page-h-cmidt};
 
-\paragraph{Pagerank - Huge} Lorem ipsum
-
-\paragraph{Pagerank - Gigantic} Lorem ipsum
+\paragraph{Pagerank - Gigantic} Figure\ref{fig:uc1-page-g-cmidt};
 
 \begin{figure}[b]
 	\caption{UC1 - Sort (Huge; 3.2 GB)}
+	\label{fig:uc1-srt-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-srt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Sort (Gigantic; 32 GB)}
+	\label{fig:uc1-srt-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-srt-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Terasort (Huge; 320 MB)}
+	\label{fig:uc1-tera-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-tera-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Terasort (Gigantic; 3.2 GB)}
+	\label{fig:uc1-tera-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-tera-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Wordcount (Huge; 32 GB)}
+	\label{fig:uc1-wrdcnt-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Wordcount (Gigantic; 320 GB)}
+	\label{fig:uc1-wrdcnt-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-wrdcnt-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Dfsioe-read (Huge; No of Files: 256, File size: 100 MB)}
+	\label{fig:uc1-dfsioer-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-dfsioer-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Dfsioe-read (Gigantic; No of Files: 512, File size: 400 MB)}
+	\label{fig:uc1-dfsioer-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-dfsioer-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Dfsioe-write (Huge; No of Files: 256, File size: 100 MB)}
+	\label{fig:uc1-dfsioew-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-dfsioew-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Dfsioe-write (Gigantic; No of Files: 512, File size: 400 MB)}
+	\label{fig:uc1-dfsioew-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-dfsioew-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Scan (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
+	\label{fig:uc1-scan-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-scan-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Scan (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
+	\label{fig:uc1-scan-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-scan-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Join (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
+	\label{fig:uc1-join-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-join-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Join (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
+	\label{fig:uc1-join-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-join-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Aggregation (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
+	\label{fig:uc1-aggreg-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-aggreg-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Aggregation (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
+	\label{fig:uc1-aggreg-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-aggreg-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Bayes (Huge; PAGES: 500,000 CLASSES: 100 NGRAMS: 2)}
+	\label{fig:uc1-bayes-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-bayes-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Bayes (Gigantic; PAGES: 1,000,000 CLASSES: 100 NGRAMS: 2)}
+	\label{fig:uc1-bayes-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-bayes-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Kmeans (Huge; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 100,000,000 SAMP PER INPUT: 20,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
+	\label{fig:uc1-kmeans-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-kmeans-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Kmeans (Gigantic; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 200,000,000 SAMP PER INPUT: 40,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
+	\label{fig:uc1-kmeans-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-kmeans-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Pagerank (Huge; PAGES: 5,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
+	\label{fig:uc1-page-h-cmidt}
 	\includegraphics[width=\textwidth]{uc1-page-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC1 - Pagerank (Gigantic; PAGES: 30,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
+	\label{fig:uc1-page-g-cmidt}
 	\includegraphics[width=\textwidth]{uc1-page-g-cmidt}
 	\centering
 \end{figure}
 
-USE CASE 1: 
+USE CASE 2: 
 
-Sort - Tiny:
+\paragraph{Sort - Tiny} Figure\ref{fig:uc2-srt-t-cmidt}; 
+\paragraph{Sort - Small} Figure\ref{fig:uc2-srt-s-cmidt}; 
+\paragraph{Sort - Large} Figure\ref{fig:uc2-srt-l-cmidt}; 
+\paragraph{Sort - Huge} Figure\ref{fig:uc2-srt-h-cmidt}; 
+\paragraph{Sort - Gigantic} Figure\ref{fig:uc2-srt-g-cmidt}; 
 
-Sort - Small:
 
-Sort - Large:
 
-Sort - Huge:
+\paragraph{Wordcount - Tiny} Figure\ref{fig:uc2-wrdcnt-t-cmidt}; 
+\paragraph{Wordcount - Small} Figure\ref{fig:uc2-wrdcnt-s-cmidt}; 
+\paragraph{Wordcount - Large} Figure\ref{fig:uc2-wrdcnt-l-cmidt}; 
+\paragraph{Wordcount - Huge} Figure\ref{fig:uc2-wrdcnt-h-cmidt}; 
+\paragraph{Wordcount - Gigantic} Figure\ref{fig:uc2-wrdcnt-g-cmidt}; 
 
-Sort - Gigantic:
-
-Wordcount - Tiny:
-
-Wordcount - Small:
-
-Wordcount - Large:
-
-Wordcount - Huge:
-
-Wordcount - Gigantic:
 
 \begin{figure}[b]
 	\caption{UC2 - Sort (Tiny; 32 KB)}
+	\label{fig:uc2-srt-t-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-t-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Sort (Small; 3.2 MB)}
+	\label{fig:uc2-srt-s-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-s-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Sort (Large; 320 MB)}
+	\label{fig:uc2-srt-l-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-l-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Sort (Huge; 3.2 GB)}
+	\label{fig:uc2-srt-h-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Sort (Gigantic; 32 GB)}
+	\label{fig:uc2-srt-g-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-g-cmidt}
 	\centering
 \end{figure}
@@ -505,30 +524,35 @@ Wordcount results in scale
 
 \begin{figure}[b]
 	\caption{UC2 - Wordcount (Tiny; 32 KB)}
+	\label{fig:uc2-wrdcnt-t-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-t-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Wordcount (Small; 320 MB)}
+	\label{fig:uc2-wrdcnt-s-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-s-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Wordcount (Large; 3.2 GB)}
+	\label{fig:uc2-wrdcnt-l-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-l-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Wordcount (Huge; 32 GB)}
+	\label{fig:uc2-wrdcnt-h-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
 	\caption{UC2 - Wordcount (Gigantic; 320 GB)}
+	\label{fig:uc2-wrdcnt-g-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-g-cmidt}
 	\centering
 \end{figure}
