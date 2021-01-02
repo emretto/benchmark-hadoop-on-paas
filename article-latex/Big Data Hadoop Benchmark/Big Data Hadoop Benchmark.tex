@@ -90,20 +90,11 @@ The advent of Big Data emerged in any data-driven domain and scaled up the exten
 %%\section{The Elsevier article class}
 \section{Introduction}
 
-Big Data has become an inevitable aspect for enterprises and academia of the information era to deal with. As the global internet access rate covers a weighing majority of the global human population, mobile technology devices become democratized, sensors and IoT devices the more occupy daily life, ongoing scientific researches produce vast amounts of data outputs the Big Data phenomenon gathered itself by means of overwhelming size with Volume, ever accelerating growth rate with Velocity, and splitting into diverse structures with Variety, new approaches were forced to mature in order to ease the maintenance of Big Data and enable extracting valuable insights from it leveraging complex statistical formulae. Distributed frameworks for storage and computation sparked up first by search engines were inherited and furtherly developed by the open source community yielding what is known as Hadoop and its ecosystem today. Considering the complexity of dealing with big data Hadoop represents a modern analytics framework decreasing management efforts and duration of analytics operations to an acceptable level by means of affordable commodity computers.
+Big Data has become an indispensable aspect for enterprises and academia of the information era to deal with. As the global internet access rate covers a weighing majority of the global human population, mobile technology devices become democratized, sensors and IoT devices the more occupy daily life, ongoing scientific researches produce vast amounts of data outputs the Big Data phenomenon gathered itself by means of overwhelming size with Volume, ever accelerating growth rate with Velocity, and splitting into diverse structures with Variety, new approaches were forced to mature in order to ease the maintenance of Big Data and enable extracting valuable insights from it leveraging complex statistical formulae. Distributed frameworks for storage and computation sparked up first by search engines were inherited and furtherly developed by the open source community yielding what is known as Hadoop and its ecosystem today. Considering the complexity of dealing with big data Hadoop represents a modern analytics framework decreasing management efforts and duration of analytics operations to an acceptable level by means of affordable commodity computers.
 
 In parallel, the commercialization of Cloud Computing in the early 2000's delivered utilization of storage and computing resources to the end users saving them high investments on hardware technology that is soon going to be obsolete and is expensive to maintain. As the migration to the cloud is an ongoing process, Hadoop also slips out from its residence on on-prem infrastructure to the cloud by being implemented on virtual machine instances provided as IaaS platforms by many providers. The Cloud Service Providers embraced the need of eliminating Hadoop's complex implementation process on multi-node VMs by providing managed Hadoop systems commercially packaged as PaaS, which are pre-installed and pre-configured Hadoop clusters allowing the installation of tens to hundreds of nodes in a matter of minutes by simply determining some settings like hardware specs and node numbers prior the installation. The Managed Hadoop system is both a blessing and a curse, by leaving the hard implementation part which is not necessarily related with the main analysis objective to a contractor the end user saves time and efforts including a payoff, though: By definition, managed systems are prepackaged solutions provided in black-box nature. CSP apply behind-the-scenes tweaks in terms of reaching better performance results on selected approaches like memory intensive or compute intensive applications.
 
 In this study we put three CSP providers' managed Hadoop services in focus in terms of performance evaluation comparison: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 report in leading or niche section. Bound by availability of their offered hardware and software options we selected by providers' promise apparently same or close settings. Without any performance tweak operation with their settings for any performance optimization on the respective managed systems after installation we immediately executed several workloads from HiBench's micro, sql, ml, and websearch categories. For a more clear understanding of the benchmark outputs, during the benchmark execution we collected system utilization records on each worker node of the cluster. The results yield that Hadoop PaaS offerings by vendor's promise side perform and system utilizations may highly vary among CSPs.
-
-
-\paragraph{Functionality} The Elsevier article class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
-\begin{itemize}
-\item document style
-\item baselineskip
-\item front matter
-\end{itemize}
-
 
 \section{Related Work}
 HiBench is a tool to measure a specific system’s performing behaviour during execution. The conceptualization of conducting a benchmark may arise from different soils. Based on the conductor’s motivation; a benchmark’s use case could be an inner evaluation of a system’s performance before and after some configuration tweaks are set, comparison of rival / complementary systems, or putting CSP’s cloud infrastructure services on scale. Following literature has been searched with finding different use cases of HiBench benchmarking suite in mind. 
@@ -140,7 +131,7 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 		 {} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
 		\hline
 		Service & Dataproc & HDInsight & e-MapReduce \\
-		Region & \textit{europe-west3-a} & \textit{Germany West Central} & \textit{eu-central-1} \\
+		Region & europe-west3-a & Germany West Central & eu-central-1 \\
 		Location & Frankfurt & Frankfurt & Frankfurt \\
 		Image & 1.4-ubuntu18  & HDI 3.6 & EMR-3.32.0 \\
 		OS & ubuntu18.04 & ubuntu 16.04 & Aliyun Linux 2 \\
@@ -149,17 +140,18 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 		\hline
 		\multicolumn{4}{ c }{MASTER NODE} \\
 		\hline
-		Machine Type & \textit{e2-highmem-8} & \textit{A8m v2} & \textit{ecs.se1.2xlarge} \\
+		Machine Type & e2-highmem-8 & A8m v2 & ecs.se1.2xlarge \\
 		Processors & 8 vCPU & 8 cores & 8 vCPU \\
 		Memory & 64 GB RAM & 64 GB RAM & 64 GB RAM \\
 		\hline
 		\multicolumn{4}{ c }{WORKER NODES} \\
 		\hline
 		\# Nodes & 3 & 3 & 3 \\
-		Machine Type & \textit{e2-highmem-4} & \textit{A4m v2} & \textit{ecs.se1.xlarge} \\
+		Machine Type & e2-highmem-4 & A4m v2 & ecs.se1.xlarge \\
 		Processors & 4 vCPU & 4 cores & 4 vCPU \\	
 		Memory & 32 GB RAM & 32 GB RAM & 32 GB RAM \\	
-		Storage & HDFS 1000 GB & \multirow{3}{ 4em }{WASB (Azure storage)} & HDFS 1000 GB \\	
+		Storage & HDFS 1000 GB & \multirow{3}{ 8em }{WASB \\
+			\textit{Azure blob storage}} & HDFS 1000 GB \\	
 		Replication & 2 &  & 2 \\	
 		Block size & 128 MB &  & 128 MB \\
 		\hline
@@ -284,13 +276,14 @@ USE CASE 1:
 
 \paragraph{Dfsioe-read - Huge} Figure\ref{fig:uc1-dfsioer-h-cmidt}; GCP's processor utilization moving roughly between 80\% to 95\% accompanied by memory utilization  within range slightly below and over 70\%, IO transfers peaking at 400 tps mostly go along 100 tps and 250 tps performs second highest Throughput resulting in 294 seconds of Duration. Azure's processor utilization is rather limited to between 60\% and 90\%whereas the memory utilization behaves between 10\% to 50\%, generally low IO transfers with two markable IO-read and IO-write condences reaching peaks at 2000 tps and 1500 tps respectively results in the lowest Throughput and 662 seconds of response time. Alibaba with 245 seconds Duration displays a similar resoure utilization pattern with GCP where it differentiates in memory utilization moving around 90\%s.
 
-\paragraph{Dfsioe-read - Gigantic} Figure\ref{fig:uc1-dfsioer-g-cmidt};
+\paragraph{Dfsioe-read - Gigantic} Figure\ref{fig:uc1-dfsioer-g-cmidt}; processor utilization in GCP cloud concentrates within range of 80\% to 90\%, memory utilization moves around 95\% to 100\% whereas IO read transfers moving along about 500 tps brings its performance to second highest Throughput with 915 seconds Duration. Azure displays a performance within a range of 55\% up to 90\% in CPU utilization, 20\% to 55\% in memory utilization, and IO-write activity moving along 70 tps, IO-read showing peak at about 470 tps reaching the lowest performance in Throughput outputting 1886 seconds response time.
+Alibaba system utilization moves along 80\%-90\% range for processing performance, 90\%-100\% for memory load and a behavior up to 1700 tps IO-write placing its performance to the highest Throughput with 660 seconds duration.
 
-\paragraph{Dfsioe-write - Huge} Figure\ref{fig:uc1-dfsioew-h-cmidt};
+\paragraph{Dfsioe-write - Huge} Figure\ref{fig:uc1-dfsioew-h-cmidt}; in GCP processor utilization moves between 70\% and 90\%, memory load increments from 20\% up to 70\% whereas IO-write transfers move along 500 tps resulting in second shortest response time 379 seconds. Azure's CPU utilization around 60\% to 90\%, memory load moves between 20\% and 40\% whereas IO-write transfers vary about 20 tps to 80 tp peaking at about 120 tps by a Duration output of 658 seconds. Alibaba with processor utilization 80\% and 95\%, incrementing memory load from about 40\% up to 90\%-100\%, and IO-write transfers at about 100 tps to 600 tps peaking at about 800 tps performs the heaviest Throughput thus reaching the shortest response time with 281 seconds.
 
-\paragraph{Dfsioe-write - Gigantic} Figure\ref{fig:uc1-dfsioew-g-cmidt};
+\paragraph{Dfsioe-write - Gigantic} Figure\ref{fig:uc1-dfsioew-g-cmidt}; GCP processor utilization moves along a broad range hitting up to 90\% load, memory load quickly rises to 95\%-100\% range and keeps its position in overall execution,  IO-writes move alond 500 tps to 600 tps placing GCP to the second best performance with 1347 seconds response time. Azure shows a CPU utization in a range 60\% up to 90\% until it drops to about 25\% in the 2/3th of the overall process, memory load moves along lower 20\% to upper 50\% until its sudden drop to upper 15\% simultaneously with CPU utilization where IO-write transfers peak at about 120 tps resulting in 1914 seconds response time. Alibaba performing the shortest response time with 1060 seconds displays a similar memory and processor utilization behaviour with GCP where it differs in IO-write transfers peaking at about 900 tps.
 
-\paragraph{Scan - Huge} Figure\ref{fig:uc1-scan-h-cmidt};
+\paragraph{Scan - Huge} Figure\ref{fig:uc1-scan-h-cmidt}; GCP processor utilization condences between about 80\% and 90\% during benchmark execution, memory load depicts movement between 20\% and 40\% accompanied by an IO-write transfer reaching over 500 tps which brings GCP to the leading performance within this benchmark with 73 seconds. On Azure's side processor utilization moves along 80\%-90\% range whereas memory load increments from the 15\%s to the 30\%s, relatively low IO-write tansfer peaking at about 85 tps results in lowest Throughput and 157 seconds Duration. Alibaba follows a similar pattern like GCP in resource utilization with about 90\% CPU load, 15\% to below 40\% memory utilization but a less dense IO-write transfer peaking at about 550 tps and so reaching a close Throughput to GCP resulting in 74 seconds response time.
 
 \paragraph{Scan - Gigantic} Figure\ref{fig:uc1-scan-g-cmidt};
 
@@ -468,6 +461,55 @@ USE CASE 1:
 	\centering
 \end{figure}
 
+A possible reason for Azure's downperformance in dfsioe over GCP and Alibaba
+
+
+%%Use Case 1 Comparative Results:
+\begin{table}[b]
+	\centering
+	\small
+	\caption{Use Case 1 Comparative benchmark outputs}
+	\label{tab:uc1-comparative-results}
+	\begin{tabular}{ r r r r r r r r }
+		\multicolumn{6}{ l }{Data Scale: Huge}  \\
+		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
+		\hline
+		Sort & GCP & Alibaba & -58.57\% & Azure & -87.14\% \\
+		Terasort & GCP & Azure & -28.64\% & Alibaba & -58.02\% \\
+		Wordcount & Alibaba & GCP & -10.01\% & Azure & -65.35\% \\
+		Dfsioe-r & Alibaba & GCP & -20.00\% & Azure & -170.20\% \\
+		Dfsioe-w & Alibaba & GCP & -34.88\% & Azure & -134.16\% \\
+		Scan & GCP & Alibaba & -1.37\% & Azure & -115.07\% \\
+		Join & Alibaba & GCP & -3.43\% & Azure & -103.43\% \\
+		Aggregation & GCP-Alibaba & --- & --- & Azure & -121.65\% \\
+		Bayes & GCP & Alibaba & -15.86\% & Azure & -135.02\% \\
+		Kmeans & Alibaba & Azure & -11.74\% & GCP & -12.13\% \\
+		Pagerank & GCP & Alibaba & -59.20\% & Azure & -115.93\% \\
+		\hline
+		\multicolumn{6}{ l }{Data Scale: Gigantic}  \\
+		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
+		\hline
+		Sort & GCP & Azure & -10.07\% & Alibaba & -25.31\% \\
+		Terasort & Alibaba & GCP & -1.67\% & Azure & --- \\
+		Wordcount & Alibaba & GCP & -16.84\% & Azure & -56.80\% \\
+		Dfsioe-r & Alibaba & GCP & -38.64\% & Azure & -185.76\% \\
+		Dfsioe-w & Alibaba & GCP & -27.08\% & Azure & -80.57\% \\
+		Scan & Alibaba & GCP & -12.29\% & Azure & -26.29\% \\
+		Join & Alibaba & GCP & -0.17\% & Azure & -28.11\% \\
+		Aggregation & GCP & Alibaba & -8.03\% & Azure & -13.58\% \\
+		Bayes & GCP & Alibaba & -18.93\% & Azure & -135.31\% \\
+		Kmeans & Alibaba & Azure & -0.20\% & GCP & -12.57\% \\
+		Pagerank & GCP & Azure & -40.71\% & Alibaba & -65.97\% \\
+		\hline
+		
+		
+	\end{tabular}
+\end{table}
+
+
+
+
+
 USE CASE 2: 
 
 \paragraph{Sort - Tiny} Figure\ref{fig:uc2-srt-t-cmidt}; 
@@ -560,15 +602,16 @@ Wordcount results in scale
 
 
 \section{Discussion}
+\paragraph{Limitations, workarounds, failures}One major limitation of this study has been the high-cost of benchmark executions' total running time which is charged in a pay-per-use manner leading the conductors halting benchmarks at only one successful execution for each workload. This is not fitting the best practise, though, where a benchmark would be executed thrice for each workload and the average performance results were taken. Following the best practise would have provided more stable outcomes especially in cases where there occurs very tiny difference between successive performances of respective providers. Hence, we recommend this study to be understood in terms of an attempt trying to bring more clarity to black-box natured managed Hadoop proposals' performance behavior by means of resource utilization dynamics, and as the managed services come out of the box without applying any performance tweaking configurations. We do not recommend this study to be understood as a grading board for the business values provided by respective CSPs.
 
-\section{Front matter}
+HiBench comes with dependencies downloaded during its compilation process by Apache Maven. The Hive engine is one of those dependencies leveraged by HiBench for running SQL workloads Scan, Join, and Aggregation. Alibaba's e-Mapreduce comprises a ready made Hive hook trigerring a Java file to run post executional transactions for other services within the package. However this preconfiguration prevented HiBench from starting with respective benchmarks' execution since the HiBench based Hive engine does not include the aforementioned jar file defined for e-MapReduce's specific environment. Disabling the predefined Hive hook from Alibaba e-MapReduce's UI management console apparently solved this issue and enabled HiBench's SQL worloads to run, hence the need to annotate it here. With GCP and Azure issues of this kind did not occur.
 
-The author names and affiliations could be formatted in two ways:
-\begin{enumerate}[(1)]
-\item Group the authors per affiliation.
-\item Use footnotes to indicate the affiliations.
-\end{enumerate}
-See the front matter of this document for examples. You are recommended to conform your choice to the journal you are submitting to.
+In Azure environment the Terasort benchmark running in data scale gigantic failed to complete in all three attempts we conducted where about 20\% of maps were completed. As distinct from GCP and Alibaba where the end user is liberate to chose HDFS or respective providers storage system as the cluster's file system, Azure obligates the user to go with WASB file system among other Azure storage services with a promise to Peta-scale. However, after inspecting the failure it turned out that the exception is not due the WASB file system. Even though WASB is predefined as the cluster's file system, during the applications' run times YARN still leverages the cluster's HDFS file system which at specific levels of maps operators fail to allocate HDFS for inner operations. As conductors we marked this failure as a structural bottleneck, since all end users running Terasort operation at this scale would face the same error, and since resource utilization can be tracked up to the failure point and after, we kept this benchmark as disqualified.
+
+
+
+\section{Conclusion}
+
 
 \section{Bibliography styles}
 
