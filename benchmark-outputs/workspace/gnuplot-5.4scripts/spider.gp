@@ -10,6 +10,10 @@ set style spiderplot  linewidth 1.000 dashtype solid pointtype 6 pointsize 2.000
 set style spiderplot fillstyle  transparent solid 0.20 border
 set size ratio 1 1,1
 set style data spiderplot
+
+#set term png size 1600, 1000
+#set output "plots/TEST.png"
+
 unset xtics
 unset ytics
 unset ztics
@@ -74,9 +78,9 @@ NO_ANIMATION = 1
 #      for [j=1:|Array3|] Array3 using (Array3[j]) lc "light-green" lw 1 notitle
 
 
-GCP_TINY = "c:/Users/UluerEmre/Desktop/uc2-gcp-tiny-srt.dat"
-AZU_TINY = "c:/Users/UluerEmre/Desktop/uc2-azu-tiny-srt.dat"
-ALI_TINY = "c:/Users/UluerEmre/Desktop/uc2-ali-tiny-srt.dat"
+GCP_TINY = "reports/processed/uc2-gcp-t-srt.tsv"
+AZU_TINY = "reports/processed/uc2-azu-t-srt.tsv"
+ALI_TINY = "reports/processed/uc2-ali-t-srt.tsv"
 ## Last datafile plotted: "@@"
 plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
       for [i=1:6] GCP_TINY using i lc "grey" lw 1 , \
