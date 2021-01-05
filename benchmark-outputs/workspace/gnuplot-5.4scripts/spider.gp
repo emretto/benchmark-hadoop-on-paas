@@ -10,6 +10,10 @@ set style spiderplot  linewidth 1.000 dashtype solid pointtype 6 pointsize 2.000
 set style spiderplot fillstyle  transparent solid 0.20 border
 set size ratio 1 1,1
 set style data spiderplot
+
+#set term png size 1600, 1000
+#set output "plots/TEST.png"
+
 unset xtics
 unset ytics
 unset ztics
