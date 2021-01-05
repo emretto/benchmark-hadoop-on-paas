@@ -74,9 +74,9 @@ NO_ANIMATION = 1
 #      for [j=1:|Array3|] Array3 using (Array3[j]) lc "light-green" lw 1 notitle
 
 
-GCP_TINY = "c:/Users/UluerEmre/Desktop/uc2-gcp-tiny.dat"
-AZU_TINY = "c:/Users/UluerEmre/Desktop/uc2-azu-tiny.dat"
-ALI_TINY = "c:/Users/UluerEmre/Desktop/uc2-ali-tiny.dat"
+GCP_TINY = "c:/Users/UluerEmre/Desktop/uc2-gcp-tiny-srt.dat"
+AZU_TINY = "c:/Users/UluerEmre/Desktop/uc2-azu-tiny-srt.dat"
+ALI_TINY = "c:/Users/UluerEmre/Desktop/uc2-ali-tiny-srt.dat"
 ## Last datafile plotted: "@@"
 plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
       for [i=1:6] GCP_TINY using i lc "grey" lw 1 , \
