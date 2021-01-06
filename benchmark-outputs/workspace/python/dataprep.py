@@ -36,7 +36,10 @@ for data_scale in data_scales:
                 df_cpu = pd.read_csv('../../uc2/'+csp+'/'+data_scale+'/sysstat/data-w' + str(worker) + '/'+csp+'-uc2-w' + str(worker) + '-'+data_scale+'-'+benchmark+'-c0.dat', decimal=",", delim_whitespace=True, header=None)
                 df_cpu = pd.DataFrame(df_cpu)
                 df_cpu.columns = ['time', 'cpu', '(%)user', '(%)nice', '(%)system', '(%)iowait', '(%)steal', '(%)idle']
-                x_cpu = df_cpu[['(%)user']].values.astype(float)
+                if (csp == 'gcp'):
+                    x_cpu = df_cpu[['(%)nice']].values.astype(float)
+                else:
+                    x_cpu = df_cpu[['(%)user']].values.astype(float)
                 x_cpu_scaled = scaler.fit_transform(x_cpu)
                 df_cpu_normalized = pd.DataFrame(x_cpu_scaled)
 
