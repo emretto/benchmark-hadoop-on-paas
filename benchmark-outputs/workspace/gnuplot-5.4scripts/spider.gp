@@ -4,10 +4,10 @@ set grid spider
 set grid noxtics nomxtics noytics nomytics noztics nomztics nortics nomrtics nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics
 set grid back linecolor rgb "grey" linewidth 0.500 dashtype solid, linecolor rgb "grey" linewidth 0.500 dashtype solid
 set key horizontal
-set key bottom left
+set key out bottom left
 set spiderplot
-set style spiderplot linewidth 1.000 dashtype solid pointtype 6 pointsize 2.000
-set style spiderplot fillstyle  transparent solid 0.20 border
+set style spiderplot linewidth 0.500 dashtype solid pointtype 6 pointsize 2.000
+set style spiderplot fillstyle  transparent solid 0.30 border
 set size ratio 1 1,1
 set style data spiderplot
 
@@ -15,7 +15,7 @@ set style data spiderplot
 #set output "plots/TEST.png"
 
 set size 0.5, 0.5
-set multiplot title "UC2 - Sort" layout 2,3 rowsfirst scale 1.1,0.9
+set multiplot title "" layout 2,3 rowsfirst scale 1.1,0.9
 
 
 unset xtics
@@ -75,25 +75,25 @@ NO_ANIMATION = 1
 
 
 
-GCP_TINY = "reports/processed/uc2-gcp-t-srt.tsv"
-AZU_TINY = "reports/processed/uc2-azu-t-srt.tsv"
-ALI_TINY = "reports/processed/uc2-ali-t-srt.tsv"
+GCP_TINY = "reports/processed/uc2-gcp-t-wrdcnt.tsv"
+AZU_TINY = "reports/processed/uc2-azu-t-wrdcnt.tsv"
+ALI_TINY = "reports/processed/uc2-ali-t-wrdcnt.tsv"
 
-GCP_SMALL = "reports/processed/uc2-gcp-s-srt.tsv"
-AZU_SMALL = "reports/processed/uc2-azu-s-srt.tsv"
-ALI_SMALL = "reports/processed/uc2-ali-s-srt.tsv"
+GCP_SMALL = "reports/processed/uc2-gcp-s-wrdcnt.tsv"
+AZU_SMALL = "reports/processed/uc2-azu-s-wrdcnt.tsv"
+ALI_SMALL = "reports/processed/uc2-ali-s-wrdcnt.tsv"
 
-GCP_LARGE= "reports/processed/uc2-gcp-l-srt.tsv"
-AZU_LARGE = "reports/processed/uc2-azu-l-srt.tsv"
-ALI_LARGE = "reports/processed/uc2-ali-l-srt.tsv"
+GCP_LARGE= "reports/processed/uc2-gcp-l-wrdcnt.tsv"
+AZU_LARGE = "reports/processed/uc2-azu-l-wrdcnt.tsv"
+ALI_LARGE = "reports/processed/uc2-ali-l-wrdcnt.tsv"
 
-GCP_HUGE = "reports/processed/uc2-gcp-h-srt.tsv"
-AZU_HUGE = "reports/processed/uc2-azu-h-srt.tsv"
-ALI_HUGE = "reports/processed/uc2-ali-h-srt.tsv"
+GCP_HUGE = "reports/processed/uc2-gcp-h-wrdcnt.tsv"
+AZU_HUGE = "reports/processed/uc2-azu-h-wrdcnt.tsv"
+ALI_HUGE = "reports/processed/uc2-ali-h-wrdcnt.tsv"
 
-GCP_GIGANTIC = "reports/processed/uc2-gcp-g-srt.tsv"
-AZU_GIGANTIC = "reports/processed/uc2-azu-g-srt.tsv"
-ALI_GIGANTIC = "reports/processed/uc2-ali-g-srt.tsv"
+GCP_GIGANTIC = "reports/processed/uc2-gcp-g-wrdcnt.tsv"
+AZU_GIGANTIC = "reports/processed/uc2-azu-g-wrdcnt.tsv"
+ALI_GIGANTIC = "reports/processed/uc2-ali-g-wrdcnt.tsv"
 
 ## Last datafile plotted: "@@"
 
