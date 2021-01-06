@@ -130,18 +130,15 @@ Ivanov et al. [56] compare the performances of two enterprise grade applications
 \section{Method}
 CSP configurations in Table \ref{tab:csp-configs}
 
-\section{Results}
-Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench benchmark execution outputs.
-\paragraph{Analysis}HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and Wordcount), sql (Scan, Join, and Aggregation), ml (Bayes and Kmeans), and websearch (Pagerank) have been executed on all three CSPs managed Hadoop services. During benchmark runtime resource utilization on worker nodes have been captured. The resulting multiplots are suggested to be read as follows: Top-left, top-right, and bottom-left plots represent CPU (user\%), Memory, and IO utilization on each worker node of the respective cluster over time. CPU utilization lines are given in blue tones, Memory utilization lines are given in fuchsia tones, IO-read and IO-write tps' are represented with orange tones and green tones, respectively. Even though the coloring convention might sound confusing, it gives a clear overview in terms of resource utilization of the total benchmark process over time. The left hand side x-axis measures CPU/Memory usage in percent, the right hand side x-axis measures IO-read or IO-write transfers in byte per second. The bottom-right plot represents the comparative benchmark performance outputs of the respective CSP. Duration measure in seconds is expected to perceived as "lower is better" while Throughput which is the amount of processed data per second in bytes is expected to perceived as "higher is better".
 
-\begin{table}[b]
+\begin{table}
 	\centering
 	\small
 	\caption{Selected configurations on CSPs’ managed Hadoop services}
 	\label{tab:csp-configs}
-	\begin{tabular}{ p{2.5cm} p{2.5cm} p{3.7cm} p{3cm}  }
+	\begin{tabular}[h]{ p{2.5cm} p{2.5cm} p{3.7cm} p{3cm}  }
 		\hline
-		 {} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
+		{} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
 		\hline
 		Service & Dataproc & HDInsight & e-MapReduce \\
 		Region & europe-west3-a & Germany West Central & eu-central-1 \\
@@ -171,13 +168,17 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 	\end{tabular}
 \end{table}
 
+
+\section{Results}
+Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench benchmark execution outputs.
+
 %%Use Case 1 Tabular Results:
-\begin{table}[b]
+\begin{table}
 	\centering
 	\small
 	\caption{Use Case 1 benchmark outputs}
 	\label{tab:uc1-results}
-	\begin{tabular}{ r r r r r r r r }
+	\begin{tabular}[h]{ r r r r r r r r }
 		\multicolumn{4}{ l }{Data Scale: Huge} & & & & \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
@@ -220,13 +221,15 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 	\end{tabular}
 \end{table}
 
+
+
 %% Use Case 2 Tabular Results:
-\begin{table}[b]
+\begin{table}
 	\centering
 	\small
 	\caption{Use Case 2 benchmark outputs}
 	\label{tab:uc2-results}
-	\begin{tabular}{ l r r r r r r r }
+	\begin{tabular}[h]{ l r r r r r r r }
 		%%\multicolumn{4}{ l }{Data Scale: Tiny} & & & & \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
@@ -268,11 +271,58 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 		Wordcount (g) & 328.49 GB & 9749 & 33696143 & 13286 & 24725537 & 8622 & 38100208 \\
 		\hline
 		\multicolumn{8}{ r }{(t): tiny, (s): small, (l): large, (h): huge, (g): gigantic} \\
-\hline
-		
-		
+		\hline
 	\end{tabular}
 \end{table}
+
+
+
+%%Use Case 1 Comparative Results:
+\begin{table}
+	\centering
+	\small
+	\caption{Use Case 1 Comparative benchmark outputs}
+	\label{tab:uc1-comparative-results}
+	\begin{tabular}[h]{ r r r r r r r r }
+		\multicolumn{6}{ l }{Data Scale: Huge}  \\
+		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
+		\hline
+		Sort & GCP & Alibaba & -58.57\% & Azure & -87.14\% \\
+		Terasort & GCP & Azure & -28.64\% & Alibaba & -58.02\% \\
+		Wordcount & Alibaba & GCP & -10.01\% & Azure & -65.35\% \\
+		Dfsioe-r & Alibaba & GCP & -20.00\% & Azure & -170.20\% \\
+		Dfsioe-w & Alibaba & GCP & -34.88\% & Azure & -134.16\% \\
+		Scan & GCP & Alibaba & -1.37\% & Azure & -115.07\% \\
+		Join & Alibaba & GCP & -3.43\% & Azure & -103.43\% \\
+		Aggregation & GCP-Alibaba & --- & --- & Azure & -121.65\% \\
+		Bayes & GCP & Alibaba & -15.86\% & Azure & -135.02\% \\
+		Kmeans & Alibaba & Azure & -11.74\% & GCP & -12.13\% \\
+		Pagerank & GCP & Alibaba & -59.20\% & Azure & -115.93\% \\
+		\hline
+		\multicolumn{6}{ l }{Data Scale: Gigantic}  \\
+		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
+		\hline
+		Sort & GCP & Azure & -10.07\% & Alibaba & -25.31\% \\
+		Terasort & Alibaba & GCP & -1.67\% & Azure & --- \\
+		Wordcount & Alibaba & GCP & -16.84\% & Azure & -56.80\% \\
+		Dfsioe-r & Alibaba & GCP & -38.64\% & Azure & -185.76\% \\
+		Dfsioe-w & Alibaba & GCP & -27.08\% & Azure & -80.57\% \\
+		Scan & Alibaba & GCP & -12.29\% & Azure & -26.29\% \\
+		Join & Alibaba & GCP & -0.17\% & Azure & -28.11\% \\
+		Aggregation & GCP & Alibaba & -8.03\% & Azure & -13.58\% \\
+		Bayes & GCP & Alibaba & -18.93\% & Azure & -135.31\% \\
+		Kmeans & Alibaba & Azure & -0.20\% & GCP & -12.57\% \\
+		Pagerank & GCP & Azure & -40.71\% & Alibaba & -65.97\% \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+\paragraph{Analysis}HiBench's Hadoop related benchmarks in groups micro (Sort, Terasort, Dfsioe, and Wordcount), sql (Scan, Join, and Aggregation), ml (Bayes and Kmeans), and websearch (Pagerank) have been executed on all three CSPs managed Hadoop services. During benchmark runtime resource utilization on worker nodes have been captured. The resulting multiplots are suggested to be read as follows: Top-left, top-right, and bottom-left plots represent CPU (user\%), Memory, and IO utilization on each worker node of the respective cluster over time. CPU utilization lines are given in blue tones, Memory utilization lines are given in fuchsia tones, IO-read and IO-write tps' are represented with orange tones and green tones, respectively. Even though the coloring convention might sound confusing, it gives a clear overview in terms of resource utilization of the total benchmark process over time. The left hand side x-axis measures CPU/Memory usage in percent, the right hand side x-axis measures IO-read or IO-write transfers in byte per second. The bottom-right plot represents the comparative benchmark performance outputs of the respective CSP. Duration measure in seconds is expected to perceived as "lower is better" while Throughput which is the amount of processed data per second in bytes is expected to perceived as "higher is better".
+
+
+
 
 
 USE CASE 1: 
@@ -321,204 +371,162 @@ Alibaba system utilization moves along 80\%-90\% range for processing performanc
 
 \paragraph{Pagerank - Gigantic} Figure \ref{fig:uc1-page-g-cmidt};
 
+
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-srt-h-cmidt}
 	\caption{UC1 - Sort (Huge; 3.2 GB)}
 	\label{fig:uc1-srt-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-srt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-srt-g-cmidt}
 	\caption{UC1 - Sort (Gigantic; 32 GB)}
 	\label{fig:uc1-srt-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-srt-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-tera-h-cmidt}
 	\caption{UC1 - Terasort (Huge; 320 MB)}
 	\label{fig:uc1-tera-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-tera-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-tera-g-cmidt}
 	\caption{UC1 - Terasort (Gigantic; 3.2 GB)}
 	\label{fig:uc1-tera-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-tera-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-wrdcnt-h-cmidt}
 	\caption{UC1 - Wordcount (Huge; 32 GB)}
 	\label{fig:uc1-wrdcnt-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-wrdcnt-g-cmidt}
 	\caption{UC1 - Wordcount (Gigantic; 320 GB)}
 	\label{fig:uc1-wrdcnt-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-wrdcnt-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-dfsioer-h-cmidt}
 	\caption{UC1 - Dfsioe-read (Huge; No of Files: 256, File size: 100 MB)}
 	\label{fig:uc1-dfsioer-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-dfsioer-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-dfsioer-g-cmidt}
 	\caption{UC1 - Dfsioe-read (Gigantic; No of Files: 512, File size: 400 MB)}
 	\label{fig:uc1-dfsioer-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-dfsioer-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-dfsioew-h-cmidt}
 	\caption{UC1 - Dfsioe-write (Huge; No of Files: 256, File size: 100 MB)}
 	\label{fig:uc1-dfsioew-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-dfsioew-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-dfsioew-g-cmidt}
 	\caption{UC1 - Dfsioe-write (Gigantic; No of Files: 512, File size: 400 MB)}
 	\label{fig:uc1-dfsioew-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-dfsioew-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-scan-h-cmidt}
 	\caption{UC1 - Scan (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-scan-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-scan-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-scan-g-cmidt}
 	\caption{UC1 - Scan (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-scan-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-scan-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-join-h-cmidt}
 	\caption{UC1 - Join (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-join-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-join-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-join-g-cmidt}
 	\caption{UC1 - Join (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-join-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-join-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-aggreg-h-cmidt}
 	\caption{UC1 - Aggregation (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-aggreg-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-aggreg-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-aggreg-g-cmidt}
 	\caption{UC1 - Aggregation (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-aggreg-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-aggreg-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}b]
+	\includegraphics[width=\textwidth]{uc1-bayes-h-cmidt}
 	\caption{UC1 - Bayes (Huge; PAGES: 500,000 CLASSES: 100 NGRAMS: 2)}
 	\label{fig:uc1-bayes-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-bayes-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-bayes-g-cmidt}
 	\caption{UC1 - Bayes (Gigantic; PAGES: 1,000,000 CLASSES: 100 NGRAMS: 2)}
 	\label{fig:uc1-bayes-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-bayes-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-kmeans-h-cmidt}
 	\caption{UC1 - Kmeans (Huge; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 100,000,000 SAMP PER INPUT: 20,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
 	\label{fig:uc1-kmeans-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-kmeans-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-kmeans-g-cmidt}
 	\caption{UC1 - Kmeans (Gigantic; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 200,000,000 SAMP PER INPUT: 40,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
 	\label{fig:uc1-kmeans-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-kmeans-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-page-h-cmidt}
 	\caption{UC1 - Pagerank (Huge; PAGES: 5,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
 	\label{fig:uc1-page-h-cmidt}
-	\includegraphics[width=\textwidth]{uc1-page-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
+	\includegraphics[width=\textwidth]{uc1-page-g-cmidt}
 	\caption{UC1 - Pagerank (Gigantic; PAGES: 30,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
 	\label{fig:uc1-page-g-cmidt}
-	\includegraphics[width=\textwidth]{uc1-page-g-cmidt}
 	\centering
 \end{figure}
 
 A possible reason for Azure's downperformance in dfsioe over GCP and Alibaba
-
-
-%%Use Case 1 Comparative Results:
-\begin{table}[b]
-	\centering
-	\small
-	\caption{Use Case 1 Comparative benchmark outputs}
-	\label{tab:uc1-comparative-results}
-	\begin{tabular}{ r r r r r r r r }
-		\multicolumn{6}{ l }{Data Scale: Huge}  \\
-		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
-		\hline
-		Sort & GCP & Alibaba & -58.57\% & Azure & -87.14\% \\
-		Terasort & GCP & Azure & -28.64\% & Alibaba & -58.02\% \\
-		Wordcount & Alibaba & GCP & -10.01\% & Azure & -65.35\% \\
-		Dfsioe-r & Alibaba & GCP & -20.00\% & Azure & -170.20\% \\
-		Dfsioe-w & Alibaba & GCP & -34.88\% & Azure & -134.16\% \\
-		Scan & GCP & Alibaba & -1.37\% & Azure & -115.07\% \\
-		Join & Alibaba & GCP & -3.43\% & Azure & -103.43\% \\
-		Aggregation & GCP-Alibaba & --- & --- & Azure & -121.65\% \\
-		Bayes & GCP & Alibaba & -15.86\% & Azure & -135.02\% \\
-		Kmeans & Alibaba & Azure & -11.74\% & GCP & -12.13\% \\
-		Pagerank & GCP & Alibaba & -59.20\% & Azure & -115.93\% \\
-		\hline
-		\multicolumn{6}{ l }{Data Scale: Gigantic}  \\
-		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
-		\hline
-		Sort & GCP & Azure & -10.07\% & Alibaba & -25.31\% \\
-		Terasort & Alibaba & GCP & -1.67\% & Azure & --- \\
-		Wordcount & Alibaba & GCP & -16.84\% & Azure & -56.80\% \\
-		Dfsioe-r & Alibaba & GCP & -38.64\% & Azure & -185.76\% \\
-		Dfsioe-w & Alibaba & GCP & -27.08\% & Azure & -80.57\% \\
-		Scan & Alibaba & GCP & -12.29\% & Azure & -26.29\% \\
-		Join & Alibaba & GCP & -0.17\% & Azure & -28.11\% \\
-		Aggregation & GCP & Alibaba & -8.03\% & Azure & -13.58\% \\
-		Bayes & GCP & Alibaba & -18.93\% & Azure & -135.31\% \\
-		Kmeans & Alibaba & Azure & -0.20\% & GCP & -12.57\% \\
-		Pagerank & GCP & Azure & -40.71\% & Alibaba & -65.97\% \\
-		\hline
-		
-		
-	\end{tabular}
-\end{table}
 
 
 
@@ -526,92 +534,106 @@ A possible reason for Azure's downperformance in dfsioe over GCP and Alibaba
 
 USE CASE 2: 
 
-\paragraph{Sort - Tiny} Figure \ref{fig:uc2-srt-t-cmidt}; 
-\paragraph{Sort - Small} Figure \ref{fig:uc2-srt-s-cmidt}; 
-\paragraph{Sort - Large} Figure \ref{fig:uc2-srt-l-cmidt}; 
-\paragraph{Sort - Huge} Figure \ref{fig:uc2-srt-h-cmidt}; 
-\paragraph{Sort - Gigantic} Figure \ref{fig:uc2-srt-g-cmidt}; 
+\paragraph{Sort} Figure \ref{fig:uc2-srt}; 
+%\paragraph{Sort - Small} Figure \ref{fig:uc2-srt-s-cmidt}; 
+%\paragraph{Sort - Large} Figure \ref{fig:uc2-srt-l-cmidt}; 
+%\paragraph{Sort - Huge} Figure \ref{fig:uc2-srt-h-cmidt}; 
+%\paragraph{Sort - Gigantic} Figure \ref{fig:uc2-srt-g-cmidt}; 
 
 
 
-\paragraph{Wordcount - Tiny} Figure \ref{fig:uc2-wrdcnt-t-cmidt}; 
-\paragraph{Wordcount - Small} Figure \ref{fig:uc2-wrdcnt-s-cmidt}; 
-\paragraph{Wordcount - Large} Figure \ref{fig:uc2-wrdcnt-l-cmidt}; 
-\paragraph{Wordcount - Huge} Figure \ref{fig:uc2-wrdcnt-h-cmidt}; 
-\paragraph{Wordcount - Gigantic} Figure \ref{fig:uc2-wrdcnt-g-cmidt}; 
+\paragraph{Wordcount} Figure \ref{fig:uc2-wrdcnt}; 
+%\paragraph{Wordcount - Small} Figure \ref{fig:uc2-wrdcnt-s-cmidt}; 
+%\paragraph{Wordcount - Large} Figure \ref{fig:uc2-wrdcnt-l-cmidt}; 
+%\paragraph{Wordcount - Huge} Figure \ref{fig:uc2-wrdcnt-h-cmidt}; 
+%\paragraph{Wordcount - Gigantic} Figure \ref{fig:uc2-wrdcnt-g-cmidt}; 
 
 
 \begin{figure}[b]
-	\caption{UC2 - Sort (Tiny; 32 KB)}
-	\label{fig:uc2-srt-t-cmidt}
-	\includegraphics[width=\textwidth]{uc2-srt-t-cmidt}
+	\includegraphics[width=\textwidth]{uc2-srt}
+	\caption{Use Case 2 - Sort performances along data scales}
+	\label{fig:uc2-srt}
 	\centering
 \end{figure}
 
 \begin{figure}[b]
-	\caption{UC2 - Sort (Small; 3.2 MB)}
-	\label{fig:uc2-srt-s-cmidt}
-	\includegraphics[width=\textwidth]{uc2-srt-s-cmidt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt}
+	\caption{Use Case 2 - Wordcount performances along data scales}
+	\label{fig:uc2-wrdcnt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
-	\caption{UC2 - Sort (Large; 320 MB)}
-	\label{fig:uc2-srt-l-cmidt}
-	\includegraphics[width=\textwidth]{uc2-srt-l-cmidt}
-	\centering
-\end{figure}
-
-\begin{figure}[b]
-	\caption{UC2 - Sort (Huge; 3.2 GB)}
-	\label{fig:uc2-srt-h-cmidt}
-	\includegraphics[width=\textwidth]{uc2-srt-h-cmidt}
-	\centering
-\end{figure}
-
-\begin{figure}[b]
-	\caption{UC2 - Sort (Gigantic; 32 GB)}
-	\label{fig:uc2-srt-g-cmidt}
-	\includegraphics[width=\textwidth]{uc2-srt-g-cmidt}
-	\centering
-\end{figure}
+%\begin{figure}[b]
+%	\caption{UC2 - Sort (Tiny; 32 KB)}
+%	\label{fig:uc2-srt-t-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-srt-t-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Sort (Small; 3.2 MB)}
+%	\label{fig:uc2-srt-s-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-srt-s-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Sort (Large; 320 MB)}
+%	\label{fig:uc2-srt-l-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-srt-l-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Sort (Huge; 3.2 GB)}
+%	\label{fig:uc2-srt-h-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-srt-h-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Sort (Gigantic; 32 GB)}
+%	\label{fig:uc2-srt-g-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-srt-g-cmidt}
+%	\centering
+%\end{figure}
 
 Wordcount results in scale
 
-\begin{figure}[b]
-	\caption{UC2 - Wordcount (Tiny; 32 KB)}
-	\label{fig:uc2-wrdcnt-t-cmidt}
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-t-cmidt}
-	\centering
-\end{figure}
-
-\begin{figure}[b]
-	\caption{UC2 - Wordcount (Small; 320 MB)}
-	\label{fig:uc2-wrdcnt-s-cmidt}
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-s-cmidt}
-	\centering
-\end{figure}
-
-\begin{figure}[b]
-	\caption{UC2 - Wordcount (Large; 3.2 GB)}
-	\label{fig:uc2-wrdcnt-l-cmidt}
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-l-cmidt}
-	\centering
-\end{figure}
-
-\begin{figure}[b]
-	\caption{UC2 - Wordcount (Huge; 32 GB)}
-	\label{fig:uc2-wrdcnt-h-cmidt}
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-h-cmidt}
-	\centering
-\end{figure}
-
-\begin{figure}[b]
-	\caption{UC2 - Wordcount (Gigantic; 320 GB)}
-	\label{fig:uc2-wrdcnt-g-cmidt}
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-g-cmidt}
-	\centering
-\end{figure}
+%\begin{figure}[b]
+%	\caption{UC2 - Wordcount (Tiny; 32 KB)}
+%	\label{fig:uc2-wrdcnt-t-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-wrdcnt-t-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Wordcount (Small; 320 MB)}
+%	\label{fig:uc2-wrdcnt-s-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-wrdcnt-s-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Wordcount (Large; 3.2 GB)}
+%	\label{fig:uc2-wrdcnt-l-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-wrdcnt-l-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Wordcount (Huge; 32 GB)}
+%	\label{fig:uc2-wrdcnt-h-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-wrdcnt-h-cmidt}
+%	\centering
+%\end{figure}
+%
+%\begin{figure}[b]
+%	\caption{UC2 - Wordcount (Gigantic; 320 GB)}
+%	\label{fig:uc2-wrdcnt-g-cmidt}
+%	\includegraphics[width=\textwidth]{uc2-wrdcnt-g-cmidt}
+%	\centering
+%\end{figure}
 
 
 

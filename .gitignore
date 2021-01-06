@@ -354,7 +354,7 @@ MigrationBackup/
 # tar.gz files
 *.tar.gz
 # png files
-*.png
+#*.png
 *.dat
 *.txt
 
