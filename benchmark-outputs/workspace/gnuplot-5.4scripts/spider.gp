@@ -1,18 +1,22 @@
 unset border
 set grid spider 
     #nopolar
-set grid noxtics nomxtics noytics nomytics noztics nomztics nortics nomrtics \
- nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics
-set grid back   linecolor rgb "grey"  linewidth 0.500 dashtype solid,  linecolor rgb "grey"  linewidth 0.500 dashtype solid
-set key fixed right top vertical Right reverse enhanced noautotitle nobox
+set grid noxtics nomxtics noytics nomytics noztics nomztics nortics nomrtics nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics
+set grid back linecolor rgb "grey" linewidth 0.500 dashtype solid, linecolor rgb "grey" linewidth 0.500 dashtype solid
+set key horizontal
+set key bottom left
 set spiderplot
-set style spiderplot  linewidth 1.000 dashtype solid pointtype 6 pointsize 2.000
+set style spiderplot linewidth 1.000 dashtype solid pointtype 6 pointsize 2.000
 set style spiderplot fillstyle  transparent solid 0.20 border
 set size ratio 1 1,1
 set style data spiderplot
 
 #set term png size 1000, 1000
 #set output "plots/TEST.png"
+
+set size 0.5, 0.5
+set multiplot title "UC2 - Sort" layout 2,3 rowsfirst scale 1.1,0.9
+
 
 unset xtics
 unset ytics
@@ -67,98 +71,79 @@ set paxis 8 range [ 0.00000 : 100.000 ]  noextend
 set paxis 9 range [ 0.00000 : 100.000 ]  noextend
 set paxis 10 range [ 0.00000 : 100.000 ]  noextend
 NO_ANIMATION = 1
-# array Array1[6] = [0.15,0.75,0.20,0.43,0.90,0.50]
-# array Array2[6] = [0.25,0.25,0.50,0.50,0.75,0.50]
-# array Array3[6] = [0.54,0.15,0.30,0.70,0.52,0.40]
-## Last datafile plotted: "@@"
-# plot      keyentry with spiderplot lc "light-blue" lw 1 title "GCP", \
-#      for [i=1:|Array1|] Array1 using (Array1[i]) lc "light-blue" lw 1 , \
-#             newspiderplot,      keyentry with spiderplot lc "pink" lw 1 title "Azure", \
-#      for [j=1:|Array2|] Array2 using (Array2[j]) lc "pink" lw 1 notitle, \
-#             newspiderplot,      keyentry with spiderplot lc "light-green" lw 1 title "Alibaba", \
-#      for [j=1:|Array3|] Array3 using (Array3[j]) lc "light-green" lw 1 notitle
-
-
-set size 1000,1000
-#set origin 0,0
-set multiplot title "UC2 - Wordcount" layout 2,3 rowsfirst #scale 1.1,0.9
 
 
 
-# GCP_TINY = "c:/Users/UluerEmre/Desktop/uc2-gcp-tiny-srt.dat"
-# AZU_TINY = "c:/Users/UluerEmre/Desktop/uc2-azu-tiny-srt.dat"
-# ALI_TINY = "c:/Users/UluerEmre/Desktop/uc2-ali-tiny-srt.dat"
 
-GCP_TINY = "reports/processed/uc2-gcp-t-wrdcnt.tsv"
-AZU_TINY = "reports/processed/uc2-azu-t-wrdcnt.tsv"
-ALI_TINY = "reports/processed/uc2-ali-t-wrdcnt.tsv"
+GCP_TINY = "reports/processed/uc2-gcp-t-srt.tsv"
+AZU_TINY = "reports/processed/uc2-azu-t-srt.tsv"
+ALI_TINY = "reports/processed/uc2-ali-t-srt.tsv"
 
-GCP_SMALL = "reports/processed/uc2-gcp-s-wrdcnt.tsv"
-AZU_SMALL = "reports/processed/uc2-azu-s-wrdcnt.tsv"
-ALI_SMALL = "reports/processed/uc2-ali-s-wrdcnt.tsv"
+GCP_SMALL = "reports/processed/uc2-gcp-s-srt.tsv"
+AZU_SMALL = "reports/processed/uc2-azu-s-srt.tsv"
+ALI_SMALL = "reports/processed/uc2-ali-s-srt.tsv"
 
-GCP_LARGE= "reports/processed/uc2-gcp-l-wrdcnt.tsv"
-AZU_LARGE = "reports/processed/uc2-azu-l-wrdcnt.tsv"
-ALI_LARGE = "reports/processed/uc2-ali-l-wrdcnt.tsv"
+GCP_LARGE= "reports/processed/uc2-gcp-l-srt.tsv"
+AZU_LARGE = "reports/processed/uc2-azu-l-srt.tsv"
+ALI_LARGE = "reports/processed/uc2-ali-l-srt.tsv"
 
-GCP_HUGE = "reports/processed/uc2-gcp-h-wrdcnt.tsv"
-AZU_HUGE = "reports/processed/uc2-azu-h-wrdcnt.tsv"
-ALI_HUGE = "reports/processed/uc2-ali-h-wrdcnt.tsv"
+GCP_HUGE = "reports/processed/uc2-gcp-h-srt.tsv"
+AZU_HUGE = "reports/processed/uc2-azu-h-srt.tsv"
+ALI_HUGE = "reports/processed/uc2-ali-h-srt.tsv"
 
-GCP_GIGANTIC = "reports/processed/uc2-gcp-g-wrdcnt.tsv"
-AZU_GIGANTIC = "reports/processed/uc2-azu-g-wrdcnt.tsv"
-ALI_GIGANTIC = "reports/processed/uc2-ali-g-wrdcnt.tsv"
+GCP_GIGANTIC = "reports/processed/uc2-gcp-g-srt.tsv"
+AZU_GIGANTIC = "reports/processed/uc2-azu-g-srt.tsv"
+ALI_GIGANTIC = "reports/processed/uc2-ali-g-srt.tsv"
 
-# benchmark-outputs\workspace\gnuplot-5.4scripts\reports\processed\uc2-ali-g-srt.tsv
 ## Last datafile plotted: "@@"
 
 set title "tiny" font "Times New Roman, 18"
 
-plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
-      for [i=1:6] GCP_TINY using i lc "grey" lw 1 , \
-            newspiderplot,      keyentry with spiderplot lc "violet" lw 1 title "Azure", \
-      for [i=1:6] AZU_TINY using i lc "violet" lw 1 notitle, \
-            newspiderplot,      keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
+plot keyentry with spiderplot lc "purple" lw 1 title "GCP", \
+      for [i=1:6] GCP_TINY using i lc "purple" lw 1 , \
+            newspiderplot, keyentry with spiderplot lc "green" lw 1 title "Azure", \
+      for [i=1:6] AZU_TINY using i lc "green" lw 1 notitle, \
+            newspiderplot, keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
       for [i=1:6] ALI_TINY using i lc "orange" lw 1 notitle
 
 
 set title "small" font "Times New Roman, 18"
 
-plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
-      for [i=1:6] GCP_SMALL using i lc "grey" lw 1 , \
-            newspiderplot,      keyentry with spiderplot lc "violet" lw 1 title "Azure", \
-      for [i=1:6] AZU_SMALL using i lc "violet" lw 1 notitle, \
-            newspiderplot,      keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
+plot keyentry with spiderplot lc "purple" lw 1 title "GCP", \
+      for [i=1:6] GCP_SMALL using i lc "purple" lw 1 , \
+            newspiderplot, keyentry with spiderplot lc "green" lw 1 title "Azure", \
+      for [i=1:6] AZU_SMALL using i lc "green" lw 1 notitle, \
+            newspiderplot, keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
       for [i=1:6] ALI_SMALL using i lc "orange" lw 1 notitle
 
 
 set title "large" font "Times New Roman, 18"
 
-plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
-      for [i=1:6] GCP_LARGE using i lc "grey" lw 1 , \
-            newspiderplot,      keyentry with spiderplot lc "violet" lw 1 title "Azure", \
-      for [i=1:6] AZU_LARGE using i lc "violet" lw 1 notitle, \
-            newspiderplot,      keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
+plot keyentry with spiderplot lc "purple" lw 1 title "GCP", \
+      for [i=1:6] GCP_LARGE using i lc "purple" lw 1 , \
+            newspiderplot, keyentry with spiderplot lc "green" lw 1 title "Azure", \
+      for [i=1:6] AZU_LARGE using i lc "green" lw 1 notitle, \
+            newspiderplot, keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
       for [i=1:6] ALI_LARGE using i lc "orange" lw 1 notitle
 
 
 set title "huge" font "Times New Roman, 18"
 
-plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
-      for [i=1:6] GCP_HUGE using i lc "grey" lw 1 , \
-            newspiderplot,      keyentry with spiderplot lc "violet" lw 1 title "Azure", \
-      for [i=1:6] AZU_HUGE using i lc "violet" lw 1 notitle, \
-            newspiderplot,      keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
+plot keyentry with spiderplot lc "purple" lw 1 title "GCP", \
+      for [i=1:6] GCP_HUGE using i lc "purple" lw 1 , \
+            newspiderplot, keyentry with spiderplot lc "green" lw 1 title "Azure", \
+      for [i=1:6] AZU_HUGE using i lc "green" lw 1 notitle, \
+            newspiderplot, keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
       for [i=1:6] ALI_HUGE using i lc "orange" lw 1 notitle
 
 
 set title "gigantic" font "Times New Roman, 18"
 
-plot      keyentry with spiderplot lc "grey" lw 1 title "GCP", \
-      for [i=1:6] GCP_GIGANTIC using i lc "grey" lw 1 , \
-            newspiderplot,      keyentry with spiderplot lc "violet" lw 1 title "Azure", \
-      for [i=1:6] AZU_GIGANTIC using i lc "violet" lw 1 notitle, \
-            newspiderplot,      keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
+plot keyentry with spiderplot lc "purple" lw 1 title "GCP", \
+      for [i=1:6] GCP_GIGANTIC using i lc "purple" lw 1 , \
+            newspiderplot, keyentry with spiderplot lc "green" lw 1 title "Azure", \
+      for [i=1:6] AZU_GIGANTIC using i lc "green" lw 1 notitle, \
+            newspiderplot, keyentry with spiderplot lc "orange" lw 1 title "Alibaba", \
       for [i=1:6] ALI_GIGANTIC using i lc "orange" lw 1 notitle
 
 
