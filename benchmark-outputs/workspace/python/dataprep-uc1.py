@@ -28,8 +28,10 @@ for data_scale in data_scales:
     for benchmark in benchmarks:
         for (csp, long_csp) in zip(CSPs, csp_names):
             # Exclude Azure Terasort in Gigantic scale since it failed to run on HiBench
-            if(data_scale != "g" and csp != 'azu' and benchmark != "tera"):
-
+            if(data_scale == "g" and csp == 'azu' and benchmark == "tera"):
+                pass
+            
+            else:
                 csp_cpu_avg = 0.0
                 csp_mem_avg = 0.0
                 csp_ior_avg = 0.0
