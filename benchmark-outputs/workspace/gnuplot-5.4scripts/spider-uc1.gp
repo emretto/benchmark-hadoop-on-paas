@@ -73,51 +73,51 @@ set paxis 10 range [ 0.00000 : 100.000 ]  noextend
 NO_ANIMATION = 1
 
 
+DATA_SCALE = "g"
 
+GCP_SRT = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-srt.tsv") 
+AZU_SRT = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-srt.tsv")
+ALI_SRT = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-srt.tsv")
 
-GCP_SRT = "reports/processed/uc1-gcp-g-srt.tsv"
-AZU_SRT = "reports/processed/uc1-azu-g-srt.tsv"
-ALI_SRT = "reports/processed/uc1-ali-g-srt.tsv"
+GCP_TERA = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-tera.tsv") 
+AZU_TERA = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-tera.tsv")
+ALI_TERA = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-tera.tsv")
 
-GCP_TERA = "reports/processed/uc1-gcp-g-tera.tsv"
-AZU_TERA = "reports/processed/uc1-azu-g-tera.tsv"
-ALI_TERA = "reports/processed/uc1-ali-g-tera.tsv"
+GCP_WRDCNT = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-wrdcnt.tsv") 
+AZU_WRDCNT = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-wrdcnt.tsv")
+ALI_WRDCNT = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-wrdcnt.tsv")
 
-GCP_WRDCNT= "reports/processed/uc1-gcp-g-wrdcnt.tsv"
-AZU_WRDCNT = "reports/processed/uc1-azu-g-wrdcnt.tsv"
-ALI_WRDCNT = "reports/processed/uc1-ali-g-wrdcnt.tsv"
+GCP_DFSIOER = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-dfsioer.tsv") 
+AZU_DFSIOER = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-dfsioer.tsv")
+ALI_DFSIOER = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-dfsioer.tsv")
 
-GCP_DFSIOER = "reports/processed/uc1-gcp-g-dfsioer.tsv"
-AZU_DFSIOER = "reports/processed/uc1-azu-g-dfsioer.tsv"
-ALI_DFSIOER = "reports/processed/uc1-ali-g-dfsioer.tsv"
+GCP_DFSIOEW = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-dfsioew.tsv") 
+AZU_DFSIOEW = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-dfsioew.tsv")
+ALI_DFSIOEW = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-dfsioew.tsv")
 
-GCP_DFSIOEW = "reports/processed/uc1-gcp-g-dfsioew.tsv"
-AZU_DFSIOEW = "reports/processed/uc1-azu-g-dfsioew.tsv"
-ALI_DFSIOEW = "reports/processed/uc1-ali-g-dfsioew.tsv"
+GCP_SCAN = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-scan.tsv") 
+AZU_SCAN = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-scan.tsv")
+ALI_SCAN = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-scan.tsv")
 
-GCP_SCAN = "reports/processed/uc1-gcp-g-scan.tsv"
-AZU_SCAN = "reports/processed/uc1-azu-g-scan.tsv"
-ALI_SCAN = "reports/processed/uc1-ali-g-scan.tsv"
+GCP_JOIN = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-join.tsv") 
+AZU_JOIN = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-join.tsv")
+ALI_JOIN = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-join.tsv")
 
-GCP_JOIN = "reports/processed/uc1-gcp-g-join.tsv"
-AZU_JOIN = "reports/processed/uc1-azu-g-join.tsv"
-ALI_JOIN = "reports/processed/uc1-ali-g-join.tsv"
+GCP_AGGREG = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-aggreg.tsv") 
+AZU_AGGREG = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-aggreg.tsv")
+ALI_AGGREG = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-aggreg.tsv")
 
-GCP_AGGREG = "reports/processed/uc1-gcp-g-aggreg.tsv"
-AZU_AGGREG = "reports/processed/uc1-azu-g-aggreg.tsv"
-ALI_AGGREG = "reports/processed/uc1-ali-g-aggreg.tsv"
+GCP_BAYES = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-bayes.tsv") 
+AZU_BAYES = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-bayes.tsv")
+ALI_BAYES = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-bayes.tsv")
 
-GCP_BAYES = "reports/processed/uc1-gcp-g-bayes.tsv"
-AZU_BAYES = "reports/processed/uc1-azu-g-bayes.tsv"
-ALI_BAYES = "reports/processed/uc1-ali-g-bayes.tsv"
+GCP_KMEANS = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-kmeans.tsv") 
+AZU_KMEANS = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-kmeans.tsv")
+ALI_KMEANS = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-kmeans.tsv")
 
-GCP_KMEANS = "reports/processed/uc1-gcp-g-kmeans.tsv"
-AZU_KMEANS = "reports/processed/uc1-azu-g-kmeans.tsv"
-ALI_KMEANS = "reports/processed/uc1-ali-g-kmeans.tsv"
-
-GCP_PAGE = "reports/processed/uc1-gcp-g-page.tsv"
-AZU_PAGE = "reports/processed/uc1-azu-g-page.tsv"
-ALI_PAGE = "reports/processed/uc1-ali-g-page.tsv"
+GCP_PAGE = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-page.tsv") 
+AZU_PAGE = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-page.tsv")
+ALI_PAGE = sprintf( "%s%s%s", "reports/processed/uc1-ali-", DATA_SCALE , "-page.tsv")
 
 ## Last datafile plotted: "@@"
 

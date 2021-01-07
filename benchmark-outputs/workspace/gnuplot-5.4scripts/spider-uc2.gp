@@ -72,28 +72,27 @@ set paxis 9 range [ 0.00000 : 100.000 ]  noextend
 set paxis 10 range [ 0.00000 : 100.000 ]  noextend
 NO_ANIMATION = 1
 
+BENCHMARK = "srt"
 
+GCP_TINY = sprintf( "%s%s%s", "reports/processed/uc2-gcp-t-", BENCHMARK , ".tsv") 
+AZU_TINY = sprintf( "%s%s%s", "reports/processed/uc2-azu-t-", BENCHMARK , ".tsv")
+ALI_TINY = sprintf( "%s%s%s", "reports/processed/uc2-ali-t-", BENCHMARK , ".tsv")
 
+GCP_SMALL = sprintf( "%s%s%s", "reports/processed/uc2-gcp-s-", BENCHMARK , ".tsv")
+AZU_SMALL = sprintf( "%s%s%s", "reports/processed/uc2-azu-s-", BENCHMARK , ".tsv")
+ALI_SMALL = sprintf( "%s%s%s", "reports/processed/uc2-ali-s-", BENCHMARK , ".tsv")
 
-GCP_TINY = "reports/processed/uc2-gcp-t-wrdcnt.tsv"
-AZU_TINY = "reports/processed/uc2-azu-t-wrdcnt.tsv"
-ALI_TINY = "reports/processed/uc2-ali-t-wrdcnt.tsv"
+GCP_LARGE= sprintf( "%s%s%s", "reports/processed/uc2-gcp-l-", BENCHMARK , ".tsv")
+AZU_LARGE = sprintf( "%s%s%s", "reports/processed/uc2-azu-l-", BENCHMARK , ".tsv")
+ALI_LARGE = sprintf( "%s%s%s", "reports/processed/uc2-ali-l-", BENCHMARK , ".tsv")
 
-GCP_SMALL = "reports/processed/uc2-gcp-s-wrdcnt.tsv"
-AZU_SMALL = "reports/processed/uc2-azu-s-wrdcnt.tsv"
-ALI_SMALL = "reports/processed/uc2-ali-s-wrdcnt.tsv"
+GCP_HUGE = sprintf( "%s%s%s", "reports/processed/uc2-gcp-h-", BENCHMARK , ".tsv")
+AZU_HUGE = sprintf( "%s%s%s", "reports/processed/uc2-azu-h-", BENCHMARK , ".tsv")
+ALI_HUGE = sprintf( "%s%s%s", "reports/processed/uc2-ali-h-", BENCHMARK , ".tsv")
 
-GCP_LARGE= "reports/processed/uc2-gcp-l-wrdcnt.tsv"
-AZU_LARGE = "reports/processed/uc2-azu-l-wrdcnt.tsv"
-ALI_LARGE = "reports/processed/uc2-ali-l-wrdcnt.tsv"
-
-GCP_HUGE = "reports/processed/uc2-gcp-h-wrdcnt.tsv"
-AZU_HUGE = "reports/processed/uc2-azu-h-wrdcnt.tsv"
-ALI_HUGE = "reports/processed/uc2-ali-h-wrdcnt.tsv"
-
-GCP_GIGANTIC = "reports/processed/uc2-gcp-g-wrdcnt.tsv"
-AZU_GIGANTIC = "reports/processed/uc2-azu-g-wrdcnt.tsv"
-ALI_GIGANTIC = "reports/processed/uc2-ali-g-wrdcnt.tsv"
+GCP_GIGANTIC = sprintf( "%s%s%s", "reports/processed/uc2-gcp-g-", BENCHMARK , ".tsv")
+AZU_GIGANTIC = sprintf( "%s%s%s", "reports/processed/uc2-azu-g-", BENCHMARK , ".tsv")
+ALI_GIGANTIC = sprintf( "%s%s%s", "reports/processed/uc2-ali-g-", BENCHMARK , ".tsv")
 
 ## Last datafile plotted: "@@"
 
