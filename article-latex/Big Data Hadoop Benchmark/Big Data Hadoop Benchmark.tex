@@ -51,6 +51,12 @@
 
 \begin{document}
 
+%\listoftables
+%
+%\newpage
+%
+%\listoffigures
+
 \begin{frontmatter}
 
 \title{Comparative Performance Evaluation of Hadoop on PaaS Proposals by Leveraging HiBench}
@@ -86,7 +92,7 @@
 
 
 \begin{abstract}
-The advent of Big Data emerged in any data-driven domain and scaled up the extent as well as the depth of data and its handling. In an ongoing maturing process, new approaches leaning on enhanced distributed storage and computing paradigms are invented helping overcome management and running analytics challenges. In this context Hadoop is embraced in a wide scale by beneficiants both from industry and academia since its first release in 2005. The commercialization of Cloud Computing started a grand migration movement towards cloud, applying also for Hadoop transferring its presence from on-premises to virtual machines stored and tamed in large data center facilities by global Cloud Service Providers. The CSPs' response to result-focused analytics purposes emerged a service called managed systems where the hard workload of multi node cluster implementation is overtaken by the contractor providing a pre-configured Hadoop package simplifying the installation process to a matter of property selection thus eliminating technical know-how requirements on such an implementation. Converting the concept of cloud based Hadoop from IaaS to PaaS apparently reduced costs commercially presented as pay-as-you-go or pay-per-use. There is a payoff, though, managed Hadoop systems do present a black-box behavior to the end user who cannot be clear on the inner performance dynamics, hence the benefits by leveraging them. In this study we selected three global providers (GCP, Azure, and Alibaba Cloud), activated their Hadoop PaaS services (Dataproc, HDInsight, and e-MapReduce, respectively) within same geographical region and by promise apparently same computing specifications, and executed several Hadoop workloads of the HiBench Benchmark Suite. The results yield that apparently same computation specs among CSPs' services do not necessarily guarantee equal or close performance outputs to each other. Our assumption is that the pre-configuration work of managed systems done by the contractor play a weighing role on their performance.
+The advent of Big Data emerged in any data-driven domain and scaled up the extent as well as the depth of data and its handling. In an ongoing maturing process, new approaches leaning on enhanced distributed storage and computing paradigms are invented helping overcome management and running analytics challenges. In this context Hadoop is embraced in a wide scale by beneficiants both from industry and academia since its first release in 2005. The commercialization of Cloud Computing started a grand migration movement towards cloud, applying also for Hadoop transferring its presence from on-premises to virtual machines stored and tamed in large data center facilities by global Cloud Service Providers. The CSPs' response to result-focused analytics purposes emerged a service called managed systems where the hard workload of multi node cluster implementation is overtaken by the contractor providing a pre-configured Hadoop package simplifying the installation process to a matter of property selection thus eliminating technical know-how requirements on such an implementation. Converting the concept of cloud based Hadoop from IaaS to PaaS apparently reduced costs commercially presented as pay-as-you-go or pay-per-use. There is a payoff, though, managed Hadoop systems do present a black-box behavior to the end user who cannot be clear on the inner performance dynamics, hence the benefits by leveraging them. In the study we selected three global providers (GCP, Azure, and Alibaba Cloud), activated their Hadoop PaaS services (Dataproc, HDInsight, and e-MapReduce, respectively) within same geographical region and by promise apparently same computing specifications, and executed several Hadoop workloads of the HiBench Benchmark Suite. The results yield that apparently same computation specs among CSPs' services do not necessarily guarantee equal or close performance outputs to each other. Our assumption is that the pre-configuration work of managed systems done by the contractor play a weighing role on their performance.
 \end{abstract}
 
 \begin{keyword}
@@ -103,11 +109,11 @@ The advent of Big Data emerged in any data-driven domain and scaled up the exten
 %%\section{The Elsevier article class}
 \section{Introduction}
 
-\paragraph{Big Data}An indispensable aspect for enterprises and academia of the information era to deal with is the term Big Data. As the global internet access rate covers a weighing majority of the global human population, mobile technology devices become democratized, sensors and IoT devices the more occupy daily life, ongoing scientific researches produce vast amounts of data outputs the Big Data phenomenon gathered itself by means of overwhelming size with Volume, ever accelerating growth rate with Velocity, and diverse data structures with Variety, new approaches were forced to mature in order to ease the maintenance of Big Data and enable extracting valuable insights from it leveraging complex statistical formulae.
+\paragraph{Big Data}An indispensable aspect for enterprises and academia of the information era to deal with is the term Big Data. As the estimated global internet access rate covers a weighing majority of roughly 63\% of the global human population by 2020 \cite{noauthor_world_nodate}, mobile technology devices become democratized, sensors and IoT devices the more occupy daily life, ongoing scientific researches produce vast amounts of data outputs the Big Data phenomenon gathered itself by means of overwhelming size with Volume, ever accelerating growth rate with Velocity, and diverse data structures with Variety, new approaches were forced to mature in order to ease the maintenance of Big Data and enable extracting valuable insights from it leveraging complex statistical formulae.
 
-\paragraph{Hadoop}Frameworks for distributed storage and computation sparked up first by search engines were inherited and developed further by the open source community yielding what is known as Hadoop and its ecosystem today. Considering the complexity of dealing with big data Hadoop represents a modern analytics framework decreasing management efforts and duration of analytics operations to an acceptable level by means of affordable commodity computers. Hadoop comprises three for its core functionality: HDFS filesystem for storing very large data among cluster of nodes, the MapReduce framework developed for distributed computation, and YARN
+\paragraph{Hadoop \cite{noauthor_apache_nodate}}Frameworks for distributed storage and computation sparked up first by search engines were inherited and developed further by the open source community yielding what is known as Hadoop and its ecosystem today. Considering the complexity of dealing with big data Hadoop represents a modern analytics framework decreasing management efforts and duration of analytics operations to an acceptable level by means of affordable commodity computers. Hadoop comprises three for its core functionality: HDFS filesystem for storing very large data among cluster of nodes, the MapReduce framework developed for distributed computation, and YARN
 
-\paragraph{HDFS}Namely Hadoop Distributed File System, is Hadoop's native file system inherited Figure \ref{fig:HDFSoverview} depicts the main architecture enabling distributed file system among a cluster.
+\paragraph{HDFS}Hadoop's native file system is inherited from the principles guidelined in a whitepaper in 2003 \cite{ghemawat_google_2003} and leveraged to store Petabyte scale data in production environment. Figure \ref{fig:HDFSoverview} depicts the main architecture enabling distributed file system among a cluster.
 
 
 \begin{figure}[h!]
@@ -122,16 +128,22 @@ The advent of Big Data emerged in any data-driven domain and scaled up the exten
 
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{MapReduce}
-	\caption{MapReduce paradigm as implemented in Hadoop}
+	\caption{MapReduce paradigm as implemented in Hadoop (recreated from source \cite{schatzle_giant_nodate})}
 	\label{fig:MapReduce}
 	\centering
 \end{figure}
 
 \paragraph{YARN}
 
-\paragraph{Cloud Computing}In parallel, the commercialization of Cloud Computing in the early 2000's delivered utilization of storage and computing resources to the end users saving them high investments on hardware technology that is soon going to be obsolete and is expensive to maintain. As the migration to the cloud is an ongoing process, Hadoop also slips out from its residence on on-prem infrastructure to the cloud by being implemented on virtual machine instances provided as IaaS platforms by many providers. The Cloud Service Providers embraced the need of eliminating Hadoop's complex implementation process on multi-node VMs by providing managed Hadoop systems commercially packaged as PaaS, which are pre-installed and pre-configured Hadoop clusters allowing the installation of tens to hundreds of nodes in a matter of minutes simply by determining some settings like hardware specs and node numbers prior the installation. The Managed Hadoop system is both a blessing and a curse, by leaving the hard implementation part which is not necessarily related with the main analysis objective to a contractor the end user saves time and efforts including a payoff, though: By definition, managed systems are prepackaged solutions provided in black-box nature. CSP apply behind-the-scenes tweaks in terms of reaching better performance results on selected approaches like memory intensive or compute intensive applications.
+\paragraph{Cloud Computing}The commercialization of Cloud Computing in the early 2000's \cite{noauthor_announcing_nodate} delivered utilization of storage and computing resources to the end users saving them high investments on hardware technology that is soon going to be obsolete and is expensive to maintain. As the migration to the cloud is an ongoing process, Hadoop also slips out from its residence on on-prem infrastructure to the cloud by being implemented on virtual machine instances provided as IaaS platforms by many providers. The Cloud Service Providers embraced the need of eliminating Hadoop's complex implementation process on multi-node VMs by providing managed Hadoop systems commercially packaged as PaaS, which are pre-installed and pre-configured Hadoop clusters allowing the installation of tens to hundreds of nodes in a matter of minutes simply by determining some settings like hardware specs and node numbers prior the installation. The Managed Hadoop system is both a blessing and a curse, by leaving the hard implementation part which is not necessarily related with the main analysis objective to a contractor the end user saves time and efforts including a payoff, though: By definition, managed systems are prepackaged solutions provided in black-box nature. CSP apply behind-the-scenes tweaks in terms of reaching better performance results on selected approaches like memory intensive or compute intensive applications.
 
-\paragraph{HiBench} Introduced to the benchmark community in 2004 and ever since
+\paragraph{GCP Dataproc \cite{noauthor_dataproc_nodate}} Google's managed Spark and Hadoop solution namely Dataproc is a preconfigured Hadoop on PaaS service built upon preinstalled VM instances on Compute Engine \cite{noauthor_compute_nodate} which is another service offering of GCP. An OS spectrum comprising Debian and\textbackslash or ubuntu was offered at the date of the study which are proposed as preinstalled images during Dataproc installation process. While Hadoop core elements HDFS, YARN, and MapReduce reside as default frameworks, a variety of elements belonging to Hadoop ecosystem are offered as well. The end user is also offered to leverage Cloud Storage \cite{noauthor_cloud_nodate}, Google's proprietary cloud storage service to keep data in a longer term where Dataproc cluster is meant to be terminated after usage. By means of Web UI or local CLI via API the end user can access the Dataproc cluster as well as single VM instances within Compute Engine. Google offers a large number of data centers around the globe.
+
+\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}
+
+\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_e-mapreduce_nodate}}
+
+\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}} Introduced to the benchmark community in 2004 and ever since
 
 
 
@@ -139,17 +151,17 @@ The advent of Big Data emerged in any data-driven domain and scaled up the exten
 \section{Related Work}
 HiBench is a tool to measure a specific system’s performing behaviour during execution. The conceptualization of conducting a benchmark may arise from different soils. Based on the conductor’s motivation; a benchmark’s use case could be an inner evaluation of a system’s performance before and after some configuration tweaks are set, comparison of rival / complementary systems, or putting CSP’s cloud infrastructure services on scale. Following literature has been searched with finding different use cases of HiBench benchmarking suite in mind. 
 
-Poggi et al. [52] Characterizing BigBench…
+Poggi et al. \cite{poggi_characterizing_2018} Characterizing BigBench…
 
-Poggi et al. the state of SQL on Hadoop [53]…
+Poggi et al. \cite{poggi_state_2016} the state of SQL on Hadoop [53]…
 
-Samadi et al. conduct an experimental comparison between Spark and Hadoop installed on virtual machines on Amazon EC2 by leveraging nine among the provided HiBench workloads. Accuracy reasons led the conductors run the workloads three times concluding input data scales of 1, 3, and 5 GB respectively. Based on the outputs comprising duration, throughput, speed up, and CPU/memory consumption, the conclusion draws Spark consuming less CPU and performing better on all workload results over Hadoop. 
+Samadi et al. \cite{samadi_performance_2018} conduct an experimental comparison between Spark and Hadoop installed on virtual machines on Amazon EC2 by leveraging nine among the provided HiBench workloads. Accuracy reasons led the conductors run the workloads three times concluding input data scales of 1, 3, and 5 GB respectively. Based on the outputs comprising duration, throughput, speed up, and CPU/memory consumption, the conclusion draws Spark consuming less CPU and performing better on all workload results over Hadoop. 
 
-Ahn et al. [54] put Spark on YARN’s performance on test with HiBench in terms of handling a deluge of data generated by IoT devices. The experiment is run on a cluster with one master and 3 worker nodes each node possessing Intel® Xeon® processor with 20 cores and 128GB main memory meaning 60 cores and 384GB memory in total. HiBench’s workloads Micro (comprising Sort, TeraSort, and Wordcount), SQL (comprising Aggregation, Join, and Scan), and Machine Learning (comprising Bayes, Logistic Regression, Gradient Boosting Tree, Random Forest, and Linear Regression) are leveraged by a chosen data scale of 30 GB. Spark occupies memory during the whole job execution which in result reduces IOs’ negative impact on processor performance. For optimizing resource usage the conductors modified YARN’s minimum memory allocation and Spark executor settings so that the Spark executors’ overall loads remain below total system memory. Alongside with HiBench’s duration and throughput report, CPU / memory utilization and disk throughput are profiled as well. Finding of this paper points out that Spark guarantees performance when provided with enough memory.
+Ahn et al. \cite{ahn_performance_2018} put Spark on YARN’s performance on test with HiBench in terms of handling a deluge of data generated by IoT devices. The experiment is run on a cluster with one master and 3 worker nodes each node possessing Intel® Xeon® processor with 20 cores and 128GB main memory meaning 60 cores and 384GB memory in total. HiBench’s workloads Micro (comprising Sort, TeraSort, and Wordcount), SQL (comprising Aggregation, Join, and Scan), and Machine Learning (comprising Bayes, Logistic Regression, Gradient Boosting Tree, Random Forest, and Linear Regression) are leveraged by a chosen data scale of 30 GB. Spark occupies memory during the whole job execution which in result reduces IOs’ negative impact on processor performance. For optimizing resource usage the conductors modified YARN’s minimum memory allocation and Spark executor settings so that the Spark executors’ overall loads remain below total system memory. Alongside with HiBench’s duration and throughput report, CPU / memory utilization and disk throughput are profiled as well. Finding of this paper points out that Spark guarantees performance when provided with enough memory.
 
-Han et al. [55] study the impact of memory size on big data processing by means of Hadoop and Spark performance comparison leveraging HiBench’s k-Means workload as the only benchmark. For each of the specified memory sizes of 4, 8, and 12 GB, iterating through a data scale of 1 to 8 GB, with 1GB increment inbetween, k-Means benchmark for Hadoop and Spark is executed. The results depict Spark’s overperforming Hadoop unless the total input data size is smaller than 33.5\% of the total memory size assigned to worker nodes. After reaching that ratio Spark suffers with insufficient memory resources and is led to interoperate with HDFS causing a sharp decrease in its performance and brings Hadoop in throughput and duration performance to the front. The conductors make a second experiment to find out if Spark’s performance can be improved by tweaking the allocation setting for storage memory and shuffle memory while remaining within the specified memory limitations of 4, 8 and 12 GB. Executing HiBench’s k-means benchmark outputs a report interpreted by the conducters as Spark show a 5-10\%, and 15\% maximum improvement in processing time.
+Han et al. \cite{han_impact_2017} study the impact of memory size on big data processing by means of Hadoop and Spark performance comparison leveraging HiBench’s k-Means workload as the only benchmark. For each of the specified memory sizes of 4, 8, and 12 GB, iterating through a data scale of 1 to 8 GB, with 1GB increment inbetween, k-Means benchmark for Hadoop and Spark is executed. The results depict Spark’s overperforming Hadoop unless the total input data size is smaller than 33.5\% of the total memory size assigned to worker nodes. After reaching that ratio Spark suffers with insufficient memory resources and is led to interoperate with HDFS causing a sharp decrease in its performance and brings Hadoop in throughput and duration performance to the front. The conductors make a second experiment to find out if Spark’s performance can be improved by tweaking the allocation setting for storage memory and shuffle memory while remaining within the specified memory limitations of 4, 8 and 12 GB. Executing HiBench’s k-means benchmark outputs a report interpreted by the conducters as Spark show a 5-10\%, and 15\% maximum improvement in processing time.
 
-Ivanov et al. [56] compare the performances of two enterprise grade applications, DataStax Enterprise (DSE), a production level implementation of Apache Cassandra with extended features like in memory computing and advanced security to name but two, and Cloudera’s Distribution of Hadoop (CDH) comprising core Hadoop elements HDFS and YARN integrated with elements belonging to the Hadoop ecosystem. DSE’s HDFS compatible file system CSF lets Hadoop applications run without any modification. The conductors installed the latest stable releases of both softwares on equal CPU, memory and network infrastructure configuration. For both installations, default system parameters have been left with their defaults. HiBench’s three chosen workloads (CPU-bound wordcount, IO-bound dfsioe, and mixed HiveBench) are executed three times, the average values have been taken for representativeness. Several conclusions of their study proclaim linearly scaling of both systems by the increase of data size, while CDH outperforms DSE in read intensive workloads, DSE performs better in write intensive workloads. Leveraging HiBench is where this study differs in approach related to other studies using YCSB benchmark suite. HiBench’s results confirm the latter’s output as well.
+Ivanov et al. \cite{ivanov_performance_2015} compare the performances of two enterprise grade applications, DataStax Enterprise (DSE), a production level implementation of Apache Cassandra with extended features like in memory computing and advanced security to name but two, and Cloudera’s Distribution of Hadoop (CDH) comprising core Hadoop elements HDFS and YARN integrated with elements belonging to the Hadoop ecosystem. DSE’s HDFS compatible file system CSF lets Hadoop applications run without any modification. The conductors installed the latest stable releases of both softwares on equal CPU, memory and network infrastructure configuration. For both installations, default system parameters have been left with their defaults. HiBench’s three chosen workloads (CPU-bound wordcount, IO-bound dfsioe, and mixed HiveBench) are executed three times, the average values have been taken for representativeness. Several conclusions of their study proclaim linearly scaling of both systems by the increase of data size, while CDH outperforms DSE in read intensive workloads, DSE performs better in write intensive workloads. Leveraging HiBench is where the study differs in approach related to other studies using YCSB benchmark suite. HiBench’s results confirm the latter’s output as well.
 
 
 
@@ -157,13 +169,23 @@ Ivanov et al. [56] compare the performances of two enterprise grade applications
 \section{Method}
 
 
-In this study we benchmarked Hadoop on PaaS services of three CSPs in terms of comparing their performances to each other: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 report in leading or niche section. Bound by availability of their respective hardware and software options we selected by providers' promise apparently same or close settings. With respect to our aim benchmarking managed systems as they come out of the box, we put two basic rules to stick for each provider in order to align initial circumstances prior to benchmark execution: Among the CSPs, respective  data center's geographic location shall be same or close (1), processor number and memory capacity (by providers' promise) shall be same or as close as possible. Thus Frankfurt is selected as location for all providers data center, within given options we selected 8 CPUs/64GB RAM for master node and 4 CPU's/32GB RAM for each worker node totaling in 12 CPUs and 96GB compute power for the cluster. Specified cluster installation options and details are given in Table \ref{tab:csp-configs}. Without applying any performance tweak operation to the respective preconfigurations we immediately executed several Hadoop benchmarks from HiBench's micro, sql, ml, and websearch categories. We only modified default cluster's configuration in cases where the benchmark was detained from running which is reported in Discussion section.
+In the study we benchmarked Hadoop on PaaS services of three CSPs in terms of comparing their performances to each other: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 Magic Quadrant for Cloud Infrastructure and Platform Services \cite{noauthor_gartner_nodate} either in leading or in niche section.
+
+We structured the benchmark study in two use cases: 
+
+Use Case 1 aims to map the overall performance behaviors of respective CSPs within HiBench's predefined data scales huge and gigantic. The following benchmarks have been executed on the clusters of the respective providers: Micro (Sort, Terasort, Wordcount, and Dfsioe), Sql (Scan, Join, and Aggregation), ML (Bayes and Kmeans), and Websearch (Pagerank).
+
+Use Case 2. We picked one benchmark of IO bound character (Sort), one benchmark of CPU bound character (Wordcount), and executed these in data scale increasing  in order tiny, small, large, huge, and gigantic. The largest predefined HiBench data scale bigdata would cross the storage limits of the installed clusters, hence we left it off the execution. 
+
+Bound by availability of their respective hardware and software options we selected by providers' promise apparently same or close settings. With respect to our aim benchmarking managed systems as they come out of the box, we put two basic rules to stick for each provider in order to align initial circumstances prior to benchmark execution: Among the CSPs, respective  data center's geographic location shall be same or close (1), processor number and memory capacity (by providers' promise) shall be same or as close as possible. Thus Frankfurt is selected as location for all providers data center, within given options we selected 8 CPUs/64GB RAM for master node and 4 CPU's/32GB RAM for each worker node totaling in 12 CPUs and 96GB compute power for the cluster. Specified cluster installation options and details are given in Table \ref{tab:csp-configs}. Without applying any performance tweak operation to the respective preconfigurations we immediately executed several Hadoop benchmarks from HiBench's micro, sql, ml, and websearch categories. We only modified default cluster's configuration in cases where the benchmark was detained from running which is reported in Discussion section.
 
 During the benchmark execution we collected system utilization records on each worker node of the cluster. This approach enabled us a visualization of an overview to the system utilization on each worker node within the cluster over the respective benchmark's execution time. 
 
 \begin{table}
 	\centering
 	\small
+	\caption{Selected configurations on CSPs' managed Hadoop services}
+	\label{tab:csp-configs}
 	\begin{tabular}[h]{ p{2.0cm} p{2.3cm} p{3.3cm} p{2.6cm}  }
 		\hline
 		{} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
@@ -194,8 +216,6 @@ During the benchmark execution we collected system utilization records on each w
 		Block size & 128 MB &  & 128 MB \\
 		\hline
 	\end{tabular}
-	\caption{Selected configurations on CSPs' managed Hadoop services}
-	\label{tab:csp-configs}
 \end{table}
 
 
@@ -206,49 +226,48 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 \begin{table}
 	\centering
 	\small
+	\caption{Use Case 1 benchmark outputs }
+	\label{tab:uc1-results}
 	\begin{tabular}[h]{ l r r r r r r r }
-		\multicolumn{4}{ l }{Data Scale: Huge} & & & & \\
+		\multicolumn{8}{ l }{Data Scale: Huge} \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
-		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(MB/s)}}\end{math} \\
 		\hline
-		Sort & 3.28 GB & 70 & 47110942 & 131 & 25076597 & 111 & 29419903 \\
-		Terasort & 32.00 GB & 667 & 47988314 & 858 & 37277268 & 1054 & 30374710 \\
-		Wordcount & 32.85 GB & 978 & 33594975 & 1470 & 22340906 & 889 & 36949719 \\
-		Dfsioe-r & 26.99 GB & 294 & 91772636 & 662 & 40787869 & 245 & 110206431 \\
-		Dfsioe-w & 27.16 GB & 379 & 71733304 & 658 & 41296567 & 281 & 96488258 \\
-		Scan & 2.01 GB & 73 & 27629405 & 157 & 12830581 & 74 (*) & 27193804 (*) \\
-		Join & 1.92 GB & 181 & 10614143 & 356 & 5390513 & 175 (*) & 10950553 (*) \\
-		Aggregation & 372.38 MB & 97 & 3857328 & 215 & 1728400 & 97 (*) & 3849353 (*) \\
-		Bayes & 1.88 GB & 2604 & 722498 & 6120 & 307708 & 3017 & 623692 \\
-		Kmeans & 20.08 GB & 2321 & 8652662 & 2313 & 8683526 & 2070 & 9703348 \\
-		Pagerank & 2.99 GB & 1544 & 1938541 & 3334 & 897807 & 2458 & 1217764 \\
+		Sort & 3.28 & 70 & 47.11 & 131 & 25.08 & 111 & 29.42 \\
+		Terasort & 32.00 & 667 & 47.99 & 858 & 37.28 & 1054 & 30.37 \\
+		Wordcount & 32.85 & 978 & 33.60 & 1470 & 22.34 & 889 & 36.95 \\
+		Dfsioe-r & 26.99 & 294 & 91.77 & 662 & 40.79 & 245 & 110.21 \\
+		Dfsioe-w & 27.16 & 379 & 71.73 & 658 & 41.30 & 281 & 96.49 \\
+		Scan & 2.01 & 73 & 27.63 & 157 & 12.83 & 74 (*) & 27.19 (*) \\
+		Join & 1.92 & 181 & 10.61 & 356 & 5.39 & 175 (*) & 10.95 (*) \\
+		Aggregation & 0.37 & 97 & 3.86 & 215 & 1.73 & 97 (*) & 3.85 (*) \\
+		Bayes & 1.88 & 2604 & 0.72 & 6120 & 0.31 & 3017 & 0.62 \\
+		Kmeans & 20.08 & 2321 & 8.65 & 2313 & 8.68 & 2070 & 9.70 \\
+		Pagerank & 2.99 & 1544 & 1.94 & 3334 & 0.90 & 2458 & 1.22 \\
 		\hline
-		\multicolumn{4}{ l }{Data Scale: Gigantic} & & & & \\
+		\multicolumn{8}{ l }{Data Scale: Gigantic} \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
-		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(MB/s)}}\end{math} \\
 		\hline
-		Sort & 32.85 GB & 715 & 45939699 & 787 & 41721261 & 896 & 36680251 \\
-		Terasort & 320.00 GB & 9821 & 32582430 & ---(**) & ---(**) & 9660 & 33126513 \\
-		Wordcount & 328.49 GB & 10131 & 32423997 & 13596 & 24159989 & 8671 & 37882290 \\
-		Dfsioe-r & 216.03 GB & 915 & 236107099 & 1886 & 114538844 & 660 & 327294273 \\
-		Dfsioe-w & 217.33 GB & 1347 & 161394226 & 1914 & 113574850 & 1060 & 205123746 \\
-		Scan & 20.10 GB & 457 & 43964927 & 514 & 39085260 & 407 (*) & 49378781 (*) \\
-		Join & 19.19 GB & 595 & 32268936 & 761 & 25240939 & 594 (*) & 32319846 (*) \\
-		Aggregation & 3.69 GB & 523 & 7051835 & 594 & 6203608 & 565 (*) & 6523381 (*) \\
-		Bayes & 3.77 GB & 5350 & 703332 & 12589 & 299143 & 6363 & 591341 \\
-		Kmeans & 40.16 GB & 4541 & 8844971 & 4042 & 9935665 & 4034 & 9956003 \\
-		Pagerank & 19.93 GB & 8371 & 2381276 & 11779 & 1692241 & 13893 & 1434711 \\
+		Sort & 32.85 & 715 & 45.94 & 787 & 41.72 & 896 & 36.68 \\
+		Terasort & 320.00 & 9821 & 32.58 & ---(**) & ---(**) & 9660 & 33.13 \\
+		Wordcount & 328.49 & 10131 & 32.42 & 13596 & 24.16 & 8671 & 37.88 \\
+		Dfsioe-r & 216.03 & 915 & 236.11 & 1886 & 114.54 & 660 & 327.29 \\
+		Dfsioe-w & 217.33 & 1347 & 161.39 & 1914 & 113.57 & 1060 & 205.12 \\
+		Scan & 20.10 & 457 & 43.96 & 514 & 39.09 & 407 (*) & 49.38 (*) \\
+		Join & 19.19 & 595 & 32.27 & 761 & 25.24 & 594 (*) & 32.32 (*) \\
+		Aggregation & 3.69 & 523 & 7.05 & 594 & 6.20 & 565 (*) & 6.52 (*) \\
+		Bayes & 3.77 & 5350 & 0.70 & 12589 & 0.30 & 6363 & 0.60 \\
+		Kmeans & 40.16 & 4541 & 8.84 & 4042 & 9.94 & 4034 & 9.96 \\
+		Pagerank & 19.93 & 8371 & 2.38 & 11779 & 1.70 & 13893 & 1.43 \\
 		\hline
-		\multicolumn{8}{ r }{(*) Benchmark execution succeeds after modifying preconfiguration, more on this in Discussion } \\
+		\multicolumn{8}{r}{IDS: Input Data Size (GB); \begin{math}D_{(s)}\end{math}: Duration (sec); \begin{math}T_{(MB/s)}\end{math}: Throughput (MB/sec)} \\
+		\multicolumn{8}{ r }{(*) Benchmark succeeds after modifying preconfiguration, more on this in Discussion } \\
 		\multicolumn{8}{ r }{(**) System failure due to insufficient space on HDFS, more on this in Discussion } \\
 		\hline
-		
-		
 	\end{tabular}
-	\caption{Use Case 1 benchmark outputs}
-	\label{tab:uc1-results}
 \end{table}
 
 
@@ -257,27 +276,28 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 \begin{table}
 	\centering
 	\small
+	\caption{Use Case 2 benchmark outputs}
+	\label{tab:uc2-results}
 	\begin{tabular}[h]{ l r r r r r r r }
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
-		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(b/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(b/s)}}\end{math} \\
+		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(MB/s)}}\end{math} \\
 		\hline
-		Sort (t) & 39.30 KB & 36 & 1077 & 69 & 563 & 32 & 1173 \\
-		Wordcount(t) & 38.65 KB & 38 & 1005 & 68 & 551 & 31 & 1242 \\
-		Sort (s) & 3.28 MB & 36 & 90155 & 70 & 47090 & 31 & 104865 \\
-		Wordcount (s) & 348.29 MB & 50 & 6508975 & 98 & 3337158 & 47 & 7055759 \\
-		Sort (l) & 328.50 MB & 42 & 7860401 & 81 & 4065391 & 42 & 7741448 \\
-		Wordcount (l) & 3.28 GB & 129 & 25448586 & 269 & 12195273 & 120 & 27269866 \\
-		Sort (h) & 3.28 GB & 70 & 47077081 & 141 & 23355371 & 107 & 30693426 \\
-		Wordcount (h) & 32.85 GB & 952 & 34512554 & 1487 & 22093900 & 888 & 36991074 \\
-		Sort (g) & 32.85 GB & 694 & 47300549 & 699 & 47000056 & 883 & 37192377 \\
-		Wordcount (g) & 328.49 GB & 9749 & 33696143 & 13286 & 24725537 & 8622 & 38100208 \\
+		Sort (t) & 39.30 KB & 36 & 0.0012 & 69 & 0.0006 & 32 & 0.0012 \\
+		Wordcount(t) & 38.65 KB & 38 & 0.001 & 68 & 0.0006 & 31 & 0.0012 \\
+		Sort (s) & 3.28 MB & 36 & 0.09 & 70 & 0.0471 & 31 & 0.105 \\
+		Wordcount (s) & 348.29 MB & 50 & 6.51 & 98 & 3.34 & 47 & 7.06 \\
+		Sort (l) & 328.50 MB & 42 & 7.86 & 81 & 4.07 & 42 & 7.74 \\
+		Wordcount (l) & 3.28 GB & 129 & 25.45 & 269 & 12.20 & 120 & 27.27 \\
+		Sort (h) & 3.28 GB & 70 & 47.08 & 141 & 23.36 & 107 & 30.69 \\
+		Wordcount (h) & 32.85 GB & 952 & 34.51 & 1487 & 22.10 & 888 & 37.00 \\
+		Sort (g) & 32.85 GB & 694 & 47.30 & 699 & 47.00 & 883 & 37.20 \\
+		Wordcount (g) & 328.49 GB & 9749 & 33.70 & 13286 & 24.73 & 8622 & 38.10 \\
 		\hline
+		\multicolumn{8}{r}{IDS: Input Data Size; \begin{math}D_{(s)}\end{math}: Duration (sec); \begin{math}T_{(MB/s)}\end{math}: Throughput (MB/sec)} \\
 		\multicolumn{8}{ r }{(t): tiny, (s): small, (l): large, (h): huge, (g): gigantic} \\
 		\hline
 	\end{tabular}
-	\caption{Use Case 2 benchmark outputs}
-	\label{tab:uc2-results}
 \end{table}
 
 
@@ -286,8 +306,10 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 \begin{table}
 	\centering
 	\small
-	\begin{tabular}[h]{ l c c r r r r r }
-		\multicolumn{6}{ l }{Data Scale: Huge}  \\
+	\caption{Use Case 1 Comparative benchmark outputs}
+	\label{tab:uc1-comparative-results}
+	\begin{tabular}[h]{ l l r r r r }
+		\multicolumn{6}{ c }{Data Scale: Huge}  \\
 		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
 		\hline
 		Sort & GCP & Alibaba & -58.57\% & Azure & -87.14\% \\
@@ -302,7 +324,7 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 		Kmeans & Alibaba & Azure & -11.74\% & GCP & -12.13\% \\
 		Pagerank & GCP & Alibaba & -59.20\% & Azure & -115.93\% \\
 		\hline
-		\multicolumn{6}{ l }{Data Scale: Gigantic}  \\
+		\multicolumn{6}{ c }{Data Scale: Gigantic}  \\
 		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
 		\hline
 		Sort & GCP & Azure & -10.07\% & Alibaba & -25.31\% \\
@@ -318,8 +340,6 @@ Table \ref{tab:uc1-results} and Table \ref{tab:uc2-results} summarize HiBench be
 		Pagerank & GCP & Azure & -40.71\% & Alibaba & -65.97\% \\
 		\hline
 	\end{tabular}
-	\caption{Use Case 1 Comparative benchmark outputs}
-	\label{tab:uc1-comparative-results}
 \end{table}
 
 
@@ -380,154 +400,154 @@ Alibaba system utilization moves along 80\%-90\% range for processing performanc
 
 
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-srt-h-cmidt}
 	\caption{UC1 - Sort (Huge; 3.2 GB)}
 	\label{fig:uc1-srt-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-srt-g-cmidt}
 	\caption{UC1 - Sort (Gigantic; 32 GB)}
 	\label{fig:uc1-srt-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-tera-h-cmidt}
 	\caption{UC1 - Terasort (Huge; 320 MB)}
 	\label{fig:uc1-tera-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-tera-g-cmidt}
 	\caption{UC1 - Terasort (Gigantic; 3.2 GB)}
 	\label{fig:uc1-tera-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-wrdcnt-h-cmidt}
 	\caption{UC1 - Wordcount (Huge; 32 GB)}
 	\label{fig:uc1-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-wrdcnt-g-cmidt}
 	\caption{UC1 - Wordcount (Gigantic; 320 GB)}
 	\label{fig:uc1-wrdcnt-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-dfsioer-h-cmidt}
 	\caption{UC1 - Dfsioe-read (Huge; No of Files: 256, File size: 100 MB)}
 	\label{fig:uc1-dfsioer-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-dfsioer-g-cmidt}
 	\caption{UC1 - Dfsioe-read (Gigantic; No of Files: 512, File size: 400 MB)}
 	\label{fig:uc1-dfsioer-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-dfsioew-h-cmidt}
 	\caption{UC1 - Dfsioe-write (Huge; No of Files: 256, File size: 100 MB)}
 	\label{fig:uc1-dfsioew-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-dfsioew-g-cmidt}
 	\caption{UC1 - Dfsioe-write (Gigantic; No of Files: 512, File size: 400 MB)}
 	\label{fig:uc1-dfsioew-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-scan-h-cmidt}
 	\caption{UC1 - Scan (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-scan-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-scan-g-cmidt}
 	\caption{UC1 - Scan (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-scan-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-join-h-cmidt}
 	\caption{UC1 - Join (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-join-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-join-g-cmidt}
 	\caption{UC1 - Join (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-join-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-aggreg-h-cmidt}
 	\caption{UC1 - Aggregation (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-aggreg-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-aggreg-g-cmidt}
 	\caption{UC1 - Aggregation (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-aggreg-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-bayes-h-cmidt}
 	\caption{UC1 - Bayes (Huge; PAGES: 500,000 CLASSES: 100 NGRAMS: 2)}
 	\label{fig:uc1-bayes-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-bayes-g-cmidt}
 	\caption{UC1 - Bayes (Gigantic; PAGES: 1,000,000 CLASSES: 100 NGRAMS: 2)}
 	\label{fig:uc1-bayes-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-kmeans-h-cmidt}
 	\caption{UC1 - Kmeans (Huge; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 100,000,000 SAMP PER INPUT: 20,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
 	\label{fig:uc1-kmeans-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-kmeans-g-cmidt}
 	\caption{UC1 - Kmeans (Gigantic; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 200,000,000 SAMP PER INPUT: 40,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
 	\label{fig:uc1-kmeans-g-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-page-h-cmidt}
 	\caption{UC1 - Pagerank (Huge; PAGES: 5,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
 	\label{fig:uc1-page-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-page-g-cmidt}
 	\caption{UC1 - Pagerank (Gigantic; PAGES: 30,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
 	\label{fig:uc1-page-g-cmidt}
@@ -539,7 +559,7 @@ Alibaba system utilization moves along 80\%-90\% range for processing performanc
 
 \paragraph{Overview to benchmarks executed in data scale Huge/} Figure \ref{fig:uc1-huge}; 
 
-\begin{figure}[h!]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-huge}
 	\caption{Use Case 1 - Hadoop benchmark comparisons in huge data scale}
 	\label{fig:uc1-huge}
@@ -548,7 +568,7 @@ Alibaba system utilization moves along 80\%-90\% range for processing performanc
 
 \paragraph{Overview to benchmarks executed in data scale Gigantic} Figure \ref{fig:uc1-gigantic}; 
 
-\begin{figure}[h!]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc1-gigantic}
 	\caption{Use Case 1 - Hadoop benchmark comparisons in gigantic data scale}
 	\label{fig:uc1-gigantic}
@@ -573,35 +593,35 @@ USE CASE 2:
 \paragraph{Wordcount - Gigantic} Figure \ref{fig:uc2-wrdcnt-g-cmidt}; 
 
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Sort (Tiny; 32 KB)}
 	\label{fig:uc2-srt-t-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-t-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Sort (Small; 3.2 MB)}
 	\label{fig:uc2-srt-s-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-s-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Sort (Large; 320 MB)}
 	\label{fig:uc2-srt-l-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-l-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Sort (Huge; 3.2 GB)}
 	\label{fig:uc2-srt-h-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Sort (Gigantic; 32 GB)}
 	\label{fig:uc2-srt-g-cmidt}
 	\includegraphics[width=\textwidth]{uc2-srt-g-cmidt}
@@ -610,35 +630,35 @@ USE CASE 2:
 
 Wordcount results in scale
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Wordcount (Tiny; 32 KB)}
 	\label{fig:uc2-wrdcnt-t-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-t-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Wordcount (Small; 320 MB)}
 	\label{fig:uc2-wrdcnt-s-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-s-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Wordcount (Large; 3.2 GB)}
 	\label{fig:uc2-wrdcnt-l-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-l-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Wordcount (Huge; 32 GB)}
 	\label{fig:uc2-wrdcnt-h-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[p]
 	\caption{UC2 - Wordcount (Gigantic; 320 GB)}
 	\label{fig:uc2-wrdcnt-g-cmidt}
 	\includegraphics[width=\textwidth]{uc2-wrdcnt-g-cmidt}
@@ -647,7 +667,7 @@ Wordcount results in scale
 
 \paragraph{Overview of Sort benchmark varying data scales} Figure \ref{fig:uc2-srt}; 
 
-\begin{figure}[h!]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc2-srt}
 	\caption{Use Case 2 - Sort performances along data scales}
 	\label{fig:uc2-srt}
@@ -656,7 +676,7 @@ Wordcount results in scale
 
 \paragraph{Overview of Wordcount benchmark varying data scales} Figure \ref{fig:uc2-wrdcnt}; 
 
-\begin{figure}[h!]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{uc2-wrdcnt}
 	\caption{Use Case 2 - Wordcount performances along data scales}
 	\label{fig:uc2-wrdcnt}
@@ -666,7 +686,7 @@ Wordcount results in scale
 
 
 \section{Discussion}
-\paragraph{Limitations, workarounds, failures}One major limitation of this study has been the high-cost of benchmark executions' total running time which is charged in a pay-per-use manner which led the conductors to halt benchmarks at only one successful execution for each workload. This is not fitting the best practice, though, where a benchmark would be executed thrice for each workload and the average performance results were taken. Following the best practise would have provided more stable outcomes especially in cases where there occurs very tiny difference between successive performances of respective providers. Hence, we recommend this study to be understood in terms of an attempt trying to bring more clarity to black-box nature managed Hadoop proposals' performance behavior by means of resource utilization dynamics, and as the managed services come out of the box without applying any performance tweaking configurations. We do not recommend this study to be understood as a grading board for the business values provided by respective CSPs.
+\paragraph{Limitations, workarounds, failures}One major limitation of the study has been the high-cost of benchmark executions' total running time which is charged in a pay-per-use manner which led the conductors to halt benchmarks at only one successful execution for each workload. This is not fitting the best practice, though, where a benchmark would be executed thrice for each workload and the average performance results were taken. Following the best practise would have provided more stable outcomes especially in cases where there occurs very tiny difference between successive performances of respective providers. Hence, we recommend the study to be understood in terms of an attempt trying to bring more clarity to black-box nature managed Hadoop proposals' performance behavior by means of resource utilization dynamics, and as the managed services come out of the box without applying any performance tweaking configurations. We do not recommend the study to be understood as a grading board for the business values provided by respective CSPs.
 
 HiBench comes with dependencies downloaded during its compilation process by Apache Maven. The Hive engine is one of those dependencies leveraged by HiBench for running SQL workloads Scan, Join, and Aggregation. Alibaba's e-Mapreduce comprises a ready made Hive hook trigerring a Java file to run post executional transactions for other services within the package. However this preconfiguration prevented HiBench from starting with respective benchmarks' execution since the HiBench based Hive engine does not include the aforementioned jar file defined for e-MapReduce's specific environment. Disabling the predefined Hive hook from Alibaba e-MapReduce's UI management console apparently solved this issue and enabled HiBench's SQL workloads to run, but the impact of this modification on the respective performance values remains unknown, hence the need to annotate it here. With GCP and Azure issues of this kind did not occur.
 
@@ -678,12 +698,7 @@ In Azure environment the Terasort benchmark running in data scale gigantic faile
 \section{Conclusion}
 The results yield that Hadoop PaaS offerings by vendor's promise side perform and system utilizations may highly vary among CSPs.
 
-\section{Bibliography styles}
-
-There are various bibliography styles available. You can select the style of your choice in the preamble of this document. These styles are Elsevier styles based on standard styles like Harvard and Vancouver. Please use Bib\TeX\ to generate your bibliography and include DOIs whenever available.
-
-Here are two sample references: \cite{Feynman1963118,Dirac1953888}.
-
+\section*{References}
 \bibliography{mybibfile}
 
 \end{document}

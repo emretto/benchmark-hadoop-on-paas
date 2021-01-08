@@ -1,20 +1,110 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{Feynman1963118}
-R.~Feynman, F.~{Vernon Jr.}, The theory of a general quantum system interacting
-  with a linear dissipative system, Annals of Physics 24 (1963) 118--173.
-\newblock \href {http://dx.doi.org/10.1016/0003-4916(63)90068-X}
-  {\path{doi:10.1016/0003-4916(63)90068-X}}.
+\bibitem{noauthor_world_nodate}
+\href{https://www.internetworldstats.com/stats.htm}{World {Internet} {Users}
+  {Statistics} and 2020 {World} {Population} {Stats}}.
+\newline\urlprefix\url{https://www.internetworldstats.com/stats.htm}
 
-\bibitem{Dirac1953888}
-P.~Dirac, The lorentz transformation and absolute time, Physica 19~(1-–12)
-  (1953) 888--896.
-\newblock \href {http://dx.doi.org/10.1016/S0031-8914(53)80099-6}
-  {\path{doi:10.1016/S0031-8914(53)80099-6}}.
+\bibitem{noauthor_apache_nodate}
+\href{https://hadoop.apache.org/}{Apache {Hadoop}}.
+\newline\urlprefix\url{https://hadoop.apache.org/}
+
+\bibitem{ghemawat_google_2003}
+S.~Ghemawat, H.~Gobioff, S.-T. Leung, The {Google} file system, in: Proceedings
+  of the nineteenth {ACM} symposium on {Operating} systems principles, Vol.~37,
+  2003, pp. 29--43, issue: 5.
+\newblock \href {http://dx.doi.org/10.1145/1165389.945450}
+  {\path{doi:10.1145/1165389.945450}}.
+
+\bibitem{schatzle_giant_nodate}
+a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
+  \href{http://www.admin-magazine.com/HPC/Articles/MapReduce-and-Hadoop}{Giant
+  {Data}: {MapReduce} and {Hadoop} » {ADMIN} {Magazine}}.
+\newline\urlprefix\url{http://www.admin-magazine.com/HPC/Articles/MapReduce-and-Hadoop}
+
+\bibitem{noauthor_announcing_nodate}
+\href{https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/}{Announcing
+  {Amazon} {Elastic} {Compute} {Cloud} ({Amazon} {EC2}) - beta}.
+\newline\urlprefix\url{https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/}
+
+\bibitem{noauthor_dataproc_nodate}
+\href{https://cloud.google.com/dataproc}{Dataproc}.
+\newline\urlprefix\url{https://cloud.google.com/dataproc}
+
+\bibitem{noauthor_compute_nodate}
+\href{https://cloud.google.com/compute}{Compute {Engine}: {Virtual} {Machines}
+  ({VMs})}.
+\newline\urlprefix\url{https://cloud.google.com/compute}
+
+\bibitem{noauthor_cloud_nodate}
+\href{https://cloud.google.com/storage}{Cloud {Storage}}.
+\newline\urlprefix\url{https://cloud.google.com/storage}
+
+\bibitem{noauthor_azure_nodate}
+\href{https://azure.microsoft.com/en-us/services/hdinsight/}{Azure {HDInsight}
+  - {Hadoop}, {Spark}, \& {Kafka} {Service} {\textbar} {Microsoft} {Azure}}.
+\newline\urlprefix\url{https://azure.microsoft.com/en-us/services/hdinsight/}
+
+\bibitem{noauthor_e-mapreduce_nodate}
+\href{https://www.alibabacloud.com/product/emapreduce}{E-{MapReduce} {Service}:
+  {Big} {Data} {Processing} and {Analysis} {Solution} - {Alibaba} {Cloud}}.
+\newline\urlprefix\url{https://www.alibabacloud.com/product/emapreduce}
+
+\bibitem{noauthor_intel-bigdatahibench_2021}
+\href{https://github.com/Intel-bigdata/HiBench}{Intel-bigdata/{HiBench}},
+  original-date: 2012-06-12T07:56:57Z (Jan. 2021).
+\newline\urlprefix\url{https://github.com/Intel-bigdata/HiBench}
+
+\bibitem{poggi_characterizing_2018}
+N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and
+  spark in multi-cloud environments, Lecture Notes in Computer Science
+  (including subseries Lecture Notes in Artificial Intelligence and Lecture
+  Notes in Bioinformatics) 10661 LNCS (2018) 55--74.
+\newblock \href {http://dx.doi.org/10.1007/978-3-319-72401-0_5}
+  {\path{doi:10.1007/978-3-319-72401-0_5}}.
+
+\bibitem{poggi_state_2016}
+N.~Poggi, J.~L. Berral, T.~Fenech, D.~Carrera, J.~Blakeley, U.~F. Minhas,
+  N.~Vujic, The state of {SQL}-on-{Hadoop} in the cloud, in: 2016 {IEEE}
+  {International} {Conference} on {Big} {Data} ({Big} {Data}), 2016, pp.
+  1432--1443.
+\newblock \href {http://dx.doi.org/10.1109/BigData.2016.7840751}
+  {\path{doi:10.1109/BigData.2016.7840751}}.
+
+\bibitem{samadi_performance_2018}
+Y.~Samadi, M.~Zbakh, C.~Tadonki, Performance comparison between hadoop and
+  spark frameworks using {HiBench} benchmarks, Concurrency Computation 30~(12).
+\newblock \href {http://dx.doi.org/10.1002/cpe.4367}
+  {\path{doi:10.1002/cpe.4367}}.
+
+\bibitem{ahn_performance_2018}
+H.~Ahn, H.~Kim, W.~You, Performance {Study} of {Spark} on {YARN} {Cluster}
+  {Using} {HiBench}, 2018.
+\newblock \href {http://dx.doi.org/10.1109/ICCE-ASIA.2018.8552137}
+  {\path{doi:10.1109/ICCE-ASIA.2018.8552137}}.
+
+\bibitem{han_impact_2017}
+S.~Han, W.~Choi, R.~Muwafiq, Y.~Nah, Impact of memory size on bigdata
+  processing based on hadoop and spark, Vol. 2017-January, 2017, pp. 275--280.
+\newblock \href {http://dx.doi.org/10.1145/3129676.3129688}
+  {\path{doi:10.1145/3129676.3129688}}.
+
+\bibitem{ivanov_performance_2015}
+T.~Ivanov, R.~Niemann, S.~Izberovic, M.~Rosselli, K.~Tolle, R.~V. Zicari,
+  Performance {Evaluation} of {Enterprise} {Big} {Data} {Platforms} with
+  {HiBench}, in: 2015 {IEEE} {Trustcom}/{BigDataSE}/{ISPA}, Vol.~2, 2015, pp.
+  120--127.
+\newblock \href {http://dx.doi.org/10.1109/Trustcom.2015.570}
+  {\path{doi:10.1109/Trustcom.2015.570}}.
+
+\bibitem{noauthor_gartner_nodate}
+\href{https://www.gartner.com/doc/reprints?id=1-1ZDZDMTF&ct=200703&st=sb}{Gartner
+  {Reprint}}.
+\newline\urlprefix\url{https://www.gartner.com/doc/reprints?id=1-1ZDZDMTF&ct=200703&st=sb}
 
 \end{thebibliography}

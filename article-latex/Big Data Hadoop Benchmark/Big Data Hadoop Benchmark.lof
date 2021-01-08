@@ -1,0 +1,38 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces HDFS File System}}{6}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces MapReduce paradigm as implemented in Hadoop}}{7}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces UC1 - Sort (Huge; 3.2 GB)}}{27}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces UC1 - Sort (Gigantic; 32 GB)}}{27}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces UC1 - Terasort (Huge; 320 MB)}}{28}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces UC1 - Terasort (Gigantic; 3.2 GB)}}{28}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces UC1 - Wordcount (Huge; 32 GB)}}{29}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces UC1 - Wordcount (Gigantic; 320 GB)}}{29}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces UC1 - Dfsioe-read (Huge; No of Files: 256, File size: 100 MB)}}{30}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces UC1 - Dfsioe-read (Gigantic; No of Files: 512, File size: 400 MB)}}{30}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces UC1 - Dfsioe-write (Huge; No of Files: 256, File size: 100 MB)}}{31}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces UC1 - Dfsioe-write (Gigantic; No of Files: 512, File size: 400 MB)}}{31}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces UC1 - Scan (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}}{32}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces UC1 - Scan (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}}{32}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces UC1 - Join (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}}{33}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces UC1 - Join (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}}{33}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces UC1 - Aggregation (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}}{34}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces UC1 - Aggregation (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}}{34}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces UC1 - Bayes (Huge; PAGES: 500,000 CLASSES: 100 NGRAMS: 2)}}{35}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces UC1 - Bayes (Gigantic; PAGES: 1,000,000 CLASSES: 100 NGRAMS: 2)}}{35}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces UC1 - Kmeans (Huge; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 100,000,000 SAMP PER INPUT: 20,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}}{36}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces UC1 - Kmeans (Gigantic; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 200,000,000 SAMP PER INPUT: 40,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}}{36}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces UC1 - Pagerank (Huge; PAGES: 5,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}}{37}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces UC1 - Pagerank (Gigantic; PAGES: 30,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}}{37}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Use Case 1 - Hadoop benchmark comparisons in huge data scale}}{38}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Use Case 1 - Hadoop benchmark comparisons in gigantic data scale}}{39}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces UC2 - Sort (Tiny; 32 KB)}}{40}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces UC2 - Sort (Small; 3.2 MB)}}{40}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces UC2 - Sort (Large; 320 MB)}}{41}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces UC2 - Sort (Huge; 3.2 GB)}}{41}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces UC2 - Sort (Gigantic; 32 GB)}}{42}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces UC2 - Wordcount (Tiny; 32 KB)}}{42}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces UC2 - Wordcount (Small; 320 MB)}}{43}{figure.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces UC2 - Wordcount (Large; 3.2 GB)}}{43}{figure.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces UC2 - Wordcount (Huge; 32 GB)}}{44}{figure.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces UC2 - Wordcount (Gigantic; 320 GB)}}{44}{figure.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Use Case 2 - Sort performances along data scales}}{45}{figure.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Use Case 2 - Wordcount performances along data scales}}{45}{figure.38}
