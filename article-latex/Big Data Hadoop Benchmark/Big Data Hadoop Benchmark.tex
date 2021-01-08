@@ -157,11 +157,9 @@ Ivanov et al. [56] compare the performances of two enterprise grade applications
 \section{Method}
 
 
-In this study we put three CSP providers' managed Hadoop services in focus in terms of performance evaluation comparison: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 report in leading or niche section. Bound by availability of their offered hardware and software options we selected by providers' promise apparently same or close settings. Without any performance tweak operation with their settings for any performance optimization on the respective managed systems after installation we immediately executed several workloads from HiBench's micro, sql, ml, and websearch categories. For a more clear understanding of the benchmark outputs, during the benchmark execution we collected system utilization records on each worker node of the cluster. 
+In this study we benchmarked Hadoop on PaaS services of three CSPs in terms of comparing their performances to each other: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 report in leading or niche section. Bound by availability of their respective hardware and software options we selected by providers' promise apparently same or close settings. With respect to our aim benchmarking managed systems as they come out of the box, we put two basic rules to stick for each provider in order to align initial circumstances prior to benchmark execution: Among the CSPs, respective  data center's geographic location shall be same or close (1), processor number and memory capacity (by providers' promise) shall be same or as close as possible. Thus Frankfurt is selected as location for all providers data center, within given options we selected 8 CPUs/64GB RAM for master node and 4 CPU's/32GB RAM for each worker node totaling in 12 CPUs and 96GB compute power for the cluster. Specified cluster installation options and details are given in Table \ref{tab:csp-configs}. Without applying any performance tweak operation to the respective preconfigurations we immediately executed several Hadoop benchmarks from HiBench's micro, sql, ml, and websearch categories. We only modified default cluster's configuration in cases where the benchmark was detained from running which is reported in Discussion section.
 
-
-Specified configurations are given in Table \ref{tab:csp-configs}
-
+During the benchmark execution we collected system utilization records on each worker node of the cluster. This approach enabled us a visualization of an overview to the system utilization on each worker node within the cluster over the respective benchmark's execution time. 
 
 \begin{table}
 	\centering
