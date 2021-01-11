@@ -3,50 +3,51 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Big Data Hadoop Benchmark.aux
 The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
+Warning--empty journal in dean_mapreduce_2004
 Too many commas in name 1 of "Schätzle, Martin Przyjaciel-Zablocki, {and} Alexander, Thomas Hornung" for entry schatzle_giant_nodate
 while executing---line 1507 of file elsarticle-num.bst
 Warning--empty booktitle in ahn_performance_2018
 Warning--empty pages in ahn_performance_2018
 Warning--empty booktitle in han_impact_2017
-You've used 18 entries,
+You've used 20 entries,
             2937 wiz_defined-function locations,
-            757 strings with 8217 characters,
-and the built_in function-call counts, 4780 in all, are:
-= -- 420
-> -- 108
-< -- 7
-+ -- 48
-- -- 30
-* -- 280
-:= -- 551
-add.period$ -- 25
-call.type$ -- 18
-change.case$ -- 20
-chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 195
-empty$ -- 638
-format.name$ -- 37
-if$ -- 1320
+            768 strings with 8435 characters,
+and the built_in function-call counts, 5256 in all, are:
+= -- 464
+> -- 121
+< -- 9
++ -- 53
+- -- 33
+* -- 299
+:= -- 607
+add.period$ -- 27
+call.type$ -- 20
+change.case$ -- 24
+chr.to.int$ -- 6
+cite$ -- 24
+duplicate$ -- 213
+empty$ -- 696
+format.name$ -- 41
+if$ -- 1455
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 7
-newline$ -- 80
-num.names$ -- 8
-pop$ -- 152
+int.to.str$ -- 20
+missing$ -- 10
+newline$ -- 86
+num.names$ -- 10
+pop$ -- 173
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 375
+skip$ -- 415
 stack$ -- 0
-substring$ -- 151
-swap$ -- 66
+substring$ -- 156
+swap$ -- 68
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 22
-width$ -- 20
-write$ -- 152
+warning$ -- 4
+while$ -- 25
+width$ -- 22
+write$ -- 167
 (There was 1 error message)

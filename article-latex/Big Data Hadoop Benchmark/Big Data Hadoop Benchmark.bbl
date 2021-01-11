@@ -21,6 +21,14 @@ S.~Ghemawat, H.~Gobioff, S.-T. Leung, The {Google} file system, in: Proceedings
 \newblock \href {http://dx.doi.org/10.1145/1165389.945450}
   {\path{doi:10.1145/1165389.945450}}.
 
+\bibitem{white_hadoop_2015}
+T.~White, Hadoop: the definitive guide, fourth edition Edition, O'Reilly,
+  Beijing, 2015, oCLC: ocn904818464.
+
+\bibitem{dean_mapreduce_2004}
+J.~Dean, S.~Ghemawat, {MapReduce}: {Simplified} data processing on large
+  clusters.
+
 \bibitem{schatzle_giant_nodate}
 a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
   \href{http://www.admin-magazine.com/HPC/Articles/MapReduce-and-Hadoop}{Giant
