@@ -140,7 +140,7 @@ Similar to HDFS, Hadoop's MapReduce is the open source implementation of the Map
 	\centering
 \end{figure}
 
-\paragraph{YARN}Hadoop version 2.x includes major architectural improvements in terms of resource managing. Version 1.x of Hadoop suffered shortcomings due to an overload of its resource management duties which was handled within MRv1 where job tracker node and task tracker nodes were handling the organizational process of MapReduce executions. YARN standing for "Yet Another Resource Negotiator" emerging as an intermediate layer between HDFS and MapReduce taking over some of the load that was previosly carried out by MRv1 also opened a layer for batch, stream, interactive and graph processing engines to leverage HDFS file system (Figure \ref{fig:YARNoverview}). After YARN, MRv1 become MRv2 isolated from resource managerial duties regarding previous version hence more efficient with processing oriented focus. YARN innovates Hadoop by brining the architectural elements resource manager, which is one node dedicated to track resources across the cluster by their availability, and node managers which reside inside each worker node and monitor containers. 
+\paragraph{YARN}Hadoop version 2.x includes major architectural improvements in terms of resource managing. Version 1.x of Hadoop suffered shortcomings due to an overload of its resource management duties which was handled within MRv1 where job tracker node and task tracker nodes were running the organizational load of MapReduce executions. YARN standing for "Yet Another Resource Negotiator" emerging as an intermediate layer between HDFS and MapReduce taking over some of the load that was previosly carried out by MRv1 also become a gate to other batch, stream, interactive and graph processing engines to leverage HDFS file system (Figure \ref{fig:YARNoverview}). After YARN, MRv1 become MRv2 isolated from resource managerial duties regarding previous version hence more efficient with processing oriented focus. YARN innovates Hadoop by brining the architectural elements resource manager, which is one node dedicated to track resources across the cluster by their availability, and node managers which reside inside each worker node and monitor containers. 
 
 
 \begin{figure}[h!]
@@ -158,7 +158,7 @@ Similar to HDFS, Hadoop's MapReduce is the open source implementation of the Map
 
 \paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_e-mapreduce_nodate}}
 
-\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}} Introduced to the benchmark community in 2004 and ever since
+\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}} Introduced to the benchmark community in 2004 and ever since. Huang et al. \cite{huang_hibench_2010}
 
 
 

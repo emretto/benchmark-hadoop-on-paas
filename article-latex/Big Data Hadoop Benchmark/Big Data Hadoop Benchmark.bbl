@@ -27,7 +27,7 @@ T.~White, Hadoop: the definitive guide, fourth edition Edition, O'Reilly,
 
 \bibitem{dean_mapreduce_2004}
 J.~Dean, S.~Ghemawat, {MapReduce}: {Simplified} data processing on large
-  clusters.
+  clusters, 2004, pp. 137--149.
 
 \bibitem{schatzle_giant_nodate}
 a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
@@ -67,6 +67,14 @@ a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
 \href{https://github.com/Intel-bigdata/HiBench}{Intel-bigdata/{HiBench}},
   original-date: 2012-06-12T07:56:57Z (Jan. 2021).
 \newline\urlprefix\url{https://github.com/Intel-bigdata/HiBench}
+
+\bibitem{huang_hibench_2010}
+S.~Huang, J.~Huang, J.~Dai, T.~Xie, B.~Huang, The {HiBench} benchmark suite:
+  {Characterization} of the {MapReduce}-based data analysis, in: 2010 {IEEE}
+  26th {International} {Conference} on {Data} {Engineering} {Workshops}
+  ({ICDEW} 2010), 2010, pp. 41--51.
+\newblock \href {http://dx.doi.org/10.1109/ICDEW.2010.5452747}
+  {\path{doi:10.1109/ICDEW.2010.5452747}}.
 
 \bibitem{poggi_characterizing_2018}
 N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and

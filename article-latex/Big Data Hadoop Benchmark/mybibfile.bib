@@ -188,11 +188,15 @@
 }
 
 
-@article{dean_mapreduce_2004,
+
+@inproceedings{dean_mapreduce_2004,
 	title = {{MapReduce}: {Simplified} data processing on large clusters},
 	shorttitle = {{MapReduce}},
-	author = {Dean, Jeffrey and Ghemawat, Sanjay},
+	abstract = {MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper. Programs written in this functional style are automatically parallelized and executed on a large cluster of commodity machines. The run-time system takes care of the details of partitioning the input data, scheduling the program’s execution across a set of machines, handling machine failures, and managing the required inter-machine communication. This allows programmers without any experience with parallel and distributed systems to easily utilize the resources of a large distributed system. Our implementation of MapReduce runs on a large cluster of commodity machines and is highly scalable: a typical MapReduce computation processes many terabytes of data on thousands of machines. Programmers find the system easy to use: hundreds of MapReduce programs have been implemented and upwards of one thousand MapReduce jobs are executed on Google’s clusters every day.},
+	author = {Dean, J. and Ghemawat, S.},
 	year = {2004},
+	pages = {137--149},
+	conference = {USENIX Association OSDI ’04: 6th Symposium on Operating Systems Design and Implementation}
 }
 
 
@@ -207,4 +211,18 @@
 	year = {2015},
 	note = {OCLC: ocn904818464},
 	keywords = {Hadoop, Apache Hadoop, File organization (Computer science)},
+}
+
+
+@inproceedings{huang_hibench_2010,
+	title = {The {HiBench} benchmark suite: {Characterization} of the {MapReduce}-based data analysis},
+	shorttitle = {The {HiBench} benchmark suite},
+	doi = {10.1109/ICDEW.2010.5452747},
+	abstract = {The MapReduce model is becoming prominent for the large-scale data analysis in the cloud. In this paper, we present the benchmarking, evaluation and characterization of Hadoop, an open-source implementation of MapReduce. We first introduce HiBench, a new benchmark suite for Hadoop. It consists of a set of Hadoop programs, including both synthetic micro-benchmarks and real-world Hadoop applications. We then evaluate and characterize the Hadoop framework using HiBench, in terms of speed (i.e., job running time), throughput (i.e., the number of tasks completed per minute), HDFS bandwidth, system resource (e.g., CPU, memory and I/O) utilizations, and data access patterns.},
+	booktitle = {2010 {IEEE} 26th {International} {Conference} on {Data} {Engineering} {Workshops} ({ICDEW} 2010)},
+	author = {Huang, Shengsheng and Huang, Jie and Dai, Jinquan and Xie, Tao and Huang, Bo},
+	month = mar,
+	year = {2010},
+	keywords = {data analysis, Throughput, Cloud computing, Bandwidth, Java, Fault tolerance, Open source software, data access patterns, Data analysis, Explosives, Hadoop characterization, HDFS bandwidth, HiBench benchmark suite, Large-scale systems, MapReduce based data analysis, open source implementation, Personal communication networks, public domain software, Resource management},
+	pages = {41--51},
 }
