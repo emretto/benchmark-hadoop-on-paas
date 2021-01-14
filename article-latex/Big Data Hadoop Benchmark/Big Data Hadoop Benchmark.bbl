@@ -58,10 +58,21 @@ a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
   - {Hadoop}, {Spark}, \& {Kafka} {Service} {\textbar} {Microsoft} {Azure}}.
 \newline\urlprefix\url{https://azure.microsoft.com/en-us/services/hdinsight/}
 
-\bibitem{noauthor_e-mapreduce_nodate}
-\href{https://www.alibabacloud.com/product/emapreduce}{E-{MapReduce} {Service}:
-  {Big} {Data} {Processing} and {Analysis} {Solution} - {Alibaba} {Cloud}}.
-\newline\urlprefix\url{https://www.alibabacloud.com/product/emapreduce}
+\bibitem{noauthor_azuravail_nodate}
+\href{https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-azure-hdinsight-3-6/}{Announcing
+  general availability of {Azure} {HDInsight} 3.6}.
+\newline\urlprefix\url{https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-azure-hdinsight-3-6/}
+
+\bibitem{noauthor_what_nodate}
+\href{https://www.alibabacloud.com/help/doc-detail/28068.htm?spm=a2c63.l28256.b99.4.65e270b2YXyKDV}{What
+  is {E}-{MapReduce}? - {Product} {Introduction}{\textbar} {Alibaba} {Cloud}
+  {Documentation} {Center}}.
+\newline\urlprefix\url{https://www.alibabacloud.com/help/doc-detail/28068.htm?spm=a2c63.l28256.b99.4.65e270b2YXyKDV}
+
+\bibitem{noauthor_alibaba_nodate}
+\href{https://alibaba.github.io/cloud-kernel/os.html}{Alibaba {Cloud} {Linux}
+  {OS}}.
+\newline\urlprefix\url{https://alibaba.github.io/cloud-kernel/os.html}
 
 \bibitem{noauthor_intel-bigdatahibench_2021}
 \href{https://github.com/Intel-bigdata/HiBench}{Intel-bigdata/{HiBench}},
@@ -75,6 +86,23 @@ S.~Huang, J.~Huang, J.~Dai, T.~Xie, B.~Huang, The {HiBench} benchmark suite:
   ({ICDEW} 2010), 2010, pp. 41--51.
 \newblock \href {http://dx.doi.org/10.1109/ICDEW.2010.5452747}
   {\path{doi:10.1109/ICDEW.2010.5452747}}.
+
+\bibitem{noauthor_release_nodate}
+\href{/Intel-bigdata/HiBench/releases/tag/v7.1.1}{Release {HiBench}-7.1.1 ·
+  {Intel}-bigdata/{HiBench}}.
+\newline\urlprefix\url{/Intel-bigdata/HiBench/releases/tag/v7.1.1}
+
+\bibitem{rabl_experience_2014}
+L.~Yi, J.~Dai,
+  \href{http://link.springer.com/10.1007/978-3-319-10596-3_4}{Experience from
+  {Hadoop} {Benchmarking} with {HiBench}: {From} {Micro}-{Benchmarks} {Toward}
+  {End}-to-{End} {Pipelines}}, in: T.~Rabl, N.~Raghunath, M.~Poess,
+  M.~Bhandarkar, H.-A. Jacobsen, C.~Baru (Eds.), Advancing {Big} {Data}
+  {Benchmarks}, Vol. 8585, Springer International Publishing, Cham, 2014, pp.
+  43--48, series Title: Lecture Notes in Computer Science.
+\newblock \href {http://dx.doi.org/10.1007/978-3-319-10596-3_4}
+  {\path{doi:10.1007/978-3-319-10596-3_4}}.
+\newline\urlprefix\url{http://link.springer.com/10.1007/978-3-319-10596-3_4}
 
 \bibitem{poggi_characterizing_2018}
 N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and

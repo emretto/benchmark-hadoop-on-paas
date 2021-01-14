@@ -9,45 +9,45 @@ while executing---line 1507 of file elsarticle-num.bst
 Warning--empty booktitle in ahn_performance_2018
 Warning--empty pages in ahn_performance_2018
 Warning--empty booktitle in han_impact_2017
-You've used 21 entries,
+You've used 25 entries,
             2937 wiz_defined-function locations,
-            776 strings with 8748 characters,
-and the built_in function-call counts, 5978 in all, are:
-= -- 537
-> -- 137
-< -- 11
-+ -- 59
-- -- 38
-* -- 343
-:= -- 684
-add.period$ -- 29
-call.type$ -- 21
-change.case$ -- 25
+            800 strings with 9699 characters,
+and the built_in function-call counts, 7056 in all, are:
+= -- 628
+> -- 166
+< -- 13
++ -- 71
+- -- 46
+* -- 417
+:= -- 804
+add.period$ -- 34
+call.type$ -- 25
+change.case$ -- 30
 chr.to.int$ -- 6
-cite$ -- 25
-duplicate$ -- 245
-empty$ -- 784
-format.name$ -- 47
-if$ -- 1653
+cite$ -- 29
+duplicate$ -- 292
+empty$ -- 930
+format.name$ -- 57
+if$ -- 1951
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 11
-newline$ -- 90
-num.names$ -- 11
-pop$ -- 185
+int.to.str$ -- 25
+missing$ -- 12
+newline$ -- 107
+num.names$ -- 14
+pop$ -- 224
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 469
+skip$ -- 545
 stack$ -- 0
-substring$ -- 212
-swap$ -- 86
-text.length$ -- 9
+substring$ -- 238
+swap$ -- 100
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 32
-width$ -- 23
-write$ -- 180
+while$ -- 37
+width$ -- 27
+write$ -- 212
 (There was 1 error message)

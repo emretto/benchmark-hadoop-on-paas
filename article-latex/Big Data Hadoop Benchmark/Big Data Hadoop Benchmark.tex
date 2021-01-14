@@ -154,11 +154,34 @@ Similar to HDFS, Hadoop's MapReduce is the open source implementation of the Map
 
 \paragraph{GCP Dataproc \cite{noauthor_dataproc_nodate}} Google's managed Spark and Hadoop solution namely Dataproc is a preconfigured Hadoop on PaaS service built upon preinstalled VM instances on Compute Engine \cite{noauthor_compute_nodate} which is another service offering of GCP. An OS spectrum comprising Debian and\textbackslash or ubuntu was offered at the date of the study which are proposed as preinstalled images during Dataproc installation process. While Hadoop core elements HDFS, YARN, and MapReduce reside as default frameworks, a variety of elements belonging to Hadoop ecosystem are offered as well. The end user is also offered to leverage Cloud Storage \cite{noauthor_cloud_nodate}, Google's proprietary cloud storage service to keep data in a longer term where Dataproc cluster is meant to be terminated after usage. By means of Web UI or local CLI via API the end user can access the Dataproc cluster as well as single VM instances within Compute Engine. Google offers a large number of data centers around the globe.
 
-\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}
+\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}Azure's solution to managed Hadoop and Spark platform is a product of the collaboration Azure's with Hortonworks bringing Hortonworks Data Platform (HDP) to a cloud platform \cite{noauthor_azuravail_nodate}. As being so, HDInsight differs in architecture with respect to its conjugates, by not being a Hadoop cluster installed on the cloud VM service layer, namely Azure Virtual Machines, instead it is an HDP platform optimised for the cloud. Another difference is that HDInsight obligates WASB, the Azure blob system as the storage system including an option to leverage Data Lake Storage, excluding Hadoop's native file system HDFS. 
 
-\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_e-mapreduce_nodate}}
+\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_what_nodate}}Alibaba Cloud's managed Hadoop service e-MapReduce leveraging Apache Hadoop and Apache Spark is placed as a service layer on its Elastic Compute Service (ECS), a similar approach to the one of GCP's. Alibaba's number of provided data center locations across the globe are not as numerous as its rivals hence available in the United States, Europe, Middle East and Asia Pacific. Alibaba Cloud's managed service distincts from others in that its preinstalled OS image is developed by Alibaba Cloud, namely Aliyun Linux 2, a linux distribution based on CentOS, the open source version of RedHat Linux. AliyunOS is claimed to provide a stable and reliable environment functioning deeply optimized with the Alibaba Cloud infrastructure, and be open source on its GitHub repository \cite{noauthor_alibaba_nodate}. e-MapReduce offers a wide scale of machine types with different specifications for specific purposes like CPU intensive or memory intensive tasks. As with GCP, on Alibabacloud e-MapReduce the type of storage whether HDFS or Alibaba cloud storage can be specified by the end user.
 
-\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}} Introduced to the benchmark community in 2004 and ever since. Huang et al. \cite{huang_hibench_2010}
+\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}}Introduced to the community in 2010 \cite{huang_hibench_2010}, the open source HiBench implementation is motivated by the aim to provide a comprehensive and more representative benchmark tool with respect to Hadoop's 
+
+Leveraged HiBench version of the study is HiBench 7.1.1 \cite{noauthor_release_nodate} Here is another HiBench citation \cite{rabl_experience_2014}
+
+Table \ref{tab:hibench-wrkl} lists the Hadoop related workloads in HiBench 7.1
+
+
+
+\begin{table}
+	\centering
+	\small
+	\caption{HiBench 7.1 - Hadoop-related Workloads}
+	\label{tab:hibench-wrkl}
+	\begin{tabular}[h!]{ p{2.0cm} p{6.0cm}  }
+		\hline
+		\textbf{Category} & \textbf{Workload} \\
+		\hline
+		Micro & Sort, Terasort, Wordcount, Dfsioe, Sleep \\
+		SQL & Scan, Join, Aggregation  \\
+		ML & Bayes, Kmeans\\
+		Websearch & Nutchindexing, Pagerank\\
+		\hline
+	\end{tabular}
+\end{table}
 
 
 
