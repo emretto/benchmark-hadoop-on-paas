@@ -9,45 +9,45 @@ while executing---line 1507 of file elsarticle-num.bst
 Warning--empty booktitle in ahn_performance_2018
 Warning--empty pages in ahn_performance_2018
 Warning--empty booktitle in han_impact_2017
-You've used 25 entries,
+You've used 26 entries,
             2937 wiz_defined-function locations,
-            800 strings with 9699 characters,
-and the built_in function-call counts, 7056 in all, are:
-= -- 628
-> -- 166
+            803 strings with 9861 characters,
+and the built_in function-call counts, 7213 in all, are:
+= -- 639
+> -- 167
 < -- 13
-+ -- 71
++ -- 72
 - -- 46
-* -- 417
-:= -- 804
-add.period$ -- 34
-call.type$ -- 25
-change.case$ -- 30
+* -- 423
+:= -- 818
+add.period$ -- 35
+call.type$ -- 26
+change.case$ -- 31
 chr.to.int$ -- 6
-cite$ -- 29
-duplicate$ -- 292
-empty$ -- 930
+cite$ -- 30
+duplicate$ -- 300
+empty$ -- 958
 format.name$ -- 57
-if$ -- 1951
+if$ -- 1999
 int.to.chr$ -- 0
-int.to.str$ -- 25
+int.to.str$ -- 26
 missing$ -- 12
-newline$ -- 107
+newline$ -- 111
 num.names$ -- 14
-pop$ -- 224
+pop$ -- 233
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 545
+skip$ -- 559
 stack$ -- 0
 substring$ -- 238
-swap$ -- 100
+swap$ -- 101
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
 while$ -- 37
-width$ -- 27
-write$ -- 212
+width$ -- 28
+write$ -- 218
 (There was 1 error message)

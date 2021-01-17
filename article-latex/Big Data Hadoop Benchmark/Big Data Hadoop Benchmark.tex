@@ -152,17 +152,17 @@ Similar to HDFS, Hadoop's MapReduce is the open source implementation of the Map
 
 \paragraph{Cloud Computing}The commercialization of Cloud Computing in the midst 2000's \cite{noauthor_announcing_nodate} delivered utilization of storage and computing resources to the end users saving them high investments on hardware technology that is soon going to be obsolete and is expensive to maintain. As the migration to the cloud is an ongoing process, Hadoop also slips out from its residence on on-prem infrastructure to the cloud by being implemented on virtual machine instances provided as IaaS platforms by many providers. The Cloud Service Providers embraced the need of eliminating Hadoop's complex implementation process on multi-node VMs by providing managed Hadoop systems commercially packaged as PaaS, which are pre-installed and pre-configured Hadoop clusters allowing the installation of tens to hundreds of nodes in a matter of minutes simply by determining some settings like hardware specs and node numbers prior the installation. The Managed Hadoop system is both a blessing and a curse, by leaving the hard implementation part which is not necessarily related with the main analysis objective to a contractor the end user saves time and efforts including a payoff, though: By definition, managed systems are prepackaged solutions provided in black-box nature. CSPs apply behind-the-scenes tweaks in terms of reaching better performance results on selected approaches like memory intensive or compute intensive applications.
 
-\paragraph{GCP Dataproc \cite{noauthor_dataproc_nodate}} Google's managed Spark and Hadoop solution, namely Dataproc, is a preconfigured Hadoop on PaaS service built upon preinstalled VM instances on Compute Engine \cite{noauthor_compute_nodate} which is another service offering of GCP. An OS spectrum comprising Debian and\textbackslash or ubuntu was offered at the date of the study which are proposed as preinstalled images during Dataproc installation process. While Hadoop core elements HDFS, YARN, and MapReduce reside as default frameworks, a variety of elements belonging to Hadoop ecosystem are offered as well. The end user is also offered to leverage Cloud Storage \cite{noauthor_cloud_nodate}, Google's proprietary cloud storage service to keep data in a longer term where Dataproc cluster is meant to be terminated after usage. By means of Web UI or local CLI via API the end user can access the Dataproc cluster as well as single VM instances within Compute Engine. Google offers a large number of data centers around the globe.
+\paragraph{GCP Dataproc \cite{noauthor_dataproc_nodate}} Google's managed Spark and Hadoop solution, namely Dataproc, is a preconfigured Hadoop on PaaS service built upon preinstalled VM instances on Compute Engine \cite{noauthor_compute_nodate} which is another service of GCP. An OS spectrum comprising Debian and\textbackslash or ubuntu was offered at the date of the study which are proposed as preinstalled images during Dataproc installation process. While Hadoop core elements HDFS, YARN, and MapReduce reside as default frameworks, a variety of elements belonging to Hadoop ecosystem are offered as well. The end user is also offered to leverage Cloud Storage \cite{noauthor_cloud_nodate}, Google's proprietary cloud storage service to keep data in long term where Dataproc cluster is meant to be terminated after usage. By means of Web UI or local CLI via API the end user can access the Dataproc cluster as well as single VM instances within Compute Engine. Google offers a large number of data centers around the globe.
 
-\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}Azure's solution to managed Hadoop and Spark platform is a product of the collaboration Azure's with Hortonworks bringing Hortonworks Data Platform (HDP) to a cloud platform \cite{noauthor_azuravail_nodate}. As being so, HDInsight differs in architecture with respect to its conjugates, by not being a Hadoop cluster installed on the cloud VM service layer, namely Azure Virtual Machines, instead it is an HDP platform optimised for the cloud. Another difference is that HDInsight obligates WASB, the Azure blob system as the storage system including an option to leverage Data Lake Storage, excluding Hadoop's native file system HDFS which apparently led one benchmark task to fail. At the date of the study Azure was obligating Hadoop to use in in High Avalability mode with 2 master nodes hence leaving hardware selection to the end user.
+\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}Azure's solution to managed Hadoop and Spark platform is a product of the collaboration with Hortonworks bringing Hortonworks Data Platform (HDP) to a cloud platform \cite{noauthor_azuravail_nodate}. As being so, HDInsight differs in architecture with respect to its conjugates, by not being a Hadoop cluster installed on the cloud VM service layer, namely Azure Virtual Machines, instead it is an HDP platform optimised for the cloud. Another difference is that HDInsight obligates WASB, the Azure blob system as the storage system including an option to leverage Data Lake Storage, excluding Hadoop's native file system HDFS from the options. At the date of the study Azure was obligating Hadoop to use in in High Avalability mode with 2 master nodes hence leaving hardware selection to the end user.
 
-\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_what_nodate}}Alibaba Cloud's managed Hadoop service e-MapReduce leveraging Apache Hadoop and Apache Spark is placed as a service layer on its Elastic Compute Service (ECS), a similar approach to the one of GCP's. Alibaba's number of provided data center locations beyond Mainland China are not as numerous as its conjugates hence available in the United States, Europe, Middle East and Asia Pacific. Alibaba Cloud's managed service distincts from others in that its preinstalled Operating System Aliyun Linux 2 by the date of the study was developed by Alibaba Cloud, a linux distribution based on CentOS, the open source version of RedHat Linux. AliyunOS is claimed to provide a stable and reliable environment functioning deeply optimized with the Alibaba Cloud infrastructure, and be open source on its GitHub repository \cite{noauthor_alibaba_nodate}. e-MapReduce offers a wide scale of machine types with different specifications for specific purposes like CPU intensive or memory intensive tasks. As with GCP, on Alibabacloud e-MapReduce the type of storage whether it shall be HDFS or leverage Alibaba cloud storage can be specified by the end user.
+\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_what_nodate}}Alibaba Cloud's managed Hadoop service e-MapReduce leveraging Apache Hadoop and Apache Spark is placed as a service layer on its Elastic Compute Service (ECS) \cite{noauthor_alielastic_nodate}, a similar approach to the one of GCP's. Alibaba's number of provided data center locations beyond Mainland China are not as numerous as its conjugates hence available in the United States, Europe, Middle East and Asia Pacific. Alibaba Cloud's managed service distincts in that its preinstalled Operating System Aliyun Linux 2 by the date of the study is developed by Alibaba Cloud, a linux distribution based on CentOS, the open source version of RedHat Linux. AliyunOS is claimed to provide a stable and reliable environment functioning deeply optimized with the Alibaba Cloud infrastructure, and be open source on its GitHub repository \cite{noauthor_alibaba_nodate}. e-MapReduce offers a wide scale of machine types with different specifications for specific purposes like CPU intensive or memory intensive tasks. As with GCP, on Alibabacloud e-MapReduce the type of storage whether it shall be HDFS or leverage Alibaba cloud storage can be specified by the end user.
 
-\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}}Introduced to the community in 2010 \cite{huang_hibench_2010}, the open source HiBench implementation is motivated by the aim to provide a comprehensive and representative benchmark for Hadoop helping evaluate different big data frameworks in terms of speed, throughput, and system utilization. At the date of the study current version of HiBench is 7.1, comprising 29 benchmarks categorized in 6 sections which are: Micro, Machine Learning, SQL, Websearch, Graph, and Streaming benchmarks.
+\paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}}Introduced to the community in 2010 \cite{huang_hibench_2010}, the open source HiBench implementation is motivated by the aim providing a comprehensive and representative benchmark for Hadoop helping evaluate different big data frameworks in terms of speed, throughput, and system utilization. At the date of the study current version of HiBench is 7.1, comprising 29 benchmarks categorized in 6 sections (Micro, Machine Learning, SQL, Websearch, Graph, and Streaming). Table \ref{tab:hibench-wrkl} lists the Hadoop related workloads in HiBench 7.1 \cite{noauthor_release_nodate} executed in the study.
 
-Leveraged HiBench version of the study is HiBench 7.1.1 \cite{noauthor_release_nodate} Here is another HiBench citation \cite{rabl_experience_2014}
+Here is another HiBench citation \cite{rabl_experience_2014}
 
-Table \ref{tab:hibench-wrkl} lists the Hadoop related workloads in HiBench 7.1
+
 
 
 
@@ -171,14 +171,24 @@ Table \ref{tab:hibench-wrkl} lists the Hadoop related workloads in HiBench 7.1
 	\small
 	\caption{HiBench 7.1 - Hadoop-related Workloads}
 	\label{tab:hibench-wrkl}
-	\begin{tabular}[p]{ p{2.0cm} p{6.0cm}  }
+	\begin{tabular}[p]{ p{2.0cm} p{2.0cm} p{5.0cm} }
 		\hline
-		\textbf{Category} & \textbf{Workload} \\
+		\textbf{Category} & \textbf{Workload} & \textbf{Dominant Character} \\
 		\hline
-		Micro & Sort, Terasort, Wordcount, Dfsioe, Sleep \\
-		SQL & Scan, Join, Aggregation  \\
-		ML & Bayes, Kmeans\\
-		Websearch & Nutchindexing, Pagerank\\
+		\multirow{5} {2cm} {Micro} & Sort & IO bound \\
+		 & Terasort & IO bound \\
+		 & Wordcount & CPU (map), IO (reduce) \\
+		 & Dfsioe & IO bound \\
+		\hline
+		\multirow{3}{ 2cm }{SQL} & Scan & IO bound \\
+		 & Join & IO bound \\
+		 & Aggregation & IO bound \\
+		\hline
+		\multirow{2}{ 2cm }{ML} & Bayes & IO bound (CPU bound in map) \\
+		 & Kmeans & CPU (iterations), IO (clustering) \\
+		\hline
+		\multirow{2}{ 2cm }{Websearch} & Nutchindexing & IO bound \\
+		 & Pagerank & CPU bound \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -215,7 +225,7 @@ Use Case 2. We picked one benchmark of IO bound character (Sort), one benchmark 
 
 Bound by availability of their respective hardware and software options we selected by providers' promise apparently same or close settings. With respect to our aim benchmarking managed systems as they come out-of-the-box, we put two basic rules to stick for each provider in order to align initial circumstances prior to benchmark execution: Among the CSPs, respective  data center's geographic location shall be same or close (1), processor number and memory capacity (by providers' promise) shall be same or as close as possible. Thus Frankfurt is selected as location for all providers data center, within given options we selected 8 CPUs/64GB RAM for master node and 4 CPU's/32GB RAM for each worker node totaling in 12 CPUs and 96GB worker compute power for the cluster. Specified cluster installation options and details are given in Table \ref{tab:csp-configs}. Without applying any performance tweak operation to the respective preconfigurations we immediately executed several Hadoop benchmarks from HiBench's Micro, Sql, ML, and Websearch categories. We only modified default cluster's configuration in cases where the benchmark was detained from running which is reported in Discussion section.
 
-During the benchmark execution we collected system utilization records on each worker node of the cluster. This approach enabled us the visualization of an overview to the system utilizations on each worker node within the cluster over the respective benchmark's execution time. 
+During the benchmark execution we collected system utilization records addressing CPU, Memory, and IO behavior on each worker node of the cluster. This approach enabled us the visualization of an overview to the system utilizations on each worker node within the cluster over the respective benchmark's execution time. To provide data locality, if a specific data block to process does not reside on the same node where there is an available map slot YARN transfers the respective block to the node with free slot requiring a network activity which would have a decreasing impact over the performance. However, due to the small cluster size consisting of 3 nodes we excluded network activity track with the assumption data locality condition is provided during the executions of the benchmark and likely to have least impact on the performance.
 
 \begin{table}
 	\centering
@@ -319,14 +329,14 @@ During the benchmark execution we collected system utilization records on each w
 		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(MB/s)}}\end{math} \\
 		\hline
 		Sort (t) & 39.30 KB & 36 & 0.0012 & 69 & 0.0006 & 32 & 0.0012 \\
-		Wordcount(t) & 38.65 KB & 38 & 0.001 & 68 & 0.0006 & 31 & 0.0012 \\
 		Sort (s) & 3.28 MB & 36 & 0.09 & 70 & 0.0471 & 31 & 0.105 \\
-		Wordcount (s) & 348.29 MB & 50 & 6.51 & 98 & 3.34 & 47 & 7.06 \\
 		Sort (l) & 328.50 MB & 42 & 7.86 & 81 & 4.07 & 42 & 7.74 \\
-		Wordcount (l) & 3.28 GB & 129 & 25.45 & 269 & 12.20 & 120 & 27.27 \\
 		Sort (h) & 3.28 GB & 70 & 47.08 & 141 & 23.36 & 107 & 30.69 \\
-		Wordcount (h) & 32.85 GB & 952 & 34.51 & 1487 & 22.10 & 888 & 37.00 \\
 		Sort (g) & 32.85 GB & 694 & 47.30 & 699 & 47.00 & 883 & 37.20 \\
+		Wordcount(t) & 38.65 KB & 38 & 0.001 & 68 & 0.0006 & 31 & 0.0012 \\
+		Wordcount (s) & 348.29 MB & 50 & 6.51 & 98 & 3.34 & 47 & 7.06 \\
+		Wordcount (l) & 3.28 GB & 129 & 25.45 & 269 & 12.20 & 120 & 27.27 \\
+		Wordcount (h) & 32.85 GB & 952 & 34.51 & 1487 & 22.10 & 888 & 37.00 \\
 		Wordcount (g) & 328.49 GB & 9749 & 33.70 & 13286 & 24.73 & 8622 & 38.10 \\
 		\hline
 		\multicolumn{8}{r}{IDS: Input Data Size; \begin{math}D_{(s)}\end{math}: Duration (sec); \begin{math}T_{(MB/s)}\end{math}: Throughput (MB/sec)} \\
@@ -341,7 +351,7 @@ During the benchmark execution we collected system utilization records on each w
 \begin{table}
 	\centering
 	\small
-	\caption{Use Case 1 Comparative benchmark outputs}
+	\caption{Use Case 1 Comparative Performances}
 	\label{tab:uc1-comparative-results}
 	\begin{tabular}[h]{ l l r r r r }
 		\multicolumn{6}{ c }{Data Scale: Huge}  \\
@@ -377,6 +387,32 @@ During the benchmark execution we collected system utilization records on each w
 	\end{tabular}
 \end{table}
 
+
+
+%%Use Case 2 Comparative Results:
+\begin{table}
+	\centering
+	\small
+	\caption{Use Case 2 Comparative Performances}
+	\label{tab:uc2-comparative-results}
+	\begin{tabular}[h]{ l l r r r r }
+		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
+		\hline
+		Sort (t) & Alibaba & GCP & -12.50\% & Azure & -115.63\% \\
+		Sort (s) & Alibaba & GCP & -16.13\% & Azure & -125.81\% \\
+		Sort (l) & GCP-Alibaba & --- & --- & Azure & -92.86\% \\
+		Sort (h) & GCP & Alibaba & -52.86\% & Azure & -101.43\% \\
+		Sort (g) & GCP & Azure & -0.72\% & Alibaba & -27.23\% \\
+		Wordcount (t) & Alibaba & GCP & -22.58\% & Azure & -119.35\% \\
+		Wordcount (s) & Alibaba & GCP & -6.38\% & Azure & -108.51\% \\
+		Wordcount (l) & Alibaba & GCP & -7.50\% & Azure & -124.17\% \\
+		Wordcount (h) & Alibaba & GCP & -7.21\% & Azure & -67.45\% \\
+		Wordcount (g) & Alibaba & GCP & -13.07\% & Azure & -54.09\% \\
+		\hline
+		\multicolumn{6}{ r }{(t): tiny, (s): small, (l): large, (h): huge, (g): gigantic} \\
+		\hline
+	\end{tabular}
+\end{table}
 
  
 \paragraph{Plots}During benchmark runtime resource utilization on worker nodes have been captured. The plots are suggested to perceived read as follows: Top-left, top-right, and bottom-left plots represent CPU (user\%), Memory (\%memused), and IO utilization (read transfers and write transfers per second) on each worker node of the respective cluster over time. CPU utilization lines are given in blue tones, Memory utilization lines are given in fuchsia tones, IO-read and IO-write tps' are represented with orange tones and green tones, respectively. Even though the coloring convention might sound confusing, it gives a clear overview in terms of utilization behavior of the total benchmark process over time. The left hand side x-axis measures CPU/Memory usage in percent, the right hand side x-axis measures IO-read and IO-write transfers per second. The bottom-right plot represents the comparative benchmark performance outputs of the respective CSPs. Duration measure in seconds is expected to perceived as "lower is better" while Throughput which is the amount of processed data per second in bytes is expected to perceived as "higher is better".
