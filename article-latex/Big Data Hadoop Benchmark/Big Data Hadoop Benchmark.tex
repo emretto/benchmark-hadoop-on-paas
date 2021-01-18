@@ -171,7 +171,7 @@ Here is another HiBench citation \cite{rabl_experience_2014}
 	\small
 	\caption{HiBench 7.1 - Hadoop-related Workloads}
 	\label{tab:hibench-wrkl}
-	\begin{tabular}[h!]{ p{2.0cm} p{2.0cm} p{5.0cm} }
+	\begin{tabular}[b]{ p{2.0cm} p{2.0cm} p{5.0cm} }
 		\hline
 		\textbf{Category} & \textbf{Workload} & \textbf{Dominant Character} \\
 		\hline
@@ -232,7 +232,7 @@ During the benchmark execution we collected system utilization records addressin
 	\small
 	\caption{Selected configurations on CSPs' managed Hadoop services}
 	\label{tab:csp-configs}
-	\begin{tabular}[h!]{ p{2.0cm} p{2.3cm} p{3.3cm} p{2.6cm}  }
+	\begin{tabular}[b]{ p{2.0cm} p{2.3cm} p{3.3cm} p{2.6cm}  }
 		\hline
 		{} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
 		\hline
@@ -249,6 +249,7 @@ During the benchmark execution we collected system utilization records addressin
 		Machine Type & e2-highmem-8 & A8m v2 & ecs.se1.2xlarge \\
 		Processors & 8 vCPU & 8 cores & 8 vCPU \\
 		Memory & 64 GB RAM & 64 GB RAM & 64 GB RAM \\
+		Extras & -- & 1 Master Node clone for HA, 3 extra nodes for Zookeeper & -- \\
 		\hline
 		\multicolumn{4}{ c }{WORKER NODES} \\
 		\hline
@@ -273,7 +274,7 @@ During the benchmark execution we collected system utilization records addressin
 	\small
 	\caption{Use Case 1 benchmark outputs }
 	\label{tab:uc1-results}
-	\begin{tabular}[h!]{ l r r r r r r r }
+	\begin{tabular}[b]{ l r r r r r r r }
 		\multicolumn{8}{ l }{Data Scale: Huge} \\
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
@@ -323,7 +324,7 @@ During the benchmark execution we collected system utilization records addressin
 	\small
 	\caption{Use Case 2 benchmark outputs}
 	\label{tab:uc2-results}
-	\begin{tabular}[h!]{ l r r r r r r r }
+	\begin{tabular}[b]{ l r r r r r r r }
 		{} & {} & \multicolumn{2}{ c }{\textbf{Dataproc}} & \multicolumn{2}{ c }{\textbf{HDInsight}} & \multicolumn{2}{ c }{\textbf{e-MapReduce}} \\
 		\hline
 		{Benchmark} & {IDS} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}T_{(MB/s)}\end{math} & \begin{math}D_{(s)}\end{math} & \begin{math}{T_{(MB/s)}}\end{math} \\
@@ -699,13 +700,13 @@ Along the resource utilization vs. performance plots both for Use Case 1 and Use
 
 
 
-%%Use Case 1 Comparative Results:
+%%Use Case 1 Relative Performance Rates:
 \begin{table}
 	\centering
 	\small
-	\caption{Use Case 1 Comparative Performances}
+	\caption{Use Case 1 Relative Performance Rates}
 	\label{tab:uc1-comparative-results}
-	\begin{tabular}[h!]{ l l r r r r }
+	\begin{tabular}[b]{ l l r r r r }
 		\multicolumn{6}{ c }{Data Scale: Huge}  \\
 		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
 		\hline
@@ -741,13 +742,13 @@ Along the resource utilization vs. performance plots both for Use Case 1 and Use
 
 
 
-%%Use Case 2 Comparative Results:
+%%Use Case 2 Relative Performance Rates:
 \begin{table}
 	\centering
 	\small
-	\caption{Use Case 2 Comparative Performances}
+	\caption{Use Case 2 Relative Performance Rates}
 	\label{tab:uc2-comparative-results}
-	\begin{tabular}[h!]{ l l r r r r }
+	\begin{tabular}[b]{ l l r r r r }
 		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
 		\hline
 		Sort (t) & Alibaba & GCP & -12.50\% & Azure & -115.63\% \\
@@ -766,7 +767,7 @@ Along the resource utilization vs. performance plots both for Use Case 1 and Use
 	\end{tabular}
 \end{table}
 
-On the other hand an engrossing aspect of the Relative Performance Rates depicts itself in the high number of Azure's relative performance rates distancing the shortest duration farther than 100\%, meaning at least 2 times slower in these benchmarks. 
+On the other hand an engrossing aspect of the Relative Performance Rates in Table \ref{tab:uc1-comparative-results} and Table \ref{tab:uc2-comparative-results} depicts itself in the high number of Azure's relative performance rates where it falls back the best duration by more than 100\%, meaning that performing at least 2 times slower in the respective benchmarks. A possible reason for the -170.20\% and -134.16\% low performances in UC1's Dfsioe's and -185.76\% and -80.57\% low performances in UC2's Dfsioe's might be the replacement of the native Hadoop filesystem by Azure blob. HDI performances for SQL benchmarks (Scan, Join, and Aggregation) move between -103\% and -121\% in UC1, whereas in UC2 a better performance moving along -13\% and -28\% occurs. Another contradictory case for Azure is in its ML performances especially in gigantic data scale where for Bayes it lowperforms at -135.31\% whereas for Kmeans it almost scores the best performance, getting the second place by a performance slightly less than -0.20\% with respect to the shortest duration. Why is it so? Our attempt to understand this situation consists of digging into execution plans of the benchmark tasks which are originally generated by Hadoop during execution but also captured and stored by HiBench inside the Reports folder. Table \ref{tab:uc1-sql-mr-allocs} and Table \ref{tab:uc2-mr-allocs} comprising the allocated map and reduce slots by their respective Hadoop cluster for the relevant benchmarks
 
 %% Allocated maps and reduces in SQL benchmarks
 \begin{table}
@@ -774,7 +775,7 @@ On the other hand an engrossing aspect of the Relative Performance Rates depicts
 	\small
 	\caption{Allocated map and reduce slots in SQL benchmarks of Use Case 1}
 	\label{tab:uc1-sql-mr-allocs}
-	\begin{tabular}[h!]{ l r r r r r r l }
+	\begin{tabular}[b]{ l r r r r r r l }
 		{} & \multicolumn{2}{c}{GCP} & \multicolumn{2}{c}{Azure} & \multicolumn{2}{c}{Alibaba} & {} \\
 		{Benchmark} & {Maps} & Reduces & {Maps} & Reduces & {Maps} & Reduces & Ref. \\
 		\hline
@@ -797,7 +798,7 @@ On the other hand an engrossing aspect of the Relative Performance Rates depicts
 	\small
 	\caption{Allocated map and reduce slots in Use Case 2}
 	\label{tab:uc2-mr-allocs}
-	\begin{tabular}[h!]{ l r r r r r r l }
+	\begin{tabular}[b]{ l r r r r r r l }
 		{} & \multicolumn{2}{c}{GCP} & \multicolumn{2}{c}{Azure} & \multicolumn{2}{c}{Alibaba} & {} \\
 		{Benchmark} & {Maps} & Reduces & {Maps} & Reduces & {Maps} & Reduces & Ref. \\
 		\hline
