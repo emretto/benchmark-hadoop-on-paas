@@ -113,40 +113,40 @@ The advent of Big Data emerged in any data-driven domain and scaled up the exten
 
 \paragraph{Hadoop \cite{noauthor_apache_nodate}}Frameworks for distributed storage and computation sparked up first by web indexing engines were inherited and developed further by the open source community yielding what is known as Hadoop and its ecosystem today. Considering the complexity of dealing with big data Hadoop represents a modern analytics framework decreasing management efforts and duration of analytics operations to an acceptable level by means of affordable commodity computers. Hadoop comprises three for its core functionality: HDFS filesystem for storing very large data across a cluster of nodes, the MapReduce framework developed for distributed computation, and YARN for allocating available resources for the requested tasks.
 
-\paragraph{HDFS}Hadoop Distributed File System which stands for HDFS is developed with inspiration from the guidelines described in a whitepaper about Google's Filesystem (GFS), a distributed storage paradigm to handle petabyte and larger scale data volumes within a cluster robust to machine failures, published in 2003 \cite{ghemawat_google_2003}. Big data volumes are chunked and stored within 128 MB blocks, each block is replicated to different nodes by a factor of 3, these values are the defaults and can be changed. When the data file is requested, related blocks are constructed from the nodes across the cluster. The redundancy of the blocks guarantees availability, in a case where one or more nodes become out of service, requested data blocks are gathered from the available redundant copies stored on other nodes. HDFS is a co-existing file system on the nodes it is installed, it provides a global distributed view to the files across the cluster, thus listing an HDFS directory is possible from within all nodes, the files on HDFS are listed as they exist on a local filesystem, but the physical parts of the files reside on other physical locations. Figure \ref{fig:HDFSoverview} depicts an overview to HDFS. The architecture of HDFS comprises Namenode which is a dedicated machine to keep track of the files and folders and respective metadata like block locations across the cluster, and a number of datanodes on which the data blocks are residing \cite{white_hadoop_2015}. Namenode is a single-point-of-failure meaning if the namenode is down, the whole Hadoop system is down. To overcome this issue starting with version 2 Hadoop matured to a High Availability configuration depicted in Figure \ref{fig:HadoopHA} where there exists two namenodes, one active namenode and one standby namenode communicating with the data nodes and storing edit logs in a shared folder. As their naming convention refers, active namenode is in charge whereas the standby node behaves more like a shadow system. Whenever the active namenode breaks down, the shadow node gets activated resulting in no service breakage for the end user.
-
-
-\begin{figure}[p]
-	\includegraphics[width=\textwidth]{HDFSoverview}
+\begin{figure}[h!]
 	\caption{Hadoop Distributed File System}
 	\label{fig:HDFSoverview}
+	\includegraphics[width=\textwidth]{HDFSoverview}
 	\centering
 \end{figure}
 
-\begin{figure}[p]
-	\centering
-	\includegraphics[width=0.7\textwidth]{HadoopHA}
+\paragraph{HDFS}Hadoop Distributed File System which stands for HDFS is developed with inspiration from the guidelines described in a whitepaper about Google's Filesystem (GFS), a distributed storage paradigm to handle petabyte and larger scale data volumes within a cluster robust to machine failures, published in 2003 \cite{ghemawat_google_2003}. Big data volumes are chunked and stored within 128 MB blocks, each block is replicated to different nodes by a factor of 3, these values are the defaults and can be changed. When the data file is requested, related blocks are constructed from the nodes across the cluster. The redundancy of the blocks guarantees availability, in a case where one or more nodes become out of service, requested data blocks are gathered from the available redundant copies stored on other nodes. HDFS is a co-existing file system on the nodes it is installed, it provides a global distributed view to the files across the cluster, thus listing an HDFS directory is possible from within all nodes, the files on HDFS are listed as they exist on a local filesystem, but the physical parts of the files reside on other physical locations. Figure \ref{fig:HDFSoverview} depicts an overview to HDFS. The architecture of HDFS comprises Namenode which is a dedicated machine to keep track of the files and folders and respective metadata like block locations across the cluster, and a number of datanodes on which the data blocks are residing \cite{white_hadoop_2015}. Namenode is a single-point-of-failure meaning if the namenode is down, the whole Hadoop system is down. To overcome this issue starting with version 2 Hadoop matured to a High Availability configuration depicted in Figure \ref{fig:HadoopHA} where there exists two namenodes, one active namenode and one standby namenode communicating with the data nodes and storing edit logs in a shared folder. As their naming convention refers, active namenode is in charge whereas the standby node behaves more like a shadow system. Whenever the active namenode breaks down, the shadow node gets activated resulting in no service breakage for the end user.
+
+
+\begin{figure}[h!]
 	\caption{Hadoop High Availability}
 	\label{fig:HadoopHA}
+	\includegraphics[width=0.7\textwidth]{HadoopHA}
+	\centering
 \end{figure}
 
 \paragraph{MapReduce} 
 Similar to HDFS, Hadoop's MapReduce is the open source implementation of the MapReduce framework described in a paper \cite{dean_mapreduce_2004} published in 2004. Depicted in Figure \ref{fig:MapReduce}, a MR flow starts with assigning blocks from HDFS as input splits to mappers, computed intermediate results are then shuffled and passed to reducers where outputs are send back to the client. Nodes running mappers and reducers provide parallel processing which can be scaled by simply adding new commodity computers. The computation is made on nodes where related data blocks reside, which explains the term data locality bringing computation to the data thus eliminating the need for moving data across nodes for computation.
 
-\begin{figure}[p]
-	\includegraphics[width=\textwidth]{MapReduce}
+\begin{figure}[h!]
 	\caption{MapReduce execution (recreated from source \cite{schatzle_giant_nodate})}
 	\label{fig:MapReduce}
+	\includegraphics[width=\textwidth]{MapReduce}
 	\centering
 \end{figure}
 
 \paragraph{YARN}Hadoop version 2.x includes major architectural improvements in terms of resource managing. Version 1.x of Hadoop suffered shortcomings due to an overload of its resource management duties which was handled within MRv1 where job tracker node and task tracker nodes were running the organizational load of MapReduce executions. YARN standing for "Yet Another Resource Negotiator" emerging as an intermediate layer between HDFS and MapReduce taking over some of the load that was previosly carried out by MRv1 also become a gate to other batch, stream, interactive and graph processing engines to leverage HDFS file system (Figure \ref{fig:YARNoverview}). After YARN, MRv1 has become MRv2 isolated from resource managerial duties regarding previous version hence more efficient with processing oriented focus. YARN innovates Hadoop by brining the architectural elements resource manager, which is one node dedicated to track resources across the cluster by availability, and node managers which reside inside each worker node and monitor containers. 
 
 
-\begin{figure}[p]
-	\includegraphics[width=\textwidth]{YARNoverview}
+\begin{figure}[h!]
 	\caption{YARN (recreated from source \cite{dean_mapreduce_2004})}
 	\label{fig:YARNoverview}
+	\includegraphics[width=\textwidth]{YARNoverview}
 	\centering
 \end{figure}
 
@@ -154,11 +154,13 @@ Similar to HDFS, Hadoop's MapReduce is the open source implementation of the Map
 
 \paragraph{GCP Dataproc \cite{noauthor_dataproc_nodate}} Google's managed Spark and Hadoop solution, namely Dataproc, is a preconfigured Hadoop on PaaS service built upon preinstalled VM instances on Compute Engine \cite{noauthor_compute_nodate} which is another service of GCP. An OS spectrum comprising Debian and\textbackslash or ubuntu was offered at the date of the study which are proposed as preinstalled images during Dataproc installation process. While Hadoop core elements HDFS, YARN, and MapReduce reside as default frameworks, a variety of elements belonging to Hadoop ecosystem are offered as well. The end user is also offered to leverage Cloud Storage \cite{noauthor_cloud_nodate}, Google's proprietary cloud storage service to keep data in long term where Dataproc cluster is meant to be terminated after usage. By means of Web UI or local CLI via API the end user can access the Dataproc cluster as well as single VM instances within Compute Engine. Google offers a large number of data centers around the globe.
 
-\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}Azure's solution to managed Hadoop and Spark platform is a product of the collaboration with Hortonworks bringing Hortonworks Data Platform (HDP) to a cloud platform \cite{noauthor_azuravail_nodate}. As being so, HDInsight differs in architecture with respect to its conjugates, by not being a Hadoop cluster installed on the cloud VM service layer, namely Azure Virtual Machines, instead it is an HDP platform optimised for the cloud. Another difference is that HDInsight obligates WASB, the Azure blob system as the storage system including an option to leverage Data Lake Storage, excluding Hadoop's native file system HDFS from the options. At the date of the study Azure was obligating Hadoop to use in in High Avalability mode with 2 master nodes hence leaving hardware selection to the end user.
+\paragraph{Azure HDInsight \cite{noauthor_azure_nodate}}Azure's solution to managed Hadoop and Spark platform is a product of the collaboration with Hortonworks bringing Hortonworks Data Platform (HDP) to a cloud platform \cite{noauthor_azuravail_nodate}. As being so, HDInsight differs in architecture with respect to its conjugates, by not being a Hadoop cluster installed on the cloud VM service layer, namely Azure Virtual Machines, instead it is an HDP platform optimised for the cloud. Another difference is that HDInsight obligates WASB, the Azure blob system as the storage system including an option to leverage Data Lake Storage, excluding Hadoop's native file system HDFS from the options. At the date of the study Azure was obligating Hadoop to use in in High Availability mode with 2 master nodes hence leaving hardware selection to the end user.
 
-\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_what_nodate}}Alibaba Cloud's managed Hadoop service e-MapReduce leveraging Apache Hadoop and Apache Spark is placed as a service layer on its Elastic Compute Service (ECS) \cite{noauthor_alielastic_nodate}, a similar approach to the one of GCP's. Alibaba's number of provided data center locations beyond Mainland China are not as numerous as its conjugates hence available in the United States, Europe, Middle East and Asia Pacific. Alibaba Cloud's managed service distincts in that its preinstalled Operating System Aliyun Linux 2 by the date of the study is developed by Alibaba Cloud, a linux distribution based on CentOS, the open source version of RedHat Linux. AliyunOS is claimed to provide a stable and reliable environment functioning deeply optimized with the Alibaba Cloud infrastructure, and be open source on its GitHub repository \cite{noauthor_alibaba_nodate}. e-MapReduce offers a wide scale of machine types with different specifications for specific purposes like CPU intensive or memory intensive tasks. As with GCP, on Alibabacloud e-MapReduce the type of storage whether it shall be HDFS or leverage Alibaba cloud storage can be specified by the end user.
+\paragraph{Alibaba Cloud e-MapReduce \cite{noauthor_what_nodate}}Alibaba Cloud's managed Hadoop service e-MapReduce leveraging Apache Hadoop and Apache Spark is placed as a service layer on its Elastic Compute Service (ECS) \cite{noauthor_alielastic_nodate}, a similar approach to the one of GCP's. Alibaba's number of provided data center locations beyond Mainland China are not as numerous as its conjugates hence available in the United States, Europe, Middle East and Asia Pacific. Alibaba Cloud's managed service distincts in that its preinstalled Operating System, Aliyun Linux 2, is developed by Alibaba Cloud, a linux distribution based on CentOS, the open source version of RedHat Linux. AliyunOS is claimed to provide a stable and reliable environment functioning deeply optimized with the Alibaba Cloud infrastructure, and be open source at its GitHub repository \cite{noauthor_alibaba_nodate}. e-MapReduce offers a wide scale of machine types with different specifications for specific purposes like CPU intensive or memory intensive tasks. As with GCP, on Alibaba Cloud e-MapReduce the type of storage whether it shall be HDFS or leverage Alibaba cloud storage can be specified by the end user.
 
 \paragraph{HiBench \cite{noauthor_intel-bigdatahibench_2021}}Introduced to the community in 2010 \cite{huang_hibench_2010}, the open source HiBench implementation is motivated by the aim providing a comprehensive and representative benchmark for Hadoop helping evaluate different big data frameworks in terms of speed, throughput, and system utilization. At the date of the study current version of HiBench is 7.1, comprising 29 benchmarks categorized in 6 sections (Micro, Machine Learning, SQL, Websearch, Graph, and Streaming). Table \ref{tab:hibench-wrkl} lists the Hadoop related workloads in HiBench 7.1 \cite{noauthor_release_nodate} executed in the study. \textit{Sort:} The workload sorts the input data generated by RandomTextWriter. \textit{Wordcount:} Counts the occurrence of words generated by RandomTextWriter. \textit{Terasort:} Subject to sort is the input data generated by Hadoop TeraGen program. \textit{Dfsioe:} The enhanced version of Hadoop's dfsio benchmark generating a large number of simultaneous write and read tasks. The enhancement calculates average IO rate, and average throughput of ech map task, and aggregated throughput of the cluster.
+
+HiBench data scales
 
 Here is another HiBench citation \cite{rabl_experience_2014}
 
@@ -216,23 +218,22 @@ Ivanov et al. \cite{ivanov_performance_2015} compare the performances of two ent
 
 \section{Method}
 
-
 In the study we benchmarked Hadoop on PaaS services of three CSPs in terms of comparing their performances accompanied by respective resource utilization across the worker nodes: GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce, each recognized in Gartner's 2020 Magic Quadrant for Cloud Infrastructure and Platform Services \cite{noauthor_gartner_nodate} either in leading or in niche section.
 
-We constructed the benchmark study in two use cases: Use Case 1 aims to map the overall performance behaviors of respective CSPs within HiBench's predefined data scales huge and gigantic. The following benchmarks have been executed on the clusters of the respective providers: Micro (Sort, Terasort, Wordcount, and Dfsioe), Sql (Scan, Join, and Aggregation), ML (Bayes and Kmeans), and Websearch (Pagerank).
+We constructed the benchmark study in two use cases: Use Case 1 aims to map the overall performance behaviors of respective CSP's service within HiBench's predefined data scales huge and gigantic. The following benchmarks have been executed on the clusters of the respective providers: Micro (Sort, Terasort, Wordcount, and Dfsioe), Sql (Scan, Join, and Aggregation), ML (Bayes and Kmeans), and Websearch (Pagerank).
 
-Use Case 2. We picked one benchmark of IO bound character (Sort), one benchmark of CPU bound character (Wordcount), and executed these in increasing data scales HiBench's: Tiny, Small, Large, Huge, and Gigantic. The largest predefined HiBench data scale namely Bigdata would cross the storage limits of the installed clusters, hence we left it off the execution. 
+Use Case 2. We picked one benchmark of IO bound character (Sort), one benchmark of CPU bound character (Wordcount), and executed these in increasing data scales delivered by HiBench: Tiny, Small, Large, Huge, and Gigantic. The largest predefined HiBench data scale namely Bigdata would cross the storage limits of the installed clusters, hence we left it off the execution. 
 
-Bound by availability of their respective hardware and software options we selected by providers' promise apparently same or close settings. With respect to our aim benchmarking managed systems as they come out-of-the-box, we put two basic rules to stick for each provider in order to align initial circumstances prior to benchmark execution: Among the CSPs, respective  data center's geographic location shall be same or close (1), processor number and memory capacity (by providers' promise) shall be same or as close as possible. Thus Frankfurt is selected as location for all providers data center, within given options we selected 8 CPUs/64GB RAM for master node and 4 CPU's/32GB RAM for each worker node totaling in 12 CPUs and 96GB worker compute power for the cluster. Specified cluster installation options and details are given in Table \ref{tab:csp-configs}. Without applying any performance tweak operation to the respective preconfigurations we immediately executed several Hadoop benchmarks from HiBench's Micro, Sql, ML, and Websearch categories. We only modified default cluster's configuration in cases where the benchmark was detained from running which is reported in Discussion section.
+Bound by availability of their respective hardware and software options we selected by providers' promise apparently same or close settings. With respect to our aim to benchmark managed systems as they come out-of-the-box, we put two basic rules to stick for each provider in order to align initial circumstances prior to benchmark execution: Among the CSPs, respective  data center's geographic location shall be same or close (1), processor number and memory capacity (by providers' promise) shall be same or as close as possible. Thus Frankfurt is selected as location for all providers data center, within given options we selected 8 CPUs/64GB RAM for master node and 4 CPU's/32GB RAM for each worker node totaling in 12 CPUs and 96GB worker compute power for the cluster. Specified cluster installation options and details are given in Table \ref{tab:csp-configs}. Without applying any performance tweak operation to the respective preconfigurations we immediately executed several Hadoop benchmarks from HiBench's Micro, Sql, ML, and Websearch categories. We only modified default cluster's configuration in cases where the benchmark was detained from running which is reported in Discussion section.
 
-During the benchmark execution we collected system utilization records addressing CPU, Memory, and IO behavior on each worker node of the cluster. This approach enabled us the visualization of an overview to the system utilizations on each worker node within the cluster over the respective benchmark's execution time. To provide data locality, if a specific data block to process does not reside on the same node where there is an available map slot YARN transfers the respective block to the node with free slot requiring a network activity which would have a decreasing impact over the performance. However, due to the small cluster size consisting of 3 nodes we excluded network activity track with the assumption data locality condition is provided during the executions of the benchmark and likely to have least impact on the performance.
+During the benchmark execution we collected system utilization records addressing CPU, Memory, and IO behavior on each worker node of the cluster. This approach enabled us the visualization of an overview to the system utilizations on each worker node within the cluster over the respective benchmark's execution time. To provide data locality, if a specific data block to process does not reside on the same node where there is an available map slot YARN transfers the respective block to the node with free slot requiring a network activity which would have a decreasing impact over the performance. However, due to the small cluster size consisting of 3 nodes we excluded network activity track with the assumption data locality condition is provided during the executions of the benchmark and is likely to have least impact on the performance.
 
 \begin{table}
 	\centering
 	\small
 	\caption{Selected configurations on CSPs' managed Hadoop services}
 	\label{tab:csp-configs}
-	\begin{tabular}[b]{ p{2.0cm} p{2.3cm} p{3.3cm} p{2.6cm}  }
+	\begin{tabular}[h!]{ p{2.0cm} p{2.3cm} p{3.3cm} p{2.6cm}  }
 		\hline
 		{} & \textbf{GCP} & \textbf{Azure} & \textbf{Alibaba Cloud}\\
 		\hline
@@ -253,7 +254,7 @@ During the benchmark execution we collected system utilization records addressin
 		\hline
 		\multicolumn{4}{ c }{WORKER NODES} \\
 		\hline
-		\# Nodes & 3 & 3 & 3 \\
+		\# of Nodes & 3 & 3 & 3 \\
 		Machine Type & e2-highmem-4 & A4m v2 & ecs.se1.xlarge \\
 		Processors & 4 vCPU & 4 cores & 4 vCPU \\	
 		Memory & 32 GB RAM & 32 GB RAM & 32 GB RAM \\	
@@ -350,340 +351,324 @@ During the benchmark execution we collected system utilization records addressin
 
 For each use case we provided spider charts, a.k.a. radar plots, to give a comparative overview for system utilization vs. benchmark performances of relevant CSPs. In these plots normalized average values of the captured CPU, Memory, and IO data on the worker nodes have been taken and averaged a second time in order to get scalar CPU, Memory and IO values representing the cluster's average performance. Combining the aforementioned values with normalized Duration and Throughput report values of HiBench resulting the spider plots of the paper. Nevertheless, for the spider plots our recommendation for both perceptions of Throughput and Duration shall be "Higher is better". Even though the Duration is of lower is better nature, for the sake of proper visualization we needed to display the shortest duration as the most visible among other CSPs.
 
+\paragraph{Use Case 1 Results:}
 
+\paragraph{Sort - Huge (Figure \ref{fig:uc1-srt-h-cmidt})}CPU utilization in GCP and Alibaba condence around 80\% to 98\% whereas in Azure the range widens up between 50\% to 90\%. Memory loads in GCP and Alibaba among the worker nodes display a harmonic behavior between 20\% to 40\% and 90\% to 100\% respectively, whereas the memory load in Azure's worker nodes vary between 10\% and 50\%. In the second half of the benchmark execution IO write transfers in GCP and Alibaba show peaks at about 500 tps where in Azure it is limited with 100 tps. Resulting in GCP carrying out the highest Throughput, thus reaching the shortest Duration of 70 seconds.
 
+\paragraph{Sort - Gigantic (Figure \ref{fig:uc1-srt-g-cmidt})}Switching the data scale for Sort benchmark to gigantic, GCP's processor load condences around 80\% - 95\% where its memory load rises to range 80\% - 100\%; IO write transfers behave at about 500 tps where IO reads reach 1000 tps in the second half of the benchmark process. Azure's processor and memory performances depict a looser behavior not utilizing the maximum potential whereas IO-read and IO-write tps' reach their maximum at 200 and 350, respectively. Alibaba's resource utilization depicts a high memory load of 90\% - 100\% dropping to 70\% and about 83\% on partial nodes in the second half. As so with the processor load behaving between 80\% and 100\% in the first half dropping to about 50\% in the second half where IO write reaches peak at 800 tps. Resulting in GCP embarking highest and Azure the second highest Throughput, respective Durations output in 715 and 758 seconds.
 
+\paragraph{Terasort - Huge (Figure \ref{fig:uc1-tera-h-cmidt})}GCP depicts a high utilization on processors at a range of 80\% - 100\%, memory moving from 80\% to 100\%, and IO behavior 500 tps in overall and peaking at 1000 tps in IO-read resulting in highest Throughput in 667 seconds response time among other CSPs. Azure's processor and memory utilization fluctuate in overall where memory performance incrementally reach 100\% in one node, a stable IO-write in overall process at about 70 tps peaking at 250 tps reaches the second highest Throughput in 858 seconds. Alibaba with high memory and processor utilization, and varying IO tps's in overall process falls back in embarking Throughput and resulting in 1054 seconds response time.
 
-USE CASE 1: 
+\paragraph{Terasort - Gigantic (Figure \ref{fig:uc1-tera-g-cmidt})}Switching the scale to gigantic causes dramatic changes on resource utilization on all CSPs. During all benchmark process GCP depicts very condensed high utilization on processor at a broad range of 30\% to about 95\%, memory consumption between 95\% and 100\% and IO read transfer varying between 800 to 1100 tps. Azure on the other side, fails to complete the benchmark on 3 attempts; suffering from YARN insufficient HDFS allocation requested for bringing the job further. IO scores drop to null and task raises failure. Alibaba Cloud's resource utilization goes within maximum levels where processor utilization depicts a consumption of 80\% to 90\% in the overall, memory utilization at it highest during all process, IO reads and writes moving along the 600 tps' and peaking around 1600 tps. With a slicely higher value in Throughput, Alibaba performs best with 9660 seconds, followed by GCP with 9821 seconds. Azure disqualifies this session.
 
-\paragraph{Sort - Huge} Figure \ref{fig:uc1-srt-h-cmidt}; CPU utilization in GCP and Alibaba condence around 80\% to 98\% whereas in Azure the range widens up between 50\% to 90\%. Memory loads in GCP and Alibaba among the worker nodes display a harmonic behavior between 20\% to 40\% and 90\% to 100\% respectively, whereas the memory load in Azure's worker nodes vary between 10\% and 50\%. In the second half of the benchmark execution IO write transfers in GCP and Alibaba show peaks at about 500 tps where in Azure it is limited with 100 tps. Resulting in GCP carrying out the highest Throughput, thus reaching the shortest Duration of 70 seconds.
+\paragraph{Wordcount - Huge (Figure \ref{fig:uc1-wrdcnt-h-cmidt})}GCP performing processor utilization of 75\% to 100\% with a memory consumption between 80\% to 95\% where IO transfers move along 60 tps peaking at about 150 tps reaches second highest Throughput with 978 seconds response time. Azure's processor utilization moving along 70\% to about 100\% where memory depicts 30\% to 50\% utilization and lower IO transfers peaking at about 60 tps reaches the lowest throughput hance the longest duration of 1470 seconds. Alibaba depicting high processor and memory load moving in ranges 70\% to 100\% and 80\% to slightly over 90\% with IO transfers moving along 200 tps peaking at 300tps to 350tps reaches the highest Throughput hence shortest execution time of 889 seconds.
 
-\paragraph{Sort - Gigantic} Figure \ref{fig:uc1-srt-g-cmidt}; switching the data scale for Sort benchmark to gigantic, GCP's processor load condences around 80\% - 95\% where its memory load rises to range 80\% - 100\%; IO write transfers behave at about 500 tps where IO reads reach 1000 tps in the second half of the benchmark process. Azure's processor and memory performances depict a looser behavior not utilizing the maximum potential whereas IO-read and IO-write tps' reach their maximum at 200 and 350, respectively. Alibaba's resource utilization depicts a high memory load of 90\% - 100\% dropping to 70\% and about 83\% on partial nodes in the second half. As so with the processor load behaving between 80\% and 100\% in the first half dropping to about 50\% in the second half where IO write reaches peak at 800 tps. Resulting in GCP embarking highest and Azure the second highest Throughput, respective Durations output in 715 and 758 seconds.
+\paragraph{Wordcount - Gigantic (Figure \ref{fig:uc1-wrdcnt-g-cmidt})}GCP utilizing processor and memory sources at their maximum during the overall process, for CPU within 60\% up to pushing 100\%, memory utilization varying between 60\% to 100\%, and IO-read and IO-write transfers moving along 90 tps and 250 tps respectively, reaches second highest Throughput load resulting in 10131 seconds response time. Azure shows a dens processor utilization varyimg between 40\%s and close to 100\%s, memory consumption is somehow oppressed to stay within range 20\% up to 50\%, IO behavior reacts seldomly over 60 tps resulting in the lowest Throughput and longest Duration of 13596 seconds. Alibaba depicting a high processor utilization within range 85\%-100\%, a relatively more stable memory consumption in range 85\% to 100\% and IO transfers mostly about 300 tps thus performing highest Throughput hence shortest response time of 8671 seconds.
 
-\paragraph{Terasort - Huge} Figure \ref{fig:uc1-tera-h-cmidt}; GCP depicts a high utilization on processors at a range of 80\% - 100\%, memory moving from 80\% to 100\%, and IO behavior 500 tps in overall and peaking at 1000 tps in IO-read resulting in highest Throughput in 667 seconds response time among other CSPs. Azure's processor and memory utilization fluctuate in overall where memory performance incrementally reach 100\% in one node, a stable IO-write in overall process at about 70 tps peaking at 250 tps reaches the second highest Throughput in 858 seconds. Alibaba with high memory and processor utilization, and varying IO tps's in overall process falls back in embarking Throughput and resulting in 1054 seconds response time.
+\paragraph{Dfsioe-read - Huge (Figure \ref{fig:uc1-dfsioer-h-cmidt})}GCP's processor utilization moving roughly between 80\% to 95\% accompanied by memory utilization  within range slightly below and over 70\%, IO transfers peaking at 400 tps mostly go along 100 tps and 250 tps performs second highest Throughput resulting in 294 seconds of Duration. Azure's processor utilization is rather limited to between 60\% and 90\% whereas the memory utilization behaves between 10\% to 50\%, generally low IO transfers with two markable IO-read and IO-write condences reaching peaks at 2000 tps and 1500 tps respectively results in the lowest Throughput and 662 seconds of response time. Alibaba with 245 seconds Duration displays a similar resoure utilization pattern with GCP where it differentiates in memory utilization moving around 90\%s.
 
-\paragraph{Terasort - Gigantic} Figure \ref{fig:uc1-tera-g-cmidt}; switching the scale to gigantic causes dramatic changes on resource utilization on all CSPs. During all benchmark process GCP depicts very condensed high utilization on processor at a broad range of 30\% to about 95\%, memory consumption between 95\% and 100\% and IO read transfer varying between 800 to 1100 tps. Azure on the other side, fails to complete the benchmark on 3 attempts; suffering from YARN insufficient HDFS allocation requested for bringing the job further. IO scores drop to null and task raises failure. Alibaba Cloud's resource utilization goes within maximum levels where processor utilization depicts a consumption of 80\% to 90\% in the overall, memory utilization at it highest during all process, IO reads and writes moving along the 600 tps' and peaking around 1600 tps. With a slicely higher value in Throughput, Alibaba performs best with 9660 seconds, followed by GCP with 9821 seconds. Azure disqualifies this session.
-
-\paragraph{Wordcount - Huge} Figure \ref{fig:uc1-wrdcnt-h-cmidt}; GCP performing processor utilization of 75\% to 100\% with a memory consumption between 80\% to 95\% where IO transfers move along 60 tps peaking at about 150 tps reaches second highest Throughput with 978 seconds response time. Azure's processor utilization moving along 70\% to about 100\% where memory depicts 30\% to 50\% utilization and lower IO transfers peaking at about 60 tps reaches the lowest throughput hance the longest duration of 1470 seconds. Alibaba depicting high processor and memory load moving in ranges 70\% to 100\% and 80\% to slightly over 90\% with IO transfers moving along 200 tps peaking at 300tps to 350tps reaches the highest Throughput hence shortest execution time of 889 seconds.
-
-\paragraph{Wordcount - Gigantic} Figure \ref{fig:uc1-wrdcnt-g-cmidt}; GCP utilizing processor and memory sources at their maximum during the overall process, for CPU within 60\% up to pushing 100\%, memory utilization varying between 60\% to 100\%, and IO-read and IO-write transfers moving along 90 tps and 250 tps respectively, reaches second highest Throughput load resulting in 10131 seconds response time. Azure shows a dens processor utilization varyimg between 40\%s and close to 100\%s, memory consumption is somehow oppressed to stay within range 20\% up to 50\%, IO behavior reacts seldomly over 60 tps resulting in the lowest Throughput and longest Duration of 13596 seconds. Alibaba depicting a high processor utilization within range 85\%-100\%, a relatively more stable memory consumption in range 85\% to 100\% and IO transfers mostly about 300 tps thus performing highest Throughput hence shortest response time of 8671 seconds.
-
-\paragraph{Dfsioe-read - Huge} Figure \ref{fig:uc1-dfsioer-h-cmidt}; GCP's processor utilization moving roughly between 80\% to 95\% accompanied by memory utilization  within range slightly below and over 70\%, IO transfers peaking at 400 tps mostly go along 100 tps and 250 tps performs second highest Throughput resulting in 294 seconds of Duration. Azure's processor utilization is rather limited to between 60\% and 90\% whereas the memory utilization behaves between 10\% to 50\%, generally low IO transfers with two markable IO-read and IO-write condences reaching peaks at 2000 tps and 1500 tps respectively results in the lowest Throughput and 662 seconds of response time. Alibaba with 245 seconds Duration displays a similar resoure utilization pattern with GCP where it differentiates in memory utilization moving around 90\%s.
-
-\paragraph{Dfsioe-read - Gigantic} Figure \ref{fig:uc1-dfsioer-g-cmidt}; processor utilization in GCP cloud concentrates within range of 80\% to 90\%, memory utilization moves around 95\% to 100\% whereas IO read transfers moving along about 500 tps brings its performance to second highest Throughput with 915 seconds Duration. Azure displays a performance within a range of 55\% up to 90\% in CPU utilization, 20\% to 55\% in memory utilization, and IO-write activity moving along 70 tps, IO-read showing peak at about 470 tps reaching the lowest performance in Throughput outputting 1886 seconds response time.
+\paragraph{Dfsioe-read - Gigantic (Figure \ref{fig:uc1-dfsioer-g-cmidt})}Processor utilization in GCP cloud concentrates within range of 80\% to 90\%, memory utilization moves around 95\% to 100\% whereas IO read transfers moving along about 500 tps brings its performance to second highest Throughput with 915 seconds Duration. Azure displays a performance within a range of 55\% up to 90\% in CPU utilization, 20\% to 55\% in memory utilization, and IO-write activity moving along 70 tps, IO-read showing peak at about 470 tps reaching the lowest performance in Throughput outputting 1886 seconds response time.
 Alibaba system utilization moves along 80\%-90\% range for processing performance, 90\%-100\% for memory load and a behavior up to 1700 tps IO-write placing its performance to the highest Throughput with 660 seconds duration.
 
-\paragraph{Dfsioe-write - Huge} Figure \ref{fig:uc1-dfsioew-h-cmidt}; in GCP processor utilization moves between 70\% and 90\%, memory load increments from 20\% up to 70\% whereas IO-write transfers move along 500 tps resulting in second shortest response time 379 seconds. Azure's CPU utilization around 60\% to 90\%, memory load moves between 20\% and 40\% whereas IO-write transfers vary about 20 tps to 80 tp peaking at about 120 tps by a Duration output of 658 seconds. Alibaba with processor utilization 80\% and 95\%, incrementing memory load from about 40\% up to 90\%-100\%, and IO-write transfers at about 100 tps to 600 tps peaking at about 800 tps performs the heaviest Throughput thus reaching the shortest response time with 281 seconds.
+\paragraph{Dfsioe-write - Huge (Figure \ref{fig:uc1-dfsioew-h-cmidt})}In GCP processor utilization moves between 70\% and 90\%, memory load increments from 20\% up to 70\% whereas IO-write transfers move along 500 tps resulting in second shortest response time 379 seconds. Azure's CPU utilization around 60\% to 90\%, memory load moves between 20\% and 40\% whereas IO-write transfers vary about 20 tps to 80 tp peaking at about 120 tps by a Duration output of 658 seconds. Alibaba with processor utilization 80\% and 95\%, incrementing memory load from about 40\% up to 90\%-100\%, and IO-write transfers at about 100 tps to 600 tps peaking at about 800 tps performs the heaviest Throughput thus reaching the shortest response time with 281 seconds.
 
-\paragraph{Dfsioe-write - Gigantic} Figure \ref{fig:uc1-dfsioew-g-cmidt}; GCP processor utilization moves along a broad range hitting up to 90\% load, memory load quickly rises to 95\%-100\% range and keeps its position in overall execution,  IO-writes move alond 500 tps to 600 tps placing GCP to the second best performance with 1347 seconds response time. Azure shows a CPU utization in a range 60\% up to 90\% until it drops to about 25\% in the 2/3th of the overall process, memory load moves along lower 20\% to upper 50\% until its sudden drop to upper 15\% simultaneously with CPU utilization where IO-write transfers peak at about 120 tps resulting in 1914 seconds response time. Alibaba performing the shortest response time with 1060 seconds displays a similar memory and processor utilization behaviour with GCP where it differs in IO-write transfers peaking at about 900 tps.
+\paragraph{Dfsioe-write - Gigantic (Figure \ref{fig:uc1-dfsioew-g-cmidt})}GCP processor utilization moves along a broad range hitting up to 90\% load, memory load quickly rises to 95\%-100\% range and keeps its position in overall execution,  IO-writes move alond 500 tps to 600 tps placing GCP to the second best performance with 1347 seconds response time. Azure shows a CPU utization in a range 60\% up to 90\% until it drops to about 25\% in the 2/3th of the overall process, memory load moves along lower 20\% to upper 50\% until its sudden drop to upper 15\% simultaneously with CPU utilization where IO-write transfers peak at about 120 tps resulting in 1914 seconds response time. Alibaba performing the shortest response time with 1060 seconds displays a similar memory and processor utilization behaviour with GCP where it differs in IO-write transfers peaking at about 900 tps.
 
-\paragraph{Scan - Huge} Figure \ref{fig:uc1-scan-h-cmidt}; GCP processor utilization condences between about 80\% and 90\% during benchmark execution, memory load depicts movement between 20\% and 40\% accompanied by an IO-write transfer reaching over 500 tps which brings GCP to the leading performance within this benchmark with 73 seconds. On Azure's side processor utilization moves along 80\%-90\% range whereas memory load increments from the 15\%s to the 30\%s, relatively low IO-write tansfer peaking at about 85 tps results in lowest Throughput and 157 seconds Duration. Alibaba follows a similar pattern like GCP in resource utilization with about 90\% CPU load, 15\% to below 40\% memory utilization but a less dense IO-write transfer peaking at about 550 tps and so reaching a close Throughput to GCP resulting in 74 seconds response time.
+\paragraph{Scan - Huge (Figure \ref{fig:uc1-scan-h-cmidt})}GCP processor utilization condences between about 80\% and 90\% during benchmark execution, memory load depicts movement between 20\% and 40\% accompanied by an IO-write transfer reaching over 500 tps which brings GCP to the leading performance within this benchmark with 73 seconds. On Azure's side processor utilization moves along 80\%-90\% range whereas memory load increments from the 15\%s to the 30\%s, relatively low IO-write tansfer peaking at about 85 tps results in lowest Throughput and 157 seconds Duration. Alibaba follows a similar pattern like GCP in resource utilization with about 90\% CPU load, 15\% to below 40\% memory utilization but a less dense IO-write transfer peaking at about 550 tps and so reaching a close Throughput to GCP resulting in 74 seconds response time.
 
-\paragraph{Scan - Gigantic} Figure \ref{fig:uc1-scan-g-cmidt}; GCP's CPU utilization varying between 50\%s and 90\%s with a convergence at about 80\%s, memory load showing similar range with utilization reaching up 100\%s and IO-write transfers moving between 500 tps and 600 tps results in second highest Throughput by a 457 seconds response time. Azure's CPU utilization condences between 80\% and 90\% and memory load incrementing two times from 20\%s to 40\%s, IO-write transfer moving along 50 tps to 60 tps peaking at about 200 tps results in 514 seconds Duration. Alibaba's processor utilization moves in a relatively higher range between 80\% and 95\%, an incrementing memory load range from 40\%s-50\%s to 80\%s-100\%s during runtime, and IO-write transfers peaking at about over 500 tps results in highest Throughput thus shortest Duration of 407 seconds.
+\paragraph{Scan - Gigantic (Figure \ref{fig:uc1-scan-g-cmidt})}GCP's CPU utilization varying between 50\%s and 90\%s with a convergence at about 80\%s, memory load showing similar range with utilization reaching up 100\%s and IO-write transfers moving between 500 tps and 600 tps results in second highest Throughput by a 457 seconds response time. Azure's CPU utilization condences between 80\% and 90\% and memory load incrementing two times from 20\%s to 40\%s, IO-write transfer moving along 50 tps to 60 tps peaking at about 200 tps results in 514 seconds Duration. Alibaba's processor utilization moves in a relatively higher range between 80\% and 95\%, an incrementing memory load range from 40\%s-50\%s to 80\%s-100\%s during runtime, and IO-write transfers peaking at about over 500 tps results in highest Throughput thus shortest Duration of 407 seconds.
 
-\paragraph{Join - Huge} Figure \ref{fig:uc1-join-h-cmidt}; GCP processor load moves mainly between 80\%s and over 90\%s, memory utilization moves along about 20\%s and 30\%s, IO-writes behaving at about 150 tps brings outputs 181 seconds response time. Azures resource utilization shows range between 80\% and 90\% for CPU, varying memory loads moving along below 20\%s and below 60\%s, IO-write transfers behave below 60 tps with a peak of 100 tps resulting in a lower throughput and response time of 356 seconds. Resource utilization at Alibaba behaves similar to GCP in processor and memory load whereas IO-write peaks at about 260 tps, reaching highest Throughput and a Duration of 175 seconds.
+\paragraph{Join - Huge (Figure \ref{fig:uc1-join-h-cmidt})}GCP processor load moves mainly between 80\%s and over 90\%s, memory utilization moves along about 20\%s and 30\%s, IO-writes behaving at about 150 tps brings outputs 181 seconds response time. Azures resource utilization shows range between 80\% and 90\% for CPU, varying memory loads moving along below 20\%s and below 60\%s, IO-write transfers behave below 60 tps with a peak of 100 tps resulting in a lower throughput and response time of 356 seconds. Resource utilization at Alibaba behaves similar to GCP in processor and memory load whereas IO-write peaks at about 260 tps, reaching highest Throughput and a Duration of 175 seconds.
 
-\paragraph{Join - Gigantic} Figure \ref{fig:uc1-join-g-cmidt}; CPU load in GCP moves along 70\% to 90\% in overall whereas RAM utilization among worker nodes takes a path within 50\% to 90\% range, IO-write transfers observed in behaviour about 100 tps resulting in a Throughput outputting 595 seconds of response time. Azure's resource utilization dynamics show a utilization of 80\% to 90\% with decreasing utilization on some worker nodes in later stage, memory utilization moving along the range 20\% up to 60\% and IO-write transfer observations peaking at 120 tps provide the lowest Throughput hence the longest response time of 761 seconds. Alibaba performing a processor utilization of about below 90\% to below 100\%, memory load behavior moving along 50\% to below 70\%, and IO-write observation peaking at 350 tps performans a slightly higher Throughput than GCP hence slightly shorter Duration of 594 seconds.
+\paragraph{Join - Gigantic (Figure \ref{fig:uc1-join-g-cmidt})}CPU load in GCP moves along 70\% to 90\% in overall whereas RAM utilization among worker nodes takes a path within 50\% to 90\% range, IO-write transfers observed in behaviour about 100 tps resulting in a Throughput outputting 595 seconds of response time. Azure's resource utilization dynamics show a utilization of 80\% to 90\% with decreasing utilization on some worker nodes in later stage, memory utilization moving along the range 20\% up to 60\% and IO-write transfer observations peaking at 120 tps provide the lowest Throughput hence the longest response time of 761 seconds. Alibaba performing a processor utilization of about below 90\% to below 100\%, memory load behavior moving along 50\% to below 70\%, and IO-write observation peaking at 350 tps performans a slightly higher Throughput than GCP hence slightly shorter Duration of 594 seconds.
 
-\paragraph{Aggregation - Huge} Figure \ref{fig:uc1-aggreg-h-cmidt}; GCP processor utilization moving around 80\% to about 95\%, memory load behaving between 15\% to 40\%, and IO-write transfer observed at about 150 tps results in 97 seconds Duration. Azure's CPU utilization behaves between 80\% and 90\% whereas memory load moves along from 10\% to varying utilizations among worker nodes up to 30\% and below 60\%, and IO-write transfers peaking at about 180 tps performs a relatively small Throughput resulting in 215 seconds completion time. Alibaba resource utilization moving along between 80\% and 90\% for CPU, 10\% to 40\% in memort, and IO-write transfer average of 26 tps show close performance to GCP resulting in same completion time of 97 seconds.
+\paragraph{Aggregation - Huge (Figure \ref{fig:uc1-aggreg-h-cmidt})}GCP processor utilization moving around 80\% to about 95\%, memory load behaving between 15\% to 40\%, and IO-write transfer observed at about 150 tps results in 97 seconds Duration. Azure's CPU utilization behaves between 80\% and 90\% whereas memory load moves along from 10\% to varying utilizations among worker nodes up to 30\% and below 60\%, and IO-write transfers peaking at about 180 tps performs a relatively small Throughput resulting in 215 seconds completion time. Alibaba resource utilization moving along between 80\% and 90\% for CPU, 10\% to 40\% in memort, and IO-write transfer average of 26 tps show close performance to GCP resulting in same completion time of 97 seconds.
 
-\paragraph{Aggregation - Gigantic} Figure \ref{fig:uc1-aggreg-g-cmidt}; processor utilization moving between 80\% and 90\% in overall execution, memory load between 50\% and 70\% peaking to below 100\%, IO-write transfers reaching a dense behavior at the end reaching 500 tps results in highest Throughput and 523 seconds response time. Azure displays a CPU utilization of below 80\% to above 90\%, mild RAM utilization moving along 30\%s to 60\%s, IO-write transfers behaving about 100 tps result in a relative low Throughput and 594 seconds of Duration to complete. Alibaba's processor load moves along 80\% to below 100\%, IO-write transfer behavior scaling from about 50 tps to 400 tps results in 565 seconds response time.	
+\paragraph{Aggregation - Gigantic (Figure \ref{fig:uc1-aggreg-g-cmidt})}Processor utilization moving between 80\% and 90\% in overall execution, memory load between 50\% and 70\% peaking to below 100\%, IO-write transfers reaching a dense behavior at the end reaching 500 tps results in highest Throughput and 523 seconds response time. Azure displays a CPU utilization of below 80\% to above 90\%, mild RAM utilization moving along 30\%s to 60\%s, IO-write transfers behaving about 100 tps result in a relative low Throughput and 594 seconds of Duration to complete. Alibaba's processor load moves along 80\% to below 100\%, IO-write transfer behavior scaling from about 50 tps to 400 tps results in 565 seconds response time.	
 
-\paragraph{Bayes - Huge} Figure \ref{fig:uc1-bayes-h-cmidt}; GCP in processor behavior moving along about 70\%s to below 100\%, memory load at about 30\% with a short peak to below 100\% at te first half, an IO-write transfer behavior about 500 tps resulting in highest Throughput thus fastest response time of 2604 seconds. Azure showing a splitted bevahior in CPU utilization among worker nodes where one load moves along about 80\% to lower 100\% and one node depicst a movement along minimum to about 20\%, memory loads also varying from each other by about 20\% load difference at the beginning however meeting the similar range starting at the second half, IO observations depict a low range with exception at the high IO-write transfer at about 3200 tps at the initial state of the execution result in a relatively low Throughput hence longest Duration of 6120 seconds. Alibaba CPU utilization shows varieties among worker nodes in load ranges, RAM utilization condences at higher levels ove 80\%, IO trransfers moving along 100tps to observable 450 tps resulting in 3017 seconds response time.
+\paragraph{Bayes - Huge (Figure \ref{fig:uc1-bayes-h-cmidt})}GCP in processor behavior moving along about 70\%s to below 100\%, memory load at about 30\% with a short peak to below 100\% at te first half, an IO-write transfer behavior about 500 tps resulting in highest Throughput thus fastest response time of 2604 seconds. Azure showing a splitted bevahior in CPU utilization among worker nodes where one load moves along about 80\% to lower 100\% and one node depicst a movement along minimum to about 20\%, memory loads also varying from each other by about 20\% load difference at the beginning however meeting the similar range starting at the second half, IO observations depict a low range with exception at the high IO-write transfer at about 3200 tps at the initial state of the execution result in a relatively low Throughput hence longest Duration of 6120 seconds. Alibaba CPU utilization shows varieties among worker nodes in load ranges, RAM utilization condences at higher levels ove 80\%, IO trransfers moving along 100tps to observable 450 tps resulting in 3017 seconds response time.
 
-\paragraph{Bayes - Gigantic} Figure \ref{fig:uc1-bayes-g-cmidt}; GCP's processor utilization moving along 70\% to below 100\%, accompanied by memory load incrementing from 40\%s to 70\%s becoming stable at 50\%s, and IO-write transfers moving along 500 tps results in the highest Throughput and 5350 seconds of response time. Azure's resource utilization shows distinction in CPU and memory among worker nodes while two nodes depict higher utilization at about 70\% to below 100\% for processing and 40\%-50\% for memory, one node staying at lower levels for respective resources, the observed IO-write transfer move along 100 tps where IO-read transfer peaks at about 650 tps resulting in a lowest performance of 12589 seconds Duration. Alibaba depicting different utilization ranges among worker nodes for processing, the memory consumption follows a more balanced load among worker nodes with IO-write transfer  moving aong 200 tps a relatively lower Throughput hence relatively longer Duration of 6363 seconds, with respect to GCP.
+\paragraph{Bayes - Gigantic (Figure \ref{fig:uc1-bayes-g-cmidt})}GCP's processor utilization moving along 70\% to below 100\%, accompanied by memory load incrementing from 40\%s to 70\%s becoming stable at 50\%s, and IO-write transfers moving along 500 tps results in the highest Throughput and 5350 seconds of response time. Azure's resource utilization shows distinction in CPU and memory among worker nodes while two nodes depict higher utilization at about 70\% to below 100\% for processing and 40\%-50\% for memory, one node staying at lower levels for respective resources, the observed IO-write transfer move along 100 tps where IO-read transfer peaks at about 650 tps resulting in a lowest performance of 12589 seconds Duration. Alibaba depicting different utilization ranges among worker nodes for processing, the memory consumption follows a more balanced load among worker nodes with IO-write transfer  moving aong 200 tps a relatively lower Throughput hence relatively longer Duration of 6363 seconds, with respect to GCP.
 
-\paragraph{Kmeans - Huge} Figure \ref{fig:uc1-kmeans-h-cmidt};
+\paragraph{Kmeans - Huge (Figure \ref{fig:uc1-kmeans-h-cmidt})}GCP's CPU performance behaves in the range of about 60\% to below 100\% whereas memory utilization moves about 60\%s increasing at the reduce phase where IO-write activity also condences 500 tps. The utilization in Azure depicts itself in a high CPU behavior of about 80\% and 90\%, a moderate memory consumption moving along 20\% up to below 60\%, and  IO transfers moving along 40 tps results in second shortest duration. Alibaba utilizing processor and memory in high levels including drops in processors on particular worker nodes, with an increased IO write transfer in reduce phase reaches the highest throughput hence shortest duration.
 
-\paragraph{Kmeans - Gigantic} Figure \ref{fig:uc1-kmeans-g-cmidt};
+\paragraph{Kmeans - Gigantic (Figure \ref{fig:uc1-kmeans-g-cmidt})}In the gigantic data scale all three services remain their previous utilization behavior in a more condence manner in IO transfers. Alibaba and Azure competing in throughputs, the result outcome is 4034 seconds for Alibaba and 4042 seconds for Azure, GCP's duration don't stands far apart by 4541 seconds.
 
-\paragraph{Pagerank - Huge} Figure \ref{fig:uc1-page-h-cmidt};
+\paragraph{Pagerank - Huge (Figure \ref{fig:uc1-page-h-cmidt})}GCP's processor utilization behavior moves in a higher range at about 70\% and below 100\%ö RAM utilization follows a midlevel path moving along to 50\% including incremental peakpoints at below 100\%, IO transfers vary in the heights at about 500 tps resulting in best performance by 1544 seconds. Azure performs a high utilization behavior in processor at about 80\% to over 90\%, memory load changes between about 20\% up to 60\%, a lowerlever range of 100 tps to 150 tps characterizes its IO transfer utilization resulting in 3334 seconds duration. Alibaba's both CPU and memory utilizations across worker nodes move between 80\%s and lower 100\%s, and IO transfer bevahior pushing upper limits at about 600 tps reaches second highest throughput resulting in 2458 seconds.
 
-\paragraph{Pagerank - Gigantic} Figure \ref{fig:uc1-page-g-cmidt};
-
-
-
+\paragraph{Pagerank - Gigantic (Figure \ref{fig:uc1-page-g-cmidt})}Switching to gigantic scale the CPU load of GCP becomes more condense in a range of about 60\% up to below 100\%, a fluctuating RAM utilization behavior incrementing three times to 100\% over the execution time, and an IO transfer at bout 500 tps performs the highest throughput and shortest duration of 8,371 seconds. Azure's processor load varies between 70\%s up to below 100\%, showing fluctuating memory utilization incrementing from 40\%s to below 100\%, general IO transfers limited to about 200 tps with peak exceptions at about 5000 tps performing the second shortest duration of 11,779 seconds. Alibaba's resources utilization draws a condence load for CPU and memory pushing the limits in a fluctuating style, IO transfers mostly stay below about 300 tps, peaking at 600 tps to 1200 tps several times during execution, performing the lowest throughput result in longest duration of 13,893 seconds.
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-srt-h-cmidt}
 	\caption{UC1 - Sort (Huge; 3.2 GB)}
 	\label{fig:uc1-srt-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-srt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-srt-g-cmidt}
 	\caption{UC1 - Sort (Gigantic; 32 GB)}
 	\label{fig:uc1-srt-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-srt-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-tera-h-cmidt}
 	\caption{UC1 - Terasort (Huge; 320 MB)}
 	\label{fig:uc1-tera-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-tera-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-tera-g-cmidt}
 	\caption{UC1 - Terasort (Gigantic; 3.2 GB)}
 	\label{fig:uc1-tera-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-tera-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-wrdcnt-h-cmidt}
 	\caption{UC1 - Wordcount (Huge; 32 GB)}
 	\label{fig:uc1-wrdcnt-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-wrdcnt-g-cmidt}
 	\caption{UC1 - Wordcount (Gigantic; 320 GB)}
 	\label{fig:uc1-wrdcnt-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-wrdcnt-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-dfsioer-h-cmidt}
 	\caption{UC1 - Dfsioe-read (Huge; No of Files: 256, File size: 100 MB)}
 	\label{fig:uc1-dfsioer-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-dfsioer-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-dfsioer-g-cmidt}
 	\caption{UC1 - Dfsioe-read (Gigantic; No of Files: 512, File size: 400 MB)}
 	\label{fig:uc1-dfsioer-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-dfsioer-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-dfsioew-h-cmidt}
 	\caption{UC1 - Dfsioe-write (Huge; No of Files: 256, File size: 100 MB)}
 	\label{fig:uc1-dfsioew-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-dfsioew-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-dfsioew-g-cmidt}
 	\caption{UC1 - Dfsioe-write (Gigantic; No of Files: 512, File size: 400 MB)}
 	\label{fig:uc1-dfsioew-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-dfsioew-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-scan-h-cmidt}
 	\caption{UC1 - Scan (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-scan-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-scan-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-scan-g-cmidt}
 	\caption{UC1 - Scan (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-scan-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-scan-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-join-h-cmidt}
 	\caption{UC1 - Join (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-join-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-join-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-join-g-cmidt}
 	\caption{UC1 - Join (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-join-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-join-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-aggreg-h-cmidt}
 	\caption{UC1 - Aggregation (Huge; USERVISITS: 10,000,000 PAGES: 1,200,000)}
 	\label{fig:uc1-aggreg-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-aggreg-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-aggreg-g-cmidt}
 	\caption{UC1 - Aggregation (Gigantic; USERVISITS: 100,000,000 PAGES: 12,000,000)}
 	\label{fig:uc1-aggreg-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-aggreg-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-bayes-h-cmidt}
 	\caption{UC1 - Bayes (Huge; PAGES: 500,000 CLASSES: 100 NGRAMS: 2)}
 	\label{fig:uc1-bayes-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-bayes-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-bayes-g-cmidt}
 	\caption{UC1 - Bayes (Gigantic; PAGES: 1,000,000 CLASSES: 100 NGRAMS: 2)}
 	\label{fig:uc1-bayes-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-bayes-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-kmeans-h-cmidt}
 	\caption{UC1 - Kmeans (Huge; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 100,000,000 SAMP PER INPUT: 20,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
 	\label{fig:uc1-kmeans-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-kmeans-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-kmeans-g-cmidt}
 	\caption{UC1 - Kmeans (Gigantic; CLUSTERS: 5 DIMENSIONS: 20 SAMPLES: 200,000,000 SAMP PER INPUT: 40,000,000 MAX IT: 5 K: 10 CONVERGEDIST: 0.5)}
 	\label{fig:uc1-kmeans-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-kmeans-g-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-page-h-cmidt}
 	\caption{UC1 - Pagerank (Huge; PAGES: 5,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
 	\label{fig:uc1-page-h-cmidt}
+	\includegraphics[width=\textwidth]{uc1-page-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-page-g-cmidt}
 	\caption{UC1 - Pagerank (Gigantic; PAGES: 30,000,000 NUM ITERATIONS: 3 BLOCK: 0 BLOCK WIDTH: 16)}
 	\label{fig:uc1-page-g-cmidt}
+	\includegraphics[width=\textwidth]{uc1-page-g-cmidt}
 	\centering
 \end{figure}
 
 
 
 
-\paragraph{Overview to benchmarks executed in data scale Huge/} Figure \ref{fig:uc1-huge}; 
+\paragraph{Overview to benchmarks executed in data scale Huge (Figure \ref{fig:uc1-huge})} 
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-huge}
 	\caption{Use Case 1 - Hadoop benchmark comparisons in huge data scale}
 	\label{fig:uc1-huge}
+	\includegraphics[width=\textwidth]{uc1-huge}
 	\centering
 \end{figure}
 
-\paragraph{Overview to benchmarks executed in data scale Gigantic} Figure \ref{fig:uc1-gigantic}; 
+\paragraph{Overview to benchmarks executed in data scale Gigantic (Figure \ref{fig:uc1-gigantic})}
+
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc1-gigantic}
 	\caption{Use Case 1 - Hadoop benchmark comparisons in gigantic data scale}
 	\label{fig:uc1-gigantic}
+	\includegraphics[width=\textwidth]{uc1-gigantic}
 	\centering
 \end{figure}
 
 
 
-USE CASE 2: 
+\paragraph{Use Case 2 Results:}
 
-
-\paragraph{Sort} Figure \ref{fig:uc2-srt-t-cmidt}; 
-\paragraph{Sort - Small} Figure \ref{fig:uc2-srt-s-cmidt}; 
-\paragraph{Sort - Large} Figure \ref{fig:uc2-srt-l-cmidt}; 
-\paragraph{Sort - Huge} Figure \ref{fig:uc2-srt-h-cmidt}; 
-\paragraph{Sort - Gigantic} Figure \ref{fig:uc2-srt-g-cmidt}; 
-
-\paragraph{Wordcount} Figure \ref{fig:uc2-wrdcnt-t-cmidt}; 
-\paragraph{Wordcount - Small} Figure \ref{fig:uc2-wrdcnt-s-cmidt}; 
-\paragraph{Wordcount - Large} Figure \ref{fig:uc2-wrdcnt-l-cmidt}; 
-\paragraph{Wordcount - Huge} Figure \ref{fig:uc2-wrdcnt-h-cmidt}; 
-\paragraph{Wordcount - Gigantic} Figure \ref{fig:uc2-wrdcnt-g-cmidt}; 
+\paragraph{Sort - Tiny, Small, Large, Huge, Gigantic (Figures \ref{fig:uc2-srt-t-cmidt}, \ref{fig:uc2-srt-s-cmidt}, \ref{fig:uc2-srt-l-cmidt}, \ref{fig:uc2-srt-h-cmidt}, \ref{fig:uc2-srt-g-cmidt})}
 
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-srt-t-cmidt}
 	\caption{UC2 - Sort (Tiny; 32 KB)}
 	\label{fig:uc2-srt-t-cmidt}
+	\includegraphics[width=\textwidth]{uc2-srt-t-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-srt-s-cmidt}
 	\caption{UC2 - Sort (Small; 3.2 MB)}
 	\label{fig:uc2-srt-s-cmidt}
+	\includegraphics[width=\textwidth]{uc2-srt-s-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-srt-l-cmidt}
 	\caption{UC2 - Sort (Large; 320 MB)}
 	\label{fig:uc2-srt-l-cmidt}
+	\includegraphics[width=\textwidth]{uc2-srt-l-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-srt-h-cmidt}
 	\caption{UC2 - Sort (Huge; 3.2 GB)}
 	\label{fig:uc2-srt-h-cmidt}
+	\includegraphics[width=\textwidth]{uc2-srt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-srt-g-cmidt}
 	\caption{UC2 - Sort (Gigantic; 32 GB)}
 	\label{fig:uc2-srt-g-cmidt}
+	\includegraphics[width=\textwidth]{uc2-srt-g-cmidt}
 	\centering
 \end{figure}
 
-Wordcount results in scale
+
+\paragraph{Wordcount - Tiny, Small, Large, Huge, Gigantic (Figures \ref{fig:uc2-wrdcnt-t-cmidt}, \ref{fig:uc2-wrdcnt-s-cmidt}, \ref{fig:uc2-wrdcnt-l-cmidt}, \ref{fig:uc2-wrdcnt-h-cmidt}, \ref{fig:uc2-wrdcnt-g-cmidt})}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-t-cmidt}
 	\caption{UC2 - Wordcount (Tiny; 32 KB)}
 	\label{fig:uc2-wrdcnt-t-cmidt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt-t-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-s-cmidt}
 	\caption{UC2 - Wordcount (Small; 320 MB)}
 	\label{fig:uc2-wrdcnt-s-cmidt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt-s-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-l-cmidt}
 	\caption{UC2 - Wordcount (Large; 3.2 GB)}
 	\label{fig:uc2-wrdcnt-l-cmidt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt-l-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-h-cmidt}
 	\caption{UC2 - Wordcount (Huge; 32 GB)}
 	\label{fig:uc2-wrdcnt-h-cmidt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt-h-cmidt}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-wrdcnt-g-cmidt}
 	\caption{UC2 - Wordcount (Gigantic; 320 GB)}
 	\label{fig:uc2-wrdcnt-g-cmidt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt-g-cmidt}
 	\centering
 \end{figure}
 
-\paragraph{Overview of Sort benchmark varying data scales} Figure \ref{fig:uc2-srt}; 
+\paragraph{Overview of Sort benchmark varying data scales (Figure \ref{fig:uc2-srt})}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-srt}
 	\caption{Use Case 2 - Sort performances along data scales}
 	\label{fig:uc2-srt}
+	\includegraphics[width=\textwidth]{uc2-srt}
 	\centering
 \end{figure}
 
-\paragraph{Overview of Wordcount benchmark varying data scales} Figure \ref{fig:uc2-wrdcnt}; 
+\paragraph{Overview of Wordcount benchmark varying data scales (Figure \ref{fig:uc2-wrdcnt})}
 
 \begin{figure}[p]
-	\includegraphics[width=\textwidth]{uc2-wrdcnt}
 	\caption{Use Case 2 - Wordcount performances along data scales}
 	\label{fig:uc2-wrdcnt}
+	\includegraphics[width=\textwidth]{uc2-wrdcnt}
 	\centering
 \end{figure}
 
@@ -706,7 +691,7 @@ Along the resource utilization vs. performance plots both for Use Case 1 and Use
 	\small
 	\caption{Use Case 1 Relative Performance Rates}
 	\label{tab:uc1-comparative-results}
-	\begin{tabular}[b]{ l l r r r r }
+	\begin{tabular}[h!]{ l l r r r r }
 		\multicolumn{6}{ c }{Data Scale: Huge}  \\
 		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
 		\hline
@@ -748,7 +733,7 @@ Along the resource utilization vs. performance plots both for Use Case 1 and Use
 	\small
 	\caption{Use Case 2 Relative Performance Rates}
 	\label{tab:uc2-comparative-results}
-	\begin{tabular}[b]{ l l r r r r }
+	\begin{tabular}[h!]{ l l r r r r }
 		{Benchmark} & First & Second & -Perf.\% & Third & -Perf.\% \\
 		\hline
 		Sort (t) & Alibaba & GCP & -12.50\% & Azure & -115.63\% \\
@@ -775,7 +760,7 @@ On the other hand an engrossing aspect of the Relative Performance Rates in Tabl
 	\small
 	\caption{Allocated map and reduce slots in SQL benchmarks of Use Case 1}
 	\label{tab:uc1-sql-mr-allocs}
-	\begin{tabular}[b]{ l r r r r r r l }
+	\begin{tabular}[h!]{ l r r r r r r l }
 		{} & \multicolumn{2}{c}{GCP} & \multicolumn{2}{c}{Azure} & \multicolumn{2}{c}{Alibaba} & {} \\
 		{Benchmark} & {Maps} & Reduces & {Maps} & Reduces & {Maps} & Reduces & Ref. \\
 		\hline
@@ -798,7 +783,7 @@ On the other hand an engrossing aspect of the Relative Performance Rates in Tabl
 	\small
 	\caption{Allocated map and reduce slots in Use Case 2}
 	\label{tab:uc2-mr-allocs}
-	\begin{tabular}[b]{ l r r r r r r l }
+	\begin{tabular}[h!]{ l r r r r r r l }
 		{} & \multicolumn{2}{c}{GCP} & \multicolumn{2}{c}{Azure} & \multicolumn{2}{c}{Alibaba} & {} \\
 		{Benchmark} & {Maps} & Reduces & {Maps} & Reduces & {Maps} & Reduces & Ref. \\
 		\hline
@@ -820,11 +805,11 @@ On the other hand an engrossing aspect of the Relative Performance Rates in Tabl
 
 
 \section{Conclusion and Future Work}
-Managed Hadoop systems are by CSPs provided cloud service proposals comprising pre-installed and pre-configured Hadoop clusters in order to eliminate the hard work on planning and installing Hadoop clusters manually on VM instances hence reducing the cluster installation to a matter of property selection and letting end users focus only to applications that will run on the cluster. As managed systems come in a black-box nature recpective pre-configurations and their impacts on the cluster performance remains unclear to the end user. In the study we  conducted HiBench benchmarks against Hadoop clusters on PaaS in their proposed form as they come out-of-the-box, provided by respective CSPs. For each CSP, among the proposed installation specifications, we selected same geographical location as region and by-promise apparently same CPU and Memory properties. Our aim is to compare those systems' performance behaviors by leveraging HiBench Benchmark Suite. We executed Hadoop related benchmarks on all three Hadoop on PaaS services and captured system resource utilization data in the meanwhile. The results yield that Hadoop PaaS offerings by vendor's promise do not necessarily utilize system resources in similar ways hence may highly distinct in some cases. Our assumption is that the pre-configuration choices applied by CSPs highly impact performance results even with apparently same hardware settings. The end users shall be aware of their use cases' requirements and truly understand what CSPs configuration proposals and their respective outcome.
+Managed Hadoop systems are by CSPs provided cloud service proposals comprising pre-installed and pre-configured Hadoop clusters in order to eliminate the hard work on planning and installing Hadoop clusters manually on VM instances hence reducing the cluster installation to a matter of property selection and letting end users focus only to applications that will run on the cluster. As managed systems come in a black-box nature respective pre-configurations and their impacts on the cluster performance remains unclear to the end user. In the study we  conducted HiBench benchmarks against Hadoop clusters on PaaS in their proposed form as they come out-of-the-box, provided by respective CSPs. For each CSP, among the proposed installation specifications, we selected same geographical location as region and by-promise apparently same CPU and Memory properties. Our aim is to compare those systems' performance behaviors by leveraging HiBench Benchmark Suite. We executed Hadoop related benchmarks on all three Hadoop on PaaS services and captured system resource utilization data in the meanwhile. The results yield that Hadoop PaaS offerings by vendors' promise do not necessarily utilize system resources in similar ways hence may highly distinct in some cases. Our assumption is that the pre-configuration choices applied by CSPs highly impact performance results even with apparently same hardware settings. The end users shall be aware of their use cases' requirements and truly understand what CSPs configuration proposals and their respective outcome.
 
-Based on the gained experience the study might varied in an approach more sensitive in balancing small performance differences among CSPs. As HiBench offers benchmarks for Spark, graph and streaming frameworks as well, the comparation can be made from within the respective perspective, putting also other global CSP players into the scope. 
+Based on the gained experience the study might varied in an approach more sensitive in balancing small performance differences among CSPs. As HiBench offers benchmarks for Spark, graph and streaming frameworks as well, the comparison can be made from within the respective perspective, putting also other global CSP players into the scope. 
 
-\section*{References}
+%\section*{References}
 \bibliography{mybibfile}
 
 \end{document}
