@@ -63,15 +63,19 @@ for data_scale in data_scales:
                     # IO
                     df_io = pd.read_csv('../../uc1/'+csp+'/'+data_scale+'/sysstat/data-w' + str(worker) + '/'+csp+'-uc1-w' + str(worker) + '-'+data_scale+'-'+benchmark+'-i.dat', decimal=",", delim_whitespace=True, header=None)
                     df_io = pd.DataFrame(df_io)
-                    df_io.columns = ['time', 'tps', 'rtps', 'wtps', 'bread/s', 'bwrtn/s']
+                    df_io.columns = ['time', 'tps', 'rtps', 'wtps', 'bread_s', 'bwrtn_s']
                     #x_ioread = df_io[['rtps']].values.astype(float)
-                    x_ioread = df_io[['bread/s']].values.astype(float)
+                    x_ioread = df_io[['bread_s']].values.astype(float)
                     x_ioread_scaled = scaler.fit_transform(x_ioread)
                     df_ioread_normalized = pd.DataFrame(x_ioread_scaled)
+                    # filter out values equal to 0 to enhance the average
+                    df_ioread_normalized = df_ioread_normalized > 0
                     #x_iowrite = df_io[['wtps']].values.astype(float)
-                    x_iowrite = df_io[['bwrtn/s']].values.astype(float)
+                    x_iowrite = df_io[['bwrtn_s']].values.astype(float)
                     x_iowrite_scaled = scaler.fit_transform(x_iowrite)
                     df_iowrite_normalized = pd.DataFrame(x_iowrite_scaled)
+                    # filter out values equal to 0 to enhance the average
+                    df_iowrite_normalized = df_iowrite_normalized > 0
 
                     # Calculate normalized averages
                     csp_cpu_avg += df_cpu_normalized.mean()
