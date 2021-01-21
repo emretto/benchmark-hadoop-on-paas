@@ -73,7 +73,7 @@ set paxis 10 range [ 0.00000 : 100.000 ]  noextend
 NO_ANIMATION = 1
 
 
-DATA_SCALE = "h"
+DATA_SCALE = "g"
 
 GCP_SRT = sprintf( "%s%s%s", "reports/processed/uc1-gcp-", DATA_SCALE , "-srt.tsv") 
 AZU_SRT = sprintf( "%s%s%s", "reports/processed/uc1-azu-", DATA_SCALE , "-srt.tsv")

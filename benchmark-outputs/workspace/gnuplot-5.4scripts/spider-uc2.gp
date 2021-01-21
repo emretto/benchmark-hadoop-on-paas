@@ -72,7 +72,7 @@ set paxis 9 range [ 0.00000 : 100.000 ]  noextend
 set paxis 10 range [ 0.00000 : 100.000 ]  noextend
 NO_ANIMATION = 1
 
-BENCHMARK = "wrdcnt"
+BENCHMARK = "srt"
 
 GCP_TINY = sprintf( "%s%s%s", "reports/processed/uc2-gcp-t-", BENCHMARK , ".tsv") 
 AZU_TINY = sprintf( "%s%s%s", "reports/processed/uc2-azu-t-", BENCHMARK , ".tsv")
