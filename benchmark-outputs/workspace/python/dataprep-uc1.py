@@ -69,13 +69,13 @@ for data_scale in data_scales:
                     x_ioread_scaled = scaler.fit_transform(x_ioread)
                     df_ioread_normalized = pd.DataFrame(x_ioread_scaled)
                     # filter out values equal to 0 to enhance the average
-                    df_ioread_normalized = df_ioread_normalized > 0
+                    # df_ioread_normalized = df_ioread_normalized > 0
                     #x_iowrite = df_io[['wtps']].values.astype(float)
                     x_iowrite = df_io[['bwrtn_s']].values.astype(float)
                     x_iowrite_scaled = scaler.fit_transform(x_iowrite)
                     df_iowrite_normalized = pd.DataFrame(x_iowrite_scaled)
                     # filter out values equal to 0 to enhance the average
-                    df_iowrite_normalized = df_iowrite_normalized > 0
+                    # df_iowrite_normalized = df_iowrite_normalized > 0
 
                     # Calculate normalized averages
                     csp_cpu_avg += df_cpu_normalized.mean()
