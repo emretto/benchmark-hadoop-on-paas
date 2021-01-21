@@ -38,6 +38,7 @@ for data_scale in data_scales:
                 csp_iow_avg = 0.0
 
                 for worker in range(0, 3):
+                    # CPU
                     df_cpu = pd.read_csv('../../uc1/'+csp+'/'+data_scale+'/sysstat/data-w' + str(worker) + '/'+csp+'-uc1-w' + str(worker) + '-'+data_scale+'-'+benchmark+'-c0.dat', decimal=",", delim_whitespace=True, header=None)
                     df_cpu = pd.DataFrame(df_cpu)
                     df_cpu.columns = ['time', 'cpu', '(%)user', '(%)nice', '(%)system', '(%)iowait', '(%)steal', '(%)idle']
@@ -48,6 +49,7 @@ for data_scale in data_scales:
                     x_cpu_scaled = scaler.fit_transform(x_cpu)
                     df_cpu_normalized = pd.DataFrame(x_cpu_scaled)
 
+                    # Memory
                     df_mem = pd.read_csv('../../uc1/'+csp+'/'+data_scale+'/sysstat/data-w' + str(worker) + '/'+csp+'-uc1-w' + str(worker) + '-'+data_scale+'-'+benchmark+'-r.dat', decimal=",", delim_whitespace=True, header=None)
                     df_mem = pd.DataFrame(df_mem)
                     if (csp == 'gcp'):
@@ -58,6 +60,7 @@ for data_scale in data_scales:
                     x_mem_scaled = scaler.fit_transform(x_mem)
                     df_mem_normalized = pd.DataFrame(x_mem_scaled)
 
+                    # IO
                     df_io = pd.read_csv('../../uc1/'+csp+'/'+data_scale+'/sysstat/data-w' + str(worker) + '/'+csp+'-uc1-w' + str(worker) + '-'+data_scale+'-'+benchmark+'-i.dat', decimal=",", delim_whitespace=True, header=None)
                     df_io = pd.DataFrame(df_io)
                     df_io.columns = ['time', 'tps', 'rtps', 'wtps', 'bread/s', 'bwrtn/s']
@@ -70,14 +73,18 @@ for data_scale in data_scales:
                     x_iowrite_scaled = scaler.fit_transform(x_iowrite)
                     df_iowrite_normalized = pd.DataFrame(x_iowrite_scaled)
 
+                    df_ioread_normalized = df_ioread_normalized[df_ioread_normalized > 0].dropna()
+                    df_iowrite_normalized = df_iowrite_normalized[df_iowrite_normalized > 0].dropna()
+                    # Calculate normalized averages
                     csp_cpu_avg += df_cpu_normalized.mean()
                     csp_mem_avg += df_mem_normalized.mean()
                     csp_ior_avg += df_ioread_normalized.mean()
                     csp_iow_avg += df_iowrite_normalized.mean()
 
                     #print('CSP: '+csp+', WORKER ' + str(worker + 1) + ' normalized CPU average:' + str(df_cpu_normalized.mean()))
-                    #print('CSP: '+csp+', WORKER ' + str(worker + 1) + ' normalized MEM average:' + str(df_mem_normalized.mean()))
-
+                    #print('CSP: '+csp+', WORKER ' + str(worker + 1) + ' normalized MEM average:' + str(df_mem_normalized.mean())
+                
+                # Calculate cluster average
                 csp_cpu_avg = csp_cpu_avg / 3
                 csp_mem_avg = csp_mem_avg / 3
                 csp_ior_avg = csp_ior_avg / 3
@@ -86,6 +93,9 @@ for data_scale in data_scales:
                 # print(csp + ', '+data_scale+', '+benchmark+', avg Mem: ', csp_mem_avg.values[0])
                 # print(csp + ', '+data_scale+', '+benchmark+', avg IO-read: ', csp_ior_avg.values[0])
                 # print(csp + ', '+data_scale+', '+benchmark+', avg IO-write: ', csp_iow_avg.values[0])
+
+                # print(csp_ior_avg)
+                # print(csp_iow_avg)
 
 
                 # HiBench data processing
