@@ -148,7 +148,7 @@ Similar to HDFS, Hadoop's MapReduce is the open-source implementation of the Map
 	\centering
 \end{figure}
 
-\paragraph{YARN}Hadoop version 2.x includes significant architectural improvements in terms of resource management. Version 1.x of Hadoop suffered shortcomings due to an overload of its resource management duties, which was handled within MRv1, where job tracker node and task tracker nodes were running the organizational load of MapReduce executions. YARN standing for "Yet Another Resource Negotiator", emerged as an intermediate layer between HDFS and MapReduce by taking over some of the load that was previously carried out by MRv1, also become a gate to batch, stream, interactive, and graph processing engines to leverage HDFS file system (Figure \ref{fig:YARNoverview}). After YARN, MRv1 has become MRv2 isolated from resource managerial duties regarding the previous version hence more efficient with processing oriented focus. YARN innovates Hadoop by bringing the architectural elements resource manager, which is one node dedicated to tracking resources across the cluster by availability, and node managers who reside inside each worker node and monitor containers.
+\paragraph{YARN}Hadoop version 2.x includes significant architectural improvements in terms of resource management. Version 1.x of Hadoop suffered shortcomings due to an overload of its resource management duties, which was handled within MRv1, where job tracker node and task tracker nodes were running the organizational load of MapReduce executions. YARN standing for "Yet Another Resource Negotiator", emerged as an intermediate layer between HDFS and MapReduce by taking over some of the load that was previously carried out by MRv1, has become a gate to batch, stream, interactive, and graph processing engines to leverage HDFS file system (Figure \ref{fig:YARNoverview}). After YARN, MRv1 has become MRv2 isolated from resource managerial duties regarding the previous version hence more efficient with processing oriented focus. YARN innovates Hadoop by bringing the architectural elements resource manager, which is one node dedicated to tracking resources across the cluster by availability, and node managers who reside inside each worker node and monitor the containers.
 
 
 \begin{figure}[h!]
@@ -558,19 +558,18 @@ For each use case, we provided spider charts, a.k.a. radar plots, to give a comp
 \end{figure}
 
 
+\paragraph{Use Case 1 Overview (Figures \ref{fig:uc1-huge} and \ref{fig:uc1-gigantic})} 
 
-
-\paragraph{Overview to benchmarks executed in Use Case 1 (Figures \ref{fig:uc1-huge} and \ref{fig:uc1-gigantic})} 
 
 \begin{figure}[p]
-	\caption{Use Case 1 - Hadoop benchmark comparisons in huge data scale}
+	\caption{Use Case 1 - Overview to system utilization in data scale huge}
 	\label{fig:uc1-huge}
 	\includegraphics[width=\textwidth]{uc1-huge}
 	\centering
 \end{figure}
 
 \begin{figure}[p]
-	\caption{Use Case 1 - Hadoop benchmark comparisons in gigantic data scale}
+	\caption{Use Case 1 - Overview to system utilization in data scale gigantic}
 	\label{fig:uc1-gigantic}
 	\includegraphics[width=\textwidth]{uc1-gigantic}
 	\centering
