@@ -72,10 +72,7 @@ for data_scale in data_scales:
                     x_iowrite = df_io[['bwrtn/s']].values.astype(float)
                     x_iowrite_scaled = scaler.fit_transform(x_iowrite)
                     df_iowrite_normalized = pd.DataFrame(x_iowrite_scaled)
-                    
-                    df_ioread_normalized[df_ioread_normalized == 0] = df_ioread_normalized.mean()
-                    df_iowrite_normalized[df_iowrite_normalized == 0] = df_iowrite_normalized.mean()
-                    # df_iowrite_normalized = df_iowrite_normalized[df_iowrite_normalized > 0].dropna()
+
                     # Calculate normalized averages
                     csp_cpu_avg += df_cpu_normalized.mean()
                     csp_mem_avg += df_mem_normalized.mean()
