@@ -79,6 +79,11 @@ a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
   {OS}}.
 \newline\urlprefix\url{https://alibaba.github.io/cloud-kernel/os.html}
 
+\bibitem{noauthor_oss_nodate}
+\href{product/oss}{{OSS} ({Object} {Storage} {Service}): {Secure} {Cloud}
+  {Storage}}.
+\newline\urlprefix\url{product/oss}
+
 \bibitem{noauthor_intel-bigdatahibench_2021}
 \href{https://github.com/Intel-bigdata/HiBench}{Intel-bigdata/{HiBench}},
   original-date: 2012-06-12T07:56:57Z (Jan. 2021).
