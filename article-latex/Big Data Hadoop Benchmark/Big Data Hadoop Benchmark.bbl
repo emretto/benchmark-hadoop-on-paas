@@ -102,18 +102,6 @@ S.~Huang, J.~Huang, J.~Dai, T.~Xie, B.~Huang, The {HiBench} benchmark suite:
   {Intel}-bigdata/{HiBench}}.
 \newline\urlprefix\url{/Intel-bigdata/HiBench/releases/tag/v7.1.1}
 
-\bibitem{rabl_experience_2014}
-L.~Yi, J.~Dai,
-  \href{http://link.springer.com/10.1007/978-3-319-10596-3_4}{Experience from
-  {Hadoop} {Benchmarking} with {HiBench}: {From} {Micro}-{Benchmarks} {Toward}
-  {End}-to-{End} {Pipelines}}, in: T.~Rabl, N.~Raghunath, M.~Poess,
-  M.~Bhandarkar, H.-A. Jacobsen, C.~Baru (Eds.), Advancing {Big} {Data}
-  {Benchmarks}, Vol. 8585, Springer International Publishing, Cham, 2014, pp.
-  43--48, series Title: Lecture Notes in Computer Science.
-\newblock \href {http://dx.doi.org/10.1007/978-3-319-10596-3_4}
-  {\path{doi:10.1007/978-3-319-10596-3_4}}.
-\newline\urlprefix\url{http://link.springer.com/10.1007/978-3-319-10596-3_4}
-
 \bibitem{poggi_characterizing_2018}
 N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and
   spark in multi-cloud environments, Lecture Notes in Computer Science
