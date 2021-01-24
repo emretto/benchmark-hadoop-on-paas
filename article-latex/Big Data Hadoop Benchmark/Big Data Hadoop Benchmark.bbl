@@ -122,14 +122,6 @@ N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and
 \newblock \href {http://dx.doi.org/10.1007/978-3-319-72401-0_5}
   {\path{doi:10.1007/978-3-319-72401-0_5}}.
 
-\bibitem{poggi_state_2016}
-N.~Poggi, J.~L. Berral, T.~Fenech, D.~Carrera, J.~Blakeley, U.~F. Minhas,
-  N.~Vujic, The state of {SQL}-on-{Hadoop} in the cloud, in: 2016 {IEEE}
-  {International} {Conference} on {Big} {Data} ({Big} {Data}), 2016, pp.
-  1432--1443.
-\newblock \href {http://dx.doi.org/10.1109/BigData.2016.7840751}
-  {\path{doi:10.1109/BigData.2016.7840751}}.
-
 \bibitem{samadi_performance_2018}
 Y.~Samadi, M.~Zbakh, C.~Tadonki, Performance comparison between hadoop and
   spark frameworks using {HiBench} benchmarks, Concurrency Computation 30~(12).
