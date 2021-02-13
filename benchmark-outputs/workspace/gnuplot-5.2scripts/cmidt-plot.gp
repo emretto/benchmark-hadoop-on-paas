@@ -51,7 +51,7 @@ set autoscale y2
 set style fill transparent solid 0.6 noborder
 set term png size 1600, 1000
 set output IMAGENAME
-# set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
+#set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
 set multiplot title "" layout 2, 2 font "Times New Roman, 1"
 
 
@@ -197,7 +197,7 @@ set style fill transparent solid 0.9 noborder
 
 set style histogram cluster gap 1
 
-set xlabel "GCPs"
+set xlabel "Cloud Service Providers"
 set ylabel "Duration (sec)" offset 2, 0, 0
 set y2label "Throughput (bytes)" offset -3, 0, 0
 set y2tics font "Times New Roman, 10"

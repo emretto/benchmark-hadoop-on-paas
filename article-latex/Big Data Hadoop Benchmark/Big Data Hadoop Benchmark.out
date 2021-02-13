@@ -1,8 +1,29 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
-\BOOKMARK [1][-]{section.3}{Method}{}% 3
-\BOOKMARK [1][-]{section.4}{Results}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Use Case 1 Results}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Use Case 2 Results}{section.4}% 6
-\BOOKMARK [1][-]{section.5}{Discussion}{}% 7
-\BOOKMARK [1][-]{section.6}{Conclusion and Future Work}{}% 8
+\BOOKMARK [1][-]{section.2}{Architectural Concepts and Overview of Big Data}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{HDFS}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{MapReduce}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{YARN}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Google Cloud Dataproc}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Azure HDInsight}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Alibaba Cloud e-MapReduce}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Alibaba Cloud e-MapReduce}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Related Work}{}% 10
+\BOOKMARK [1][-]{section.4}{Materials and Methods}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Evaluation Setup}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Use Case 1 Results}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Sort Benchmark Results}{section.5}% 14
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Terasort}{subsection.5.1}% 15
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Wordcount}{subsection.5.1}% 16
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Dfsioe-read}{subsection.5.1}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Dfsioe-write}{subsection.5.1}% 18
+\BOOKMARK [3][-]{subsubsection.5.1.5}{Scan}{subsection.5.1}% 19
+\BOOKMARK [3][-]{subsubsection.5.1.6}{Join}{subsection.5.1}% 20
+\BOOKMARK [3][-]{subsubsection.5.1.7}{Aggregation}{subsection.5.1}% 21
+\BOOKMARK [3][-]{subsubsection.5.1.8}{Bayes}{subsection.5.1}% 22
+\BOOKMARK [3][-]{subsubsection.5.1.9}{Kmeans}{subsection.5.1}% 23
+\BOOKMARK [3][-]{subsubsection.5.1.10}{Pagerank}{subsection.5.1}% 24
+\BOOKMARK [1][-]{section.6}{Use Case 2 Results}{}% 25
+\BOOKMARK [2][-]{subsection.6.1}{Scalability Results in Sort Benchmark}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.2}{Scalability Results of Wordcount Benchmark}{section.6}% 27
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 28
+\BOOKMARK [1][-]{section.8}{Conclusion and Future Work}{}% 29
