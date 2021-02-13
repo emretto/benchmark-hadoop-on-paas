@@ -18,7 +18,7 @@
 S.~Ghemawat, H.~Gobioff, S.-T. Leung, The {Google} file system, in: Proceedings
   of the nineteenth {ACM} symposium on {Operating} systems principles, Vol.~37,
   2003, pp. 29--43, issue: 5.
-\newblock \href {http://dx.doi.org/10.1145/1165389.945450}
+\newblock \href {https://doi.org/10.1145/1165389.945450}
   {\path{doi:10.1145/1165389.945450}}.
 
 \bibitem{white_hadoop_2015}
@@ -94,7 +94,7 @@ S.~Huang, J.~Huang, J.~Dai, T.~Xie, B.~Huang, The {HiBench} benchmark suite:
   {Characterization} of the {MapReduce}-based data analysis, in: 2010 {IEEE}
   26th {International} {Conference} on {Data} {Engineering} {Workshops}
   ({ICDEW} 2010), 2010, pp. 41--51.
-\newblock \href {http://dx.doi.org/10.1109/ICDEW.2010.5452747}
+\newblock \href {https://doi.org/10.1109/ICDEW.2010.5452747}
   {\path{doi:10.1109/ICDEW.2010.5452747}}.
 
 \bibitem{noauthor_release_nodate}
@@ -107,25 +107,26 @@ N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and
   spark in multi-cloud environments, Lecture Notes in Computer Science
   (including subseries Lecture Notes in Artificial Intelligence and Lecture
   Notes in Bioinformatics) 10661 LNCS (2018) 55--74.
-\newblock \href {http://dx.doi.org/10.1007/978-3-319-72401-0_5}
+\newblock \href {https://doi.org/10.1007/978-3-319-72401-0_5}
   {\path{doi:10.1007/978-3-319-72401-0_5}}.
 
 \bibitem{samadi_performance_2018}
 Y.~Samadi, M.~Zbakh, C.~Tadonki, Performance comparison between hadoop and
-  spark frameworks using {HiBench} benchmarks, Concurrency Computation 30~(12).
-\newblock \href {http://dx.doi.org/10.1002/cpe.4367}
+  spark frameworks using {HiBench} benchmarks, Concurrency Computation 30~(12)
+  (2018).
+\newblock \href {https://doi.org/10.1002/cpe.4367}
   {\path{doi:10.1002/cpe.4367}}.
 
 \bibitem{ahn_performance_2018}
 H.~Ahn, H.~Kim, W.~You, Performance {Study} of {Spark} on {YARN} {Cluster}
   {Using} {HiBench}, 2018.
-\newblock \href {http://dx.doi.org/10.1109/ICCE-ASIA.2018.8552137}
+\newblock \href {https://doi.org/10.1109/ICCE-ASIA.2018.8552137}
   {\path{doi:10.1109/ICCE-ASIA.2018.8552137}}.
 
 \bibitem{han_impact_2017}
 S.~Han, W.~Choi, R.~Muwafiq, Y.~Nah, Impact of memory size on bigdata
   processing based on hadoop and spark, Vol. 2017-January, 2017, pp. 275--280.
-\newblock \href {http://dx.doi.org/10.1145/3129676.3129688}
+\newblock \href {https://doi.org/10.1145/3129676.3129688}
   {\path{doi:10.1145/3129676.3129688}}.
 
 \bibitem{ivanov_performance_2015}
@@ -133,7 +134,7 @@ T.~Ivanov, R.~Niemann, S.~Izberovic, M.~Rosselli, K.~Tolle, R.~V. Zicari,
   Performance {Evaluation} of {Enterprise} {Big} {Data} {Platforms} with
   {HiBench}, in: 2015 {IEEE} {Trustcom}/{BigDataSE}/{ISPA}, Vol.~2, 2015, pp.
   120--127.
-\newblock \href {http://dx.doi.org/10.1109/Trustcom.2015.570}
+\newblock \href {https://doi.org/10.1109/Trustcom.2015.570}
   {\path{doi:10.1109/Trustcom.2015.570}}.
 
 \bibitem{noauthor_gartner_nodate}
