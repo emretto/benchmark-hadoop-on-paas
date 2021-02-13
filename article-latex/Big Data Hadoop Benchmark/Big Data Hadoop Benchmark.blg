@@ -1,34 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Big Data Hadoop Benchmark.aux
 The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
+Warning--empty year in noauthor_world_nodate
+Warning--empty year in noauthor_apache_nodate
 Warning--empty booktitle in dean_mapreduce_2004
 Too many commas in name 1 of "Schätzle, Martin Przyjaciel-Zablocki, {and} Alexander, Thomas Hornung" for entry schatzle_giant_nodate
-while executing---line 1507 of file elsarticle-num.bst
+while executing---line 1497 of file elsarticle-num.bst
+Warning--empty year in schatzle_giant_nodate
+Warning--empty year in noauthor_announcing_nodate
+Warning--empty year in noauthor_dataproc_nodate
+Warning--empty year in noauthor_compute_nodate
+Warning--empty year in noauthor_cloud_nodate
+Warning--empty year in noauthor_azure_nodate
+Warning--empty year in noauthor_azuravail_nodate
+Warning--empty year in noauthor_what_nodate
+Warning--empty year in noauthor_alielastic_nodate
+Warning--empty year in noauthor_alibaba_nodate
+Warning--empty year in noauthor_oss_nodate
+Warning--empty year in noauthor_release_nodate
 Warning--empty booktitle in ahn_performance_2018
 Warning--empty pages in ahn_performance_2018
 Warning--empty booktitle in han_impact_2017
+Warning--empty year in noauthor_gartner_nodate
 You've used 25 entries,
-            2937 wiz_defined-function locations,
-            786 strings with 9180 characters,
-and the built_in function-call counts, 6193 in all, are:
-= -- 538
+            2952 wiz_defined-function locations,
+            787 strings with 9182 characters,
+and the built_in function-call counts, 6322 in all, are:
+= -- 543
 > -- 120
 < -- 10
 + -- 56
 - -- 31
-* -- 334
-:= -- 686
+* -- 381
+:= -- 707
 add.period$ -- 32
 call.type$ -- 25
 change.case$ -- 29
 chr.to.int$ -- 6
-cite$ -- 29
-duplicate$ -- 263
-empty$ -- 864
+cite$ -- 44
+duplicate$ -- 265
+empty$ -- 871
 format.name$ -- 39
-if$ -- 1744
+if$ -- 1756
 int.to.chr$ -- 0
 int.to.str$ -- 25
 missing$ -- 10
@@ -38,16 +53,16 @@ pop$ -- 221
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 498
+skip$ -- 501
 stack$ -- 0
 substring$ -- 172
-swap$ -- 78
+swap$ -- 79
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
+warning$ -- 19
 while$ -- 28
 width$ -- 27
-write$ -- 199
+write$ -- 200
 (There was 1 error message)
