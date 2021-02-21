@@ -85,7 +85,7 @@ StyleCopReport.xml
 *.tmp
 *.tmp_proj
 *_wpftmp.csproj
-*.log
+#*.log
 *.vspscc
 *.vssscc
 .builds
@@ -359,3 +359,4 @@ MigrationBackup/
 *.txt
 
 .vscode/settings.json
+article-latex/Big Data Hadoop Benchmark/Big Data Hadoop Benchmark.log
