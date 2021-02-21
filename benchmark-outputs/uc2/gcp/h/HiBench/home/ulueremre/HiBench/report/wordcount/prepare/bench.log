@@ -1,0 +1,67 @@
+20/12/13 21:50:14 INFO client.RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 21:50:14 INFO client.AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+Running 12 maps.
+Job started: Sun Dec 13 21:50:15 UTC 2020
+20/12/13 21:50:15 INFO client.RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 21:50:15 INFO client.AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+20/12/13 21:50:15 INFO mapreduce.JobSubmitter: number of splits:12
+20/12/13 21:50:15 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1607867764932_0082
+20/12/13 21:50:15 INFO impl.YarnClientImpl: Submitted application application_1607867764932_0082
+20/12/13 21:50:15 INFO mapreduce.Job: The url to track the job: http://hadoop-cluster-m:8088/proxy/application_1607867764932_0082/
+20/12/13 21:50:15 INFO mapreduce.Job: Running job: job_1607867764932_0082
+20/12/13 21:50:21 INFO mapreduce.Job: Job job_1607867764932_0082 running in uber mode : false
+20/12/13 21:50:21 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/13 21:51:57 INFO mapreduce.Job:  map 8% reduce 0%
+20/12/13 21:52:11 INFO mapreduce.Job:  map 17% reduce 0%
+20/12/13 21:52:36 INFO mapreduce.Job:  map 25% reduce 0%
+20/12/13 21:52:40 INFO mapreduce.Job:  map 42% reduce 0%
+20/12/13 21:52:43 INFO mapreduce.Job:  map 50% reduce 0%
+20/12/13 21:53:12 INFO mapreduce.Job:  map 58% reduce 0%
+20/12/13 21:53:16 INFO mapreduce.Job:  map 67% reduce 0%
+20/12/13 21:53:23 INFO mapreduce.Job:  map 75% reduce 0%
+20/12/13 21:53:24 INFO mapreduce.Job:  map 83% reduce 0%
+20/12/13 21:53:25 INFO mapreduce.Job:  map 92% reduce 0%
+20/12/13 21:53:35 INFO mapreduce.Job:  map 100% reduce 0%
+20/12/13 21:53:36 INFO mapreduce.Job: Job job_1607867764932_0082 completed successfully
+20/12/13 21:53:36 INFO mapreduce.Job: Counters: 33
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2505542
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1514
+		HDFS: Number of bytes written=32849152848
+		HDFS: Number of read operations=72
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=36
+	Job Counters
+		Killed map tasks=6
+		Launched map tasks=18
+		Other local map tasks=18
+		Total time spent by all maps in occupied slots (ms)=11137734
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=1856289
+		Total vcore-milliseconds taken by all map tasks=1856289
+		Total megabyte-milliseconds taken by all map tasks=11405039616
+	Map-Reduce Framework
+		Map input records=12
+		Map output records=48835157
+		Input split bytes=1514
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=7304
+		CPU time spent (ms)=670490
+		Physical memory (bytes) snapshot=18189815808
+		Virtual memory (bytes) snapshot=85108989952
+		Total committed heap usage (bytes)=16842227712
+	org.apache.hadoop.examples.RandomTextWriter$Counters
+		BYTES_WRITTEN=32000003824
+		RECORDS_WRITTEN=48835157
+	File Input Format Counters
+		Bytes Read=0
+	File Output Format Counters
+		Bytes Written=32849152848
+Job ended: Sun Dec 13 21:53:36 UTC 2020
+The job took 201 seconds.

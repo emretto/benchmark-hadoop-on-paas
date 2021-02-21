@@ -1,0 +1,83 @@
+20/12/13 21:11:46 INFO client.RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 21:11:46 INFO client.AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+20/12/13 21:11:46 INFO input.FileInputFormat: Total input files to process : 12
+20/12/13 21:11:46 INFO mapreduce.JobSubmitter: number of splits:12
+20/12/13 21:11:46 INFO Configuration.deprecation: mapreduce.outputformat.class is deprecated. Instead, use mapreduce.job.outputformat.class
+20/12/13 21:11:46 INFO Configuration.deprecation: mapreduce.inputformat.class is deprecated. Instead, use mapreduce.job.inputformat.class
+20/12/13 21:11:46 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/12/13 21:11:47 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1607867764932_0074
+20/12/13 21:11:47 INFO impl.YarnClientImpl: Submitted application application_1607867764932_0074
+20/12/13 21:11:47 INFO mapreduce.Job: The url to track the job: http://hadoop-cluster-m:8088/proxy/application_1607867764932_0074/
+20/12/13 21:11:47 INFO mapreduce.Job: Running job: job_1607867764932_0074
+20/12/13 21:11:54 INFO mapreduce.Job: Job job_1607867764932_0074 running in uber mode : false
+20/12/13 21:11:54 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/13 21:12:11 INFO mapreduce.Job:  map 25% reduce 0%
+20/12/13 21:12:15 INFO mapreduce.Job:  map 81% reduce 0%
+20/12/13 21:12:16 INFO mapreduce.Job:  map 92% reduce 0%
+20/12/13 21:12:19 INFO mapreduce.Job:  map 100% reduce 0%
+20/12/13 21:12:26 INFO mapreduce.Job:  map 100% reduce 17%
+20/12/13 21:12:27 INFO mapreduce.Job:  map 100% reduce 25%
+20/12/13 21:12:29 INFO mapreduce.Job:  map 100% reduce 50%
+20/12/13 21:12:30 INFO mapreduce.Job:  map 100% reduce 58%
+20/12/13 21:12:31 INFO mapreduce.Job:  map 100% reduce 83%
+20/12/13 21:12:32 INFO mapreduce.Job:  map 100% reduce 92%
+20/12/13 21:12:34 INFO mapreduce.Job:  map 100% reduce 100%
+20/12/13 21:12:34 INFO mapreduce.Job: Job job_1607867764932_0074 completed successfully
+20/12/13 21:12:34 INFO mapreduce.Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=199932
+		FILE: Number of bytes written=5430040
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=328496477
+		HDFS: Number of bytes written=23755
+		HDFS: Number of read operations=108
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=36
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=13
+		Launched reduce tasks=12
+		Data-local map tasks=13
+		Total time spent by all maps in occupied slots (ms)=1268226
+		Total time spent by all reduces in occupied slots (ms)=444630
+		Total time spent by all map tasks (ms)=211371
+		Total time spent by all reduce tasks (ms)=74105
+		Total vcore-milliseconds taken by all map tasks=211371
+		Total vcore-milliseconds taken by all reduce tasks=74105
+		Total megabyte-milliseconds taken by all map tasks=1298663424
+		Total megabyte-milliseconds taken by all reduce tasks=455301120
+	Map-Reduce Framework
+		Map input records=488111
+		Map output records=26619385
+		Map output bytes=390097522
+		Map output materialized bytes=200724
+		Input split bytes=1500
+		Combine input records=26619385
+		Combine output records=12000
+		Reduce input groups=1000
+		Reduce shuffle bytes=200724
+		Reduce input records=12000
+		Reduce output records=1000
+		Spilled Records=24000
+		Shuffled Maps =144
+		Failed Shuffles=0
+		Merged Map outputs=144
+		GC time elapsed (ms)=5239
+		CPU time spent (ms)=154500
+		Physical memory (bytes) snapshot=12558950400
+		Virtual memory (bytes) snapshot=169891463168
+		Total committed heap usage (bytes)=15386279936
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=328494977
+	File Output Format Counters
+		Bytes Written=23755
