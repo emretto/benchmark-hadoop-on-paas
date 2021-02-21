@@ -1,0 +1,68 @@
+20/12/13 17:34:40 INFO HiBench.Dummy: Creating dummy file hdfs://hadoop-cluster-m/HiBench/Bayes/temp/dummy with 12 slots...
+curIndex: 12386, total: 12387
+20/12/13 17:34:41 INFO HiBench.BayesData: creating bayes text data ...
+20/12/13 17:34:41 INFO HiBench.BayesData: Running Job: Create bayes data
+20/12/13 17:34:41 INFO HiBench.BayesData: Pages file hdfs://hadoop-cluster-m/HiBench/Bayes/temp/dummy as input
+20/12/13 17:34:41 INFO HiBench.BayesData: Rankings file hdfs://hadoop-cluster-m/HiBench/Bayes/Input as output
+20/12/13 17:34:42 INFO client.RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 17:34:42 INFO client.AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+20/12/13 17:34:42 INFO client.RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 17:34:42 INFO client.AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+20/12/13 17:34:42 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/12/13 17:34:42 INFO mapred.FileInputFormat: Total input files to process : 1
+20/12/13 17:34:42 INFO mapreduce.JobSubmitter: number of splits:12
+20/12/13 17:34:42 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/12/13 17:34:42 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1607867764932_0031
+20/12/13 17:34:42 INFO impl.YarnClientImpl: Submitted application application_1607867764932_0031
+20/12/13 17:34:42 INFO mapreduce.Job: The url to track the job: http://hadoop-cluster-m:8088/proxy/application_1607867764932_0031/
+20/12/13 17:34:42 INFO mapreduce.Job: Running job: job_1607867764932_0031
+20/12/13 17:34:50 INFO mapreduce.Job: Job job_1607867764932_0031 running in uber mode : false
+20/12/13 17:34:50 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/13 17:35:09 INFO mapreduce.Job:  map 8% reduce 0%
+20/12/13 17:35:10 INFO mapreduce.Job:  map 17% reduce 0%
+20/12/13 17:35:11 INFO mapreduce.Job:  map 50% reduce 0%
+20/12/13 17:35:13 INFO mapreduce.Job:  map 75% reduce 0%
+20/12/13 17:35:16 INFO mapreduce.Job:  map 92% reduce 0%
+20/12/13 17:35:25 INFO mapreduce.Job:  map 100% reduce 0%
+20/12/13 17:35:25 INFO mapreduce.Job: Job job_1607867764932_0031 completed successfully
+20/12/13 17:35:25 INFO mapreduce.Job: Counters: 32
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=2528822
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1400
+		HDFS: Number of bytes written=1881576036
+		HDFS: Number of read operations=84
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=36
+	Job Counters
+		Killed map tasks=1
+		Launched map tasks=13
+		Other local map tasks=13
+		Total time spent by all maps in occupied slots (ms)=1821666
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=303611
+		Total vcore-milliseconds taken by all map tasks=303611
+		Total megabyte-milliseconds taken by all map tasks=1865385984
+	Map-Reduce Framework
+		Map input records=12
+		Map output records=500000
+		Input split bytes=1200
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=7995
+		CPU time spent (ms)=177700
+		Physical memory (bytes) snapshot=9695485952
+		Virtual memory (bytes) snapshot=85197447168
+		Total committed heap usage (bytes)=9867100160
+	HiBench.Counters
+		BYTES_DATA_GENERATED=1865575380
+	File Input Format Counters
+		Bytes Read=200
+	File Output Format Counters
+		Bytes Written=1881576036
+20/12/13 17:35:25 INFO HiBench.BayesData: Finished Running Job: Create bayes data
+20/12/13 17:35:25 INFO HiBench.BayesData: Closing bayes data generator...
