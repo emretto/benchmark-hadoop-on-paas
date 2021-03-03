@@ -5,64 +5,63 @@ The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
 Warning--empty year in noauthor_world_nodate
 Warning--empty year in noauthor_apache_nodate
+Warning--empty year in aws_announcing_ec2
 Warning--empty booktitle in dean_mapreduce_2004
 Too many commas in name 1 of "Schätzle, Martin Przyjaciel-Zablocki, {and} Alexander, Thomas Hornung" for entry schatzle_giant_nodate
 while executing---line 1497 of file elsarticle-num.bst
 Warning--empty year in schatzle_giant_nodate
-Warning--empty year in noauthor_announcing_nodate
-Warning--empty year in noauthor_dataproc_nodate
 Warning--empty year in noauthor_compute_nodate
 Warning--empty year in noauthor_cloud_nodate
-Warning--empty year in noauthor_azure_nodate
 Warning--empty year in noauthor_azuravail_nodate
-Warning--empty year in noauthor_what_nodate
 Warning--empty year in noauthor_alielastic_nodate
 Warning--empty year in noauthor_alibaba_nodate
 Warning--empty year in noauthor_oss_nodate
 Warning--empty year in noauthor_release_nodate
+Warning--empty booktitle in poggi_state_2016
 Warning--empty booktitle in ahn_performance_2018
 Warning--empty pages in ahn_performance_2018
 Warning--empty booktitle in han_impact_2017
+Warning--empty booktitle in wang_improved_2020
 Warning--empty year in noauthor_gartner_nodate
-You've used 25 entries,
+You've used 23 entries,
             2952 wiz_defined-function locations,
-            787 strings with 9182 characters,
-and the built_in function-call counts, 6322 in all, are:
-= -- 543
-> -- 120
-< -- 10
-+ -- 56
-- -- 31
-* -- 381
-:= -- 707
+            784 strings with 8979 characters,
+and the built_in function-call counts, 6681 in all, are:
+= -- 586
+> -- 154
+< -- 12
++ -- 66
+- -- 43
+* -- 412
+:= -- 764
 add.period$ -- 32
-call.type$ -- 25
-change.case$ -- 29
+call.type$ -- 23
+change.case$ -- 26
 chr.to.int$ -- 6
-cite$ -- 44
-duplicate$ -- 265
-empty$ -- 871
-format.name$ -- 39
-if$ -- 1756
+cite$ -- 41
+duplicate$ -- 274
+empty$ -- 870
+format.name$ -- 53
+if$ -- 1826
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 10
-newline$ -- 106
-num.names$ -- 10
-pop$ -- 221
+int.to.str$ -- 23
+missing$ -- 12
+newline$ -- 98
+num.names$ -- 12
+pop$ -- 203
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 501
+skip$ -- 521
 stack$ -- 0
-substring$ -- 172
-swap$ -- 79
-text.length$ -- 8
+substring$ -- 242
+swap$ -- 98
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 19
-while$ -- 28
-width$ -- 27
-write$ -- 200
+warning$ -- 18
+while$ -- 36
+width$ -- 25
+write$ -- 194
 (There was 1 error message)

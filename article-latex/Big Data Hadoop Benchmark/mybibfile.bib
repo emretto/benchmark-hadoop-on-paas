@@ -3,14 +3,22 @@
 	title = {Characterizing bigbench queries, hive, and spark in multi-cloud environments},
 	volume = {10661 LNCS},
 	doi = {10.1007/978-3-319-72401-0_5},
-	abstract = {BigBench is the new standard (TPCx-BB) for benchmarking and testing Big Data systems. The TPCx-BB specification describes several business use cases—queries—which require a broad combination of data extraction techniques including SQL, Map/Reduce (M/R), user code (UDF), and Machine Learning to fulfill them. However, currently, there is no widespread knowledge of the different resource requirements and expected performance of each query, as is the case to more established benchmarks. Moreover, over the last year, the Spark framework and APIs have been evolving very rapidly, with major improvements in performance and the stable release of v2. It is our intent to compare the current state of Spark to Hive’s base implementation which can use the legacy M/R engine and Mahout or the current Tez and MLlib frameworks. At the same time, cloud providers currently offer convenient on-demand managed big data clusters (PaaS) with a pay-as-you-go model. In PaaS, analytical engines such as Hive and Spark come ready to use, with a general-purpose configuration and upgrade management. The study characterizes both the BigBench queries and the out-of-the-box performance of Spark and Hive versions in the cloud. At the same time, comparing popular PaaS offerings in terms of reliability, data scalability (1 GB to 10 TB), versions, and settings from Azure HDinsight, Amazon Web Services EMR, and Google Cloud Dataproc. The query characterization highlights the similarities and differences in Hive an Spark frameworks, and which queries are the most resource consuming according to CPU, memory, and I/O. Scalability results show how there is a need for configuration tuning in most cloud providers as data scale grows, especially with Sparks memory usage. These results can help practitioners to quickly test systems by picking a subset of the queries which stresses each of the categories. At the same time, results show how Hive and Spark compare and what performance can be expected of each in PaaS. © Springer International Publishing AG 2018.},
 	journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
 	author = {Poggi, N. and Montero, A. and Carrera, D.},
 	year = {2018},
 	pages = {55--74},
 	annote = {Cited By :2},
-	file = {SCOPUS Snapshot:/Users/emre/Zotero/storage/VYKBLBYU/display.html:text/html;Submitted Version:/Users/emre/Zotero/storage/LX7562ND/Poggi et al. - 2018 - Characterizing bigbench queries, hive, and spark i.pdf:application/pdf}
 }
+
+@inproceedings{poggi_state_2016,
+	title = {The state of {SQL}-on-{Hadoop} in the cloud},
+	doi = {10.1109/BigData.2016.7840751},
+	author = {Poggi, N. and Berral, J.L. and Fenech, T. and Carrera, D. and Blakeley, J. and Minhas, U.F. and Vujic, N.},
+	year = {2016},
+	pages = {1432--1443},
+	annote = {Cited By :6},
+}
+
 
 @article{samadi_performance_2018,
 	title = {Performance comparison between hadoop and spark frameworks using {HiBench} benchmarks},
@@ -88,7 +96,7 @@
 }
 
 
-@misc{noauthor_announcing_nodate,
+@misc{aws_announcing_ec2,
 	title = {Announcing {Amazon} {Elastic} {Compute} {Cloud} ({Amazon} {EC2}) - beta},
 	url = {https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/},
 	language = {en-US},
@@ -254,4 +262,13 @@
 	abstract = {Alibaba Cloud Object Storage Service is an encrypted, secure, cost-effective, and easy-to-use object storage service.},
 	language = {en},
 	urldate = {2021-01-23},
+}
+
+
+@inproceedings{wang_improved_2020,
+	title = {Improved {Intermediate} {Data} {Management} for {MapReduce} {Frameworks}},
+	doi = {10.1109/IPDPS47924.2020.00062},
+	author = {Wang, H. and Shen, H. and Reiss, C. and Jain, A. and Zhang, Y.},
+	year = {2020},
+	pages = {536--545},
 }

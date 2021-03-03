@@ -14,6 +14,11 @@
 \href{https://hadoop.apache.org/}{Apache {Hadoop}}.
 \newline\urlprefix\url{https://hadoop.apache.org/}
 
+\bibitem{aws_announcing_ec2}
+\href{https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/}{Announcing
+  {Amazon} {Elastic} {Compute} {Cloud} ({Amazon} {EC2}) - beta}.
+\newline\urlprefix\url{https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/}
+
 \bibitem{ghemawat_google_2003}
 S.~Ghemawat, H.~Gobioff, S.-T. Leung, The {Google} file system, in: Proceedings
   of the nineteenth {ACM} symposium on {Operating} systems principles, Vol.~37,
@@ -35,15 +40,6 @@ a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
   {Data}: {MapReduce} and {Hadoop} » {ADMIN} {Magazine}}.
 \newline\urlprefix\url{http://www.admin-magazine.com/HPC/Articles/MapReduce-and-Hadoop}
 
-\bibitem{noauthor_announcing_nodate}
-\href{https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/}{Announcing
-  {Amazon} {Elastic} {Compute} {Cloud} ({Amazon} {EC2}) - beta}.
-\newline\urlprefix\url{https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/}
-
-\bibitem{noauthor_dataproc_nodate}
-\href{https://cloud.google.com/dataproc}{Dataproc}.
-\newline\urlprefix\url{https://cloud.google.com/dataproc}
-
 \bibitem{noauthor_compute_nodate}
 \href{https://cloud.google.com/compute}{Compute {Engine}: {Virtual} {Machines}
   ({VMs})}.
@@ -53,21 +49,10 @@ a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
 \href{https://cloud.google.com/storage}{Cloud {Storage}}.
 \newline\urlprefix\url{https://cloud.google.com/storage}
 
-\bibitem{noauthor_azure_nodate}
-\href{https://azure.microsoft.com/en-us/services/hdinsight/}{Azure {HDInsight}
-  - {Hadoop}, {Spark}, \& {Kafka} {Service} {\textbar} {Microsoft} {Azure}}.
-\newline\urlprefix\url{https://azure.microsoft.com/en-us/services/hdinsight/}
-
 \bibitem{noauthor_azuravail_nodate}
 \href{https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-azure-hdinsight-3-6/}{Announcing
   general availability of {Azure} {HDInsight} 3.6}.
 \newline\urlprefix\url{https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-azure-hdinsight-3-6/}
-
-\bibitem{noauthor_what_nodate}
-\href{https://www.alibabacloud.com/help/doc-detail/28068.htm?spm=a2c63.l28256.b99.4.65e270b2YXyKDV}{What
-  is {E}-{MapReduce}? - {Product} {Introduction}{\textbar} {Alibaba} {Cloud}
-  {Documentation} {Center}}.
-\newline\urlprefix\url{https://www.alibabacloud.com/help/doc-detail/28068.htm?spm=a2c63.l28256.b99.4.65e270b2YXyKDV}
 
 \bibitem{noauthor_alielastic_nodate}
 \href{https://www.alibabacloud.com/product/ecs}{Elastic {Compute} {Service}
@@ -83,11 +68,6 @@ a.~A. T.~H. Schätzle, Martin Przyjaciel-Zablocki,
 \href{product/oss}{{OSS} ({Object} {Storage} {Service}): {Secure} {Cloud}
   {Storage}}.
 \newline\urlprefix\url{product/oss}
-
-\bibitem{noauthor_intel-bigdatahibench_2021}
-\href{https://github.com/Intel-bigdata/HiBench}{Intel-bigdata/{HiBench}},
-  original-date: 2012-06-12T07:56:57Z (Jan. 2021).
-\newline\urlprefix\url{https://github.com/Intel-bigdata/HiBench}
 
 \bibitem{huang_hibench_2010}
 S.~Huang, J.~Huang, J.~Dai, T.~Xie, B.~Huang, The {HiBench} benchmark suite:
@@ -109,6 +89,12 @@ N.~Poggi, A.~Montero, D.~Carrera, Characterizing bigbench queries, hive, and
   Notes in Bioinformatics) 10661 LNCS (2018) 55--74.
 \newblock \href {https://doi.org/10.1007/978-3-319-72401-0_5}
   {\path{doi:10.1007/978-3-319-72401-0_5}}.
+
+\bibitem{poggi_state_2016}
+N.~Poggi, J.~Berral, T.~Fenech, D.~Carrera, J.~Blakeley, U.~Minhas, N.~Vujic,
+  The state of {SQL}-on-{Hadoop} in the cloud, 2016, pp. 1432--1443.
+\newblock \href {https://doi.org/10.1109/BigData.2016.7840751}
+  {\path{doi:10.1109/BigData.2016.7840751}}.
 
 \bibitem{samadi_performance_2018}
 Y.~Samadi, M.~Zbakh, C.~Tadonki, Performance comparison between hadoop and
@@ -136,6 +122,12 @@ T.~Ivanov, R.~Niemann, S.~Izberovic, M.~Rosselli, K.~Tolle, R.~V. Zicari,
   120--127.
 \newblock \href {https://doi.org/10.1109/Trustcom.2015.570}
   {\path{doi:10.1109/Trustcom.2015.570}}.
+
+\bibitem{wang_improved_2020}
+H.~Wang, H.~Shen, C.~Reiss, A.~Jain, Y.~Zhang, Improved {Intermediate} {Data}
+  {Management} for {MapReduce} {Frameworks}, 2020, pp. 536--545.
+\newblock \href {https://doi.org/10.1109/IPDPS47924.2020.00062}
+  {\path{doi:10.1109/IPDPS47924.2020.00062}}.
 
 \bibitem{noauthor_gartner_nodate}
 \href{https://www.gartner.com/doc/reprints?id=1-1ZDZDMTF&ct=200703&st=sb}{Gartner

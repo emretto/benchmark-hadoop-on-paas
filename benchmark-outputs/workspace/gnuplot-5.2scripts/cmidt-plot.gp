@@ -51,7 +51,7 @@ set autoscale y2
 set style fill transparent solid 0.6 noborder
 set term png size 1600, 1000
 set output IMAGENAME
-# set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
+#set multiplot title TITLE layout 2, 2 font "Times New Roman, 16"
 set multiplot title "" layout 2, 2 font "Times New Roman, 1"
 
 
