@@ -5,63 +5,68 @@ The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
 Warning--empty year in noauthor_world_nodate
 Warning--empty year in noauthor_apache_nodate
-Warning--empty year in aws_announcing_ec2
+Warning--empty year in noauthor_announcing_nodate
+Warning--empty year in tpc-history
+Warning--empty year in spec
 Warning--empty booktitle in dean_mapreduce_2004
-Too many commas in name 1 of "Schätzle, Martin Przyjaciel-Zablocki, {and} Alexander, Thomas Hornung" for entry schatzle_giant_nodate
+Name 1 in "Schätzle, M. P.-Z., and Alexander, Thomas Hornung" has a comma at the end for entry schatzle_giant_nodate
 while executing---line 1497 of file elsarticle-num.bst
 Warning--empty year in schatzle_giant_nodate
+Warning--empty year in noauthor_dataproc_nodate
 Warning--empty year in noauthor_compute_nodate
 Warning--empty year in noauthor_cloud_nodate
+Warning--empty year in noauthor_azure_nodate
 Warning--empty year in noauthor_azuravail_nodate
+Warning--empty year in noauthor_what_nodate
 Warning--empty year in noauthor_alielastic_nodate
 Warning--empty year in noauthor_alibaba_nodate
 Warning--empty year in noauthor_oss_nodate
 Warning--empty year in noauthor_release_nodate
 Warning--empty booktitle in poggi_state_2016
+Warning--empty booktitle in wang_improved_2020
 Warning--empty booktitle in ahn_performance_2018
 Warning--empty pages in ahn_performance_2018
 Warning--empty booktitle in han_impact_2017
-Warning--empty booktitle in wang_improved_2020
 Warning--empty year in noauthor_gartner_nodate
-You've used 23 entries,
+You've used 31 entries,
             2952 wiz_defined-function locations,
-            784 strings with 8979 characters,
-and the built_in function-call counts, 6681 in all, are:
-= -- 586
-> -- 154
+            819 strings with 10166 characters,
+and the built_in function-call counts, 8434 in all, are:
+= -- 736
+> -- 192
 < -- 12
-+ -- 66
-- -- 43
-* -- 412
-:= -- 764
-add.period$ -- 32
-call.type$ -- 23
-change.case$ -- 26
++ -- 84
+- -- 53
+* -- 540
+:= -- 962
+add.period$ -- 42
+call.type$ -- 31
+change.case$ -- 35
 chr.to.int$ -- 6
-cite$ -- 41
-duplicate$ -- 274
-empty$ -- 870
-format.name$ -- 53
-if$ -- 1826
+cite$ -- 54
+duplicate$ -- 340
+empty$ -- 1110
+format.name$ -- 66
+if$ -- 2304
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 12
-newline$ -- 98
-num.names$ -- 12
-pop$ -- 203
+int.to.str$ -- 31
+missing$ -- 14
+newline$ -- 130
+num.names$ -- 14
+pop$ -- 268
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 521
+skip$ -- 644
 stack$ -- 0
-substring$ -- 242
-swap$ -- 98
+substring$ -- 294
+swap$ -- 111
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 18
-while$ -- 36
-width$ -- 25
-write$ -- 194
+warning$ -- 23
+while$ -- 42
+width$ -- 33
+write$ -- 252
 (There was 1 error message)

@@ -24,22 +24,18 @@
 	title = {Performance comparison between hadoop and spark frameworks using {HiBench} benchmarks},
 	volume = {30},
 	doi = {10.1002/cpe.4367},
-	abstract = {Big Data has become one of the major areas of research for cloud service providers due to a large amount of data produced every day and the inefficiency of traditional algorithms and technologies to handle these large amounts of data. Big Data with its characteristics such as volume, variety, and veracity (3V) requires efficient technologies to process in real time. To solve this problem and to process and analyze this vast amount of data, there are many powerful tools like Hadoop and Spark, which are mainly used in the context of Big Data. They work following the principles of parallel computing. The challenge is to specify which Big Data's tool is better depending on the processing context. In this paper, we present and discuss a performance comparison between two popular Big Data frameworks deployed on virtual machines. Hadoop MapReduce and Apache Spark are used to efficiently process a vast amount of data in parallel and distributed mode on large clusters, and both of them suit for Big Data processing. We also present the execution results of Apache Hadoop in Amazon EC2, a major cloud computing environment. To compare the performance of these two frameworks, we use HiBench benchmark suite, which is an experimental approach for measuring the effectiveness of any computer system. The comparison is made based on three criteria: execution time, throughput, and speedup. We test Wordcount workload with different data sizes for more accurate results. Our experimental results show that the performance of these frameworks varies significantly based on the use case implementation. Furthermore, from our results we draw the conclusion that Spark is more efficient than Hadoop to deal with a large amount of data in major cases. However, Spark requires higher memory allocation, since it loads the data to be processed into memory and keeps them in caches for a while, just like standard databases. So the choice depends on performance level and memory constraints. © 2017 John Wiley \& Sons, Ltd.},
 	number = {12},
 	journal = {Concurrency Computation},
 	author = {Samadi, Y. and Zbakh, M. and Tadonki, C.},
 	year = {2018},
-	keywords = {Big Data, Hadoop, Cloud computing, HiBench, Amazon EC2, Parallel and distributed processing, Spark},
 }
 
 
 @inproceedings{ahn_performance_2018,
 	title = {Performance {Study} of {Spark} on {YARN} {Cluster} {Using} {HiBench}},
 	doi = {10.1109/ICCE-ASIA.2018.8552137},
-	abstract = {Recently, various kinds of Internet-of-Things (IoT) solutions and services are provided such as smart industry, smart city, smart factory, smart agriculture and etc. Those solutions and services generate large amount of data from various devices which are connected through networks while they communicate with each other. However, it is a difficult problem to process the fast and massively produced data efficiently. To solve the problems in the framework level, there are many open-source big data processing and analysis frameworks. To process large-scale data in a fast manner, those frameworks use a cluster consisting of multiple computing machines. However, to set the framework running on large-scale cluster properly is not simple and it is difficult to verify its performance in the distributed environment. In this paper, we evaluate the performance of Apache Spark which is one of the most popular big data processing and analysis frameworks. Especially, we conduct experiments by using a representative benchmark tool, called HiBench, and large-scale data in the cluster environment. From the experimental results, we can conclude that Spark is highly scalable for distributed machine learning as well as big data processing. © 2018 IEEE.},
 	author = {Ahn, H. and Kim, H. and You, W.},
 	year = {2018},
-	keywords = {Big Data, Benchmark, Parallel computing, YARN, Spark, Distributed Machine Learning, IoT},
 }
 
 
@@ -47,10 +43,8 @@
 	title = {Impact of memory size on bigdata processing based on hadoop and spark},
 	volume = {2017-January},
 	doi = {10.1145/3129676.3129688},
-	abstract = {Hadoop and Spark are well-known big data processing platforms. The main technologies of Hadoop are Hadoop Distributed File System and MapReduce processing. Hadoop stores intermediary data on Hadoop Distributed File System, which is a disk-based distributed file system, while Spark stores intermediary data in the memories of distributed computing nodes as Resilient Distributed Dataset. In this paper, we show how memory size affects distributed processing of large volume of data, by comparing the running time of K-means algorithm of HiBench benchmark on Hadoop and Spark clusters, with different size of memories allocated to data nodes. Our results show that Spark cluster is faster than Hadoop cluster as long as the memory size is big enough for the data size. But, with the increase of the data size, Hadoop cluster outperforms Spark cluster. When data size is bigger than memory cache, Spark has to replace disk data with memory cached data, and this situation causes performance degradation. © 2017 Association for Computing Machinery.},
 	author = {Han, S. and Choi, W. and Muwafiq, R. and Nah, Y.},
 	year = {2017},
-	keywords = {Hadoop, Distributed processing, Spark, Bigdata processing, Memory size, Performance analysis},
 	pages = {275--280},
 }
 
@@ -59,12 +53,10 @@
 	title = {Performance {Evaluation} of {Enterprise} {Big} {Data} {Platforms} with {HiBench}},
 	volume = {2},
 	doi = {10.1109/Trustcom.2015.570},
-	abstract = {In this paper, we evaluate the performance of DataStax Enterprise (DSE) using the HiBench benchmark suite and compare it with the corresponding Cloudera's Distribution of Hadoop (CDH) results. Both systems, DSE and CDH were stress tested using CPU-bound (WordCount), I/O-bound (Enhanced DFSIO) and mixed (HiveBench) workloads. The experimental results showed that DSE is better than CDH in writing files, whereas CDH is better than DSE in reading files. Additionally, for DSE the read and write throughput difference is very minor, whereas for CDH the read throughput is much higher than the write throughput. The results we obtained show that the HiBench benchmark suite, developed specifically for Hadoop, can be successfully executed on top of the DataStax Enterprise (DSE).},
 	booktitle = {2015 {IEEE} {Trustcom}/{BigDataSE}/{ISPA}},
 	author = {Ivanov, T. and Niemann, R. and Izberovic, S. and Rosselli, M. and Tolle, K. and Zicari, R. V.},
 	month = aug,
 	year = {2015},
-	keywords = {Big data, Big Data, Hadoop, Benchmark testing, Throughput, Cloud computing, performance evaluation, big data, benchmarking, HiBench benchmark suite, business data processing, Cassandra, CPU-bound, DataStax Enterprise, DSE, enhanced DFSIO, enterprise big data platforms, File systems, HiveBench, I/O-bound, mixed workload, WordCount, Writing},
 	pages = {120--127},
 }
 
@@ -80,7 +72,6 @@
 	title = {Intel-bigdata/{HiBench}},
 	copyright = {View license         ,                 View license},
 	url = {https://github.com/Intel-bigdata/HiBench},
-	abstract = {HiBench is a big data benchmark suite. Contribute to Intel-bigdata/HiBench development by creating an account on GitHub.},
 	urldate = {2021-01-08},
 	publisher = {Intel-bigdata},
 	month = jan,
@@ -96,7 +87,7 @@
 }
 
 
-@misc{aws_announcing_ec2,
+@misc{noauthor_announcing_nodate,
 	title = {Announcing {Amazon} {Elastic} {Compute} {Cloud} ({Amazon} {EC2}) - beta},
 	url = {https://aws.amazon.com/about-aws/whats-new/2006/08/24/announcing-amazon-elastic-compute-cloud-amazon-ec2---beta/},
 	language = {en-US},
@@ -108,7 +99,6 @@
 @misc{noauthor_dataproc_nodate,
 	title = {Dataproc},
 	url = {https://cloud.google.com/dataproc},
-	abstract = {Dataproc is a fast, easy-to-use, fully managed cloud service for running Apache Spark and Apache Hadoop clusters in a simpler, more cost-efficient way},
 	language = {en},
 	urldate = {2021-01-08},
 	journal = {Google Cloud},
@@ -118,7 +108,6 @@
 @misc{noauthor_azure_nodate,
 	title = {Azure {HDInsight} - {Hadoop}, {Spark}, \& {Kafka} {Service} {\textbar} {Microsoft} {Azure}},
 	url = {https://azure.microsoft.com/en-us/services/hdinsight/},
-	abstract = {Learn about HDInsight, an open source analytics service that runs Hadoop, Spark, Kafka, and more. Integrate HDInsight with other Azure services for superior analytics.},
 	language = {en},
 	urldate = {2021-01-08},
 }
@@ -136,7 +125,6 @@
 	title = {Compute {Engine}: {Virtual} {Machines} ({VMs})},
 	shorttitle = {Compute {Engine}},
 	url = {https://cloud.google.com/compute},
-	abstract = {Compute Engine delivers configurable virtual machines running in Google’s data centers with access to high-performance},
 	language = {en},
 	urldate = {2021-01-08},
 	journal = {Google Cloud},
@@ -146,7 +134,6 @@
 @misc{noauthor_cloud_nodate,
 	title = {Cloud {Storage}},
 	url = {https://cloud.google.com/storage},
-	abstract = {Object storage for companies of all sizes. Secure, durable, and with low latency. Store any amount of data. Retrieve it as often as you’d like.},
 	language = {en},
 	urldate = {2021-01-08},
 	journal = {Google Cloud},
@@ -157,18 +144,16 @@
 	title = {Giant {Data}: {MapReduce} and {Hadoop} » {ADMIN} {Magazine}},
 	shorttitle = {Giant {Data}},
 	url = {http://www.admin-magazine.com/HPC/Articles/MapReduce-and-Hadoop},
-	abstract = {Enterprises like Google and Facebook use the map–reduce approach to process petabyte-range volumes of data. For some analyses, it is an attractive...},
 	language = {en-US},
 	urldate = {2020-10-30},
 	journal = {ADMIN Magazine},
-	author = {Schätzle, Martin Przyjaciel-Zablocki, {and} Alexander, Thomas Hornung},
+	author = {Schätzle, M. P.-Z., and Alexander, T.H.},
 }
 
 @inproceedings{ghemawat_google_2003,
 	title = {The {Google} file system},
 	volume = {37},
 	doi = {10.1145/1165389.945450},
-	abstract = {We have designed and implemented the Google File System, a scalable distributed file system for large distributed data-intensive applications. It provides fault tolerance while running on inexpensive commodity hardware, and it delivers high aggregate performance to a large number of clients. While sharing many of the same goals as previous distributed file systems, our design has been driven by observations of our application workloads and technological environment, both current and anticipated, that reflect a marked departure from some earlier file system assumptions. This has led us to reexamine traditional choices and explore radically different design points. The file system has successfully met our storage needs. It is widely deployed within Google as the storage platform for the generation and processing of data used by our service as well as research and development efforts that require large data sets. The largest cluster to date provides hundreds of terabytes of storage across thousands of disks on over a thousand machines, and it is concurrently accessed by hundreds of clients. In this paper, we present file system interface extensions designed to support distributed applications, discuss many aspects of our design, and report measurements from both micro-benchmarks and real world use. Copyright 2003 ACM.},
 	booktitle = {Proceedings of the nineteenth {ACM} symposium on {Operating} systems principles},
 	author = {Ghemawat, S. and Gobioff, H. and Leung, S.-T.},
 	year = {2003},
@@ -188,7 +173,6 @@
 @inproceedings{dean_mapreduce_2004,
 	title = {{MapReduce}: {Simplified} data processing on large clusters},
 	shorttitle = {{MapReduce}},
-	abstract = {MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper. Programs written in this functional style are automatically parallelized and executed on a large cluster of commodity machines. The run-time system takes care of the details of partitioning the input data, scheduling the program’s execution across a set of machines, handling machine failures, and managing the required inter-machine communication. This allows programmers without any experience with parallel and distributed systems to easily utilize the resources of a large distributed system. Our implementation of MapReduce runs on a large cluster of commodity machines and is highly scalable: a typical MapReduce computation processes many terabytes of data on thousands of machines. Programmers find the system easy to use: hundreds of MapReduce programs have been implemented and upwards of one thousand MapReduce jobs are executed on Google’s clusters every day.},
 	author = {Dean, J. and Ghemawat, S.},
 	year = {2004},
 	pages = {137--149},
@@ -206,7 +190,6 @@
 	author = {White, Tom},
 	year = {2015},
 	note = {OCLC: ocn904818464},
-	keywords = {Hadoop, Apache Hadoop, File organization (Computer science)},
 }
 
 
@@ -214,12 +197,10 @@
 	title = {The {HiBench} benchmark suite: {Characterization} of the {MapReduce}-based data analysis},
 	shorttitle = {The {HiBench} benchmark suite},
 	doi = {10.1109/ICDEW.2010.5452747},
-	abstract = {The MapReduce model is becoming prominent for the large-scale data analysis in the cloud. In this paper, we present the benchmarking, evaluation and characterization of Hadoop, an open-source implementation of MapReduce. We first introduce HiBench, a new benchmark suite for Hadoop. It consists of a set of Hadoop programs, including both synthetic micro-benchmarks and real-world Hadoop applications. We then evaluate and characterize the Hadoop framework using HiBench, in terms of speed (i.e., job running time), throughput (i.e., the number of tasks completed per minute), HDFS bandwidth, system resource (e.g., CPU, memory and I/O) utilizations, and data access patterns.},
 	booktitle = {2010 {IEEE} 26th {International} {Conference} on {Data} {Engineering} {Workshops} ({ICDEW} 2010)},
 	author = {Huang, Shengsheng and Huang, Jie and Dai, Jinquan and Xie, Tao and Huang, Bo},
 	month = mar,
 	year = {2010},
-	keywords = {data analysis, Throughput, Cloud computing, Bandwidth, Java, Fault tolerance, Open source software, data access patterns, Data analysis, Explosives, Hadoop characterization, HDFS bandwidth, HiBench benchmark suite, Large-scale systems, MapReduce based data analysis, open source implementation, Personal communication networks, public domain software, Resource management},
 	pages = {41--51},
 }
 
@@ -271,4 +252,43 @@
 	author = {Wang, H. and Shen, H. and Reiss, C. and Jain, A. and Zhang, Y.},
 	year = {2020},
 	pages = {536--545},
+}
+
+
+@article{han_benchmarking_2018,
+	title = {Benchmarking {Big} {Data} {Systems}: {A} {Review}},
+	volume = {11},
+	shorttitle = {Benchmarking {Big} {Data} {Systems}},
+	doi = {10.1109/TSC.2017.2730882},
+	number = {3},
+	journal = {IEEE Transactions on Services Computing},
+	author = {Han, R. and John, L.K. and Zhan, J.},
+	year = {2018},
+	keywords = {benchmarks, Big data systems, input data, metrics, workloads},
+	pages = {580--597},
+	annote = {Cited By :15},
+}
+
+@misc{spec,
+	title = {{SPEC} - {Standard} {Performance} {Evaluation} {Corporation}},
+	url = {https://www.spec.org/},
+	urldate = {2021-02-22},
+}
+
+@misc{tpc-history,
+	title = {{TPC}-{History}},
+	url = {http://tpc.org/information/about/history5.asp},
+	urldate = {2021-02-22},
+}
+
+@article{hwang_cloud_2016,
+	title = {Cloud {Performance} {Modeling} with {Benchmark} {Evaluation} of {Elastic} {Scaling} {Strategies}},
+	volume = {27},
+	doi = {10.1109/TPDS.2015.2398438},
+	number = {1},
+	journal = {IEEE Transactions on Parallel and Distributed Systems},
+	author = {Hwang, K. and Bai, X. and Shi, Y. and Li, M. and Chen, W.-G. and Wu, Y.},
+	year = {2016},
+	pages = {130--143},
+	annote = {Cited By :72},
 }
