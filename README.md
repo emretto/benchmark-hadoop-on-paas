@@ -1,4 +1,4 @@
-# benchmark-hadoop-on-paas
+# COMPARATIVE PERFORMANCE EVALUATION OF HADOOP ON PAAS PROPOSALS BY LEVERAGING HIBENCH
 Benchmarking managed Hadoop services of three Cloud Service Providers, namely GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce.  
 
 HiBench 7.1.1  
