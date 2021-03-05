@@ -121,7 +121,7 @@ Setting permissions for the user:
 $ chmod 0600 ~/.ssh/authorized_keys
 ```
 
-It is a good practice to confirm paswordless ssh is working properly. To do so, we shortly connect to ssh on localhost as the user hdoop.
+It is good practise to confirm paswordless ssh is working properly. To do so, we shortly connect to ssh on localhost as the user hdoop.
 
 ```
 $ ssh localhost
