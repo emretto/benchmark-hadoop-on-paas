@@ -1,6 +1,6 @@
 
 
-Before running benchmarks on PaaS systems, this section aims to play around with essential aspects on a virtual environment.
+This section aims to play around with essential aspects in a virtual environment before running benchmarks on PaaS systems.
 
 In here, installation of Hadoop and other elements are documented, then followed by HiBench installation and execution.
 
