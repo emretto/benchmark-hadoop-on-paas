@@ -1,6 +1,6 @@
-Credits for the original codes in this scripts goes to Julio Sanz, who created the repository for capturing and visualizing sar data. We only took the data collecting part and adapted it to the data collecting needs of the study as shown in the code below.  
+Credits for the original codes in this scripts go to Julio Sanz, who created the repository [**_sarviewer_**](https://github.com/juliojsb/sarviewer) for capturing and visualizing sar data. We only took the data collecting part and adapted it to the data collecting needs of the study as shown in the code below.  
   
-The script captures general CPU (for up to 8 cores), Memory, and I/O resource utilization as txt files, and extracts granulated parts as dat files, based on visualisation requirements of gnuplot.
+The script captures general CPU (for up to 8 cores), Memory, and I/O resource utilization as `.txt` files, and extracts granulated parts as `.dat` files, based on visualisation requirements of [**_gnuplot_**](http://gnuplot.sourceforge.net/).
   
 The Instructions below are implemented on each worker node and all three are started prior to the benchmark execution. After completed benchmark execution they are terminated manually from the command line.
 
@@ -175,7 +175,15 @@ Create a folder to store captured data files
 ```bash
 $ mkdir data
 ```
-Running below command will start capturing system resource utilization on the respective machine.
+Running below command will start capturing system resource utilization on the respective machine. The parameter `gcp-uc1-w0-g-tera` specifies the file name that's going to be saved.  
+To provide uniqueness in the filenames, following naming approach has been leveraged: 
+`<csp>-<usecase>-<workernode>-<datascale>-<benchmark>`  
+
+**`<csp>`**: Cloud Service Provider's shortname (**gcp** for Google Cloud Platform, **azu** for Azure, **ali** for Alibaba)  
+**`<usecase>`**: Use Case number (uc1, uc2)  
+**`<workernode>`**: Number of the worker node where the script runs (wo, w1, w2)  
+**`<datascale>`**: data scale (**t**iny, **s**mall, **l**arge, **h**uge, **g**igantic)  
+**`<benchmark>`**: Executed benchmark 
 
 ```bash
 $ ./datacollector.sh -p gcp-uc1-w0-g-tera
@@ -183,5 +191,5 @@ $ ./datacollector.sh -p gcp-uc1-w0-g-tera
 How to stop the execution: `Ctrl+C` will terminate the data capturing process, raw files and their granulated `.dat` files will be saved to the specified `data` folder.
   
 Notes: 
-1. Since there are three worker nodes, given instructions are implemented on all three worker nodes of the cluster.
+1. Since there are three worker nodes, given instructions are implemented on all worker nodes of the cluster, which is three nodes in our case.
 2. In some cases, typing `Ctrl+C` did not save granulated `dat` files as expected, but only the raw (`.txt`) file. This is not a big issue, the raw file can be granulated manually by playing around with the codes in the script.

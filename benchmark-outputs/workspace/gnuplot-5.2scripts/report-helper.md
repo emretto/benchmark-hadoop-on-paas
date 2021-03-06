@@ -1,10 +1,8 @@
-# hibench.report files comprise input data size, duration, and throughput outcomes of
-# executed benchmarks. A "raw" report file includes only outputs for specific CSP.
-# However, in order to compare them visually in our study, we need duration and 
-# throughput data of each CSP in one file.
+hibench.report files comprise input data size, duration, and throughput outcomes of executed benchmarks. A "raw" report file includes only outputs for specific CSP.
 
-# This script helps extracting relevant lines of the three CSPs into one
-# file, so gnuplot can leverage them for plotting
+However, in order to compare them visually in our study, we need duration and throughput data of each CSP in one file.
+
+This script helps extracting relevant lines of the three CSPs into one file, so gnuplot can leverage them for plotting
 
 # The following directories 
 
@@ -12,15 +10,15 @@ USE CASE 1 - hibench.report directories
 included data scales: huge - gigantic
 executed benchmarks: Sort, Terasort, Wordcount, Dfsioe, Scan, Join, Aggregation, Bayes, Kmeans, Pagerank
 
-GCP
+GCP  
 ../uc1/gcp/gigantic/HiBench/root/HiBench/report/hibench.report
 ../uc1/gcp/huge/HiBench/root/HiBench/report/hibench.report
 
-Azure
+Azure  
 ../uc1/azu/gigantic/HiBench/root/HiBench/report/hibench.report
 ../uc1/azu/huge/HiBench/root/HiBench/report/hibench.report
 
-Alibaba Cloud
+Alibaba Cloud  
 ../uc1/ali/gigantic/HiBench/root/HiBench/report/hibench.report
 ../uc1/ali/huge/HiBench/root/HiBench/report/hibench.report
 
@@ -28,21 +26,21 @@ USE CASE 2 - hibench.report directories
 included data scales: tiny - small - large - huge - gigantic
 executed benchmarks: Sort, Wordcount
 
-GCP
+GCP  
 ../uc2/gcp/tiny/HiBench/root/HiBench/report/hibench.report
 ../uc2/gcp/small/HiBench/root/HiBench/report/hibench.report
 ../uc2/gcp/large/HiBench/root/HiBench/report/hibench.report
 ../uc2/gcp/huge/HiBench/root/HiBench/report/hibench.report
 ../uc2/gcp/gigantic/HiBench/root/HiBench/report/hibench.report
 
-AZURE
+AZURE  
 ../uc2/azu/tiny/HiBench/root/HiBench/report/hibench.report
 ../uc2/azu/small/HiBench/root/HiBench/report/hibench.report
 ../uc2/azu/large/HiBench/root/HiBench/report/hibench.report
 ../uc2/azu/huge/HiBench/root/HiBench/report/hibench.report
 ../uc2/azu/gigantic/HiBench/root/HiBench/report/hibench.report
 
-ALIBABA CLOUD
+ALIBABA CLOUD  
 ../uc2/ali/tiny/HiBench/root/HiBench/report/hibench.report
 ../uc2/ali/small/HiBench/root/HiBench/report/hibench.report
 ../uc2/ali/large/HiBench/root/HiBench/report/hibench.report
@@ -50,9 +48,8 @@ ALIBABA CLOUD
 ../uc2/ali/gigantic/HiBench/root/HiBench/report/hibench.report
 
 
-# Given that HiBench report files are stored as above
-# the following script accesses them and saves them in one file
-# The namin convention for processed report files is like below:
+
+Given that HiBench report files are stored as above the following script accesses them and saves them in one file. The naming convention for processed report files is like below:
 
 <use_case>-<data_scale>-<benchmark>.report
 example:
@@ -60,7 +57,7 @@ uc1-g-wrdcnt.report
 
 
 
-SCRIPTS
+```bash
 #################### Collect original CSP HiBench reports and save within naming convention
 ########## USE CASE 1: 
 ##### HUGE
@@ -242,3 +239,4 @@ gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Huge; 32 GB)" uc2 wrdcnt h
 gnuplot -c cmidt-plot.gp "Results: UC2 - Sort (Gigantic; 32 GB)" uc2 srt g
 ## WORDCOUNT
 gnuplot -c cmidt-plot.gp "Results: UC2 - Wordcount (Gigantic; 320 GB)" uc2 wrdcnt g
+```

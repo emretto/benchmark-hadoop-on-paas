@@ -1,13 +1,15 @@
 ## Installing Hadoop on Virtualbox:  
 
-We assume that ubuntu 18.04 on VirtualBox is already installed. Installing ubuntu on Virtualbox is a straightforward process, plenty of resources providing installation instructions can be found on the internet.  
+We assume that **ubuntu 18.04** on VirtualBox is already installed. Installing ubuntu on Virtualbox is a straightforward process, after a quick internet search plenty of resources providing installation instructions can be found.  
 
 The Hadoop version we are going to use is 2.7.5, meaning Java 8 is required. Before starting with Java installation, an update with the apt sources is necessary to make sure the repositories are up to date.  
+
 ```
 $ sudo apt update 
 $ sudo apt upgrade
 ```
 By running the command below, OpenJDK 8 will be installed:
+
 ```
 $ sudo apt install openjdk-8-jdk -y
 ```
@@ -273,14 +275,18 @@ $ mkdir -p dfsdata/namenode
 $ mkdir dfsdata/datanode
 ```
 
-**Editing `mapred-site.xml`:** This file file keeps MapReduce specific settings. First copy the mapred-template.xml.template file:
+**Editing `mapred-site.xml`:** This file file keeps MapReduce specific settings. First copy the `mapred-template.xml.template` file:
 
 ```
 $ cp $HADOOP_HOME/etc/hadoop/mapred-site.xml.template $HADOOP_HOME/etc/hadoop/mapred-site.xml
 ```
 
 Open the copied configuration file in editor:
-﻿$ sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml
+
+```
+$ sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml
+```
+
 Hadoop’s MapReduce framework has two versions: MRv1 and MRv2 (YARN). YARN is specified in this configuration file as property. Place following configuration settings to the file to do so, save, and close the file:
 
 ```XML
