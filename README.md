@@ -1,10 +1,10 @@
 # COMPARATIVE PERFORMANCE EVALUATION OF HADOOP ON PAAS PROPOSALS BY LEVERAGING HIBENCH
 
-This repository is build to document the steps taken in our benchmark study. 
+We are benchmarking managed Hadoop services of three Cloud Service Providers, namely GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce. This repository documenting the steps taken in our study. 
 
-Benchmarking managed Hadoop services of three Cloud Service Providers, namely GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce.  
+## ROADMAP
 
-Instead of diving directly into Hadoop on PaaS benchmarking, we set up first a virtual environment to install Hadoop manually and execute HiBench on it. The reason for this approach is to understand HiBench's functioning and face eventual issues before they appear during the benchmark, which could dramatically rise costs on the cloud.
+Instead of diving directly into Hadoop on PaaS benchmarking, we set up first a virtual environment to install Hadoop manually and execute HiBench on it. The reason for this approach is to understand HiBench's functioning and face eventual issues before they appear during the benchmark on the cloud, which could dramatically rise costs on the cloud.
 
 Structure:  
 
@@ -16,10 +16,10 @@ In warmup-sessions the followings has been done in virtual environment:
 1. Installing a single-node Hadoop in a virtual environment (ubuntu18.04 on VirtualBox)
 2. Building and running HiBench
 
-We constructed the benchmarks in two use cases which are executed on all three managed Hadoop services (GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce) 
+We constructed the study in two use cases which are executed on all three managed Hadoop services (GCP Dataproc, Azure HDInsight, and Alibaba Cloud e-MapReduce) 
 
 **USE CASE 1**  
-For HiBench data scales Huge and Gigantic:  
+The following benchmarks are applied for HiBench's default data scales Huge and Gigantic:  
 Micro - _Sort, Terasort, Wordcount, Dfsioe_  
 SQL - _Scan, Join, Aggregation_  
 ML - _Bayes, Kmeans_  
