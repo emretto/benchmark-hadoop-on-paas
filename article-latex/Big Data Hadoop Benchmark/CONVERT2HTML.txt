@@ -1,0 +1,1 @@
+latex2html /home/anka/Documents/Benchmark\ Project/benchmark-hadoop-on-paas/article-latex/Big\ Data\ Hadoop\ Benchmark/Big\ Data\ Hadoop\ Benchmark.tex -split 0 -no_navigation -info "" -address "" -html_version 5.0,unicode
