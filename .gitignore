@@ -352,11 +352,11 @@ MigrationBackup/
 
 
 # tar.gz files
-*.tar.gz
+#*.tar.gz
 # png files
 #*.png
-*.dat
-*.txt
+#*.dat
+#*.txt
 
 .vscode/settings.json
 article-latex/Big Data Hadoop Benchmark/Big Data Hadoop Benchmark.log
