@@ -48,12 +48,12 @@ sar_collectors(){
 		sed -n -e '/ all /p' data/$naming-c.txt > data/$naming-ca.dat && sed -i '/Average/d' data/$naming-ca.dat && \
 		sed -n -e '/ 0 /p' data/$naming-c.txt > data/$naming-c0.dat && sed -i '/Average/d' data/$naming-c0.dat && \
 		sed -n -e '/ 1 /p' data/$naming-c.txt > data/$naming-c1.dat && sed -i '/Average/d' data/$naming-c1.dat && \
-        sed -n -e '/ 2 /p' data/$naming-c.txt > data/$naming-c2.dat && sed -i '/Average/d' data/$naming-c2.dat && \
-        sed -n -e '/ 3 /p' data/$naming-c.txt > data/$naming-c3.dat && sed -i '/Average/d' data/$naming-c3.dat && \
-        sed -n -e '/ 4 /p' data/$naming-c.txt > data/$naming-c4.dat && sed -i '/Average/d' data/$naming-c4.dat && \
-        sed -n -e '/ 5 /p' data/$naming-c.txt > data/$naming-c5.dat && sed -i '/Average/d' data/$naming-c5.dat && \
-        sed -n -e '/ 6 /p' data/$naming-c.txt > data/$naming-c6.dat && sed -i '/Average/d' data/$naming-c6.dat && \
-        sed -n -e '/ 7 /p' data/$naming-c.txt > data/$naming-c7.dat && sed -i '/Average/d' data/$naming-c7.dat &
+        	sed -n -e '/ 2 /p' data/$naming-c.txt > data/$naming-c2.dat && sed -i '/Average/d' data/$naming-c2.dat && \
+        	sed -n -e '/ 3 /p' data/$naming-c.txt > data/$naming-c3.dat && sed -i '/Average/d' data/$naming-c3.dat && \
+        	sed -n -e '/ 4 /p' data/$naming-c.txt > data/$naming-c4.dat && sed -i '/Average/d' data/$naming-c4.dat && \
+        	sed -n -e '/ 5 /p' data/$naming-c.txt > data/$naming-c5.dat && sed -i '/Average/d' data/$naming-c5.dat && \
+        	sed -n -e '/ 6 /p' data/$naming-c.txt > data/$naming-c6.dat && sed -i '/Average/d' data/$naming-c6.dat && \
+        	sed -n -e '/ 7 /p' data/$naming-c.txt > data/$naming-c7.dat && sed -i '/Average/d' data/$naming-c7.dat &
 
 	# CAPTURE RAM UTILIZATION DATA
 	sar -r 1 86400 > data/$naming-r.txt && \
