@@ -192,4 +192,4 @@ How to stop the execution: `Ctrl+C` will terminate the data capturing process, r
   
 Notes: 
 1. Since there are three worker nodes, given instructions are implemented on all worker nodes of the cluster, which is three nodes in our case.
-2. In some cases, typing `Ctrl+C` did not save granulated `dat` files as expected, but only the raw (`.txt`) file. This is not a big issue, the raw file can be granulated manually by playing around with the codes in the script.
+2. In some cases, typing `Ctrl+C` did not save granulated `dat` files as expected, but only the raw (`.txt`) file. This is not a big issue, the raw file can be granulated manually by playing around with the codes in the script.  
