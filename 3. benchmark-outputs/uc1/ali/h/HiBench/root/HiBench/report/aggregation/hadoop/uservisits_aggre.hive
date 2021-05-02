@@ -1,0 +1,11 @@
+USE DEFAULT;
+set hive.input.format=org.apache.hadoop.hive.ql.io.HiveInputFormat;
+set mapreduce.job.maps=12;
+set mapreduce.job.reduces=12;
+set hive.stats.autogather=false;
+
+DROP TABLE IF EXISTS uservisits;
+CREATE EXTERNAL TABLE uservisits (sourceIP STRING,destURL STRING,visitDate STRING,adRevenue DOUBLE,userAgent STRING,countryCode STRING,languageCode STRING,searchWord STRING,duration INT ) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' STORED AS  SEQUENCEFILE LOCATION 'hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/Input/uservisits';
+DROP TABLE IF EXISTS uservisits_aggre;
+CREATE EXTERNAL TABLE uservisits_aggre ( sourceIP STRING, sumAdRevenue DOUBLE) STORED AS  SEQUENCEFILE LOCATION 'hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/Output/uservisits_aggre';
+INSERT OVERWRITE TABLE uservisits_aggre SELECT sourceIP, SUM(adRevenue) FROM uservisits GROUP BY sourceIP;

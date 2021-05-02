@@ -1,0 +1,389 @@
+20/12/26 16:48:51 INFO terasort.TeraSort: starting
+20/12/26 16:48:54 INFO input.FileInputFormat: Total input paths to process : 12
+Spent 452ms computing base-splits.
+Spent 10ms computing TeraScheduler splits.
+Computing input splits took 463ms
+Sampling 10 splits of 600
+Making 12 from 100000 sampled records
+Computing parititions took 805ms
+Spent 1271ms computing partitions.
+20/12/26 16:48:55 INFO client.AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/26 16:48:55 INFO client.RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/26 16:48:56 INFO client.RequestHedgingRMFailoverProxyProvider: Found active RM [rm2]
+20/12/26 16:48:56 INFO mapreduce.JobSubmitter: number of splits:600
+20/12/26 16:48:56 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1608971187179_0009
+20/12/26 16:48:57 INFO impl.YarnClientImpl: Submitted application application_1608971187179_0009
+20/12/26 16:48:57 INFO mapreduce.Job: The url to track the job: http://hn1-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608971187179_0009/
+20/12/26 16:48:57 INFO mapreduce.Job: Running job: job_1608971187179_0009
+20/12/26 16:49:08 INFO mapreduce.Job: Job job_1608971187179_0009 running in uber mode : false
+20/12/26 16:49:08 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/26 16:49:49 INFO mapreduce.Job:  map 1% reduce 0%
+20/12/26 16:50:00 INFO mapreduce.Job:  map 2% reduce 0%
+20/12/26 16:50:18 INFO mapreduce.Job:  map 3% reduce 0%
+20/12/26 16:51:48 INFO mapreduce.Job:  map 4% reduce 0%
+20/12/26 16:52:16 INFO mapreduce.Job:  map 5% reduce 0%
+20/12/26 16:52:43 INFO mapreduce.Job:  map 6% reduce 0%
+20/12/26 16:53:27 INFO mapreduce.Job:  map 7% reduce 0%
+20/12/26 16:54:14 INFO mapreduce.Job:  map 8% reduce 0%
+20/12/26 16:54:53 INFO mapreduce.Job:  map 9% reduce 0%
+20/12/26 16:55:28 INFO mapreduce.Job:  map 10% reduce 0%
+20/12/26 16:56:02 INFO mapreduce.Job:  map 11% reduce 0%
+20/12/26 16:56:50 INFO mapreduce.Job:  map 12% reduce 0%
+20/12/26 16:57:35 INFO mapreduce.Job:  map 13% reduce 0%
+20/12/26 16:57:45 INFO mapreduce.Job:  map 13% reduce 1%
+20/12/26 16:58:07 INFO mapreduce.Job:  map 14% reduce 1%
+20/12/26 16:58:56 INFO mapreduce.Job:  map 15% reduce 1%
+20/12/26 16:59:14 INFO mapreduce.Job:  map 16% reduce 1%
+20/12/26 17:00:08 INFO mapreduce.Job:  map 17% reduce 1%
+20/12/26 17:00:54 INFO mapreduce.Job:  map 18% reduce 1%
+20/12/26 17:01:26 INFO mapreduce.Job:  map 19% reduce 1%
+20/12/26 17:02:08 INFO mapreduce.Job:  map 20% reduce 1%
+20/12/26 17:02:15 INFO mapreduce.Job:  map 20% reduce 2%
+20/12/26 17:02:59 INFO mapreduce.Job:  map 21% reduce 2%
+20/12/26 17:03:16 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_0, Status : FAILED
+Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for attempt_1608971187179_0009_m_000127_0_spill_0.out
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathForWrite(LocalDirAllocator.java:441)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:151)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:132)
+	at org.apache.hadoop.mapred.YarnOutputFiles.getSpillFileForWrite(YarnOutputFiles.java:159)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1592)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1489)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:723)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:793)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:170)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1869)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:164)
+
+Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143.
+
+20/12/26 17:03:22 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000122_0, Status : FAILED
+FSError: java.io.IOException: No space left on device
+20/12/26 17:03:22 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_0, Status : FAILED
+FSError: java.io.IOException: No space left on device
+20/12/26 17:03:24 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_0, Status : FAILED
+FSError: java.io.IOException: No space left on device
+20/12/26 17:03:24 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:26 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:26 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000122_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:27 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:27 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:28 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000129_0, Status : FAILED
+Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for attempt_1608971187179_0009_m_000129_0_spill_0.out
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathForWrite(LocalDirAllocator.java:441)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:151)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:132)
+	at org.apache.hadoop.mapred.YarnOutputFiles.getSpillFileForWrite(YarnOutputFiles.java:159)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1592)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1489)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:723)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:793)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:170)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1869)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:164)
+
+Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143.
+
+20/12/26 17:03:28 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:28 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000122_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:30 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_0, Status : FAILED
+Error: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for attempt_1608971187179_0009_m_000130_0_spill_0.out
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathForWrite(LocalDirAllocator.java:441)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:151)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:132)
+	at org.apache.hadoop.mapred.YarnOutputFiles.getSpillFileForWrite(YarnOutputFiles.java:159)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1592)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1489)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:723)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:793)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:170)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1869)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:164)
+
+Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143.
+
+20/12/26 17:03:30 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:31 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:32 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:32 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:33 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:34 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000140_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:34 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000139_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:34 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_5, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:34 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_2, Status : FAILED
+FSError: java.io.IOException: No space left on device
+20/12/26 17:03:34 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_3, Status : FAILED
+FSError: java.io.IOException: No space left on device
+20/12/26 17:03:35 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_2, Status : FAILED
+java.io.IOException: No space left on device
+
+20/12/26 17:03:35 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:36 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000142_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:36 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000140_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:36 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000141_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:36 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000139_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:36 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000143_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:37 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:37 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:37 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:37 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_6, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:37 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:40 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000140_2, Status : FAILED
+Exception from container-launch.
+Container id: container_e04_1608971187179_0009_01_000176
+Exit code: 1
+Exception message: /mnt/resource/hadoop/yarn/local/usercache/sshuser/appcache/application_1608971187179_0009/container_e04_1608971187179_0009_01_000176/default_container_executor.sh: line 4: echo: write error: No space left on device
+
+
+Container exited with a non-zero exit code 1. Error file: prelaunch.err.
+Last 4096 bytes of prelaunch.err :
+
+
+20/12/26 17:03:40 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000143_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:40 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000141_1, Status : FAILED
+20/12/26 17:03:40 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000142_1, Status : FAILED
+Exception from container-launch.
+Container id: container_e04_1608971187179_0009_01_000175
+Exit code: 1
+Exception message: /mnt/resource/hadoop/yarn/local/usercache/sshuser/appcache/application_1608971187179_0009/container_e04_1608971187179_0009_01_000175/default_container_executor.sh: line 4: echo: write error: No space left on device
+
+
+Container exited with a non-zero exit code 1. Error file: prelaunch.err.
+Last 4096 bytes of prelaunch.err :
+
+
+20/12/26 17:03:41 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000139_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:41 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_5, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:41 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:41 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:42 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000146_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:42 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_7, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:42 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000145_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:42 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000144_0, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:42 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:43 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000143_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:44 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000140_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:44 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000141_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:44 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000142_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:44 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000139_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:45 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000146_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:45 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_5, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:45 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_5, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:45 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_6, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:45 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_r_000003_0, Status : FAILED
+Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in InMemoryMerger - Thread to merge in-memory shuffled map-outputs
+	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:134)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:376)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:170)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1869)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:164)
+Caused by: org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find any valid local directory for output/attempt_1608971187179_0009_r_000003_0/map_8.out
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathForWrite(LocalDirAllocator.java:441)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:151)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathForWrite(LocalDirAllocator.java:132)
+	at org.apache.hadoop.mapred.YarnOutputFiles.getInputFileForWrite(YarnOutputFiles.java:213)
+	at org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl$InMemoryMerger.merge(MergeManagerImpl.java:463)
+	at org.apache.hadoop.mapreduce.task.reduce.MergeThread.run(MergeThread.java:94)
+
+20/12/26 17:03:46 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000145_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:46 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_5, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:46 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000144_1, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:46 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000120_8, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:47 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000142_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:47 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000139_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:47 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000140_4, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:47 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000146_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:47 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000141_3, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:48 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000145_2, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:48 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000130_6, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:48 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000138_6, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:48 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000136_6, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:48 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000127_7, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:49 INFO mapreduce.Job: Task Id : attempt_1608971187179_0009_m_000139_5, Status : FAILED
+No space available in any of the local directories.
+
+20/12/26 17:03:50 INFO mapreduce.Job:  map 100% reduce 100%
+20/12/26 17:03:53 INFO mapreduce.Job: Job job_1608971187179_0009 failed with state FAILED due to: Task failed task_1608971187179_0009_m_000120
+Job failed as tasks failed. failedMaps:1 failedReduces:0
+
+20/12/26 17:03:53 INFO mapreduce.Job: Counters: 41
+	File System Counters
+		FILE: Number of bytes read=14641
+		FILE: Number of bytes written=67579946069
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=64976414232
+		WASB: Number of bytes written=0
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Failed map tasks=76
+		Failed reduce tasks=1
+		Killed map tasks=475
+		Killed reduce tasks=12
+		Launched map tasks=216
+		Launched reduce tasks=4
+		Other local map tasks=69
+		Rack-local map tasks=147
+		Total time spent by all maps in occupied slots (ms)=18620397
+		Total time spent by all reduces in occupied slots (ms)=1423565
+		Total time spent by all map tasks (ms)=18620397
+		Total time spent by all reduce tasks (ms)=1423565
+		Total vcore-milliseconds taken by all map tasks=18620397
+		Total vcore-milliseconds taken by all reduce tasks=1423565
+		Total megabyte-milliseconds taken by all map tasks=57201859584
+		Total megabyte-milliseconds taken by all reduce tasks=4373191680
+	Map-Reduce Framework
+		Map input records=649613804
+		Map output records=649613804
+		Map output bytes=66260608008
+		Map output materialized bytes=67559844328
+		Input split bytes=24200
+		Combine input records=0
+		Spilled Records=649613804
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=118572
+		CPU time spent (ms)=7216650
+		Physical memory (bytes) snapshot=203008679936
+		Virtual memory (bytes) snapshot=542105292800
+		Total committed heap usage (bytes)=321525383168
+	File Input Format Counters
+		Bytes Read=64963346432
+20/12/26 17:03:53 INFO terasort.TeraSort: done

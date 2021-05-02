@@ -1,0 +1,76 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apps/ecm/service/hadoop/2.8.5-1.6.1/package/hadoop-2.8.5-1.6.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/root/HiBench/hadoopbench/sql/target/apache-hive-0.14.0-bin/lib/hive-jdbc-0.14.0-standalone.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.stats.column.autogather does not exist
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.mapjoin.hybridgrace.hashtable does not exist
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.blobstore.use.blobstore.as.scratchdir does not exist
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.merge.sparkfiles does not exist
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.blobstore.optimizations.enabled does not exist
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.optimize.dynamic.partition.hashjoin does not exist
+20/12/21 16:03:16 WARN conf.HiveConf: HiveConf of name hive.blobstore.supported.schemes does not exist
+
+Logging initialized using configuration in jar:file:/root/HiBench/hadoopbench/sql/target/apache-hive-0.14.0-bin/lib/hive-common-0.14.0.jar!/hive-log4j.properties
+OK
+Time taken: 0.612 seconds
+OK
+Time taken: 0.105 seconds
+OK
+Time taken: 0.187 seconds
+OK
+Time taken: 0.132 seconds
+OK
+Time taken: 0.089 seconds
+Query ID = root_20201221160303_79201cdf-d2fb-4818-bd6a-bfa69423386d
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Defaulting to jobconf value of: 12
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1608498255007_0075, Tracking URL = http://emr-header-1.cluster-53391:20888/proxy/application_1608498255007_0075/
+Kill Command = /usr/lib/hadoop-current/bin/hadoop job  -kill job_1608498255007_0075
+Hadoop job information for Stage-1: number of mappers: 24; number of reducers: 12
+2020-12-21 16:03:26,914 Stage-1 map = 0%,  reduce = 0%
+2020-12-21 16:03:51,805 Stage-1 map = 13%,  reduce = 0%, Cumulative CPU 27.71 sec
+2020-12-21 16:03:52,839 Stage-1 map = 22%,  reduce = 0%, Cumulative CPU 103.57 sec
+2020-12-21 16:03:53,895 Stage-1 map = 25%,  reduce = 0%, Cumulative CPU 130.55 sec
+2020-12-21 16:03:54,943 Stage-1 map = 31%,  reduce = 0%, Cumulative CPU 137.27 sec
+2020-12-21 16:03:55,985 Stage-1 map = 33%,  reduce = 0%, Cumulative CPU 140.48 sec
+2020-12-21 16:03:58,081 Stage-1 map = 34%,  reduce = 0%, Cumulative CPU 143.76 sec
+2020-12-21 16:03:59,116 Stage-1 map = 43%,  reduce = 0%, Cumulative CPU 177.89 sec
+2020-12-21 16:04:04,312 Stage-1 map = 45%,  reduce = 0%, Cumulative CPU 192.9 sec
+2020-12-21 16:04:05,356 Stage-1 map = 51%,  reduce = 0%, Cumulative CPU 217.64 sec
+2020-12-21 16:04:10,529 Stage-1 map = 53%,  reduce = 0%, Cumulative CPU 229.32 sec
+2020-12-21 16:04:11,561 Stage-1 map = 60%,  reduce = 0%, Cumulative CPU 258.82 sec
+2020-12-21 16:04:12,602 Stage-1 map = 68%,  reduce = 0%, Cumulative CPU 273.33 sec
+2020-12-21 16:04:13,637 Stage-1 map = 76%,  reduce = 0%, Cumulative CPU 290.81 sec
+2020-12-21 16:04:16,735 Stage-1 map = 78%,  reduce = 0%, Cumulative CPU 300.04 sec
+2020-12-21 16:04:17,768 Stage-1 map = 83%,  reduce = 1%, Cumulative CPU 334.5 sec
+2020-12-21 16:04:18,797 Stage-1 map = 85%,  reduce = 1%, Cumulative CPU 335.97 sec
+2020-12-21 16:04:19,825 Stage-1 map = 85%,  reduce = 3%, Cumulative CPU 336.57 sec
+2020-12-21 16:04:20,856 Stage-1 map = 87%,  reduce = 3%, Cumulative CPU 342.15 sec
+2020-12-21 16:04:21,885 Stage-1 map = 90%,  reduce = 3%, Cumulative CPU 349.22 sec
+2020-12-21 16:04:26,002 Stage-1 map = 100%,  reduce = 4%, Cumulative CPU 384.26 sec
+2020-12-21 16:04:29,107 Stage-1 map = 100%,  reduce = 12%, Cumulative CPU 389.83 sec
+2020-12-21 16:04:30,137 Stage-1 map = 100%,  reduce = 17%, Cumulative CPU 393.45 sec
+2020-12-21 16:04:32,194 Stage-1 map = 100%,  reduce = 21%, Cumulative CPU 400.61 sec
+2020-12-21 16:04:35,291 Stage-1 map = 100%,  reduce = 26%, Cumulative CPU 415.18 sec
+2020-12-21 16:04:36,319 Stage-1 map = 100%,  reduce = 50%, Cumulative CPU 455.8 sec
+2020-12-21 16:04:41,465 Stage-1 map = 100%,  reduce = 58%, Cumulative CPU 467.89 sec
+2020-12-21 16:04:42,494 Stage-1 map = 100%,  reduce = 75%, Cumulative CPU 493.23 sec
+2020-12-21 16:04:46,624 Stage-1 map = 100%,  reduce = 83%, Cumulative CPU 502.16 sec
+2020-12-21 16:04:48,695 Stage-1 map = 100%,  reduce = 92%, Cumulative CPU 512.41 sec
+2020-12-21 16:04:49,724 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 523.08 sec
+MapReduce Total cumulative CPU time: 8 minutes 43 seconds 80 msec
+Ended Job = job_1608498255007_0075
+Loading data to table default.uservisits_aggre
+MapReduce Jobs Launched:
+Stage-Stage-1: Map: 24  Reduce: 12   Cumulative CPU: 523.08 sec   HDFS Read: 1866996172 HDFS Write: 372378756 SUCCESS
+Total MapReduce CPU Time Spent: 8 minutes 43 seconds 80 msec
+OK
+Time taken: 92.448 seconds

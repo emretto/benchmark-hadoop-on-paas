@@ -1,0 +1,1082 @@
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /usr/hdp/current/hadoop-client/bin/hadoop and HADOOP_CONF_DIR=/usr/hdp/current/hadoop-client/etc/hadoop
+MAHOUT-JOB: /home/sshuser/HiBench/hadoopbench/mahout/target/apache-mahout-distribution-0.11.0/mahout-examples-0.11.0-job.jar
+20/12/25 22:26:50 INFO AbstractJob: Command line arguments: {--clustering=null, --clusters=[wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Input/cluster], --convergenceDelta=[0.5], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Input/samples], --maxIter=[5], --method=[mapreduce], --output=[wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+20/12/25 22:26:51 INFO MetricsConfig: loaded properties from hadoop-metrics2-azure-file-system.properties
+20/12/25 22:26:51 INFO WasbAzureIaasSink: Init starting.
+20/12/25 22:26:51 INFO AzureIaasSink: Init starting. Initializing MdsLogger.
+20/12/25 22:26:51 INFO AzureIaasSink: Init completed.
+20/12/25 22:26:51 INFO WasbAzureIaasSink: Init completed.
+20/12/25 22:26:51 INFO MetricsSinkAdapter: Sink azurefs2 started
+20/12/25 22:26:51 INFO MetricsSystemImpl: Scheduled snapshot period at 60 second(s).
+20/12/25 22:26:51 INFO MetricsSystemImpl: azure-file-system metrics system started
+20/12/25 22:26:52 INFO KMeansDriver: Input: wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Input/samples Clusters In: wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Input/cluster Out: wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Output
+20/12/25 22:26:52 INFO KMeansDriver: convergence: 0.5 max Iterations: 5
+20/12/25 22:26:54 INFO AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 22:26:54 INFO RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 22:26:54 INFO RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 22:26:57 INFO FileInputFormat: Total input paths to process : 5
+20/12/25 22:26:57 INFO JobSubmitter: number of splits:75
+20/12/25 22:26:57 INFO JobSubmitter: Submitting tokens for job: job_1608909264307_0049
+20/12/25 22:26:58 INFO YarnClientImpl: Submitted application application_1608909264307_0049
+20/12/25 22:26:58 INFO Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0049/
+20/12/25 22:26:58 INFO Job: Running job: job_1608909264307_0049
+20/12/25 22:27:11 INFO Job: Job job_1608909264307_0049 running in uber mode : false
+20/12/25 22:27:11 INFO Job:  map 0% reduce 0%
+20/12/25 22:27:58 INFO Job:  map 1% reduce 0%
+20/12/25 22:28:07 INFO Job:  map 2% reduce 0%
+20/12/25 22:28:13 INFO Job:  map 3% reduce 0%
+20/12/25 22:28:20 INFO Job:  map 4% reduce 0%
+20/12/25 22:28:27 INFO Job:  map 5% reduce 0%
+20/12/25 22:28:34 INFO Job:  map 6% reduce 0%
+20/12/25 22:28:40 INFO Job:  map 7% reduce 0%
+20/12/25 22:28:46 INFO Job:  map 8% reduce 0%
+20/12/25 22:28:53 INFO Job:  map 9% reduce 0%
+20/12/25 22:28:59 INFO Job:  map 10% reduce 0%
+20/12/25 22:29:06 INFO Job:  map 11% reduce 0%
+20/12/25 22:29:12 INFO Job:  map 12% reduce 0%
+20/12/25 22:29:18 INFO Job:  map 13% reduce 0%
+20/12/25 22:29:25 INFO Job:  map 14% reduce 0%
+20/12/25 22:29:32 INFO Job:  map 15% reduce 0%
+20/12/25 22:29:38 INFO Job:  map 16% reduce 0%
+20/12/25 22:29:45 INFO Job:  map 17% reduce 0%
+20/12/25 22:29:47 INFO Job:  map 18% reduce 0%
+20/12/25 22:29:50 INFO Job:  map 19% reduce 0%
+20/12/25 22:29:51 INFO Job:  map 20% reduce 0%
+20/12/25 22:29:52 INFO Job:  map 21% reduce 0%
+20/12/25 22:30:01 INFO Job:  map 22% reduce 0%
+20/12/25 22:30:11 INFO Job:  map 23% reduce 0%
+20/12/25 22:30:15 INFO Job:  map 24% reduce 0%
+20/12/25 22:30:16 INFO Job:  map 25% reduce 0%
+20/12/25 22:30:19 INFO Job:  map 26% reduce 5%
+20/12/25 22:30:20 INFO Job:  map 27% reduce 5%
+20/12/25 22:30:22 INFO Job:  map 29% reduce 7%
+20/12/25 22:30:24 INFO Job:  map 30% reduce 7%
+20/12/25 22:30:25 INFO Job:  map 30% reduce 9%
+20/12/25 22:30:27 INFO Job:  map 31% reduce 9%
+20/12/25 22:30:28 INFO Job:  map 31% reduce 10%
+20/12/25 22:30:40 INFO Job:  map 32% reduce 10%
+20/12/25 22:30:58 INFO Job:  map 33% reduce 10%
+20/12/25 22:31:10 INFO Job:  map 34% reduce 10%
+20/12/25 22:31:17 INFO Job:  map 35% reduce 10%
+20/12/25 22:31:23 INFO Job:  map 36% reduce 10%
+20/12/25 22:31:30 INFO Job:  map 37% reduce 10%
+20/12/25 22:31:36 INFO Job:  map 38% reduce 10%
+20/12/25 22:31:42 INFO Job:  map 39% reduce 10%
+20/12/25 22:31:49 INFO Job:  map 40% reduce 10%
+20/12/25 22:31:56 INFO Job:  map 41% reduce 10%
+20/12/25 22:32:02 INFO Job:  map 42% reduce 10%
+20/12/25 22:32:05 INFO Job:  map 43% reduce 10%
+20/12/25 22:32:06 INFO Job:  map 44% reduce 11%
+20/12/25 22:32:07 INFO Job:  map 45% reduce 11%
+20/12/25 22:32:09 INFO Job:  map 45% reduce 12%
+20/12/25 22:32:12 INFO Job:  map 46% reduce 13%
+20/12/25 22:32:22 INFO Job:  map 47% reduce 13%
+20/12/25 22:32:32 INFO Job:  map 48% reduce 13%
+20/12/25 22:32:40 INFO Job:  map 49% reduce 13%
+20/12/25 22:32:48 INFO Job:  map 50% reduce 13%
+20/12/25 22:32:55 INFO Job:  map 51% reduce 13%
+20/12/25 22:33:01 INFO Job:  map 52% reduce 13%
+20/12/25 22:33:08 INFO Job:  map 53% reduce 13%
+20/12/25 22:33:15 INFO Job:  map 54% reduce 13%
+20/12/25 22:33:18 INFO Job:  map 55% reduce 13%
+20/12/25 22:33:19 INFO Job:  map 56% reduce 13%
+20/12/25 22:33:20 INFO Job:  map 57% reduce 14%
+20/12/25 22:33:23 INFO Job:  map 58% reduce 16%
+20/12/25 22:33:26 INFO Job:  map 59% reduce 16%
+20/12/25 22:33:27 INFO Job:  map 60% reduce 16%
+20/12/25 22:33:29 INFO Job:  map 61% reduce 17%
+20/12/25 22:33:32 INFO Job:  map 62% reduce 19%
+20/12/25 22:33:36 INFO Job:  map 63% reduce 19%
+20/12/25 22:33:38 INFO Job:  map 63% reduce 20%
+20/12/25 22:33:47 INFO Job:  map 64% reduce 20%
+20/12/25 22:34:03 INFO Job:  map 65% reduce 20%
+20/12/25 22:34:14 INFO Job:  map 66% reduce 20%
+20/12/25 22:34:19 INFO Job:  map 67% reduce 20%
+20/12/25 22:34:21 INFO Job:  map 68% reduce 21%
+20/12/25 22:34:24 INFO Job:  map 69% reduce 22%
+20/12/25 22:34:29 INFO Job:  map 70% reduce 22%
+20/12/25 22:34:39 INFO Job:  map 71% reduce 22%
+20/12/25 22:34:44 INFO Job:  map 72% reduce 22%
+20/12/25 22:34:45 INFO Job:  map 72% reduce 23%
+20/12/25 22:34:53 INFO Job:  map 73% reduce 23%
+20/12/25 22:35:00 INFO Job:  map 74% reduce 23%
+20/12/25 22:35:07 INFO Job:  map 75% reduce 23%
+20/12/25 22:35:14 INFO Job:  map 76% reduce 23%
+20/12/25 22:35:20 INFO Job:  map 77% reduce 23%
+20/12/25 22:35:27 INFO Job:  map 78% reduce 23%
+20/12/25 22:35:33 INFO Job:  map 79% reduce 23%
+20/12/25 22:35:39 INFO Job:  map 80% reduce 23%
+20/12/25 22:35:46 INFO Job:  map 81% reduce 23%
+20/12/25 22:35:53 INFO Job:  map 82% reduce 23%
+20/12/25 22:35:59 INFO Job:  map 83% reduce 23%
+20/12/25 22:36:06 INFO Job:  map 84% reduce 23%
+20/12/25 22:36:12 INFO Job:  map 85% reduce 23%
+20/12/25 22:36:16 INFO Job:  map 86% reduce 23%
+20/12/25 22:36:20 INFO Job:  map 87% reduce 24%
+20/12/25 22:36:23 INFO Job:  map 88% reduce 24%
+20/12/25 22:36:25 INFO Job:  map 89% reduce 24%
+20/12/25 22:36:26 INFO Job:  map 89% reduce 25%
+20/12/25 22:36:28 INFO Job:  map 90% reduce 25%
+20/12/25 22:36:29 INFO Job:  map 91% reduce 26%
+20/12/25 22:36:30 INFO Job:  map 92% reduce 26%
+20/12/25 22:36:32 INFO Job:  map 93% reduce 28%
+20/12/25 22:36:33 INFO Job:  map 95% reduce 28%
+20/12/25 22:36:34 INFO Job:  map 96% reduce 28%
+20/12/25 22:36:35 INFO Job:  map 96% reduce 31%
+20/12/25 22:36:37 INFO Job:  map 97% reduce 31%
+20/12/25 22:36:38 INFO Job:  map 97% reduce 32%
+20/12/25 22:36:43 INFO Job:  map 98% reduce 32%
+20/12/25 22:37:21 INFO Job:  map 99% reduce 32%
+20/12/25 22:37:41 INFO Job:  map 100% reduce 32%
+20/12/25 22:37:44 INFO Job:  map 100% reduce 100%
+20/12/25 22:37:46 INFO Job: Job job_1608909264307_0049 completed successfully
+20/12/25 22:37:46 INFO Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=260256
+		FILE: Number of bytes written=13119638
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=40182891174
+		WASB: Number of bytes written=2705
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=75
+		Launched reduce tasks=1
+		Rack-local map tasks=75
+		Total time spent by all maps in occupied slots (ms)=12501241
+		Total time spent by all reduces in occupied slots (ms)=472054
+		Total time spent by all map tasks (ms)=12501241
+		Total time spent by all reduce tasks (ms)=472054
+		Total vcore-milliseconds taken by all map tasks=12501241
+		Total vcore-milliseconds taken by all reduce tasks=472054
+		Total megabyte-milliseconds taken by all map tasks=38403812352
+		Total megabyte-milliseconds taken by all reduce tasks=1450149888
+	Map-Reduce Framework
+		Map input records=200000000
+		Map output records=375
+		Map output bytes=258750
+		Map output materialized bytes=260700
+		Input split bytes=15300
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=260700
+		Reduce input records=375
+		Reduce output records=5
+		Spilled Records=750
+		Shuffled Maps =75
+		Failed Shuffles=0
+		Merged Map outputs=75
+		GC time elapsed (ms)=310794
+		CPU time spent (ms)=5610270
+		Physical memory (bytes) snapshot=130119831552
+		Virtual memory (bytes) snapshot=341089673216
+		Total committed heap usage (bytes)=203297914880
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=40181986850
+	File Output Format Counters
+		Bytes Written=2705
+20/12/25 22:37:47 INFO AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 22:37:47 INFO RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 22:37:47 INFO RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 22:37:49 INFO FileInputFormat: Total input paths to process : 5
+20/12/25 22:37:50 INFO JobSubmitter: number of splits:75
+20/12/25 22:37:50 INFO JobSubmitter: Submitting tokens for job: job_1608909264307_0050
+20/12/25 22:37:50 INFO YarnClientImpl: Submitted application application_1608909264307_0050
+20/12/25 22:37:50 INFO Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0050/
+20/12/25 22:37:50 INFO Job: Running job: job_1608909264307_0050
+20/12/25 22:38:03 INFO Job: Job job_1608909264307_0050 running in uber mode : false
+20/12/25 22:38:03 INFO Job:  map 0% reduce 0%
+20/12/25 22:38:50 INFO Job:  map 1% reduce 0%
+20/12/25 22:38:58 INFO Job:  map 2% reduce 0%
+20/12/25 22:39:05 INFO Job:  map 3% reduce 0%
+20/12/25 22:39:11 INFO Job:  map 4% reduce 0%
+20/12/25 22:39:18 INFO Job:  map 5% reduce 0%
+20/12/25 22:39:25 INFO Job:  map 6% reduce 0%
+20/12/25 22:39:31 INFO Job:  map 7% reduce 0%
+20/12/25 22:39:38 INFO Job:  map 8% reduce 0%
+20/12/25 22:39:44 INFO Job:  map 9% reduce 0%
+20/12/25 22:39:51 INFO Job:  map 10% reduce 0%
+20/12/25 22:39:58 INFO Job:  map 11% reduce 0%
+20/12/25 22:40:04 INFO Job:  map 12% reduce 0%
+20/12/25 22:40:11 INFO Job:  map 13% reduce 0%
+20/12/25 22:40:17 INFO Job:  map 14% reduce 0%
+20/12/25 22:40:24 INFO Job:  map 15% reduce 0%
+20/12/25 22:40:30 INFO Job:  map 16% reduce 0%
+20/12/25 22:40:37 INFO Job:  map 17% reduce 0%
+20/12/25 22:40:41 INFO Job:  map 18% reduce 0%
+20/12/25 22:40:42 INFO Job:  map 19% reduce 0%
+20/12/25 22:40:47 INFO Job:  map 20% reduce 0%
+20/12/25 22:40:48 INFO Job:  map 21% reduce 0%
+20/12/25 22:40:51 INFO Job:  map 22% reduce 0%
+20/12/25 22:40:58 INFO Job:  map 23% reduce 0%
+20/12/25 22:41:04 INFO Job:  map 24% reduce 0%
+20/12/25 22:41:06 INFO Job:  map 25% reduce 0%
+20/12/25 22:41:07 INFO Job:  map 26% reduce 0%
+20/12/25 22:41:11 INFO Job:  map 27% reduce 0%
+20/12/25 22:41:13 INFO Job:  map 28% reduce 0%
+20/12/25 22:41:15 INFO Job:  map 29% reduce 8%
+20/12/25 22:41:18 INFO Job:  map 29% reduce 9%
+20/12/25 22:41:19 INFO Job:  map 30% reduce 9%
+20/12/25 22:41:26 INFO Job:  map 31% reduce 9%
+20/12/25 22:41:27 INFO Job:  map 31% reduce 10%
+20/12/25 22:41:37 INFO Job:  map 32% reduce 10%
+20/12/25 22:41:52 INFO Job:  map 33% reduce 10%
+20/12/25 22:42:01 INFO Job:  map 34% reduce 10%
+20/12/25 22:42:08 INFO Job:  map 35% reduce 10%
+20/12/25 22:42:15 INFO Job:  map 36% reduce 10%
+20/12/25 22:42:21 INFO Job:  map 37% reduce 10%
+20/12/25 22:42:28 INFO Job:  map 38% reduce 10%
+20/12/25 22:42:34 INFO Job:  map 39% reduce 10%
+20/12/25 22:42:41 INFO Job:  map 40% reduce 10%
+20/12/25 22:42:48 INFO Job:  map 41% reduce 10%
+20/12/25 22:42:54 INFO Job:  map 42% reduce 10%
+20/12/25 22:43:00 INFO Job:  map 43% reduce 10%
+20/12/25 22:43:02 INFO Job:  map 43% reduce 11%
+20/12/25 22:43:04 INFO Job:  map 44% reduce 11%
+20/12/25 22:43:05 INFO Job:  map 45% reduce 11%
+20/12/25 22:43:08 INFO Job:  map 45% reduce 12%
+20/12/25 22:43:09 INFO Job:  map 46% reduce 12%
+20/12/25 22:43:14 INFO Job:  map 47% reduce 12%
+20/12/25 22:43:17 INFO Job:  map 47% reduce 13%
+20/12/25 22:43:21 INFO Job:  map 48% reduce 13%
+20/12/25 22:43:30 INFO Job:  map 49% reduce 13%
+20/12/25 22:43:39 INFO Job:  map 50% reduce 13%
+20/12/25 22:43:46 INFO Job:  map 51% reduce 13%
+20/12/25 22:43:53 INFO Job:  map 52% reduce 13%
+20/12/25 22:43:58 INFO Job:  map 53% reduce 13%
+20/12/25 22:44:00 INFO Job:  map 54% reduce 13%
+20/12/25 22:44:01 INFO Job:  map 54% reduce 14%
+20/12/25 22:44:04 INFO Job:  map 55% reduce 14%
+20/12/25 22:44:08 INFO Job:  map 56% reduce 14%
+20/12/25 22:44:10 INFO Job:  map 57% reduce 15%
+20/12/25 22:44:12 INFO Job:  map 58% reduce 15%
+20/12/25 22:44:13 INFO Job:  map 58% reduce 17%
+20/12/25 22:44:14 INFO Job:  map 59% reduce 17%
+20/12/25 22:44:19 INFO Job:  map 60% reduce 17%
+20/12/25 22:44:22 INFO Job:  map 60% reduce 18%
+20/12/25 22:44:23 INFO Job:  map 61% reduce 18%
+20/12/25 22:44:25 INFO Job:  map 61% reduce 19%
+20/12/25 22:44:28 INFO Job:  map 62% reduce 19%
+20/12/25 22:44:31 INFO Job:  map 62% reduce 20%
+20/12/25 22:44:32 INFO Job:  map 63% reduce 20%
+20/12/25 22:44:43 INFO Job:  map 64% reduce 20%
+20/12/25 22:44:54 INFO Job:  map 65% reduce 20%
+20/12/25 22:45:03 INFO Job:  map 66% reduce 20%
+20/12/25 22:45:11 INFO Job:  map 67% reduce 20%
+20/12/25 22:45:15 INFO Job:  map 68% reduce 20%
+20/12/25 22:45:19 INFO Job:  map 69% reduce 21%
+20/12/25 22:45:25 INFO Job:  map 70% reduce 21%
+20/12/25 22:45:26 INFO Job:  map 70% reduce 22%
+20/12/25 22:45:28 INFO Job:  map 71% reduce 22%
+20/12/25 22:45:31 INFO Job:  map 72% reduce 22%
+20/12/25 22:45:32 INFO Job:  map 72% reduce 23%
+20/12/25 22:45:41 INFO Job:  map 73% reduce 23%
+20/12/25 22:45:50 INFO Job:  map 74% reduce 23%
+20/12/25 22:45:58 INFO Job:  map 75% reduce 23%
+20/12/25 22:46:05 INFO Job:  map 76% reduce 23%
+20/12/25 22:46:11 INFO Job:  map 77% reduce 23%
+20/12/25 22:46:18 INFO Job:  map 78% reduce 23%
+20/12/25 22:46:24 INFO Job:  map 79% reduce 23%
+20/12/25 22:46:31 INFO Job:  map 80% reduce 23%
+20/12/25 22:46:38 INFO Job:  map 81% reduce 23%
+20/12/25 22:46:45 INFO Job:  map 82% reduce 23%
+20/12/25 22:46:51 INFO Job:  map 83% reduce 23%
+20/12/25 22:46:55 INFO Job:  map 84% reduce 23%
+20/12/25 22:46:57 INFO Job:  map 84% reduce 24%
+20/12/25 22:46:58 INFO Job:  map 85% reduce 24%
+20/12/25 22:47:03 INFO Job:  map 86% reduce 24%
+20/12/25 22:47:05 INFO Job:  map 87% reduce 24%
+20/12/25 22:47:06 INFO Job:  map 87% reduce 25%
+20/12/25 22:47:08 INFO Job:  map 88% reduce 25%
+20/12/25 22:47:11 INFO Job:  map 89% reduce 25%
+20/12/25 22:47:12 INFO Job:  map 89% reduce 26%
+20/12/25 22:47:18 INFO Job:  map 90% reduce 26%
+20/12/25 22:47:22 INFO Job:  map 91% reduce 27%
+20/12/25 22:47:26 INFO Job:  map 92% reduce 27%
+20/12/25 22:47:28 INFO Job:  map 93% reduce 28%
+20/12/25 22:47:29 INFO Job:  map 94% reduce 28%
+20/12/25 22:47:31 INFO Job:  map 94% reduce 29%
+20/12/25 22:47:33 INFO Job:  map 95% reduce 29%
+20/12/25 22:47:34 INFO Job:  map 95% reduce 30%
+20/12/25 22:47:36 INFO Job:  map 96% reduce 30%
+20/12/25 22:47:38 INFO Job:  map 97% reduce 31%
+20/12/25 22:47:40 INFO Job:  map 98% reduce 31%
+20/12/25 22:47:41 INFO Job:  map 98% reduce 32%
+20/12/25 22:47:58 INFO Job:  map 99% reduce 32%
+20/12/25 22:48:19 INFO Job:  map 100% reduce 32%
+20/12/25 22:48:20 INFO Job:  map 100% reduce 33%
+20/12/25 22:48:24 INFO Job:  map 100% reduce 100%
+20/12/25 22:48:26 INFO Job: Job job_1608909264307_0050 completed successfully
+20/12/25 22:48:26 INFO Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=218406
+		FILE: Number of bytes written=13035938
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=40182788574
+		WASB: Number of bytes written=2705
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=75
+		Launched reduce tasks=1
+		Rack-local map tasks=75
+		Total time spent by all maps in occupied slots (ms)=12506136
+		Total time spent by all reduces in occupied slots (ms)=454964
+		Total time spent by all map tasks (ms)=12506136
+		Total time spent by all reduce tasks (ms)=454964
+		Total vcore-milliseconds taken by all map tasks=12506136
+		Total vcore-milliseconds taken by all reduce tasks=454964
+		Total megabyte-milliseconds taken by all map tasks=38418849792
+		Total megabyte-milliseconds taken by all reduce tasks=1397649408
+	Map-Reduce Framework
+		Map input records=200000000
+		Map output records=375
+		Map output bytes=216900
+		Map output materialized bytes=218850
+		Input split bytes=15300
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=218850
+		Reduce input records=375
+		Reduce output records=5
+		Spilled Records=750
+		Shuffled Maps =75
+		Failed Shuffles=0
+		Merged Map outputs=75
+		GC time elapsed (ms)=308250
+		CPU time spent (ms)=5635120
+		Physical memory (bytes) snapshot=130072567808
+		Virtual memory (bytes) snapshot=341103538176
+		Total committed heap usage (bytes)=203296342016
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=40181986850
+	File Output Format Counters
+		Bytes Written=2705
+20/12/25 22:48:26 INFO AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 22:48:26 INFO RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 22:48:26 INFO RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 22:48:29 INFO FileInputFormat: Total input paths to process : 5
+20/12/25 22:48:29 INFO JobSubmitter: number of splits:75
+20/12/25 22:48:29 INFO JobSubmitter: Submitting tokens for job: job_1608909264307_0051
+20/12/25 22:48:29 INFO YarnClientImpl: Submitted application application_1608909264307_0051
+20/12/25 22:48:29 INFO Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0051/
+20/12/25 22:48:29 INFO Job: Running job: job_1608909264307_0051
+20/12/25 22:48:44 INFO Job: Job job_1608909264307_0051 running in uber mode : false
+20/12/25 22:48:44 INFO Job:  map 0% reduce 0%
+20/12/25 22:49:30 INFO Job:  map 1% reduce 0%
+20/12/25 22:49:39 INFO Job:  map 2% reduce 0%
+20/12/25 22:49:45 INFO Job:  map 3% reduce 0%
+20/12/25 22:49:52 INFO Job:  map 4% reduce 0%
+20/12/25 22:49:58 INFO Job:  map 5% reduce 0%
+20/12/25 22:50:05 INFO Job:  map 6% reduce 0%
+20/12/25 22:50:12 INFO Job:  map 7% reduce 0%
+20/12/25 22:50:18 INFO Job:  map 8% reduce 0%
+20/12/25 22:50:24 INFO Job:  map 9% reduce 0%
+20/12/25 22:50:31 INFO Job:  map 10% reduce 0%
+20/12/25 22:50:37 INFO Job:  map 11% reduce 0%
+20/12/25 22:50:44 INFO Job:  map 12% reduce 0%
+20/12/25 22:50:51 INFO Job:  map 13% reduce 0%
+20/12/25 22:50:57 INFO Job:  map 14% reduce 0%
+20/12/25 22:51:04 INFO Job:  map 15% reduce 0%
+20/12/25 22:51:11 INFO Job:  map 16% reduce 0%
+20/12/25 22:51:19 INFO Job:  map 17% reduce 0%
+20/12/25 22:51:25 INFO Job:  map 18% reduce 0%
+20/12/25 22:51:29 INFO Job:  map 19% reduce 0%
+20/12/25 22:51:32 INFO Job:  map 20% reduce 0%
+20/12/25 22:51:34 INFO Job:  map 21% reduce 0%
+20/12/25 22:51:38 INFO Job:  map 22% reduce 0%
+20/12/25 22:51:40 INFO Job:  map 23% reduce 0%
+20/12/25 22:51:42 INFO Job:  map 25% reduce 0%
+20/12/25 22:51:48 INFO Job:  map 26% reduce 0%
+20/12/25 22:51:50 INFO Job:  map 27% reduce 0%
+20/12/25 22:51:51 INFO Job:  map 28% reduce 0%
+20/12/25 22:51:56 INFO Job:  map 29% reduce 0%
+20/12/25 22:51:57 INFO Job:  map 30% reduce 0%
+20/12/25 22:52:02 INFO Job:  map 31% reduce 0%
+20/12/25 22:52:03 INFO Job:  map 31% reduce 10%
+20/12/25 22:52:27 INFO Job:  map 32% reduce 10%
+20/12/25 22:52:38 INFO Job:  map 33% reduce 10%
+20/12/25 22:52:45 INFO Job:  map 34% reduce 10%
+20/12/25 22:52:51 INFO Job:  map 35% reduce 10%
+20/12/25 22:52:58 INFO Job:  map 36% reduce 10%
+20/12/25 22:53:05 INFO Job:  map 37% reduce 10%
+20/12/25 22:53:12 INFO Job:  map 38% reduce 10%
+20/12/25 22:53:19 INFO Job:  map 39% reduce 10%
+20/12/25 22:53:25 INFO Job:  map 40% reduce 10%
+20/12/25 22:53:32 INFO Job:  map 41% reduce 10%
+20/12/25 22:53:39 INFO Job:  map 42% reduce 10%
+20/12/25 22:53:45 INFO Job:  map 43% reduce 10%
+20/12/25 22:53:53 INFO Job:  map 44% reduce 10%
+20/12/25 22:54:00 INFO Job:  map 45% reduce 10%
+20/12/25 22:54:07 INFO Job:  map 46% reduce 10%
+20/12/25 22:54:14 INFO Job:  map 47% reduce 10%
+20/12/25 22:54:16 INFO Job:  map 47% reduce 11%
+20/12/25 22:54:17 INFO Job:  map 48% reduce 11%
+20/12/25 22:54:22 INFO Job:  map 49% reduce 11%
+20/12/25 22:54:24 INFO Job:  map 50% reduce 11%
+20/12/25 22:54:25 INFO Job:  map 50% reduce 12%
+20/12/25 22:54:27 INFO Job:  map 51% reduce 12%
+20/12/25 22:54:28 INFO Job:  map 51% reduce 13%
+20/12/25 22:54:29 INFO Job:  map 52% reduce 13%
+20/12/25 22:54:31 INFO Job:  map 52% reduce 14%
+20/12/25 22:54:33 INFO Job:  map 53% reduce 14%
+20/12/25 22:54:37 INFO Job:  map 54% reduce 15%
+20/12/25 22:54:44 INFO Job:  map 55% reduce 15%
+20/12/25 22:54:46 INFO Job:  map 56% reduce 16%
+20/12/25 22:54:52 INFO Job:  map 57% reduce 17%
+20/12/25 22:54:57 INFO Job:  map 58% reduce 17%
+20/12/25 22:54:58 INFO Job:  map 58% reduce 18%
+20/12/25 22:55:03 INFO Job:  map 59% reduce 18%
+20/12/25 22:55:04 INFO Job:  map 59% reduce 19%
+20/12/25 22:55:07 INFO Job:  map 60% reduce 19%
+20/12/25 22:55:10 INFO Job:  map 60% reduce 20%
+20/12/25 22:55:15 INFO Job:  map 61% reduce 20%
+20/12/25 22:55:22 INFO Job:  map 62% reduce 20%
+20/12/25 22:55:33 INFO Job:  map 63% reduce 20%
+20/12/25 22:55:41 INFO Job:  map 64% reduce 20%
+20/12/25 22:55:49 INFO Job:  map 65% reduce 20%
+20/12/25 22:55:56 INFO Job:  map 66% reduce 20%
+20/12/25 22:56:03 INFO Job:  map 67% reduce 20%
+20/12/25 22:56:10 INFO Job:  map 68% reduce 20%
+20/12/25 22:56:17 INFO Job:  map 69% reduce 20%
+20/12/25 22:56:23 INFO Job:  map 70% reduce 20%
+20/12/25 22:56:30 INFO Job:  map 71% reduce 20%
+20/12/25 22:56:37 INFO Job:  map 72% reduce 20%
+20/12/25 22:56:44 INFO Job:  map 73% reduce 20%
+20/12/25 22:56:51 INFO Job:  map 74% reduce 20%
+20/12/25 22:56:58 INFO Job:  map 75% reduce 20%
+20/12/25 22:57:02 INFO Job:  map 76% reduce 20%
+20/12/25 22:57:06 INFO Job:  map 77% reduce 20%
+20/12/25 22:57:07 INFO Job:  map 77% reduce 21%
+20/12/25 22:57:08 INFO Job:  map 78% reduce 21%
+20/12/25 22:57:10 INFO Job:  map 78% reduce 22%
+20/12/25 22:57:13 INFO Job:  map 79% reduce 22%
+20/12/25 22:57:14 INFO Job:  map 79% reduce 23%
+20/12/25 22:57:16 INFO Job:  map 80% reduce 23%
+20/12/25 22:57:18 INFO Job:  map 81% reduce 23%
+20/12/25 22:57:20 INFO Job:  map 82% reduce 24%
+20/12/25 22:57:23 INFO Job:  map 82% reduce 25%
+20/12/25 22:57:24 INFO Job:  map 83% reduce 25%
+20/12/25 22:57:29 INFO Job:  map 83% reduce 26%
+20/12/25 22:57:32 INFO Job:  map 84% reduce 26%
+20/12/25 22:57:39 INFO Job:  map 85% reduce 26%
+20/12/25 22:57:47 INFO Job:  map 86% reduce 26%
+20/12/25 22:57:52 INFO Job:  map 87% reduce 26%
+20/12/25 22:57:53 INFO Job:  map 87% reduce 27%
+20/12/25 22:57:59 INFO Job:  map 88% reduce 27%
+20/12/25 22:58:03 INFO Job:  map 89% reduce 27%
+20/12/25 22:58:06 INFO Job:  map 90% reduce 27%
+20/12/25 22:58:07 INFO Job:  map 90% reduce 28%
+20/12/25 22:58:08 INFO Job:  map 91% reduce 28%
+20/12/25 22:58:13 INFO Job:  map 92% reduce 29%
+20/12/25 22:58:14 INFO Job:  map 93% reduce 29%
+20/12/25 22:58:16 INFO Job:  map 93% reduce 30%
+20/12/25 22:58:27 INFO Job:  map 94% reduce 30%
+20/12/25 22:58:37 INFO Job:  map 95% reduce 30%
+20/12/25 22:58:41 INFO Job:  map 96% reduce 30%
+20/12/25 22:58:44 INFO Job:  map 96% reduce 31%
+20/12/25 22:58:52 INFO Job:  map 97% reduce 31%
+20/12/25 22:59:04 INFO Job:  map 98% reduce 31%
+20/12/25 22:59:05 INFO Job:  map 98% reduce 32%
+20/12/25 22:59:07 INFO Job:  map 99% reduce 32%
+20/12/25 22:59:10 INFO Job:  map 100% reduce 32%
+20/12/25 22:59:11 INFO Job:  map 100% reduce 67%
+20/12/25 22:59:13 INFO Job:  map 100% reduce 100%
+20/12/25 22:59:14 INFO Job: Job job_1608909264307_0051 completed successfully
+20/12/25 22:59:14 INFO Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=218406
+		FILE: Number of bytes written=13035938
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=40182788574
+		WASB: Number of bytes written=2705
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=75
+		Launched reduce tasks=1
+		Rack-local map tasks=75
+		Total time spent by all maps in occupied slots (ms)=12613370
+		Total time spent by all reduces in occupied slots (ms)=451593
+		Total time spent by all map tasks (ms)=12613370
+		Total time spent by all reduce tasks (ms)=451593
+		Total vcore-milliseconds taken by all map tasks=12613370
+		Total vcore-milliseconds taken by all reduce tasks=451593
+		Total megabyte-milliseconds taken by all map tasks=38748272640
+		Total megabyte-milliseconds taken by all reduce tasks=1387293696
+	Map-Reduce Framework
+		Map input records=200000000
+		Map output records=375
+		Map output bytes=216900
+		Map output materialized bytes=218850
+		Input split bytes=15300
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=218850
+		Reduce input records=375
+		Reduce output records=5
+		Spilled Records=750
+		Shuffled Maps =75
+		Failed Shuffles=0
+		Merged Map outputs=75
+		GC time elapsed (ms)=308395
+		CPU time spent (ms)=5812610
+		Physical memory (bytes) snapshot=130102128640
+		Virtual memory (bytes) snapshot=341082607616
+		Total committed heap usage (bytes)=203289001984
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=40181986850
+	File Output Format Counters
+		Bytes Written=2705
+20/12/25 22:59:14 INFO AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 22:59:14 INFO RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 22:59:14 INFO RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 22:59:17 INFO FileInputFormat: Total input paths to process : 5
+20/12/25 22:59:17 INFO JobSubmitter: number of splits:75
+20/12/25 22:59:17 INFO JobSubmitter: Submitting tokens for job: job_1608909264307_0052
+20/12/25 22:59:18 INFO YarnClientImpl: Submitted application application_1608909264307_0052
+20/12/25 22:59:18 INFO Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0052/
+20/12/25 22:59:18 INFO Job: Running job: job_1608909264307_0052
+20/12/25 22:59:31 INFO Job: Job job_1608909264307_0052 running in uber mode : false
+20/12/25 22:59:31 INFO Job:  map 0% reduce 0%
+20/12/25 23:00:18 INFO Job:  map 1% reduce 0%
+20/12/25 23:00:26 INFO Job:  map 2% reduce 0%
+20/12/25 23:00:33 INFO Job:  map 3% reduce 0%
+20/12/25 23:00:40 INFO Job:  map 4% reduce 0%
+20/12/25 23:00:47 INFO Job:  map 5% reduce 0%
+20/12/25 23:00:53 INFO Job:  map 6% reduce 0%
+20/12/25 23:01:00 INFO Job:  map 7% reduce 0%
+20/12/25 23:01:07 INFO Job:  map 8% reduce 0%
+20/12/25 23:01:13 INFO Job:  map 9% reduce 0%
+20/12/25 23:01:19 INFO Job:  map 10% reduce 0%
+20/12/25 23:01:26 INFO Job:  map 11% reduce 0%
+20/12/25 23:01:33 INFO Job:  map 12% reduce 0%
+20/12/25 23:01:39 INFO Job:  map 13% reduce 0%
+20/12/25 23:01:46 INFO Job:  map 14% reduce 0%
+20/12/25 23:01:52 INFO Job:  map 15% reduce 0%
+20/12/25 23:01:59 INFO Job:  map 16% reduce 0%
+20/12/25 23:02:07 INFO Job:  map 17% reduce 0%
+20/12/25 23:02:09 INFO Job:  map 18% reduce 0%
+20/12/25 23:02:11 INFO Job:  map 19% reduce 0%
+20/12/25 23:02:16 INFO Job:  map 20% reduce 0%
+20/12/25 23:02:18 INFO Job:  map 21% reduce 0%
+20/12/25 23:02:22 INFO Job:  map 22% reduce 0%
+20/12/25 23:02:31 INFO Job:  map 23% reduce 0%
+20/12/25 23:02:34 INFO Job:  map 24% reduce 0%
+20/12/25 23:02:36 INFO Job:  map 25% reduce 0%
+20/12/25 23:02:39 INFO Job:  map 26% reduce 0%
+20/12/25 23:02:42 INFO Job:  map 27% reduce 0%
+20/12/25 23:02:46 INFO Job:  map 28% reduce 7%
+20/12/25 23:02:47 INFO Job:  map 29% reduce 7%
+20/12/25 23:02:49 INFO Job:  map 30% reduce 9%
+20/12/25 23:02:53 INFO Job:  map 31% reduce 9%
+20/12/25 23:02:55 INFO Job:  map 31% reduce 10%
+20/12/25 23:03:05 INFO Job:  map 32% reduce 10%
+20/12/25 23:03:20 INFO Job:  map 33% reduce 10%
+20/12/25 23:03:31 INFO Job:  map 34% reduce 10%
+20/12/25 23:03:38 INFO Job:  map 35% reduce 10%
+20/12/25 23:03:45 INFO Job:  map 36% reduce 10%
+20/12/25 23:03:52 INFO Job:  map 37% reduce 10%
+20/12/25 23:04:00 INFO Job:  map 38% reduce 10%
+20/12/25 23:04:06 INFO Job:  map 39% reduce 10%
+20/12/25 23:04:13 INFO Job:  map 40% reduce 10%
+20/12/25 23:04:20 INFO Job:  map 41% reduce 10%
+20/12/25 23:04:27 INFO Job:  map 42% reduce 10%
+20/12/25 23:04:30 INFO Job:  map 43% reduce 11%
+20/12/25 23:04:32 INFO Job:  map 44% reduce 11%
+20/12/25 23:04:33 INFO Job:  map 44% reduce 12%
+20/12/25 23:04:36 INFO Job:  map 45% reduce 12%
+20/12/25 23:04:37 INFO Job:  map 46% reduce 12%
+20/12/25 23:04:39 INFO Job:  map 46% reduce 13%
+20/12/25 23:04:47 INFO Job:  map 47% reduce 13%
+20/12/25 23:04:58 INFO Job:  map 48% reduce 13%
+20/12/25 23:05:07 INFO Job:  map 49% reduce 13%
+20/12/25 23:05:14 INFO Job:  map 50% reduce 13%
+20/12/25 23:05:21 INFO Job:  map 51% reduce 13%
+20/12/25 23:05:28 INFO Job:  map 52% reduce 13%
+20/12/25 23:05:35 INFO Job:  map 53% reduce 13%
+20/12/25 23:05:41 INFO Job:  map 54% reduce 13%
+20/12/25 23:05:44 INFO Job:  map 55% reduce 13%
+20/12/25 23:05:46 INFO Job:  map 55% reduce 14%
+20/12/25 23:05:47 INFO Job:  map 57% reduce 14%
+20/12/25 23:05:49 INFO Job:  map 57% reduce 16%
+20/12/25 23:05:54 INFO Job:  map 58% reduce 16%
+20/12/25 23:05:56 INFO Job:  map 59% reduce 16%
+20/12/25 23:05:58 INFO Job:  map 60% reduce 16%
+20/12/25 23:05:59 INFO Job:  map 60% reduce 17%
+20/12/25 23:06:02 INFO Job:  map 60% reduce 18%
+20/12/25 23:06:03 INFO Job:  map 61% reduce 18%
+20/12/25 23:06:05 INFO Job:  map 62% reduce 19%
+20/12/25 23:06:10 INFO Job:  map 63% reduce 19%
+20/12/25 23:06:11 INFO Job:  map 63% reduce 20%
+20/12/25 23:06:21 INFO Job:  map 64% reduce 20%
+20/12/25 23:06:32 INFO Job:  map 65% reduce 20%
+20/12/25 23:06:43 INFO Job:  map 66% reduce 20%
+20/12/25 23:06:47 INFO Job:  map 67% reduce 20%
+20/12/25 23:06:50 INFO Job:  map 67% reduce 21%
+20/12/25 23:06:52 INFO Job:  map 68% reduce 21%
+20/12/25 23:06:55 INFO Job:  map 69% reduce 21%
+20/12/25 23:06:56 INFO Job:  map 69% reduce 22%
+20/12/25 23:06:58 INFO Job:  map 70% reduce 22%
+20/12/25 23:07:07 INFO Job:  map 71% reduce 22%
+20/12/25 23:07:09 INFO Job:  map 71% reduce 23%
+20/12/25 23:07:14 INFO Job:  map 72% reduce 23%
+20/12/25 23:07:23 INFO Job:  map 73% reduce 23%
+20/12/25 23:07:31 INFO Job:  map 74% reduce 23%
+20/12/25 23:07:39 INFO Job:  map 75% reduce 23%
+20/12/25 23:07:46 INFO Job:  map 76% reduce 23%
+20/12/25 23:07:53 INFO Job:  map 77% reduce 23%
+20/12/25 23:07:59 INFO Job:  map 78% reduce 23%
+20/12/25 23:08:06 INFO Job:  map 79% reduce 23%
+20/12/25 23:08:13 INFO Job:  map 80% reduce 23%
+20/12/25 23:08:20 INFO Job:  map 81% reduce 23%
+20/12/25 23:08:27 INFO Job:  map 82% reduce 23%
+20/12/25 23:08:34 INFO Job:  map 83% reduce 23%
+20/12/25 23:08:40 INFO Job:  map 84% reduce 23%
+20/12/25 23:08:47 INFO Job:  map 85% reduce 23%
+20/12/25 23:08:50 INFO Job:  map 86% reduce 23%
+20/12/25 23:08:51 INFO Job:  map 87% reduce 23%
+20/12/25 23:08:52 INFO Job:  map 87% reduce 24%
+20/12/25 23:08:55 INFO Job:  map 88% reduce 24%
+20/12/25 23:08:58 INFO Job:  map 88% reduce 25%
+20/12/25 23:09:00 INFO Job:  map 89% reduce 25%
+20/12/25 23:09:03 INFO Job:  map 90% reduce 25%
+20/12/25 23:09:04 INFO Job:  map 91% reduce 26%
+20/12/25 23:09:05 INFO Job:  map 92% reduce 26%
+20/12/25 23:09:07 INFO Job:  map 93% reduce 28%
+20/12/25 23:09:10 INFO Job:  map 94% reduce 29%
+20/12/25 23:09:11 INFO Job:  map 95% reduce 29%
+20/12/25 23:09:13 INFO Job:  map 97% reduce 30%
+20/12/25 23:09:16 INFO Job:  map 97% reduce 32%
+20/12/25 23:09:18 INFO Job:  map 98% reduce 32%
+20/12/25 23:09:56 INFO Job:  map 99% reduce 32%
+20/12/25 23:10:18 INFO Job:  map 100% reduce 32%
+20/12/25 23:10:20 INFO Job:  map 100% reduce 33%
+20/12/25 23:10:22 INFO Job:  map 100% reduce 100%
+20/12/25 23:10:24 INFO Job: Job job_1608909264307_0052 completed successfully
+20/12/25 23:10:24 INFO Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=218406
+		FILE: Number of bytes written=13035938
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=40182788574
+		WASB: Number of bytes written=2705
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=75
+		Launched reduce tasks=1
+		Rack-local map tasks=75
+		Total time spent by all maps in occupied slots (ms)=12863741
+		Total time spent by all reduces in occupied slots (ms)=483209
+		Total time spent by all map tasks (ms)=12863741
+		Total time spent by all reduce tasks (ms)=483209
+		Total vcore-milliseconds taken by all map tasks=12863741
+		Total vcore-milliseconds taken by all reduce tasks=483209
+		Total megabyte-milliseconds taken by all map tasks=39517412352
+		Total megabyte-milliseconds taken by all reduce tasks=1484418048
+	Map-Reduce Framework
+		Map input records=200000000
+		Map output records=375
+		Map output bytes=216900
+		Map output materialized bytes=218850
+		Input split bytes=15300
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=218850
+		Reduce input records=375
+		Reduce output records=5
+		Spilled Records=750
+		Shuffled Maps =75
+		Failed Shuffles=0
+		Merged Map outputs=75
+		GC time elapsed (ms)=307544
+		CPU time spent (ms)=5813880
+		Physical memory (bytes) snapshot=130121158656
+		Virtual memory (bytes) snapshot=341080662016
+		Total committed heap usage (bytes)=203285331968
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=40181986850
+	File Output Format Counters
+		Bytes Written=2705
+20/12/25 23:10:24 INFO AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 23:10:24 INFO RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 23:10:24 INFO RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 23:10:27 INFO FileInputFormat: Total input paths to process : 5
+20/12/25 23:10:27 INFO JobSubmitter: number of splits:75
+20/12/25 23:10:27 INFO JobSubmitter: Submitting tokens for job: job_1608909264307_0053
+20/12/25 23:10:27 INFO YarnClientImpl: Submitted application application_1608909264307_0053
+20/12/25 23:10:27 INFO Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0053/
+20/12/25 23:10:27 INFO Job: Running job: job_1608909264307_0053
+20/12/25 23:10:40 INFO Job: Job job_1608909264307_0053 running in uber mode : false
+20/12/25 23:10:40 INFO Job:  map 0% reduce 0%
+20/12/25 23:11:28 INFO Job:  map 1% reduce 0%
+20/12/25 23:11:36 INFO Job:  map 2% reduce 0%
+20/12/25 23:11:42 INFO Job:  map 3% reduce 0%
+20/12/25 23:11:49 INFO Job:  map 4% reduce 0%
+20/12/25 23:11:56 INFO Job:  map 5% reduce 0%
+20/12/25 23:12:02 INFO Job:  map 6% reduce 0%
+20/12/25 23:12:10 INFO Job:  map 7% reduce 0%
+20/12/25 23:12:17 INFO Job:  map 8% reduce 0%
+20/12/25 23:12:23 INFO Job:  map 9% reduce 0%
+20/12/25 23:12:29 INFO Job:  map 10% reduce 0%
+20/12/25 23:12:36 INFO Job:  map 11% reduce 0%
+20/12/25 23:12:43 INFO Job:  map 12% reduce 0%
+20/12/25 23:12:49 INFO Job:  map 13% reduce 0%
+20/12/25 23:12:56 INFO Job:  map 14% reduce 0%
+20/12/25 23:13:02 INFO Job:  map 15% reduce 0%
+20/12/25 23:13:09 INFO Job:  map 16% reduce 0%
+20/12/25 23:13:16 INFO Job:  map 17% reduce 0%
+20/12/25 23:13:19 INFO Job:  map 18% reduce 0%
+20/12/25 23:13:22 INFO Job:  map 19% reduce 0%
+20/12/25 23:13:24 INFO Job:  map 20% reduce 0%
+20/12/25 23:13:26 INFO Job:  map 21% reduce 0%
+20/12/25 23:13:31 INFO Job:  map 22% reduce 0%
+20/12/25 23:13:41 INFO Job:  map 23% reduce 0%
+20/12/25 23:13:44 INFO Job:  map 24% reduce 0%
+20/12/25 23:13:48 INFO Job:  map 25% reduce 0%
+20/12/25 23:13:49 INFO Job:  map 26% reduce 0%
+20/12/25 23:13:51 INFO Job:  map 27% reduce 0%
+20/12/25 23:13:52 INFO Job:  map 28% reduce 7%
+20/12/25 23:13:53 INFO Job:  map 29% reduce 7%
+20/12/25 23:13:55 INFO Job:  map 29% reduce 8%
+20/12/25 23:13:57 INFO Job:  map 30% reduce 8%
+20/12/25 23:13:58 INFO Job:  map 30% reduce 10%
+20/12/25 23:14:04 INFO Job:  map 31% reduce 10%
+20/12/25 23:14:15 INFO Job:  map 32% reduce 10%
+20/12/25 23:14:31 INFO Job:  map 33% reduce 10%
+20/12/25 23:14:40 INFO Job:  map 34% reduce 10%
+20/12/25 23:14:47 INFO Job:  map 35% reduce 10%
+20/12/25 23:14:54 INFO Job:  map 36% reduce 10%
+20/12/25 23:15:01 INFO Job:  map 37% reduce 10%
+20/12/25 23:15:08 INFO Job:  map 38% reduce 10%
+20/12/25 23:15:15 INFO Job:  map 39% reduce 10%
+20/12/25 23:15:21 INFO Job:  map 40% reduce 10%
+20/12/25 23:15:28 INFO Job:  map 41% reduce 10%
+20/12/25 23:15:35 INFO Job:  map 42% reduce 10%
+20/12/25 23:15:39 INFO Job:  map 43% reduce 11%
+20/12/25 23:15:43 INFO Job:  map 44% reduce 11%
+20/12/25 23:15:44 INFO Job:  map 45% reduce 11%
+20/12/25 23:15:46 INFO Job:  map 45% reduce 12%
+20/12/25 23:15:49 INFO Job:  map 46% reduce 12%
+20/12/25 23:15:55 INFO Job:  map 47% reduce 13%
+20/12/25 23:16:06 INFO Job:  map 48% reduce 13%
+20/12/25 23:16:16 INFO Job:  map 49% reduce 13%
+20/12/25 23:16:23 INFO Job:  map 50% reduce 13%
+20/12/25 23:16:30 INFO Job:  map 51% reduce 13%
+20/12/25 23:16:37 INFO Job:  map 52% reduce 13%
+20/12/25 23:16:43 INFO Job:  map 53% reduce 13%
+20/12/25 23:16:47 INFO Job:  map 54% reduce 13%
+20/12/25 23:16:51 INFO Job:  map 55% reduce 13%
+20/12/25 23:16:53 INFO Job:  map 55% reduce 14%
+20/12/25 23:16:54 INFO Job:  map 56% reduce 14%
+20/12/25 23:16:56 INFO Job:  map 57% reduce 15%
+20/12/25 23:16:59 INFO Job:  map 57% reduce 16%
+20/12/25 23:17:00 INFO Job:  map 59% reduce 16%
+20/12/25 23:17:02 INFO Job:  map 59% reduce 17%
+20/12/25 23:17:04 INFO Job:  map 60% reduce 17%
+20/12/25 23:17:08 INFO Job:  map 61% reduce 18%
+20/12/25 23:17:13 INFO Job:  map 62% reduce 18%
+20/12/25 23:17:14 INFO Job:  map 62% reduce 19%
+20/12/25 23:17:17 INFO Job:  map 63% reduce 19%
+20/12/25 23:17:20 INFO Job:  map 63% reduce 20%
+20/12/25 23:17:27 INFO Job:  map 64% reduce 20%
+20/12/25 23:17:42 INFO Job:  map 65% reduce 20%
+20/12/25 23:17:51 INFO Job:  map 66% reduce 20%
+20/12/25 23:17:58 INFO Job:  map 67% reduce 20%
+20/12/25 23:18:03 INFO Job:  map 68% reduce 20%
+20/12/25 23:18:05 INFO Job:  map 69% reduce 20%
+20/12/25 23:18:06 INFO Job:  map 70% reduce 22%
+20/12/25 23:18:15 INFO Job:  map 71% reduce 22%
+20/12/25 23:18:24 INFO Job:  map 72% reduce 22%
+20/12/25 23:18:25 INFO Job:  map 72% reduce 23%
+20/12/25 23:18:30 INFO Job:  map 73% reduce 23%
+20/12/25 23:18:38 INFO Job:  map 74% reduce 23%
+20/12/25 23:18:46 INFO Job:  map 75% reduce 23%
+20/12/25 23:18:52 INFO Job:  map 76% reduce 23%
+20/12/25 23:18:59 INFO Job:  map 77% reduce 23%
+20/12/25 23:19:06 INFO Job:  map 78% reduce 23%
+20/12/25 23:19:13 INFO Job:  map 79% reduce 23%
+20/12/25 23:19:20 INFO Job:  map 80% reduce 23%
+20/12/25 23:19:27 INFO Job:  map 81% reduce 23%
+20/12/25 23:19:35 INFO Job:  map 82% reduce 23%
+20/12/25 23:19:41 INFO Job:  map 83% reduce 23%
+20/12/25 23:19:48 INFO Job:  map 84% reduce 23%
+20/12/25 23:19:51 INFO Job:  map 85% reduce 23%
+20/12/25 23:19:57 INFO Job:  map 86% reduce 23%
+20/12/25 23:19:59 INFO Job:  map 86% reduce 24%
+20/12/25 23:20:02 INFO Job:  map 87% reduce 24%
+20/12/25 23:20:05 INFO Job:  map 88% reduce 24%
+20/12/25 23:20:06 INFO Job:  map 89% reduce 24%
+20/12/25 23:20:07 INFO Job:  map 90% reduce 24%
+20/12/25 23:20:08 INFO Job:  map 90% reduce 26%
+20/12/25 23:20:09 INFO Job:  map 91% reduce 26%
+20/12/25 23:20:11 INFO Job:  map 92% reduce 27%
+20/12/25 23:20:13 INFO Job:  map 93% reduce 27%
+20/12/25 23:20:15 INFO Job:  map 93% reduce 29%
+20/12/25 23:20:16 INFO Job:  map 94% reduce 29%
+20/12/25 23:20:18 INFO Job:  map 95% reduce 30%
+20/12/25 23:20:22 INFO Job:  map 96% reduce 30%
+20/12/25 23:20:23 INFO Job:  map 97% reduce 30%
+20/12/25 23:20:24 INFO Job:  map 97% reduce 32%
+20/12/25 23:20:27 INFO Job:  map 98% reduce 32%
+20/12/25 23:21:01 INFO Job:  map 99% reduce 32%
+20/12/25 23:21:23 INFO Job:  map 100% reduce 32%
+20/12/25 23:21:24 INFO Job:  map 100% reduce 33%
+20/12/25 23:21:28 INFO Job:  map 100% reduce 100%
+20/12/25 23:21:30 INFO Job: Job job_1608909264307_0053 completed successfully
+20/12/25 23:21:30 INFO Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=218406
+		FILE: Number of bytes written=13035938
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=40182788574
+		WASB: Number of bytes written=2705
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=75
+		Launched reduce tasks=1
+		Rack-local map tasks=75
+		Total time spent by all maps in occupied slots (ms)=12798767
+		Total time spent by all reduces in occupied slots (ms)=480650
+		Total time spent by all map tasks (ms)=12798767
+		Total time spent by all reduce tasks (ms)=480650
+		Total vcore-milliseconds taken by all map tasks=12798767
+		Total vcore-milliseconds taken by all reduce tasks=480650
+		Total megabyte-milliseconds taken by all map tasks=39317812224
+		Total megabyte-milliseconds taken by all reduce tasks=1476556800
+	Map-Reduce Framework
+		Map input records=200000000
+		Map output records=375
+		Map output bytes=216900
+		Map output materialized bytes=218850
+		Input split bytes=15300
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=218850
+		Reduce input records=375
+		Reduce output records=5
+		Spilled Records=750
+		Shuffled Maps =75
+		Failed Shuffles=0
+		Merged Map outputs=75
+		GC time elapsed (ms)=316006
+		CPU time spent (ms)=5791840
+		Physical memory (bytes) snapshot=130138607616
+		Virtual memory (bytes) snapshot=341088612352
+		Total committed heap usage (bytes)=203298963456
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=40181986850
+	File Output Format Counters
+		Bytes Written=2705
+20/12/25 23:21:30 WARN AzureFileSystemThreadPoolExecutor: Disabling threads for Rename operation as thread count 0 is <= 1
+20/12/25 23:21:31 INFO AzureFileSystemThreadPoolExecutor: Time taken for Rename operation is: 136 ms with threads: 0
+20/12/25 23:21:31 INFO KMeansDriver: Clustering data
+20/12/25 23:21:31 INFO KMeansDriver: Running Clustering
+20/12/25 23:21:31 INFO KMeansDriver: Input: wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Input/samples Clusters In: wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Output Out: wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Kmeans/Output
+20/12/25 23:21:31 INFO AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 23:21:31 INFO RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 23:21:31 INFO RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 23:21:35 INFO FileInputFormat: Total input paths to process : 5
+20/12/25 23:21:35 INFO JobSubmitter: number of splits:75
+20/12/25 23:21:35 INFO JobSubmitter: Submitting tokens for job: job_1608909264307_0054
+20/12/25 23:21:35 INFO YarnClientImpl: Submitted application application_1608909264307_0054
+20/12/25 23:21:35 INFO Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0054/
+20/12/25 23:21:35 INFO Job: Running job: job_1608909264307_0054
+20/12/25 23:21:49 INFO Job: Job job_1608909264307_0054 running in uber mode : false
+20/12/25 23:21:49 INFO Job:  map 0% reduce 0%
+20/12/25 23:22:36 INFO Job:  map 1% reduce 0%
+20/12/25 23:22:44 INFO Job:  map 2% reduce 0%
+20/12/25 23:22:49 INFO Job:  map 3% reduce 0%
+20/12/25 23:22:55 INFO Job:  map 4% reduce 0%
+20/12/25 23:23:00 INFO Job:  map 5% reduce 0%
+20/12/25 23:23:05 INFO Job:  map 6% reduce 0%
+20/12/25 23:23:12 INFO Job:  map 7% reduce 0%
+20/12/25 23:23:17 INFO Job:  map 8% reduce 0%
+20/12/25 23:23:23 INFO Job:  map 9% reduce 0%
+20/12/25 23:23:28 INFO Job:  map 10% reduce 0%
+20/12/25 23:23:33 INFO Job:  map 11% reduce 0%
+20/12/25 23:23:39 INFO Job:  map 12% reduce 0%
+20/12/25 23:23:44 INFO Job:  map 13% reduce 0%
+20/12/25 23:23:49 INFO Job:  map 14% reduce 0%
+20/12/25 23:23:55 INFO Job:  map 15% reduce 0%
+20/12/25 23:24:01 INFO Job:  map 16% reduce 0%
+20/12/25 23:24:06 INFO Job:  map 17% reduce 0%
+20/12/25 23:24:12 INFO Job:  map 18% reduce 0%
+20/12/25 23:24:17 INFO Job:  map 19% reduce 0%
+20/12/25 23:24:23 INFO Job:  map 20% reduce 0%
+20/12/25 23:24:28 INFO Job:  map 21% reduce 0%
+20/12/25 23:24:33 INFO Job:  map 22% reduce 0%
+20/12/25 23:24:39 INFO Job:  map 23% reduce 0%
+20/12/25 23:24:45 INFO Job:  map 24% reduce 0%
+20/12/25 23:24:49 INFO Job:  map 25% reduce 0%
+20/12/25 23:24:55 INFO Job:  map 26% reduce 0%
+20/12/25 23:25:01 INFO Job:  map 27% reduce 0%
+20/12/25 23:25:09 INFO Job:  map 28% reduce 0%
+20/12/25 23:25:17 INFO Job:  map 29% reduce 0%
+20/12/25 23:25:25 INFO Job:  map 30% reduce 0%
+20/12/25 23:25:34 INFO Job:  map 31% reduce 0%
+20/12/25 23:25:50 INFO Job:  map 32% reduce 0%
+20/12/25 23:26:05 INFO Job:  map 33% reduce 0%
+20/12/25 23:26:16 INFO Job:  map 34% reduce 0%
+20/12/25 23:26:24 INFO Job:  map 35% reduce 0%
+20/12/25 23:26:31 INFO Job:  map 36% reduce 0%
+20/12/25 23:26:37 INFO Job:  map 37% reduce 0%
+20/12/25 23:26:43 INFO Job:  map 38% reduce 0%
+20/12/25 23:26:48 INFO Job:  map 39% reduce 0%
+20/12/25 23:26:53 INFO Job:  map 40% reduce 0%
+20/12/25 23:27:00 INFO Job:  map 41% reduce 0%
+20/12/25 23:27:06 INFO Job:  map 42% reduce 0%
+20/12/25 23:27:11 INFO Job:  map 43% reduce 0%
+20/12/25 23:27:17 INFO Job:  map 44% reduce 0%
+20/12/25 23:27:22 INFO Job:  map 45% reduce 0%
+20/12/25 23:27:28 INFO Job:  map 46% reduce 0%
+20/12/25 23:27:33 INFO Job:  map 47% reduce 0%
+20/12/25 23:27:39 INFO Job:  map 48% reduce 0%
+20/12/25 23:27:45 INFO Job:  map 49% reduce 0%
+20/12/25 23:27:51 INFO Job:  map 50% reduce 0%
+20/12/25 23:27:56 INFO Job:  map 51% reduce 0%
+20/12/25 23:28:01 INFO Job:  map 52% reduce 0%
+20/12/25 23:28:08 INFO Job:  map 53% reduce 0%
+20/12/25 23:28:16 INFO Job:  map 54% reduce 0%
+20/12/25 23:28:25 INFO Job:  map 55% reduce 0%
+20/12/25 23:28:34 INFO Job:  map 56% reduce 0%
+20/12/25 23:28:41 INFO Job:  map 57% reduce 0%
+20/12/25 23:28:48 INFO Job:  map 58% reduce 0%
+20/12/25 23:28:53 INFO Job:  map 59% reduce 0%
+20/12/25 23:28:59 INFO Job:  map 60% reduce 0%
+20/12/25 23:29:05 INFO Job:  map 61% reduce 0%
+20/12/25 23:29:10 INFO Job:  map 62% reduce 0%
+20/12/25 23:29:17 INFO Job:  map 63% reduce 0%
+20/12/25 23:29:24 INFO Job:  map 64% reduce 0%
+20/12/25 23:29:35 INFO Job:  map 65% reduce 0%
+20/12/25 23:29:50 INFO Job:  map 66% reduce 0%
+20/12/25 23:30:01 INFO Job:  map 67% reduce 0%
+20/12/25 23:30:11 INFO Job:  map 68% reduce 0%
+20/12/25 23:30:18 INFO Job:  map 69% reduce 0%
+20/12/25 23:30:24 INFO Job:  map 70% reduce 0%
+20/12/25 23:30:30 INFO Job:  map 71% reduce 0%
+20/12/25 23:30:35 INFO Job:  map 72% reduce 0%
+20/12/25 23:30:41 INFO Job:  map 73% reduce 0%
+20/12/25 23:30:46 INFO Job:  map 74% reduce 0%
+20/12/25 23:30:52 INFO Job:  map 75% reduce 0%
+20/12/25 23:30:57 INFO Job:  map 76% reduce 0%
+20/12/25 23:31:04 INFO Job:  map 77% reduce 0%
+20/12/25 23:31:10 INFO Job:  map 78% reduce 0%
+20/12/25 23:31:17 INFO Job:  map 79% reduce 0%
+20/12/25 23:31:24 INFO Job:  map 80% reduce 0%
+20/12/25 23:31:32 INFO Job:  map 81% reduce 0%
+20/12/25 23:31:39 INFO Job:  map 82% reduce 0%
+20/12/25 23:31:47 INFO Job:  map 83% reduce 0%
+20/12/25 23:31:54 INFO Job:  map 84% reduce 0%
+20/12/25 23:32:00 INFO Job:  map 85% reduce 0%
+20/12/25 23:32:06 INFO Job:  map 86% reduce 0%
+20/12/25 23:32:12 INFO Job:  map 87% reduce 0%
+20/12/25 23:32:16 INFO Job:  map 88% reduce 0%
+20/12/25 23:32:22 INFO Job:  map 89% reduce 0%
+20/12/25 23:32:27 INFO Job:  map 90% reduce 0%
+20/12/25 23:32:33 INFO Job:  map 91% reduce 0%
+20/12/25 23:32:39 INFO Job:  map 92% reduce 0%
+20/12/25 23:32:43 INFO Job:  map 93% reduce 0%
+20/12/25 23:32:49 INFO Job:  map 94% reduce 0%
+20/12/25 23:32:56 INFO Job:  map 95% reduce 0%
+20/12/25 23:33:02 INFO Job:  map 96% reduce 0%
+20/12/25 23:33:10 INFO Job:  map 97% reduce 0%
+20/12/25 23:33:18 INFO Job:  map 98% reduce 0%
+20/12/25 23:33:33 INFO Job:  map 99% reduce 0%
+20/12/25 23:33:48 INFO Job:  map 100% reduce 0%
+20/12/25 23:34:00 INFO Job: Job job_1608909264307_0054 completed successfully
+20/12/25 23:34:00 INFO Job: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=12418565
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=40182785675
+		WASB: Number of bytes written=47736981386
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=75
+		Rack-local map tasks=75
+		Total time spent by all maps in occupied slots (ms)=15647517
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=15647517
+		Total vcore-milliseconds taken by all map tasks=15647517
+		Total megabyte-milliseconds taken by all map tasks=48069172224
+	Map-Reduce Framework
+		Map input records=200000000
+		Map output records=200000000
+		Input split bytes=15300
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=159398
+		CPU time spent (ms)=7014140
+		Physical memory (bytes) snapshot=34365505536
+		Virtual memory (bytes) snapshot=337233657856
+		Total committed heap usage (bytes)=200268054528
+	File Input Format Counters
+		Bytes Read=40181986850
+	File Output Format Counters
+		Bytes Written=47736981386
+20/12/25 23:34:00 INFO MahoutDriver: Program took 4030506 ms (Minutes: 67.1751)

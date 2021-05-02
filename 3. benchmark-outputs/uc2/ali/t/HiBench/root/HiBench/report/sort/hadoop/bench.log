@@ -1,0 +1,82 @@
+20/12/19 16:41:06 INFO client.RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53371/192.168.0.152:8032
+Running on 3 nodes to sort from hdfs://emr-header-1.cluster-53371:9000/HiBench/Sort/Input into hdfs://emr-header-1.cluster-53371:9000/HiBench/Sort/Output with 12 reduces.
+Job started: Sat Dec 19 16:41:07 CST 2020
+20/12/19 16:41:07 INFO client.RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53371/192.168.0.152:8032
+20/12/19 16:41:07 INFO input.FileInputFormat: Total input files to process : 12
+20/12/19 16:41:07 INFO mapreduce.JobSubmitter: number of splits:12
+20/12/19 16:41:07 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1608361927307_0006
+20/12/19 16:41:07 INFO impl.YarnClientImpl: Submitted application application_1608361927307_0006
+20/12/19 16:41:08 INFO mapreduce.Job: The url to track the job: http://emr-header-1.cluster-53371:20888/proxy/application_1608361927307_0006/
+20/12/19 16:41:08 INFO mapreduce.Job: Running job: job_1608361927307_0006
+20/12/19 16:41:14 INFO mapreduce.Job: Job job_1608361927307_0006 running in uber mode : false
+20/12/19 16:41:14 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/19 16:41:25 INFO mapreduce.Job:  map 8% reduce 0%
+20/12/19 16:41:26 INFO mapreduce.Job:  map 42% reduce 0%
+20/12/19 16:41:29 INFO mapreduce.Job:  map 100% reduce 0%
+20/12/19 16:41:32 INFO mapreduce.Job:  map 100% reduce 17%
+20/12/19 16:41:33 INFO mapreduce.Job:  map 100% reduce 25%
+20/12/19 16:41:34 INFO mapreduce.Job:  map 100% reduce 42%
+20/12/19 16:41:35 INFO mapreduce.Job:  map 100% reduce 50%
+20/12/19 16:41:36 INFO mapreduce.Job:  map 100% reduce 92%
+20/12/19 16:41:37 INFO mapreduce.Job:  map 100% reduce 100%
+20/12/19 16:41:37 INFO mapreduce.Job: Job job_1608361927307_0006 completed successfully
+20/12/19 16:41:37 INFO mapreduce.Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=19206
+		FILE: Number of bytes written=4222292
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=39443
+		HDFS: Number of bytes written=37763
+		HDFS: Number of read operations=84
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=24
+	Job Counters
+		Killed map tasks=1
+		Launched map tasks=12
+		Launched reduce tasks=12
+		Data-local map tasks=11
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=15271713
+		Total time spent by all reduces in occupied slots (ms)=11455314
+		Total time spent by all map tasks (ms)=137583
+		Total time spent by all reduce tasks (ms)=51834
+		Total vcore-milliseconds taken by all map tasks=137583
+		Total vcore-milliseconds taken by all reduce tasks=51834
+		Total megabyte-milliseconds taken by all map tasks=484842492
+		Total megabyte-milliseconds taken by all reduce tasks=365326032
+	Map-Reduce Framework
+		Map input records=52
+		Map output records=52
+		Map output bytes=36271
+		Map output materialized bytes=23302
+		Input split bytes=1620
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=52
+		Reduce shuffle bytes=23302
+		Reduce input records=52
+		Reduce output records=52
+		Spilled Records=104
+		Shuffled Maps =144
+		Failed Shuffles=0
+		Merged Map outputs=144
+		GC time elapsed (ms)=4728
+		CPU time spent (ms)=15970
+		Physical memory (bytes) snapshot=8754839552
+		Virtual memory (bytes) snapshot=156014870528
+		Total committed heap usage (bytes)=12161908736
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=37823
+	File Output Format Counters
+		Bytes Written=37763
+Job ended: Sat Dec 19 16:41:37 CST 2020
+The job took 29 seconds.

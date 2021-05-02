@@ -1,0 +1,178 @@
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /usr/lib/hadoop/bin/hadoop and HADOOP_CONF_DIR=/usr/lib/hadoop/etc/hadoop
+MAHOUT-JOB: /home/ulueremre/HiBench/hadoopbench/mahout/target/apache-mahout-distribution-0.11.0/mahout-examples-0.11.0-job.jar
+20/12/13 18:21:07 WARN MahoutDriver: No trainnb.props found on classpath, will use command-line arguments only
+20/12/13 18:21:07 INFO AbstractJob: Command line arguments: {--alphaI=[1.0], --endPhase=[2147483647], --input=[hdfs://hadoop-cluster-m/HiBench/Bayes/Output/vectors/tfidf-vectors], --labelIndex=[hdfs://hadoop-cluster-m/HiBench/Bayes/Output/labelindex], --output=[hdfs://hadoop-cluster-m/HiBench/Bayes/Output/model], --overwrite=null, --startPhase=[0], --tempDir=[hdfs://hadoop-cluster-m/HiBench/Bayes/Output/temp]}
+20/12/13 18:21:15 INFO deprecation: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+20/12/13 18:21:15 INFO deprecation: mapred.compress.map.output is deprecated. Instead, use mapreduce.map.output.compress
+20/12/13 18:21:15 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/12/13 18:21:15 INFO RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 18:21:15 INFO AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+20/12/13 18:21:15 INFO FileInputFormat: Total input files to process : 12
+20/12/13 18:21:15 INFO JobSubmitter: number of splits:12
+20/12/13 18:21:15 INFO deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/12/13 18:21:15 INFO JobSubmitter: Submitting tokens for job: job_1607867764932_0050
+20/12/13 18:21:15 INFO YarnClientImpl: Submitted application application_1607867764932_0050
+20/12/13 18:21:15 INFO Job: The url to track the job: http://hadoop-cluster-m:8088/proxy/application_1607867764932_0050/
+20/12/13 18:21:15 INFO Job: Running job: job_1607867764932_0050
+20/12/13 18:21:22 INFO Job: Job job_1607867764932_0050 running in uber mode : false
+20/12/13 18:21:22 INFO Job:  map 0% reduce 0%
+20/12/13 18:21:38 INFO Job:  map 8% reduce 0%
+20/12/13 18:21:39 INFO Job:  map 25% reduce 0%
+20/12/13 18:21:42 INFO Job:  map 33% reduce 0%
+20/12/13 18:21:43 INFO Job:  map 75% reduce 0%
+20/12/13 18:21:44 INFO Job:  map 92% reduce 0%
+20/12/13 18:21:48 INFO Job:  map 100% reduce 0%
+20/12/13 18:22:01 INFO Job:  map 100% reduce 9%
+20/12/13 18:22:04 INFO Job:  map 100% reduce 27%
+20/12/13 18:22:05 INFO Job:  map 100% reduce 36%
+20/12/13 18:22:06 INFO Job:  map 100% reduce 45%
+20/12/13 18:22:08 INFO Job:  map 100% reduce 64%
+20/12/13 18:22:09 INFO Job:  map 100% reduce 91%
+20/12/13 18:22:10 INFO Job:  map 100% reduce 100%
+20/12/13 18:22:10 INFO Job: Job job_1607867764932_0050 completed successfully
+20/12/13 18:22:10 INFO Job: Counters: 52
+	File System Counters
+		FILE: Number of bytes read=178511174
+		FILE: Number of bytes written=361926922
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=413934261
+		HDFS: Number of bytes written=413932050
+		HDFS: Number of read operations=103
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=33
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=13
+		Launched reduce tasks=12
+		Data-local map tasks=11
+		Rack-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=1190946
+		Total time spent by all reduces in occupied slots (ms)=990774
+		Total time spent by all map tasks (ms)=198491
+		Total time spent by all reduce tasks (ms)=165129
+		Total vcore-milliseconds taken by all map tasks=198491
+		Total vcore-milliseconds taken by all reduce tasks=165129
+		Total megabyte-milliseconds taken by all map tasks=1219528704
+		Total megabyte-milliseconds taken by all reduce tasks=1014552576
+	Map-Reduce Framework
+		Map input records=100
+		Map output records=100
+		Map output bytes=413928403
+		Map output materialized bytes=178587542
+		Input split bytes=1728
+		Combine input records=100
+		Combine output records=100
+		Reduce input groups=100
+		Reduce shuffle bytes=178587542
+		Reduce input records=100
+		Reduce output records=100
+		Spilled Records=200
+		Shuffled Maps =132
+		Failed Shuffles=0
+		Merged Map outputs=132
+		GC time elapsed (ms)=6641
+		CPU time spent (ms)=221760
+		Physical memory (bytes) snapshot=15555661824
+		Virtual memory (bytes) snapshot=163250311168
+		Total committed heap usage (bytes)=16845897728
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=413932533
+	File Output Format Counters
+		Bytes Written=413932050
+20/12/13 18:22:10 INFO RMProxy: Connecting to ResourceManager at hadoop-cluster-m/10.156.0.6:8032
+20/12/13 18:22:10 INFO AHSProxy: Connecting to Application History server at hadoop-cluster-m/10.156.0.6:10200
+20/12/13 18:22:10 INFO FileInputFormat: Total input files to process : 11
+20/12/13 18:22:10 INFO JobSubmitter: number of splits:11
+20/12/13 18:22:10 INFO deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/12/13 18:22:10 INFO JobSubmitter: Submitting tokens for job: job_1607867764932_0051
+20/12/13 18:22:10 INFO YarnClientImpl: Submitted application application_1607867764932_0051
+20/12/13 18:22:10 INFO Job: The url to track the job: http://hadoop-cluster-m:8088/proxy/application_1607867764932_0051/
+20/12/13 18:22:10 INFO Job: Running job: job_1607867764932_0051
+20/12/13 18:22:16 INFO Job: Job job_1607867764932_0051 running in uber mode : false
+20/12/13 18:22:16 INFO Job:  map 0% reduce 0%
+20/12/13 18:22:33 INFO Job:  map 9% reduce 0%
+20/12/13 18:22:34 INFO Job:  map 27% reduce 0%
+20/12/13 18:22:37 INFO Job:  map 45% reduce 0%
+20/12/13 18:22:38 INFO Job:  map 82% reduce 0%
+20/12/13 18:22:39 INFO Job:  map 100% reduce 0%
+20/12/13 18:22:46 INFO Job:  map 100% reduce 18%
+20/12/13 18:22:48 INFO Job:  map 100% reduce 27%
+20/12/13 18:22:49 INFO Job:  map 100% reduce 45%
+20/12/13 18:22:50 INFO Job:  map 100% reduce 64%
+20/12/13 18:22:51 INFO Job:  map 100% reduce 73%
+20/12/13 18:22:52 INFO Job:  map 100% reduce 91%
+20/12/13 18:22:57 INFO Job:  map 100% reduce 95%
+20/12/13 18:23:03 INFO Job:  map 100% reduce 96%
+20/12/13 18:23:15 INFO Job:  map 100% reduce 100%
+20/12/13 18:23:18 INFO Job: Job job_1607867764932_0051 completed successfully
+20/12/13 18:23:18 INFO Job: Counters: 52
+	File System Counters
+		FILE: Number of bytes read=111291780
+		FILE: Number of bytes written=227238053
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=413933656
+		HDFS: Number of bytes written=82508523
+		HDFS: Number of read operations=99
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=33
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=12
+		Launched reduce tasks=12
+		Data-local map tasks=10
+		Rack-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=1159836
+		Total time spent by all reduces in occupied slots (ms)=772278
+		Total time spent by all map tasks (ms)=193306
+		Total time spent by all reduce tasks (ms)=128713
+		Total vcore-milliseconds taken by all map tasks=193306
+		Total vcore-milliseconds taken by all reduce tasks=128713
+		Total megabyte-milliseconds taken by all map tasks=1187672064
+		Total megabyte-milliseconds taken by all reduce tasks=790812672
+	Map-Reduce Framework
+		Map input records=100
+		Map output records=22
+		Map output bytes=251146013
+		Map output materialized bytes=111300476
+		Input split bytes=1606
+		Combine input records=22
+		Combine output records=22
+		Reduce input groups=2
+		Reduce shuffle bytes=111300476
+		Reduce input records=22
+		Reduce output records=2
+		Spilled Records=44
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=8118
+		CPU time spent (ms)=162890
+		Physical memory (bytes) snapshot=14952882176
+		Virtual memory (bytes) snapshot=155971350528
+		Total committed heap usage (bytes)=19485687808
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=413932050
+	File Output Format Counters
+		Bytes Written=82508523
+20/12/13 18:23:34 INFO MahoutDriver: Program took 147001 ms (Minutes: 2.4500166666666665)

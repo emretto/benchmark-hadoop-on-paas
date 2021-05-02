@@ -1,0 +1,70 @@
+20/12/25 18:22:31 INFO HiBench.Dummy: Creating dummy file wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Bayes/temp/dummy with 12 slots...
+curIndex: 12820, total: 12821
+20/12/25 18:22:33 INFO HiBench.BayesData: creating bayes text data ...
+20/12/25 18:22:34 WARN azure.AzureFileSystemThreadPoolExecutor: Disabling threads for Delete operation as thread count 0 is <= 1
+20/12/25 18:22:34 INFO azure.AzureFileSystemThreadPoolExecutor: Time taken for Delete operation is: 2 ms with threads: 0
+20/12/25 18:22:34 INFO HiBench.BayesData: Running Job: Create bayes data
+20/12/25 18:22:34 INFO HiBench.BayesData: Pages file wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Bayes/temp/dummy as input
+20/12/25 18:22:34 INFO HiBench.BayesData: Rankings file wasb://my-benchmark-cluster-2020-12-25t15-05-27-062z@mybenchmarkclhdistorage.blob.core.windows.net/HiBench/Bayes/Input as output
+20/12/25 18:22:35 INFO client.AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 18:22:35 INFO client.AHSProxy: Connecting to Application History server at headnodehost/10.0.0.17:10200
+20/12/25 18:22:35 INFO client.RequestHedgingRMFailoverProxyProvider: Looking for the active RM in [rm1, rm2]...
+20/12/25 18:22:35 INFO client.RequestHedgingRMFailoverProxyProvider: Found active RM [rm1]
+20/12/25 18:22:35 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/12/25 18:22:39 INFO mapred.FileInputFormat: Total input paths to process : 1
+20/12/25 18:22:39 INFO mapreduce.JobSubmitter: number of splits:12
+20/12/25 18:22:40 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1608909264307_0015
+20/12/25 18:22:41 INFO impl.YarnClientImpl: Submitted application application_1608909264307_0015
+20/12/25 18:22:41 INFO mapreduce.Job: The url to track the job: http://hn0-my-ben.xhy0enc3p5eunmisrmmhg0jlda.frax.internal.cloudapp.net:8088/proxy/application_1608909264307_0015/
+20/12/25 18:22:41 INFO mapreduce.Job: Running job: job_1608909264307_0015
+20/12/25 18:22:54 INFO mapreduce.Job: Job job_1608909264307_0015 running in uber mode : false
+20/12/25 18:22:54 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/25 18:23:10 INFO mapreduce.Job:  map 8% reduce 0%
+20/12/25 18:23:12 INFO mapreduce.Job:  map 17% reduce 0%
+20/12/25 18:23:13 INFO mapreduce.Job:  map 42% reduce 0%
+20/12/25 18:23:15 INFO mapreduce.Job:  map 75% reduce 0%
+20/12/25 18:23:16 INFO mapreduce.Job:  map 83% reduce 0%
+20/12/25 18:23:18 INFO mapreduce.Job:  map 100% reduce 0%
+20/12/25 18:23:54 INFO mapreduce.Job: Job job_1608909264307_0015 completed successfully
+20/12/25 18:23:54 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=1997042
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		WASB: Number of bytes read=13850
+		WASB: Number of bytes written=3765907363
+		WASB: Number of read operations=0
+		WASB: Number of large read operations=0
+		WASB: Number of write operations=0
+	Job Counters
+		Launched map tasks=12
+		Other local map tasks=12
+		Total time spent by all maps in occupied slots (ms)=599910
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=599910
+		Total vcore-milliseconds taken by all map tasks=599910
+		Total megabyte-milliseconds taken by all map tasks=1842923520
+	Map-Reduce Framework
+		Map input records=12
+		Map output records=1000000
+		Input split bytes=2100
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=16187
+		CPU time spent (ms)=448670
+		Physical memory (bytes) snapshot=5539127296
+		Virtual memory (bytes) snapshot=53946351616
+		Total committed heap usage (bytes)=31840010240
+	HiBench.Counters
+		BYTES_DATA_GENERATED=3733906727
+	File Input Format Counters
+		Bytes Read=200
+	File Output Format Counters
+		Bytes Written=3765907363
+20/12/25 18:23:54 INFO HiBench.BayesData: Finished Running Job: Create bayes data
+20/12/25 18:23:54 INFO HiBench.BayesData: Closing bayes data generator...
+20/12/25 18:23:55 WARN azure.AzureFileSystemThreadPoolExecutor: Disabling threads for Delete operation as thread count 0 is <= 1
+20/12/25 18:23:55 INFO azure.AzureFileSystemThreadPoolExecutor: Time taken for Delete operation is: 21 ms with threads: 0

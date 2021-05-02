@@ -1,0 +1,202 @@
+20/12/21 16:00:48 INFO HiBench.HiveData: Generating hive data files...
+20/12/21 16:00:48 INFO HiBench.HiveData: Initializing hive date generator...
+curIndex: 870, total: 871
+20/12/21 16:00:50 INFO HiBench.Dummy: Creating dummy file hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/temp/dummy with 12 slots...
+20/12/21 16:00:50 INFO HiBench.HiveData: Creating table rankings...
+20/12/21 16:00:50 INFO Configuration.deprecation: mapred.reduce.slowstart.completed.maps is deprecated. Instead, use mapreduce.job.reduce.slowstart.completedmaps
+20/12/21 16:00:50 INFO HiBench.HiveData: Running Job: Create rankings
+20/12/21 16:00:50 INFO HiBench.HiveData: Pages file hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/temp/dummy as input
+20/12/21 16:00:50 INFO HiBench.HiveData: Rankings file hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/Input/rankings as output
+20/12/21 16:00:50 INFO client.RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53391/192.168.0.160:8032
+20/12/21 16:00:51 INFO client.RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53391/192.168.0.160:8032
+20/12/21 16:00:51 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/12/21 16:00:51 INFO mapred.FileInputFormat: Total input files to process : 1
+20/12/21 16:00:51 INFO mapreduce.JobSubmitter: number of splits:12
+20/12/21 16:00:51 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1608498255007_0073
+20/12/21 16:00:51 INFO impl.YarnClientImpl: Submitted application application_1608498255007_0073
+20/12/21 16:00:51 INFO mapreduce.Job: The url to track the job: http://emr-header-1.cluster-53391:20888/proxy/application_1608498255007_0073/
+20/12/21 16:00:51 INFO mapreduce.Job: Running job: job_1608498255007_0073
+20/12/21 16:00:58 INFO mapreduce.Job: Job job_1608498255007_0073 running in uber mode : false
+20/12/21 16:00:58 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/21 16:01:12 INFO mapreduce.Job:  map 8% reduce 0%
+20/12/21 16:01:13 INFO mapreduce.Job:  map 17% reduce 0%
+20/12/21 16:01:14 INFO mapreduce.Job:  map 42% reduce 0%
+20/12/21 16:01:15 INFO mapreduce.Job:  map 50% reduce 0%
+20/12/21 16:01:16 INFO mapreduce.Job:  map 58% reduce 0%
+20/12/21 16:01:17 INFO mapreduce.Job:  map 92% reduce 0%
+20/12/21 16:01:18 INFO mapreduce.Job:  map 100% reduce 0%
+20/12/21 16:01:27 INFO mapreduce.Job:  map 100% reduce 25%
+20/12/21 16:01:28 INFO mapreduce.Job:  map 100% reduce 58%
+20/12/21 16:01:29 INFO mapreduce.Job:  map 100% reduce 67%
+20/12/21 16:01:30 INFO mapreduce.Job:  map 100% reduce 75%
+20/12/21 16:01:33 INFO mapreduce.Job:  map 100% reduce 83%
+20/12/21 16:01:34 INFO mapreduce.Job:  map 100% reduce 92%
+20/12/21 16:01:35 INFO mapreduce.Job:  map 100% reduce 100%
+20/12/21 16:01:35 INFO mapreduce.Job: Job job_1608498255007_0073 completed successfully
+20/12/21 16:01:35 INFO mapreduce.Job: Counters: 52
+	File System Counters
+		FILE: Number of bytes read=75153394
+		FILE: Number of bytes written=168753278
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1652
+		HDFS: Number of bytes written=52312812
+		HDFS: Number of read operations=72
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=24
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=13
+		Launched reduce tasks=12
+		Other local map tasks=13
+		Total time spent by all maps in occupied slots (ms)=18485274
+		Total time spent by all reduces in occupied slots (ms)=23744019
+		Total time spent by all map tasks (ms)=166534
+		Total time spent by all reduce tasks (ms)=107439
+		Total vcore-milliseconds taken by all map tasks=166534
+		Total vcore-milliseconds taken by all reduce tasks=107439
+		Total megabyte-milliseconds taken by all map tasks=586865816
+		Total megabyte-milliseconds taken by all reduce tasks=757230072
+	Map-Reduce Framework
+		Map input records=12
+		Map output records=14373340
+		Map output bytes=208519556
+		Map output materialized bytes=89373780
+		Input split bytes=1452
+		Combine input records=14373340
+		Combine output records=13275542
+		Reduce input groups=1200000
+		Reduce shuffle bytes=89373780
+		Reduce input records=13275542
+		Reduce output records=1200000
+		Spilled Records=26551084
+		Shuffled Maps =144
+		Failed Shuffles=0
+		Merged Map outputs=144
+		GC time elapsed (ms)=3414
+		CPU time spent (ms)=176620
+		Physical memory (bytes) snapshot=9926782976
+		Virtual memory (bytes) snapshot=156294651904
+		Total committed heap usage (bytes)=12821987328
+	HiBench.Counters
+		BYTES_DATA_GENERATED=82719661
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=200
+	File Output Format Counters
+		Bytes Written=52312812
+20/12/21 16:01:35 INFO HiBench.HiveData: Finished Running Job: Create rankings
+20/12/21 16:01:35 INFO HiBench.HiveData: Creating user visits...
+20/12/21 16:01:35 INFO HiBench.HiveData: Running Job: Create uservisits
+20/12/21 16:01:35 INFO HiBench.HiveData: Dummy file hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/temp/dummy as input
+20/12/21 16:01:35 INFO HiBench.HiveData: Rankings file hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/Input/rankings as input
+20/12/21 16:01:35 INFO HiBench.HiveData: Ouput file hdfs://emr-header-1.cluster-53391:9000/HiBench/Aggregation/Input/uservisits
+20/12/21 16:01:35 INFO client.RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53391/192.168.0.160:8032
+20/12/21 16:01:35 INFO client.RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53391/192.168.0.160:8032
+20/12/21 16:01:35 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/12/21 16:01:35 INFO mapred.FileInputFormat: Total input files to process : 12
+20/12/21 16:01:35 INFO mapred.FileInputFormat: Total input files to process : 1
+20/12/21 16:01:35 INFO mapreduce.JobSubmitter: number of splits:36
+20/12/21 16:01:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1608498255007_0074
+20/12/21 16:01:35 INFO impl.YarnClientImpl: Submitted application application_1608498255007_0074
+20/12/21 16:01:35 INFO mapreduce.Job: The url to track the job: http://emr-header-1.cluster-53391:20888/proxy/application_1608498255007_0074/
+20/12/21 16:01:35 INFO mapreduce.Job: Running job: job_1608498255007_0074
+20/12/21 16:01:41 INFO mapreduce.Job: Job job_1608498255007_0074 running in uber mode : false
+20/12/21 16:01:41 INFO mapreduce.Job:  map 0% reduce 0%
+20/12/21 16:01:58 INFO mapreduce.Job:  map 11% reduce 0%
+20/12/21 16:01:59 INFO mapreduce.Job:  map 25% reduce 0%
+20/12/21 16:02:00 INFO mapreduce.Job:  map 44% reduce 0%
+20/12/21 16:02:01 INFO mapreduce.Job:  map 56% reduce 0%
+20/12/21 16:02:09 INFO mapreduce.Job:  map 61% reduce 0%
+20/12/21 16:02:10 INFO mapreduce.Job:  map 67% reduce 0%
+20/12/21 16:02:14 INFO mapreduce.Job:  map 72% reduce 0%
+20/12/21 16:02:15 INFO mapreduce.Job:  map 83% reduce 0%
+20/12/21 16:02:16 INFO mapreduce.Job:  map 86% reduce 0%
+20/12/21 16:02:19 INFO mapreduce.Job:  map 89% reduce 0%
+20/12/21 16:02:21 INFO mapreduce.Job:  map 92% reduce 0%
+20/12/21 16:02:22 INFO mapreduce.Job:  map 94% reduce 5%
+20/12/21 16:02:24 INFO mapreduce.Job:  map 100% reduce 8%
+20/12/21 16:02:28 INFO mapreduce.Job:  map 100% reduce 26%
+20/12/21 16:02:30 INFO mapreduce.Job:  map 100% reduce 30%
+20/12/21 16:02:33 INFO mapreduce.Job:  map 100% reduce 39%
+20/12/21 16:02:34 INFO mapreduce.Job:  map 100% reduce 53%
+20/12/21 16:02:35 INFO mapreduce.Job:  map 100% reduce 55%
+20/12/21 16:02:36 INFO mapreduce.Job:  map 100% reduce 58%
+20/12/21 16:02:37 INFO mapreduce.Job:  map 100% reduce 67%
+20/12/21 16:02:41 INFO mapreduce.Job:  map 100% reduce 75%
+20/12/21 16:02:44 INFO mapreduce.Job:  map 100% reduce 83%
+20/12/21 16:02:47 INFO mapreduce.Job:  map 100% reduce 92%
+20/12/21 16:02:48 INFO mapreduce.Job:  map 100% reduce 100%
+20/12/21 16:02:48 INFO mapreduce.Job: Job job_1608498255007_0074 completed successfully
+20/12/21 16:02:48 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=63232455
+		FILE: Number of bytes written=143589970
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=65394654
+		HDFS: Number of bytes written=1866957801
+		HDFS: Number of read operations=168
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=24
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=36
+		Launched reduce tasks=13
+		Other local map tasks=12
+		Data-local map tasks=23
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=56702241
+		Total time spent by all reduces in occupied slots (ms)=53822340
+		Total time spent by all map tasks (ms)=510831
+		Total time spent by all reduce tasks (ms)=243540
+		Total vcore-milliseconds taken by all map tasks=510831
+		Total vcore-milliseconds taken by all reduce tasks=243540
+		Total megabyte-milliseconds taken by all map tasks=1800168444
+		Total megabyte-milliseconds taken by all reduce tasks=1716469920
+	Map-Reduce Framework
+		Map input records=1200012
+		Map output records=11200000
+		Map output bytes=176783330
+		Map output materialized bytes=71859699
+		Input split bytes=9672
+		Combine input records=11200000
+		Combine output records=8408134
+		Reduce input groups=1200000
+		Reduce shuffle bytes=71859699
+		Reduce input records=8408134
+		Reduce output records=10000000
+		Spilled Records=16816268
+		Shuffled Maps =432
+		Failed Shuffles=0
+		Merged Map outputs=432
+		GC time elapsed (ms)=13251
+		CPU time spent (ms)=274020
+		Physical memory (bytes) snapshot=26065915904
+		Virtual memory (bytes) snapshot=275516268544
+		Total committed heap usage (bytes)=32488030208
+	HiBench.Counters
+		BYTES_DATA_GENERATED=1750727912
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=0
+	File Output Format Counters
+		Bytes Written=1866957801
+20/12/21 16:02:48 INFO HiBench.HiveData: Finished Running Job: Create uservisits
+20/12/21 16:02:48 INFO HiBench.HiveData: Closing hive data generator...

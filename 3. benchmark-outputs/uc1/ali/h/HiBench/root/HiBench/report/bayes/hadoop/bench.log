@@ -1,0 +1,203 @@
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /usr/lib/hadoop-current/bin/hadoop and HADOOP_CONF_DIR=/etc/ecm/hadoop-conf
+MAHOUT-JOB: /root/HiBench/hadoopbench/mahout/target/apache-mahout-distribution-0.11.0/mahout-examples-0.11.0-job.jar
+20/12/20 02:52:46 WARN MahoutDriver: No trainnb.props found on classpath, will use command-line arguments only
+20/12/20 02:52:46 INFO AbstractJob: Command line arguments: {--alphaI=[1.0], --endPhase=[2147483647], --input=[hdfs://emr-header-1.cluster-53371:9000/HiBench/Bayes/Output/vectors/tfidf-vectors], --labelIndex=[hdfs://emr-header-1.cluster-53371:9000/HiBench/Bayes/Output/labelindex], --output=[hdfs://emr-header-1.cluster-53371:9000/HiBench/Bayes/Output/model], --overwrite=null, --startPhase=[0], --tempDir=[hdfs://emr-header-1.cluster-53371:9000/HiBench/Bayes/Output/temp]}
+20/12/20 02:52:54 INFO deprecation: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+20/12/20 02:52:54 INFO deprecation: mapred.compress.map.output is deprecated. Instead, use mapreduce.map.output.compress
+20/12/20 02:52:54 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/12/20 02:52:54 INFO RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53371/192.168.0.152:8032
+20/12/20 02:52:55 INFO FileInputFormat: Total input files to process : 12
+20/12/20 02:52:55 INFO JobSubmitter: number of splits:12
+20/12/20 02:52:55 INFO JobSubmitter: Submitting tokens for job: job_1608361927307_0062
+20/12/20 02:52:55 INFO YarnClientImpl: Submitted application application_1608361927307_0062
+20/12/20 02:52:55 INFO Job: The url to track the job: http://emr-header-1.cluster-53371:20888/proxy/application_1608361927307_0062/
+20/12/20 02:52:55 INFO Job: Running job: job_1608361927307_0062
+20/12/20 02:53:01 INFO Job: Job job_1608361927307_0062 running in uber mode : false
+20/12/20 02:53:01 INFO Job:  map 0% reduce 0%
+20/12/20 02:53:21 INFO Job:  map 8% reduce 0%
+20/12/20 02:53:22 INFO Job:  map 42% reduce 0%
+20/12/20 02:53:26 INFO Job:  map 81% reduce 0%
+20/12/20 02:53:27 INFO Job:  map 83% reduce 0%
+20/12/20 02:53:28 INFO Job:  map 94% reduce 0%
+20/12/20 02:53:29 INFO Job:  map 100% reduce 0%
+20/12/20 02:53:39 INFO Job:  map 100% reduce 14%
+20/12/20 02:53:40 INFO Job:  map 100% reduce 43%
+20/12/20 02:53:41 INFO Job:  map 100% reduce 100%
+20/12/20 02:53:42 INFO Job: Job job_1608361927307_0062 completed successfully
+20/12/20 02:53:42 INFO Job: Counters: 52
+	File System Counters
+		FILE: Number of bytes read=178505282
+		FILE: Number of bytes written=360386275
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=413934441
+		HDFS: Number of bytes written=413931742
+		HDFS: Number of read operations=69
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=14
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=13
+		Launched reduce tasks=7
+		Data-local map tasks=12
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=30253161
+		Total time spent by all reduces in occupied slots (ms)=21230365
+		Total time spent by all map tasks (ms)=272551
+		Total time spent by all reduce tasks (ms)=96065
+		Total vcore-milliseconds taken by all map tasks=272551
+		Total vcore-milliseconds taken by all reduce tasks=96065
+		Total megabyte-milliseconds taken by all map tasks=960469724
+		Total megabyte-milliseconds taken by all reduce tasks=677066120
+	Map-Reduce Framework
+		Map input records=100
+		Map output records=100
+		Map output bytes=413928403
+		Map output materialized bytes=178567875
+		Input split bytes=1908
+		Combine input records=100
+		Combine output records=100
+		Reduce input groups=100
+		Reduce shuffle bytes=178567875
+		Reduce input records=100
+		Reduce output records=100
+		Spilled Records=200
+		Shuffled Maps =84
+		Failed Shuffles=0
+		Merged Map outputs=84
+		GC time elapsed (ms)=7946
+		CPU time spent (ms)=162480
+		Physical memory (bytes) snapshot=10932387840
+		Virtual memory (bytes) snapshot=115878195200
+		Total committed heap usage (bytes)=13926137856
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=413932533
+	File Output Format Counters
+		Bytes Written=413931742
+20/12/20 02:53:42 INFO RMProxy: Connecting to ResourceManager at emr-header-1.cluster-53371/192.168.0.152:8032
+20/12/20 02:53:42 INFO FileInputFormat: Total input files to process : 7
+20/12/20 02:53:42 INFO JobSubmitter: number of splits:7
+20/12/20 02:53:42 INFO JobSubmitter: Submitting tokens for job: job_1608361927307_0063
+20/12/20 02:53:42 INFO YarnClientImpl: Submitted application application_1608361927307_0063
+20/12/20 02:53:42 INFO Job: The url to track the job: http://emr-header-1.cluster-53371:20888/proxy/application_1608361927307_0063/
+20/12/20 02:53:42 INFO Job: Running job: job_1608361927307_0063
+20/12/20 02:53:49 INFO Job: Job job_1608361927307_0063 running in uber mode : false
+20/12/20 02:53:49 INFO Job:  map 0% reduce 0%
+20/12/20 02:54:01 INFO Job:  map 14% reduce 0%
+20/12/20 02:54:12 INFO Job:  map 50% reduce 0%
+20/12/20 02:54:13 INFO Job:  map 58% reduce 0%
+20/12/20 02:54:18 INFO Job:  map 66% reduce 0%
+20/12/20 02:54:19 INFO Job:  map 71% reduce 1%
+20/12/20 02:54:20 INFO Job:  map 71% reduce 2%
+20/12/20 02:54:21 INFO Job:  map 71% reduce 3%
+20/12/20 02:54:22 INFO Job:  map 71% reduce 4%
+20/12/20 02:54:26 INFO Job:  map 86% reduce 4%
+20/12/20 02:54:27 INFO Job:  map 90% reduce 7%
+20/12/20 02:54:28 INFO Job:  map 100% reduce 23%
+20/12/20 02:54:29 INFO Job:  map 100% reduce 73%
+20/12/20 02:54:30 INFO Job:  map 100% reduce 88%
+20/12/20 02:54:33 INFO Job:  map 100% reduce 93%
+20/12/20 02:54:39 INFO Job:  map 100% reduce 94%
+20/12/20 02:54:51 INFO Job:  map 100% reduce 98%
+20/12/20 02:54:57 INFO Job:  map 100% reduce 100%
+20/12/20 02:54:59 INFO Job: Job job_1608361927307_0063 completed successfully
+20/12/20 02:54:59 INFO Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=97085442
+		FILE: Number of bytes written=196636730
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=413932869
+		HDFS: Number of bytes written=82508163
+		HDFS: Number of read operations=49
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=14
+	Job Counters
+		Killed map tasks=1
+		Killed reduce tasks=2
+		Launched map tasks=7
+		Launched reduce tasks=8
+		Data-local map tasks=7
+		Total time spent by all maps in occupied slots (ms)=24898743
+		Total time spent by all reduces in occupied slots (ms)=41708667
+		Total time spent by all map tasks (ms)=224313
+		Total time spent by all reduce tasks (ms)=188727
+		Total vcore-milliseconds taken by all map tasks=224313
+		Total vcore-milliseconds taken by all reduce tasks=188727
+		Total megabyte-milliseconds taken by all map tasks=790479012
+		Total megabyte-milliseconds taken by all reduce tasks=1330147896
+	Map-Reduce Framework
+		Map input records=100
+		Map output records=14
+		Map output bytes=222562503
+		Map output materialized bytes=97089619
+		Input split bytes=1127
+		Combine input records=14
+		Combine output records=14
+		Reduce input groups=2
+		Reduce shuffle bytes=97089619
+		Reduce input records=14
+		Reduce output records=2
+		Spilled Records=28
+		Shuffled Maps =49
+		Failed Shuffles=0
+		Merged Map outputs=49
+		GC time elapsed (ms)=9099
+		CPU time spent (ms)=135300
+		Physical memory (bytes) snapshot=11041210368
+		Virtual memory (bytes) snapshot=91180068864
+		Total committed heap usage (bytes)=13277593600
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=413931742
+	File Output Format Counters
+		Bytes Written=82508163
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at org.apache.mahout.math.map.OpenIntDoubleHashMap.rehash(OpenIntDoubleHashMap.java:489)
+	at org.apache.mahout.math.map.OpenIntDoubleHashMap.put(OpenIntDoubleHashMap.java:442)
+	at org.apache.mahout.math.RandomAccessSparseVector.setQuick(RandomAccessSparseVector.java:128)
+	at org.apache.mahout.math.VectorWritable.readFields(VectorWritable.java:125)
+	at org.apache.mahout.math.VectorWritable.readFields(VectorWritable.java:89)
+	at org.apache.hadoop.io.SequenceFile$Reader.getCurrentValue(SequenceFile.java:2277)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:2405)
+	at org.apache.mahout.common.iterator.sequencefile.SequenceFileIterator.computeNext(SequenceFileIterator.java:101)
+	at org.apache.mahout.common.iterator.sequencefile.SequenceFileIterator.computeNext(SequenceFileIterator.java:40)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:143)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:138)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:543)
+	at com.google.common.collect.ForwardingIterator.hasNext(ForwardingIterator.java:43)
+	at org.apache.mahout.classifier.naivebayes.BayesUtils.readModelFromDir(BayesUtils.java:78)
+	at org.apache.mahout.classifier.naivebayes.training.TrainNaiveBayesJob.run(TrainNaiveBayesJob.java:160)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:76)
+	at org.apache.mahout.classifier.naivebayes.training.TrainNaiveBayesJob.main(TrainNaiveBayesJob.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.ProgramDriver$ProgramDescription.invoke(ProgramDriver.java:71)
+	at org.apache.hadoop.util.ProgramDriver.run(ProgramDriver.java:144)
+	at org.apache.hadoop.util.ProgramDriver.driver(ProgramDriver.java:152)
+	at org.apache.mahout.driver.MahoutDriver.main(MahoutDriver.java:195)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:239)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:153)

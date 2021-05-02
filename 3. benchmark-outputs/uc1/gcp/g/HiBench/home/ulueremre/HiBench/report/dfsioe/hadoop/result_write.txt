@@ -1,0 +1,17 @@
+----- TestDFSIO ----- : write
+           Date & time: Mon Dec 14 17:56:44 UTC 2020
+       Number of files: 512
+Total MBytes processed: 204800
+     Throughput mb/sec: 22.542037377515726
+Average IO rate mb/sec: 30.248559951782227
+ IO rate std deviation: 23.147617987596185
+    Test exec time sec: 1212.873
+
+-- Extended Metrics --   : write
+Result file name         : /home/ulueremre/HiBench/report/dfsioe/hadoop/conf/../throughput_write.csv
+Sampling overhead        : 0.2550398%
+Reference Start Time     : 1607967391254
+Aggregated throughput results are unavailable, because the concurrency of Mappers is too low and consequently the aggregated throughput measurement is not very meaningful
+Please adjust your test workload and try again.
+
+-- Result Analyse -- : 121s

@@ -8,10 +8,11 @@ Instead of diving directly into Hadoop on PaaS benchmarking, we set up first a v
 
 Structure:  
 
-**warmup-sessions:** comprises documentation of the preparational work before conducting the benchmarks on the providers' services.  
+**1. warmup-sessions:** comprises documentation of the preparational work before conducting the benchmarks on the cloud. 
 
-()
-**benchmark-outputs:** contains HiBench benchmark reports in uc1 and uc2
+**2. Setting up the clusters and HiBench:** Contains a file documenting the implementation processes of starting Hadoop-on PaaS services on Google Cloud Platform, Microsoft Azure, and Alibaba Cloud; it also comtains the instructions to compile and run HiBench on the respective clusters.  
+
+**3. benchmark-outputs:** contains HiBench benchmark reports in uc1 and uc2
 
 In warmup-sessions the followings has been done in virtual environment:
 1. Installing a single-node Hadoop in a virtual environment (ubuntu18.04 on VirtualBox)
