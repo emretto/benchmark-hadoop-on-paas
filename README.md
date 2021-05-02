@@ -10,6 +10,7 @@ Structure:
 
 **warmup-sessions:** comprises documentation of the preparational work before conducting the benchmarks on the providers' services.  
 
+()
 **benchmark-outputs:** contains HiBench benchmark reports in uc1 and uc2
 
 In warmup-sessions the followings has been done in virtual environment:

@@ -1,3 +1,0 @@
-Type         Date       Time     Input_data_size      Duration(s)          Throughput(bytes/s)  Throughput/node     
-HadoopSort   2020-12-24 16:28:25 328491777            80.802               4065391              1355130             
-HadoopWordcount 2020-12-24 16:40:45 3284918781           269.360              12195273             4065091             
