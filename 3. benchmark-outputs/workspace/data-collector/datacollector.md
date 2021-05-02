@@ -44,7 +44,7 @@ cd $(dirname $0)
 
 sar_collectors(){
 	# CAPTURE CPU UTILIZATION DATA
-	sar -P ALL 1 86400 > data/$naming-c.txt && \
+	sar -P ALL 1 86400 > data/$naming-c.txt && \ 
 		sed -n -e '/ all /p' data/$naming-c.txt > data/$naming-ca.dat && sed -i '/Average/d' data/$naming-ca.dat && \
 		sed -n -e '/ 0 /p' data/$naming-c.txt > data/$naming-c0.dat && sed -i '/Average/d' data/$naming-c0.dat && \
 		sed -n -e '/ 1 /p' data/$naming-c.txt > data/$naming-c1.dat && sed -i '/Average/d' data/$naming-c1.dat && \
