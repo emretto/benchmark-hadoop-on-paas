@@ -30,5 +30,5 @@ Websearch - _Pagerank_
 **USE CASE 2**    
 CPU bound _Sort_ and IO bound _Wordcount_ benchmarks have been executed for data scales tiny, small, large, huge, and gigantic. 
   
-Results of the benchmarks are located within `benchmark-outputs` folder. `HiBench` stores outputted reports and selected configurations for each executed benchmark. The folder sysstat contains raw data files of captured system resource utilization data during benchmark execution.  
+Results of the benchmarks are located within `benchmark-outputs` folder. `HiBench` stores outputted reports and selected configurations for each executed benchmark. The folder `sysstat` contains raw data files of captured system resource utilization data during benchmark execution.  
 
