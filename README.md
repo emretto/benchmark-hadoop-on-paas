@@ -1,4 +1,4 @@
-# Documentation for the Thesis "Comparative Performance Evaluation of Hadoop on PaaS Proposals by Leveraging HiBench"
+# Documentation for the Master's Thesis "Comparative Performance Evaluation of Hadoop on PaaS Proposals by Leveraging HiBench"
 
 We benchmarked the managed Hadoop services (Hadoop-on-PaaS) of three Cloud Service Providers, namely GCP Dataproc, Microsoft Azure HDInsight, and Alibaba Cloud e-MapReduce. This repository documents the steps taken in our study. 
 
