@@ -185,6 +185,8 @@ To provide uniqueness in the filenames, following naming approach has been lever
 **`<datascale>`**: data scale (**t**iny, **s**mall, **l**arge, **h**uge, **g**igantic)  
 **`<benchmark>`**: Executed benchmark 
 
+Example:  
+
 ```bash
 $ ./datacollector.sh -p gcp-uc1-w0-g-tera
 ```
