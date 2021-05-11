@@ -190,7 +190,9 @@ Example:
 ```bash
 $ ./datacollector.sh -p gcp-uc1-w0-g-tera
 ```
-How to stop the execution: `Ctrl+C` will terminate the data capturing process, raw files and their granulated `.dat` files will be saved to the specified `data` folder.
+**How to stop the execution:**  
+
+`Ctrl+C` will terminate the data capturing process, raw files and their granulated `.dat` files will be saved to the specified `data` folder.
   
 Notes: 
 1. Since there are three worker nodes, given instructions are implemented on all worker nodes of the cluster, which is three nodes in our case.
