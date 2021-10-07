@@ -12,7 +12,7 @@ Structure:
 
 **2. Setting up the clusters and HiBench:** Contains a file documenting the implementation processes of starting Hadoop-on PaaS services on Google Cloud Platform, Microsoft Azure, and Alibaba Cloud; it also comtains the instructions to compile and run HiBench on the respective clusters.  
 
-**3. benchmark-outputs:** contains HiBench benchmark reports in uc1 and uc2
+**3. benchmark-outputs:** contains HiBench benchmark reports in uc1 and uc2, also the results in tabular and graphic format, which is a PDF file in the ´results´ folder.
 
 In warmup-sessions the followings has been done in virtual environment:
 1. Installing a single-node Hadoop in a virtual environment (ubuntu18.04 on VirtualBox)
